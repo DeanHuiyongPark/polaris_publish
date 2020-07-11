@@ -25,7 +25,56 @@ svg {position:absolute;width:0;height:0}
 .box-recent-item .day {font-size:13px;margin-top:4px;color:#fff}
 
 @media (max-width:1024px) {
+    .box-recent {width:1024px;padding-left:40px}
+    .box-recent .box-title .title-recent {display:block;font-size:60px}
+    .box-recent .box-title .btn-more-b {min-width:156px;height:64px;line-height:60px;border-radius:32px;font-size:32px;margin-top:16px;margin-left:0}
+
+    .recent-list {width:100%;white-space:nowrap;font-size:0;white-space:nowrap;overflow-x:auto;overflow-y:hidden;height:720px;-webkit-overflow-scrolling:touch;
+        -ms-overflow-style:none;}
+    .recent-list .recent-item {float:none;display:inline-block;margin:0 !important}
+    .recent-list .recent-item ~ .recent-item {margin-left:30px !important}
+    .recent-list::-webkit-scrollbar {width:5px}
+    .recent-list::-webkit-scrollbar-track {background-color:transparent}
+    .recent-list::-webkit-scrollbar-thumb {border-radius:30px;background-color:#1f82ff;border:6.5px solid #fff;}
+    .recent-list::-webkit-scrollbar-button {width:0;height:0}
+
+    .box-recent-item {position:relative;-webkit-clip-path:none;clip-path:none;width:495px;height:694px;background-color:#fff;border-radius:72px;border:1px solid #e0e0e0;overflow:hidden}
+    .box-recent-item .box-content {opacity:1;position:relative;background-image:none;height:calc(100% - 308px);display:block}
+    .box-recent-item .txt-tag {position:absolute;top:-58px;left:10px}
+    .box-recent-item .txt-tag .tag {height:48px;line-height:46px;border-radius:12px;font-size:28px;min-width:112px}
+    .box-recent-item .box-img {height:308px;overflow:hidden;position:relative}
+    .box-recent-item .box-img img {position:absolute;width:100%;top:50%;left:0;transform:translateY(-50%);-webkit-transform:translateY(-50%)}
+    .box-recent-item .item-title {font-size:40px;line-height:52px;min-height:114px;text-align:center;white-space:normal;padding:30px;color:#000}
+    .box-recent-item .box-group {position:absolute;bottom:0;left:0;right:0;padding:20px;background-color:#f6f6f6}
+    .box-recent-item .text-money {margin-top:0}
+    .box-recent-item .text-money i {margin-right:24px}
+    .box-recent-item .text-money .text-value {font-size:32px;color:#0071ff;font-weight:600}
+    .box-recent-item .file-name {font-size:28px;color:#696969;margin-top:0;font-weight:400}
+    .box-recent-item .file-name .file-type {font-size:32px;color:#262626}
+    .box-recent-item .day {font-size:28px;margin-top:0;color:#818181}
+
 }
 @media (max-width:768px) {
+    .box-recent {width:100%;padding-left:15px}
+    .box-recent .box-title {margin:50px auto 35px}
+    .box-recent .box-title .title-recent {font-size:30px}
+    .box-recent .box-title .btn-more-b {min-width:78px;height:32px;line-height:32px;border-radius:16px;font-size:16px;margin-top:8px}
+
+    .recent-list {height:375px}
+    .recent-list .recent-item ~ .recent-item {margin-left:10px !important}
+
+    .box-recent-item {width:250px;height:347px;border-radius:36px}
+    .box-recent-item .box-content {height:calc(100% - 154px)}
+    .box-recent-item .txt-tag {top:-48px}
+    .box-recent-item .txt-tag .tag {height:24px;line-height:23px;border-radius:6px;font-size:14px;min-width:56px}
+    .box-recent-item .box-img {height:154px}
+    .box-recent-item .item-title {font-size:20px;line-height:26px;min-height:57px;padding:15px}
+    .box-recent-item .box-group {padding:10px}
+    .box-recent-item .text-money {margin-top:0}
+    .box-recent-item .text-money i {margin-right:12px}
+    .box-recent-item .text-money .text-value {font-size:16px}
+    .box-recent-item .file-name {font-size:14px}
+    .box-recent-item .file-name .file-type {font-size:16px}
+    .box-recent-item .day {font-size:14px}
     
 }

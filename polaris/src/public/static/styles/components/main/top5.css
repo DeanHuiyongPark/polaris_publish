@@ -39,12 +39,12 @@
 @media (max-width:1024px) {
     .box-top5 {width:1024px;padding-left:40px;padding-bottom:200px}
     .box-top5 .title {font-size:59px;line-height:100%}
-    .top5-list {margin:64px 0 0;display:block;font-size:0;white-space:nowrap;overflow-x:auto;overflow-y:hidden;height:720px;
+    .top5-list {margin:64px 0 0;display:block;font-size:0;white-space:nowrap;overflow-x:auto;overflow-y:hidden;height:720px;-webkit-overflow-scrolling:touch;
         -ms-overflow-style:none;
     }
     .top5-list::-webkit-scrollbar {width:5px}
     .top5-list::-webkit-scrollbar-track {background-color:transparent}
-    .top5-list::-webkit-scrollbar-thumb {border-radius:30px;background-color:#1f82ff;border:6.5px solid #fff;}
+    .top5-list::-webkit-scrollbar-thumb {border-radius:30px;background-color:#1f82ff;border:7px solid #fff;}
     .top5-list::-webkit-scrollbar-button {width:0;height:0}
     .top5-item:hover,
     .top5-list .top5-item {width:495px;max-width:495px}
