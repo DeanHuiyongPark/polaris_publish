@@ -1,0 +1,27 @@
+.big-event-wrap {background-color:#0059c9;min-width:1200px}
+.big-event-inner {max-width:1200px;padding:45px 28px;margin:0 auto;position:relative}
+.big-event-inner:after {content:'';position:absolute;top:50px;right:73px;background:url("/polaris/src/public/static/images/main/event-img.png") no-repeat 50% 50%;width:206px;height:211px;background-size:100%}
+.big-event-inner .title-small {font-size:20px;color:#9ce2ff;line-height:100%}
+.big-event-inner .title-big {font-size:45px;color:#fff;font-weight:500;line-height:50px;margin-bottom:18px}
+.big-event-inner .text-content-a {font-size:18px;line-height:30px;color:#fff;font-weight:300}
+.big-event-inner .text-content-a .text-point {color:#9ce2ff;font-weight:500}
+.big-event-inner .text-content-b {font-size:15px;line-height:30px;color:#fff;font-weight:300}
+@media (max-width:1024px) {
+    .big-event-wrap {min-width:1024px}
+    .big-event-inner {padding:100px 40px 90px}
+    .big-event-inner:after {top:215px;right:40px;width:354px;height:363px;background-image:url("/polaris/src/public/static/images/main/event-img-t.png")}
+    .big-event-inner .title-small {font-size:36px}
+    .big-event-inner .title-big {font-size:81px;margin:8px 0 36px;line-height:100%}
+    .big-event-inner .text-content-a {font-size:32px;max-width:475px;line-height:54px;letter-spacing:-1px;word-break:keep-all}
+    .big-event-inner .text-content-a br {display:none}
+    .big-event-inner .text-content-b {font-size:27px;margin-top:50px;line-height:54px;letter-spacing:-1px;word-break:keep-all}
+}
+@media (max-width:768px) {
+    .big-event-wrap {min-width:100%}
+    .big-event-inner {padding:45px 15px}
+    .big-event-inner:after {display:none}
+    .big-event-inner .title-small {font-size:18px}
+    .big-event-inner .title-big {font-size:40px;margin:4px 0 18px}
+    .big-event-inner .text-content-a {font-size:16px;line-height:27px;max-width:100%;letter-spacing:-.5px}
+    .big-event-inner .text-content-b {font-size:14px;margin-top:20px;line-height:27px;letter-spacing:-.5px}
+}

@@ -10,4 +10,5 @@
 @import url(element/button.css);
 
 /* main-contents */
-@import url(components/big-event.css);
+@import url(components/main/big-event.css);
+@import url(components/main/top5.css);
