@@ -1,5 +1,8 @@
-<div class="aaa">
-    여기 Main....
+<div>
+    <div class="inc-MainTag"></div>
+    <div class="inc-MainInsight"></div>
+    <div class="inc-MainLibrary"></div>
+    <div class="inc-MainEvent"></div>
     
 </div>
 
@@ -8,9 +11,26 @@
 
         'use strict';
 
-        // main page load
-        console.log(`main content ${$('.aaa').length}`);
-            
+        //page callback
+        var callbackMainTag = function(){
+            console.log('MainTag load');
+        }
+        var callbackMainInsight = function(){
+            console.log('MainInsight load');
+        }
+        var callbackMainLibrary = function(){
+            console.log(`MainLibrary load ${$('.aaa').length}`);
+        }
+        var callbackMainEvent = function(){
+            console.log('MainEvent load');
+        }
+
+        //pageload
+        $plugins.uiPageLoad('/polaris/src/components/body/main/MainTag.html', 'inc-MainTag', callbackMainTag);
+        $plugins.uiPageLoad('/polaris/src/components/body/main/MainInsight.html', 'inc-MainInsight', callbackMainInsight);
+        $plugins.uiPageLoad('/polaris/src/components/body/main/MainLibrary.html', 'inc-MainLibrary', callbackMainLibrary);
+        $plugins.uiPageLoad('/polaris/src/components/body/main/MainEvent.html', 'inc-MainEvent', callbackMainEvent);
+
     })(jQuery, window, document);
 
 </script>

@@ -16,14 +16,14 @@
 
 <body>
 
-	<div class="inc-layout"></div>
+	<div class="inc-Layout"></div>
 	
 	<script>
 		;(function($, win, doc, undefined) {
 
 			'use strict';
 
-			var pageLoad = function   (v,w,c) {
+			$plugins.uiPageLoad = function(v,w,c) {
 				var url = v;
 				var target = w;
 				var callback = c;
@@ -54,10 +54,10 @@
 			}
 
 			//pageload
-			pageLoad('/polaris/src/components/Layout.html', 'inc-layout', callbackLayout)
-				.then(pageLoad('/polaris/src/components/header/Header.html', 'inc-header', callbackHeader))
-				.then(pageLoad('/polaris/src/components/body/main/Main.html', 'inc-body', callbackBody))
-				.then(pageLoad('/polaris/src/components/footer/Footer.html', 'inc-footer', callbackFooter));
+			$plugins.uiPageLoad('/polaris/src/components/Layout.html', 'inc-Layout', callbackLayout)
+				.then($plugins.uiPageLoad('/polaris/src/components/header/Header.html', 'inc-Header', callbackHeader))
+				.then($plugins.uiPageLoad('/polaris/src/components/body/main/Main.html', 'inc-Main', callbackBody))
+				.then($plugins.uiPageLoad('/polaris/src/components/footer/Footer.html', 'inc-Footer', callbackFooter));
 
 		})(jQuery, window, document);
 
