@@ -1,4 +1,10 @@
 @charset "utf-8";
 
+/* reset */
+@import url(reset/reset.css);
+
 /* button */
 @import url(element/button.css);
+
+/* main-contents */
+@import url(components/big-event.css);
