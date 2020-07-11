@@ -1,1 +1,2 @@
-.btn-more-a {min-width:60px;background-color:#0032a2;height:24px;border-radius:12px;font-size:12px;border:none;color:#fff}
+.btn-more-a {display:inline-block;min-width:60px;background-color:#0032a2;height:24px;border-radius:12px;font-size:12px;border:none;color:#fff;text-align:center;line-height:24px}
+.btn-more-b {display:inline-block;min-width:90px;background-color:#0032a2;height:36px;border-radius:18px;font-size:18px;border:none;color:#fff;text-align:center;line-height:36px}

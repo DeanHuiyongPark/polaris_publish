@@ -1,6 +1,7 @@
 <div>
     <div class="library-wrap">
-        <h3>POLARIS SHARE LIBRARY</h3>
+        <h3 class="title-library">POLARIS SHARE <span class="point">LIBRARY</span></h3>
+        <p class="text-library">필요한 라이브러리를 사용하시고 평가해 주세요</p>
 
         <div class="inc-MainRecent"></div>
         <div class="inc-MainTop5"></div>
@@ -14,10 +15,14 @@
         'use strict';
 
         // page load
+        var callbackMainRecent = function(){
+            console.log('MainRecent load');
+        }
         var callbackMainTop5 = function(){
             console.log(`MainTop5 load`);
         }
 
+        $plugins.uiPageLoad('/polaris/src/components/body/main/MainRecent.html', 'inc-MainRecent', callbackMainRecent);
         $plugins.uiPageLoad('/polaris/src/components/body/main/MainTop5.html', 'inc-MainTop5', callbackMainTop5);
             
     })(jQuery, window, document);

@@ -1,9 +1,9 @@
-.box-top5 {width:1200px;margin:0 auto}
+.box-top5 {width:1200px;margin:0 auto;padding-bottom:155px}
 .box-top5 .title {font-size:45px;color:#000;letter-spacing:3px;font-weight:600;text-align:center}
-.top5-list {margin:65px 0 155px;display:flex;align-items:center;justify-content:center;height:430px}
+.top5-list {margin:65px 0 0;display:flex;align-items:center;justify-content:center;height:430px}
 .top5-list .top5-item {-ms-flex-preferred-size:0;flex-basis:0;-ms-flex-positive:1;flex-grow:1;min-width:0;max-width:100%;transition:all ease .3s}
 .top5-list .top5-item ~ .top5-item {margin-left:10px}
-.top5-item .top5-item-wrap {overflow:hidden;border-radius:30px;border:1px solid #e0e0e0;height:300px;transition: all ease .3s;position:relative}
+.top5-item .top5-item-wrap {overflow:hidden;border-radius:30px;border:1px solid #e0e0e0;height:300px;transition: all ease .3s;position:relative;background-color:#fff}
 .top5-item .box-img {position:relative;height:132px;overflow:hidden}
 .top5-item .box-img img {position:absolute;left:0;width:100%;top:50%;transform:translateY(-50%);-webkit-transform:translateY(-50%)}
 .top5-item .box-img .tag {position:absolute;left:10px;bottom:10px;height:24px;border:1px solid #fff;border-radius:6px;text-align:center;min-width:56px;padding:0 10px;line-height:22px;color:#fff;background-color:#0065e4;font-weight:600;font-size:14px}
@@ -37,9 +37,9 @@
 .top5-item:hover .content-items .text-number {font-size:14px}
 
 @media (max-width:1024px) {
-    .box-top5 {width:1024px;padding-left:40px}
+    .box-top5 {width:1024px;padding-left:40px;padding-bottom:200px}
     .box-top5 .title {font-size:59px;line-height:100%}
-    .top5-list {margin:64px 0 200px;display:block;font-size:0;white-space:nowrap;overflow-x:auto;overflow-y:hidden;height:720px;
+    .top5-list {margin:64px 0 0;display:block;font-size:0;white-space:nowrap;overflow-x:auto;overflow-y:hidden;height:720px;
         -ms-overflow-style:none;
     }
     .top5-list::-webkit-scrollbar {width:5px}
@@ -76,9 +76,9 @@
 
 }
 @media (max-width:768px) {
-    .box-top5 {width:100%;padding-left:15px}
+    .box-top5 {width:100%;padding-left:15px;padding-bottom:100px}
     .box-top5 .title {font-size:30px}
-    .top5-list {margin:35px 0 100px;height:375px}
+    .top5-list {margin:35px 0 0;height:375px}
     .top5-item:hover,
     .top5-list .top5-item {width:250px;max-width:250px}
     .top5-item:hover .top5-item-wrap,

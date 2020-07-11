@@ -1,0 +1,10 @@
+.library-wrap {background:url("/polaris/src/public/static/images/main/library-bg.png") no-repeat 50% 0;padding-top:130px}
+.library-wrap .title-library {text-align:center;font-size:50px;color:#4678b7;line-height:100%}
+.library-wrap .title-library .point {color:#00459b;font-weight:600}
+.library-wrap .text-library {font-size:24px;color:#454545;margin-top:16px;font-weight:300;text-align:center}
+
+@media (max-width:1024px) {
+}
+@media (max-width:768px) {
+
+}
