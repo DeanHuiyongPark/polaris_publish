@@ -13,8 +13,12 @@
 
         'use strict';
 
-        // main page load
-        console.log(`main library`);
+        // page load
+        var callbackMainTop5 = function(){
+            console.log(`MainTop5 load`);
+        }
+
+        $plugins.uiPageLoad('/polaris/src/components/body/main/MainTop5.html', 'inc-MainTop5', callbackMainTop5);
             
     })(jQuery, window, document);
 

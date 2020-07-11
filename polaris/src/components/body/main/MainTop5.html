@@ -1,12 +1,38 @@
 <div>
     <div class="box-top5">
-        <h3 class="title">Top 5</h3>
+        <h3 class="title">TOP 5</h3>
         <div class="top5-list">
-            <div class="top5-item">
-                <div class="box-img">
-                    <img src="/polaris/src/public/static/images/main/thum-01.png" alt="">
-                </div>
-            </div>
+            <!-- S : item unit -->
+            <div class="top5-item"></div>
+            <!-- E : item unit -->
+            <!-- S : item unit -->
+            <div class="top5-item"></div>
+            <!-- E : item unit -->
+            <!-- S : item unit -->
+            <div class="top5-item"></div>
+            <!-- E : item unit -->
+            <!-- S : item unit -->
+            <div class="top5-item"></div>
+            <!-- E : item unit -->
+            <!-- S : item unit -->
+            <div class="top5-item"></div>
+            <!-- E : item unit -->
         </div>
     </div>
 </div>
+
+<script>
+    ;(function($, win, doc, undefined) {
+
+        'use strict';
+
+        // page load
+        var callbackMainTop5Item = function(){
+            console.log(`MainTop5Item load`);
+        }
+
+        $plugins.uiPageLoad('/polaris/src/components/body/main/MainTop5Item.html', 'top5-item', callbackMainTop5Item);
+
+    })(jQuery, window, document);
+
+</script>

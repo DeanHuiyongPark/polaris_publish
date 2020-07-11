@@ -1,0 +1,49 @@
+.footer-menu {background-color:#f8f8f8;text-align:center}
+.fm-list {display:inline-block;font-size:0}
+.fm-list .list-item {display:inline-block}
+.fm-list .list-item ~ .list-item {position:relative}
+.fm-list .list-item ~ .list-item:before {content:'';position:absolute;left:0;top:50%;width:1px;height:14px;margin-top:-7px;background-color:#d2d2d2}
+.fm-list .list-item .link-footer {display:block;line-height:46px;height:46px;padding:0 24px;font-size:16px;color:#5c5c5c;letter-spacing:0}
+
+.footer-contents {padding:25px 0}
+.footer-contents .box-footer {width:1200px;margin:0 auto;display:flex;align-items:center}
+.box-footer .logo {width:295px}
+.box-footer .copy {width:250px}
+.box-footer .copy .text-email {font-size:14px;color:#8a8a8a}
+.box-footer .copy .text-copy {font-size:12px;color:#8a8a8a;margin-top:2px}
+.box-footer .sns-list {flex:1;display:flex}
+.box-footer .sns-list .list-item {margin-right:10px}
+.box-footer .family-site {width:185px}
+.box-footer .family-site select {width:100%}
+@media (max-width:1024px) {
+    .footer-menu {padding:28px 50px;min-width:1024px}
+    .fm-list .list-item .link-footer {line-height:80px;font-size:32px;height:80px;padding:0 52px}
+    .fm-list .list-item ~ .list-item:before {height:30px;margin-top:-15px}
+    .fm-list .list-item:nth-child(4):before {display:none}
+
+    .footer-contents {padding:90px 0}
+    .footer-contents .box-footer {width:1024px;display:block;text-align:center}
+    .box-footer .logo {margin:0 auto}
+    .box-footer .copy {width:100%;text-align:center}
+    .box-footer .sns-list {display:inline-flex;flex-wrap:wrap;max-width:620px;margin:70px auto;justify-content:center}
+    .box-footer .family-site {width:100%;padding:0 325px}
+    .box-footer .family-site select {height:70px}
+    .box-footer .copy {margin-top:60px}
+    .box-footer .copy .text-email {font-size:28px}
+    .box-footer .copy .text-copy {font-size:24px}
+}
+@media (max-width:768px) {
+    .footer-menu {padding:28px 50px;min-width:100%}
+    .fm-list .list-item .link-footer {line-height:40px;font-size:16px;height:40px;padding:0 26px}
+    .fm-list .list-item ~ .list-item:before {height:14px;margin-top:-7px}
+    .fm-list .list-item:nth-child(4):before {display:none}
+
+    .footer-contents {padding:45px 0}
+    .footer-contents .box-footer {width:100%}
+    .box-footer .sns-list {max-width:300px;margin:35px auto}
+    .box-footer .family-site {padding:0 95px}
+    .box-footer .family-site select {height:35px}
+    .box-footer .copy {margin-top:30px}
+    .box-footer .copy .text-email {font-size:14px}
+    .box-footer .copy .text-copy {font-size:12px}
+}

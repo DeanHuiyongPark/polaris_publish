@@ -1,8 +1,101 @@
-.box-top5 { }
+.box-top5 {width:1200px;margin:0 auto}
+.box-top5 .title {font-size:45px;color:#000;letter-spacing:3px;font-weight:600;text-align:center}
+.top5-list {margin:65px 0 155px;display:flex;align-items:center;justify-content:center;height:430px}
+.top5-list .top5-item {-ms-flex-preferred-size:0;flex-basis:0;-ms-flex-positive:1;flex-grow:1;min-width:0;max-width:100%;transition:all ease .3s}
+.top5-list .top5-item ~ .top5-item {margin-left:10px}
+.top5-item .top5-item-wrap {overflow:hidden;border-radius:30px;border:1px solid #e0e0e0;height:300px;transition: all ease .3s;position:relative}
+.top5-item .box-img {position:relative;height:132px;overflow:hidden}
+.top5-item .box-img img {position:absolute;left:0;width:100%;top:50%;transform:translateY(-40%);-webkit-transform:translateY(-40%)}
+.top5-item .box-img .tag {position:absolute;left:10px;bottom:10px;height:24px;border:1px solid #fff;border-radius:6px;text-align:center;min-width:56px;padding:0 10px;line-height:22px;color:#fff;background-color:#0065e4;font-weight:600;font-size:14px}
+.top5-item .box-content .item-title {margin:16px 14px 12px;line-height:21px;font-size:15px;color:#000;font-weight:500;min-height:42px;overflow:hidden}
+.top5-item .box-content .item-title a {display:block;color:#000;}
+.top5-item .content-items {padding:0 0 0 14px;display:flex}
+.top5-item .content-items .items {flex:1;display:flex;align-items:center}
+.top5-item .content-items .items i {margin-right:5px}
+.top5-item .content-items .text-money {font-size:10px;color:#0071ff;font-weight:600}
+.top5-item .content-items .text-number {font-size:10px;color:#323232}
+.top5-item .person-info-box {background-color:#f6f6f6;position:absolute;left:0;bottom:0;right:0;padding:14px;display:flex;justify-content:space-between;align-items:center}
+.person-info-box .person-info {display:flex;align-items:center}
+.person-info-box .person-info .person-photo {width:30px;height:30px;border-radius:50%;overflow:hidden;margin-right:8px}
+.person-info-box .person-info .person-photo img {width:100%;vertical-align:top}
+.person-info-box .person-info .person-name {font-size:12px;color:#2e2e2e}
+.person-info-box .text-time {font-size:10px;line-height:12px;color:#818181}
+
+.top5-item:hover {flex:0 0 310px;max-width:310px}
+.top5-item:hover .top5-item-wrap {height:430px}
+.top5-item:hover .box-img {height:190px}
+.top5-item:hover .box-img .tag {height:30px;min-width:72px;font-size:18px;line-height:28px}
+.top5-item:hover .box-content .item-title {font-size:21px;line-height:31px;min-height:62px;margin:24px 20px}
+.top5-item:hover .person-info-box .person-info .person-photo {width:45px;height:45px;margin-right:14px}
+.top5-item:hover .person-info-box .person-info .person-name {font-size:18px}
+.top5-item:hover .person-info-box .text-time {font-size:14px;line-height:16px}
+.top5-item:hover [class^="sp-ico-"] {width:30px;height:30px}
+.top5-item:hover .sp-ico-a {background-position:0 -20px}
+.top5-item:hover .sp-ico-b {background-position:-30px -20px}
+.top5-item:hover .sp-ico-c {background-position:-60px -20px}
+.top5-item:hover .content-items .text-money {font-size:14px}
+.top5-item:hover .content-items .text-number {font-size:14px}
 
 @media (max-width:1024px) {
-
+    .box-top5 {width:1024px;padding-left:40px}
+    .box-top5 .title {font-size:59px;line-height:100%}
+    .top5-list {margin:64px 0 200px;display:block;font-size:0;white-space:nowrap;overflow-x:auto;overflow-y:hidden;height:694px}
+    .top5-item:hover,
+    .top5-list .top5-item {width:495px;max-width:495px}
+    .top5-item:hover .top5-item-wrap,
+    .top5-item .top5-item-wrap {height:694px;border-radius:72px}
+    .top5-list .top5-item {display:inline-block}
+    .top5-item .box-img,
+    .top5-item:hover .box-img {height:308px}
+    .top5-item .box-img .tag,
+    .top5-item:hover .box-img .tag {height:48px;line-height:46px;border-radius:12px;font-size:28px;min-width:112px}
+    .top5-item .box-content .item-title,
+    .top5-item:hover .box-content .item-title {font-size:40px;line-height:52px;min-height:114px;text-align:center;white-space:normal;margin:30px}
+    .top5-item:hover [class^="sp-ico-"] {width:40px;height:40px;}
+    .top5-item:hover .sp-ico-a {background-position:0 0}
+    .top5-item:hover .sp-ico-b {background-position:-40px 0}
+    .top5-item:hover .sp-ico-c {background-position:-80px 0}
+    .top5-item:hover .person-info-box .person-info .person-photo,
+    .top5-item .person-info-box .person-info .person-photo {width:72px;height:72px;margin-right:20px}
+    .top5-item .person-info-box {padding:30px}
+    .top5-item .person-info-box .person-info .person-name,
+    .top5-item:hover .person-info-box .person-info .person-name {font-size:29px}
+    .top5-item .person-info-box .text-time,
+    .top5-item:hover .person-info-box .text-time {line-height:28px;font-size:23px}
+    .top5-item .content-items .text-money,
+    .top5-item .content-items .text-number,
+    .top5-item:hover .content-items .text-money,
+    .top5-item:hover .content-items .text-number {font-size:23px}
+    .top5-item .content-items .items i {margin-right:12px}
 }
 @media (max-width:768px) {
-
+    .box-top5 {width:100%;padding-left:15px}
+    .box-top5 .title {font-size:30px}
+    .top5-list {margin:35px 0 200px;height:347px}
+    .top5-item:hover,
+    .top5-list .top5-item {width:250px;max-width:250px}
+    .top5-item:hover .top5-item-wrap,
+    .top5-item .top5-item-wrap {height:347px;border-radius:36px}
+    .top5-item .box-img,
+    .top5-item:hover .box-img {height:154px}
+    .top5-item .box-img .tag,
+    .top5-item:hover .box-img .tag {height:24px;line-height:23px;border-radius:6px;font-size:14px;min-width:56px}
+    .top5-item .box-content .item-title,
+    .top5-item:hover .box-content .item-title {font-size:20px;line-height:26px;min-height:57px;margin:15px}
+    .top5-item:hover [class^="sp-ico-"] {width:20px;height:20px}
+    .top5-item:hover .sp-ico-a {background-position:0 0}
+    .top5-item:hover .sp-ico-b {background-position:-20px 0}
+    .top5-item:hover .sp-ico-c {background-position:-40px 0}
+    .top5-item:hover .person-info-box .person-info .person-photo,
+    .top5-item .person-info-box .person-info .person-photo {width:36px;height:36px;margin-right:10px}
+    .top5-item .person-info-box {padding:15px}
+    .top5-item .person-info-box .person-info .person-name,
+    .top5-item:hover .person-info-box .person-info .person-name {font-size:15px}
+    .top5-item .person-info-box .text-time,
+    .top5-item:hover .person-info-box .text-time {line-height:14px;font-size:11px}
+    .top5-item .content-items .text-money,
+    .top5-item .content-items .text-number,
+    .top5-item:hover .content-items .text-money,
+    .top5-item:hover .content-items .text-number {font-size:11px}
+    .top5-item .content-items .items i {margin-right:6px}
 }
