@@ -48,5 +48,9 @@
     .box-footer .copy .text-copy {font-size:12px}
 }
 @media (max-width:420px) {
+    .footer-menu {padding:28px 0}
     .box-footer .family-site {padding:0 50px}
+}
+@media (max-width:320px) {
+    .fm-list .list-item .link-footer {padding:0 20px}
 }
