@@ -3,11 +3,14 @@
 /* reset */
 @import url(reset/reset.css);
 
+/* common */
+@import url(common/common.css);
+
 /* sprite */
 @import url(sprite/sprite.css);
 
-/* comon */
-@import url(common/common.css);
+/* footer */
+@import url(footer/footer.css);
 
 /* button */
 @import url(element/button.css);
