@@ -47,3 +47,6 @@
     .box-footer .copy .text-email {font-size:14px}
     .box-footer .copy .text-copy {font-size:12px}
 }
+@media (max-width:420px) {
+    .box-footer .family-site {padding:0 50px}
+}
