@@ -3,6 +3,9 @@
 /* reset */
 @import url(reset/reset.css);
 
+/* comon */
+@import url(common/common.css);
+
 /* button */
 @import url(element/button.css);
 

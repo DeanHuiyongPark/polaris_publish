@@ -23,3 +23,5 @@ input, textarea, select {box-sizing:border-box;font-family:'Noto Sans KR', sans-
 input::-webkit-search-cancel-button,
 [class*="inp-"]::-webkit-search-cancel-button {display:none}
 label {cursor:pointer}
+
+.hidden, .hide { position:absolute !important; width:1px !important; height:1px !important; color:transparent !important; overflow:hidden !important; clip:rect(1px, 1px,1px, 1px); clip-path:inset(50%); }
