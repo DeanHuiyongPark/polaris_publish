@@ -4,59 +4,61 @@
 	<meta charSet="utf-8" />
 	<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
 
-	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons&display=swap" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons&display=swap" />
+	<link rel="stylesheet" href="/polaris/src/public/static/styles/ui.base.css">
 
 	<title>Main</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="/polaris/src/public/static/js/ui.global.js"></script>
 
 </head>
 
 <body>
 
-	<div id="incMain">
-
-	</div>
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script src="/polaris/src/public/static/js/ui.global.js"></script>
+	<div class="inc-layout"></div>
+	
 	<script>
 		;(function($, win, doc, undefined) {
 
 			'use strict';
 
-			// main page load
-			$plugins.uiAjax({ 
-				id:'incMain', 
-				url:'/polaris/src/components/layout.html', 
-				page:true, 
-				callback:function(){
-					$plugins.uiAjax({ 
-						id:'incHeader', 
-						url:'/polaris/src/components/header/Header.html', 
-						page:true, 
-						callback:function(){
-								console.log(111111111);
-						} 
+			var pageLoad = function   (v,w,c) {
+				var url = v;
+				var target = w;
+				var callback = c;
+				return new Promise(function(resolve, reject) {
+					$.get(url, function(response) {
+						if (response) {
+							$('.' + target).html(response);
+							resolve(callback());
+						} else{
+							reject(new Error("Request is failed"));
+						}
 					});
-					$plugins.uiAjax({ 
-						id:'incBody', 
-						url:'/polaris/src/components/body/main/Main.html', 
-						page:true, 
-						callback:function(){
-								console.log(222222222);
-						} 
-					});
-					$plugins.uiAjax({ 
-						id:'incFooter', 
-						url:'/polaris/src/components/footer/Footer.html', 
-						page:true, 
-						callback:function(){
-								console.log(333333333);
-						} 
-					});
-				} 
-			});
-					
-				
+				});
+			}
+
+			//page callback
+			var callbackLayout = function(){
+				console.log('layout load');
+			}
+			var callbackHeader = function(){
+				console.log('header load');
+			}
+			var callbackBody = function(){
+				console.log(`body load ${$('.aaa').length}`);
+			}
+			var callbackFooter = function(){
+				console.log('footer load');
+			}
+
+			//pageload
+			pageLoad('/polaris/src/components/Layout.html', 'inc-layout', callbackLayout)
+				.then(pageLoad('/polaris/src/components/header/Header.html', 'inc-header', callbackHeader))
+				.then(pageLoad('/polaris/src/components/body/main/Main.html', 'inc-body', callbackBody))
+				.then(pageLoad('/polaris/src/components/footer/Footer.html', 'inc-footer', callbackFooter));
+
 		})(jQuery, window, document);
 
 	</script>
