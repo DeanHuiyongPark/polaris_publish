@@ -544,8 +544,20 @@ dl.bul-hyphen > div:first-child{margin-top:0;}
 .col-4 [grid$="-2"] [grid$="-2"] {flex:1; min-width:calc(100% - 16px); max-width:calc(100% - 16px);}
 .col-4 [grid$="-1"] [grid$="-1"] {flex:1; min-width:calc(100% - 16px); max-width:calc(100% - 16px);}
 
+.btn-skip{position:fixed; width:100%; width:100%; padding:10px; background:#0059c9; color:#fff; text-align:center; z-index:999; top:-100px; transition:top .2s ease-in;}
+.btn-skip:focus{top:0;}
 .base-wrap{position:relative; width:100%;}
-.header-wrap{position:relative; width:100%; max-width:1200px; height:100px; margin:0 auto;}
+.header-wrap{position:absolute; width:100%; max-width:1200px; height:100px; left:50%; top:0; margin-left:-600px }
 
 .header-logo{position:absolute; top:30px; left:0; background:url(/polaris/src/public/static/images/common/logo.png) no-repeat 0 0; width:450px; height:46px;}
-.header-search{position:absolute; top:100px; width:348px; height:59px; background:#fff; border:1px solid #c7e0ff;}
+.header-search{position:absolute; top:120px; width:348px; height:58px; background:#fff; }
+.header-search input{width:100%; height:100%; padding:5px 70px 5px 10px; border:1px solid #c7e0ff;}
+.header-search input:focus{outline:0; border-color:#0059c9}
+.btn-search{position:absolute; top:0; right:0; width:58px; height:58px; background:url(/polaris/src/public/static/images/common/btn-search.png) no-repeat 0 0;}
+.btn-login{position:absolute; top:30px; right:0; width:116px; height:40px; background:#fff; border-radius:20px; color:#6e6e6e; font-size:14px; padding:0 22px;}
+.btn-login:before{content:""; display:inline-block; width:24px; height:24px; background:url(/polaris/src/public/static/images/common/ico-login.png) no-repeat 0 0; vertical-align:middle; margin-right:5px; }
+.btn-login span{display:inline-block; vertical-align:middle;}
+
+.visual-img{position:absolute; top:0; right:-105px; width:883px; height:624px; background:url(/polaris/src/public/static/images/main/visual-main.png) no-repeat 0 0;}
+
+.main-section-wrap{position:relative; width:100%; max-width:1200px; margin:0 auto; height:940px}

@@ -1,5 +1,8 @@
 <div>
-    <div class="inc-MainTag"></div>
+    <div class="main-section-wrap">
+        <div class="inc-MainVisual"></div>
+        <div class="inc-MainTag"></div>
+    </div>
     <div class="inc-MainInsight"></div>
     <div class="inc-MainLibrary"></div>
     <div class="inc-MainEvent"></div>
@@ -12,6 +15,9 @@
         'use strict';
 
         //page callback
+         var callbackMainVisual = function(){
+            console.log('MainVisual load');
+        }
         var callbackMainTag = function(){
             console.log('MainTag load');
         }
@@ -26,6 +32,7 @@
         }
 
         //pageload
+        $plugins.uiPageLoad('/polaris/src/components/body/main/MainVisual.html', 'inc-MainVisual', callbackMainVisual);
         $plugins.uiPageLoad('/polaris/src/components/body/main/MainTag.html', 'inc-MainTag', callbackMainTag);
         $plugins.uiPageLoad('/polaris/src/components/body/main/MainInsight.html', 'inc-MainInsight', callbackMainInsight);
         $plugins.uiPageLoad('/polaris/src/components/body/main/MainLibrary.html', 'inc-MainLibrary', callbackMainLibrary);
