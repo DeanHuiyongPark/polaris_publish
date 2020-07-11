@@ -3,7 +3,7 @@
 
 /* default */
 html, body {width:100%;height:100%}
-body {font-family:'Noto Sans KR', 'Malgun Gothic', AppleGothicNeoSD, 'Apple SD 산돌고딕 Neo', 'Microsoft NeoGothic', 'Droid sans', arial, sans-serif;font-size:16px;background:#fff;line-height:1.5;letter-spacing:-.5px;-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:none;-moz-osx-font-smoothing:grayscale;color:#535353}
+body {font-family:'Roboto','Noto Sans KR', 'Malgun Gothic', AppleGothicNeoSD, 'Apple SD 산돌고딕 Neo', 'Microsoft NeoGothic', 'Droid sans', arial, sans-serif;font-size:16px;background:#fff;line-height:1.5;letter-spacing:-.5px;-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:none;-moz-osx-font-smoothing:grayscale;color:#535353}
 body:before {content:'';position:fixed;left:0;top:0;width:100%;height:0}/* fix webkit bug(scroll event delay) */
 body.bg-type_a {background-color:#fff}
 body, div, h1, h2, h3, h4, h5, h6, form, fieldset, p, button, iframe, tr, tbody, thead, table, th, td, b, i, a, span, strong, em, label {margin:0;padding:0;box-sizing:border-box}

@@ -3,6 +3,9 @@
 /* reset */
 @import url(reset/reset.css);
 
+/* sprite */
+@import url(sprite/sprite.css);
+
 /* button */
 @import url(element/button.css);
 
