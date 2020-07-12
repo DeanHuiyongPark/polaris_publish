@@ -1,0 +1,105 @@
+
+
+.main-section-wrap{position:relative; width:100%; height:860px; background:url(/polaris/src/public/static/images/main/main-bg.png) no-repeat calc(100% + 220px) -400px;}
+.main-section-wrap:before{content:""; display:block; width:192px; height:600px; position:absolute; left:0; top:0; z-index:-1; background:url(/polaris/src/public/static/images/main/main-bg2.png) no-repeat 0 0;}
+.inc-MainVisual{position:relative; width:100%; max-width:1200px; margin:0 auto; height:940px}
+.visual-img{position:absolute; top:0; right:-105px; width:883px; height:624px; background:url(/polaris/src/public/static/images/main/visual-main.png) no-repeat 0 0;}
+
+.visual-wrap .btn-upload{position:absolute; top:640px; right:0; width:110px; height:110px; background:#0032a2; color:#fff; border-radius:50%; border:7px solid #215ce1; font-size:14px; transition: border .4s ease-in; z-index:10;}
+.visual-wrap .btn-upload span{display:none;}
+.visual-wrap .btn-upload::before{content:""; display:block; width:60px; height:60px; background:url(/polaris/src/public/static/images/main/ico-docinfo.png) no-repeat 0 -30px; margin:-5px auto; }
+.visual-wrap .btn-upload:hover,
+.visual-wrap .btn-upload:focus{border-width:0;}
+
+.main-swiper{position:absolute !important; width:510px; height:510px; background:url(/polaris/src/public/static/images/main/hexagon-bg.png) no-repeat 0 0 / contain; top:345px; right:180px; padding:44px 30px 0; }
+.main-swiper .swiper-container{width:100%; margin:0 auto; height:437px;-webkit-clip-path: url(#my-clip-path); clip-path: url(#my-clip-path);}
+.main-swiper .swiper-button-next:after, 
+.main-swiper .swiper-button-prev:after{display:none}
+.main-swiper .swiper-button-next, 
+.main-swiper .swiper-button-prev{width:50px; height:70px; background:url(/polaris/src/public/static/images/main/main-swiper-arrow.png) no-repeat 0 0 / cover; top:208px; left:-11px}
+.main-swiper .swiper-button-next{background-position:100% 0; left:auto; right:-11px;}
+.doc-info{ width:310px; margin:20px auto 0; text-align: center; color:#fff; }
+.doc-info .badge{font-size:12px; font-weight:700; background:#0065e4; display:inline-block; padding:3px 10px 2px; letter-spacing:0.07em; border-radius:4px; margin-right:5px;}
+.doc-info .hash{color:#81dafe; font-size:18px; font-weight:700;}
+.doc-info h3{font-size:34px; font-weight: 400; line-height:1.2; margin-top:10px; min-height:80px;}
+.doc-info .dec{font-size:13px; opacity:0.8; line-height:1.3; margin-top:10px; min-height:30px;}
+.doc-info .date{color:#8bbeff; font-size:12px; margin-top:5px; font-weight:300;}
+
+.doc-info .file-info{width:100%; overflow:hidden; margin-top:5px;}
+.doc-info .file-info .document{display:block; float:left; font-size:13px;}
+.doc-info .file-info .document span{font-size:16px; color:#81dafe;}
+.doc-info .file-info .views{display:block; float:right; font-size:16px;  color:#0032a2; font-weight:700;}
+.doc-info .info-group{width:100%; background:rgba(14,110,230,0.7); height:45px; border-radius:23px; margin-top:10px; display:flex; justify-content:space-around; padding-top:7px}
+.doc-info .info-group > div {flex:1;}
+.doc-info .info-group > div > span{display:inline-block; vertical-align:middle; font-size:13px; font-weight:300;}
+.doc-info .info-group > div > i{display:inline-block; vertical-align:middle; width:30px; height:30px; background-image:url(/polaris/src/public/static/images/main/ico-docinfo.png);}
+.doc-info .info-group > div:first-child > span{font-weight:700;}
+.doc-info .icon-money{background-position:0 0}
+.doc-info .icon-download{background-position:-30px 0}
+.doc-info .icon-like{background-position:-60px 0}
+.doc-info .info-group .icon-down{background-position:-90px 0; width:10px; height:10px;}
+.doc-info .user{margin-top:22px;}
+.doc-info .user-img{display:block; width:70px; height:70px; border-radius:50%; background:#4095ff; margin:0 auto;}
+.btn-follow{position:relative; z-index:1; display:block; padding:0 10px; width:auto; color:#fff; height:20px; background:#0032a2; font-size:12px; margin:-10px auto 0; border-radius:10px; margin-bottom:5px;}
+
+@media (max-width:1024px) {
+    .visual-wrap{padding-bottom:10vw;}
+    .main-section-wrap{position:relative; width:100%; height:auto; background:url(/polaris/src/public/static/images/main/main-bg-m.png) no-repeat 50% 100% / cover;}
+    .main-section-wrap:before{display:none;}
+
+    .inc-MainVisual{height:auto}
+    .visual-img{position: relative;; top:0; right:0; width:100%; height:0; padding-bottom:100%; background:url(/polaris/src/public/static/images/main/visual-main-m.png) no-repeat 50% 100% / cover;}
+
+    .visual-wrap .btn-upload{position:absolute; top:70vw; left:20vw; right:auto; width:60vw; height:15vw; background:#3ec6ff; color:#fff; border-radius:8vw; border:0; font-size:6vw; transition: border .4s ease-in;}
+    .visual-wrap .btn-upload span{display:inline;}
+    .visual-wrap .btn-upload::before{display:none}
+    .visual-wrap .btn-upload:hover,
+    .visual-wrap .btn-upload:focus{border-width:0;}
+
+    .main-swiper{position:relative !important; width:100%; height:auto; background:none; top:0; margin-top:-50vw; right:0; padding:0; }
+    .main-swiper .swiper-container{width:100%; margin:0 auto; height:auto; -webkit-clip-path: none; clip-path: none; padding-top:50vw}
+
+    .main-swiper .swiper-slide{ transform:scale(0.5); top:-45vw; transition:left .1s ease-in, top .2s ease-in, transform 0.4s}
+    .main-swiper .swiper-slide.swiper-slide-active{transform:scale(1); top:0}
+    .main-swiper .swiper-slide-prev{ left:45vw;}
+    .main-swiper .swiper-slide-next{ left:-45vw} 
+    .main-swiper .swiper-slide-duplicate-prev{ left:45vw;}
+    .main-swiper .swiper-button-next, 
+    .main-swiper .swiper-button-prev{width:7vw; height:12vw; background:url(/polaris/src/public/static/images/main/main-swiper-arrow.png) no-repeat 0 0 / cover; top:auto; bottom:45.5vw; left:3vw}
+    .main-swiper .swiper-button-next{background-position:100% 0; left:auto; right:3vw;}
+
+    .swiper-slide-active .doc-info{background-image:url(/polaris/src/public/static/images/main/hexagon-bg-m.png)}
+    .doc-info{ width:100vw; height:100vw; background:url(/polaris/src/public/static/images/main/hexagon2-bg-m.png) no-repeat 50% 0 / 100%; margin:0; padding:9vw 20vw 0; letter-spacing: 0.07em;}
+
+    .doc-info .badge{font-size:2.5vw; padding:0.2vw 2vw 0.2vw; letter-spacing:0.07em; border-radius:1vw; margin-right:0.5vw; font-weight:400;}
+    .doc-info .hash{font-size:3vw;}
+    .doc-info h3{font-size:6.2vw; font-weight:500; line-height:1.2; margin-top:1.5vw; min-height:17vw;}
+    .doc-info .dec{font-size:2.5vw; opacity:0.8; line-height:1.3; margin-top:0; min-height:7vw;}
+    .doc-info .date{font-size:2.5vw; margin-top:0; }
+
+    .doc-info .file-info{margin-top:0.2vw;}
+    .doc-info .file-info .document{font-size:2.2vw;}
+    .doc-info .file-info .document span{font-size:2.8vw;}
+    .doc-info .file-info .views{font-size:2.8vw;}
+    .doc-info .info-group{height:8vw; border-radius:4vw; margin-top:2vw; padding-top:1.8vw; line-height: 1;}
+    .doc-info .info-group > div > span{font-size:2.5vw; font-weight:300;}
+
+    .doc-info .info-group > div > i{width:4vw; height:4vw; background-size:13vw}
+
+    .doc-info .info-group > div:first-child > span{font-weight:700;}
+    .doc-info .icon-money{background-position:0 0}
+    .doc-info .icon-download{background-position:-4vw 0}
+    .doc-info .icon-like{background-position:-8vw 0}
+    .doc-info .info-group .icon-down{background-position:-11.7vw 0; width:1.4vw; height:1.4vw;}
+
+    .doc-info .user{margin-top:4vw; font-size:2.8vw}
+    .doc-info .user-img{width:14vw; height:14vw; border-radius:50%; }
+    .doc-info .user-img img{width:100%;}
+    .btn-follow{position:relative; z-index:1; display:block; padding:0 1.5vw; min-width:14vw; height:4vw; font-size:2.2vw; margin:-1.5vw auto 0; border-radius:2vw; margin-bottom:0.5vw;}
+}
+@media (max-width:768px) {
+  .doc-info .file-info .document{font-size:3vw;}
+  .doc-info .file-info .document span{font-size:3vw;}
+  .doc-info .info-group > div > span{font-size:3vw;}
+
+}

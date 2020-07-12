@@ -1,6 +1,81 @@
 <div>
     <div class="insight-wrap">
-        <h3>POLARIS SHARE INSIGHT</h3>
+        <h3 class="title-insight">POLARIS SHARE <span class="point">INSIGHT</span></h3>
+        <p class="text-insight">라이브러리를 손쉽게 공유하는 방법</p>
+
+        <div class="insight-swiper">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="insight-box n1">
+                            <dl>
+                                <dt>업로드</dt>
+                                <dd>Upload 를 통해 PC 또는 클라우드와 같은 저장매체에 있는 모든 형식의 문서 등을 업로드하고 해당 파일은 라이브러리로 부릅니다.<br>라이브러리는 일정기간 동안 공개되며 <br>해당 기간동안은 다운로드를 지원하지 않습니다.</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="insight-box n2">
+                            <dl>
+                                <dt>오픈 라이브러리로 공유하기</dt>
+                                <dd>일정기간 이후 오픈 라이브러리로 <br>변경할 수 있습니다.<br>오픈 라이브러리로 변경 한 후에는 <br>다운로드, 투표, 펀딩, 판매 등 리워드를 <br>제공 받을 수 있습니다.</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="insight-box n3">
+                            <dl>
+                                <dt>보상 및 판매</dt>
+                                <dd>오픈 라이브러리는 폴라리스쉐어 사용자들로 <br>인해 더 많이 공유되고 사용되어 <br>해당하는 가치만큼 보상을 지급 받거나 <br>판매를 하실 수 있습니다.</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                    
+            </div>
+        </div>
+
+        <button type="button" class="btn-upload" onclick="alert(1)"><b>UPLOAD</b> <span>하러가기</span></button>
 
     </div>
 </div>
+
+<script>
+    ;(function($, win, doc, undefined) {
+
+        'use strict';
+
+        var insightSwiper = new Swiper('.insight-swiper .swiper-container', {
+            // Optional parameters
+            loop: true,
+            slidesPerView: 1,
+            spaceBetween:0,
+            breakpoints: {
+                1020: {
+                    loop: false,
+                    slidesPerView: 3,
+                    centeredSlides: true,
+                    spaceBetween:85
+                },
+            },
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        });
+
+    })(jQuery, window, document);
+
+</script>

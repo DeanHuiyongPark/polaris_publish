@@ -1,0 +1,76 @@
+.live-tag{position:absolute; top:230px; left:50%; margin-left:-600px}
+.live-tag h3{font-size:28px; display:inline-block; vertical-align:middle;}
+.live-tag .btn-more{vertical-align:middle; margin-left:10px}
+
+.live-tag .tags{width:450px; height:390px; position: relative; margin-top:10px}
+.live-tag .tags button{display:block; text-align:center; line-height:1.1; word-break: keep-all; position: absolute;}
+
+.live-tag .n1{width:160px; height:144px; background:url(/polaris/src/public/static/images/main/tag-level-01.png) no-repeat 0 0 / contain; font-size:20px; color:#0056c1; padding:25px;}
+.live-tag .n2{width:133px; height:120px; background:url(/polaris/src/public/static/images/main/tag-level-02.png) no-repeat 0 0 / contain; font-size:18px; color:#2279e7; padding:10px;}
+.live-tag .n3{width:107px; height:97px; background:url(/polaris/src/public/static/images/main/tag-level-03.png) no-repeat 0 0 / contain; font-size:16px; color:#519af6; padding:10px;}
+.live-tag .n4{width:86px; height:78px; background:url(/polaris/src/public/static/images/main/tag-level-04.png) no-repeat 0 0 / contain; font-size:14px; color:#7ab5ff; padding:5px;}
+.live-tag .n5{width:54px; height:49px; background:url(/polaris/src/public/static/images/main/tag-level-05.png) no-repeat 0 0 / contain; font-size:12px; color:#91b7e6; padding:5px;}
+.live-tag .tags li:nth-child(1) button{top:180px; left:125px;}
+.live-tag .tags li:nth-child(2) button{top:100px; left:5px;}
+.live-tag .tags li:nth-child(3) button{top:110px; left:265px;}
+.live-tag .tags li:nth-child(4) button{top:350px; left:140px;}
+.live-tag .tags li:nth-child(5) button{top:58px; left:157px;}
+.live-tag .tags li:nth-child(6) button{top:270px; left:30px;}
+.live-tag .tags li:nth-child(7) button{top:290px; left:280px;}
+.live-tag .tags li:nth-child(8) button{top:10px; left:80px;}
+.live-tag .tags li:nth-child(9) button{top:40px; left:270px;}
+.live-tag .tags li:nth-child(10) button{top:370px; left:350px;}
+
+.live-tag .tags button:hover{animation-name:dungdung; 
+animation-duration:.5s; 
+animation-iteration-count:infinite; 
+animation-timing-function:ease-out; 
+animation-fill-mode: forwards;
+}
+/* .live-tag .tags li:nth-child(1) button{animation-delay: 0; animation-duration:2s;}
+.live-tag .tags li:nth-child(2) button{animation-delay: 0.2s; animation-duration:1.7s; }
+.live-tag .tags li:nth-child(3) button{animation-delay: 0.2s;  animation-duration:1.4s;}
+.live-tag .tags li:nth-child(4) button{animation-delay: 0.2s;  animation-duration:1.5s;}
+.live-tag .tags li:nth-child(5) button{animation-delay: 0.3s;  animation-duration:1.4s;}
+.live-tag .tags li:nth-child(6) button{animation-delay: 0.3s;  animation-duration:1.1s;}
+.live-tag .tags li:nth-child(7) button{animation-delay: 0.4s;  animation-duration:1.2s;}
+.live-tag .tags li:nth-child(8) button{animation-delay: 0.48s;  animation-duration:1s;}
+.live-tag .tags li:nth-child(9) button{animation-delay: 0.5s;  animation-duration:0.7s;}
+.live-tag .tags li:nth-child(10) button{animation-delay: 0.5s;  animation-duration:0.5s;} */
+
+@keyframes dungdung{
+    0% {margin-top:0; margin-left:0; transform:scale(1); opacity:1}
+    10% {margin-top:2px; margin-left:2px;}
+    20% {margin-top:0; margin-left:2px; opacity:0.7}
+    40% {margin-top:0; margin-left:-2px; transform:scale(1.03)}
+    60% {margin-top:-1px; margin-left:0;}
+    80% {margin-top:-2px; margin-left:1px;}
+    100% {margin-top:0; margin-left:0; transform:scale(1); opacity:1}
+}
+
+@media (max-width:1024px) {
+    .live-tag{position:absolute; z-index:10; width:100%; top:185vw; left:0; margin-left:0; background:url(/polaris/src/public/static/images/main/livetag-bg.png) no-repeat 0 0 / 100%; padding:2.9vw; height:17vw; overflow:hidden;}
+    .live-tag h3{float:left; font-size:4vw; display:block; vertical-align:middle;}
+    .live-tag h3 b{display:inline-block; width:15vw; height:8vw; background:url(/polaris/src/public/static/images/main/livetag-t.png) no-repeat 0 0 / contain; color:#fff;  padding:0 0 0 5.5vw; line-height: 7.5vw;}
+    .live-tag h3 span{display:none;}
+    .live-tag .btn-more{display:none;}
+
+    .live-tag .tags{float:left; display:block; width:75vw; overflow-x:auto; height:auto; margin:0 0 0 2vw}
+    .live-tag .tags .tag-group button{display:block; text-align:center; line-height:1.1; word-break: keep-all; position: relative; top:0 !important; left:0 !important; width:auto !important;  background:none; word-break: keep-all; white-space: nowrap; font-size:4vw !important; padding:0 2vw; border:1px solid #90b6e6; border-radius:1vw; height:8vw !important; color:#0056c1 !important;}
+    .live-tag .tags .tag-group li + li{margin-left:1vw}
+    .live-tag .tags .tag-group{display:flex;}
+    .live-tag .tags .tag-group li{flex:1;}
+    .live-tag .tags button{animation-name:none; }
+    .live-tag .tags button:hover{animation-play-state: paused;
+    }
+
+}
+
+
+
+
+
+
+
+
+

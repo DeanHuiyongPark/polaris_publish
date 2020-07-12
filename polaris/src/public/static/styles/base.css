@@ -9,6 +9,9 @@
 /* sprite */
 @import url(sprite/sprite.css);
 
+/* header */
+@import url(common/header.css);
+
 /* footer */
 @import url(footer/footer.css);
 
@@ -16,6 +19,9 @@
 @import url(element/button.css);
 
 /* main-contents */
+@import url(components/main/main.css);
+@import url(components/main/insight.css);
+@import url(components/main/live-tag.css);
 @import url(components/main/library.css);
 @import url(components/main/recent.css);
 @import url(components/main/big-event.css);

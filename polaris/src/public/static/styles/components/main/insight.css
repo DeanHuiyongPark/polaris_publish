@@ -1,0 +1,48 @@
+.insight-wrap {background:url(/polaris/src/public/static/images/main/main-bg.png) no-repeat -10vw 0 / contain; padding-top:130px; height:870px; position: relative; text-align: center;}
+.insight-wrap .title-insight {text-align:center;font-size:50px;color:#4678b7;line-height:100%}
+.insight-wrap .title-insight .point {color:#00459b;font-weight:600}
+.insight-wrap .text-insight {font-size:24px;color:#454545;margin-top:16px;font-weight:300;text-align:center}
+
+.insight-swiper{max-width:1200px; width:100%; margin:60px auto 0;}
+.insight-box{width:340px; height:430px; background:#25aef4; border-radius:50px; padding:20px; color:#fff; text-align:center; font-size:15px; font-weight:400; margin:0 auto}
+.insight-box dt{font-size:24px;font-weight:500; margin-bottom:15px;}
+.insight-box dt::before{content:""; display:block; width:260px; height:200px; background:url(/polaris/src/public/static/images/main/insight-bg.png) no-repeat 0 0; margin:0 auto; margin-bottom:20px} 
+.insight-box dd{word-break: keep-all;}
+
+.insight-box.n2:after,
+.insight-box.n1:after{content:""; display:block; width:24px; height:42px; background:url(/polaris/src/public/static/images/main/insight-arrow.png) no-repeat 0 0 / contain; position:absolute; top:45%; right:-52px}
+
+.insight-box.n2 dt::before{background-position:-260px 0} 
+.insight-box.n3 dt::before{background-position:-520px 0} 
+
+.insight-swiper .swiper-button-disabled{display:none}
+
+.insight-wrap .btn-upload{margin:50px auto 0; width:400px; height:100px; background:#0032a2; color:#fff; border-radius:50px; border:0; font-size:30px; }
+.insight-wrap .btn-upload span{font-weight:200;}
+.insight-swiper .swiper-pagination{display:none}
+
+@media (max-width:1024px) {
+    .insight-wrap {background:url(/polaris/src/public/static/images/main/main-bg.png) no-repeat -120vw 30vw / 190vw; padding-top:130px; height:auto}
+    .insight-wrap .title-insight {font-size:50px}
+    .insight-wrap .title-insight .point {font-size:90px;display:block;margin-top:16px}
+    .insight-wrap .text-insight {font-size:32px;margin-top:32px}
+    .insight-swiper{margin:10vw auto 0;}
+    .insight-box{width:80vw; height:auto;border-radius:10vw; padding:5vw; font-size:3.5vw; line-height:1.6;}
+    .insight-box dt::before{content:""; display:block; width:70vw; height:54vw; background:url(/polaris/src/public/static/images/main/insight-bg1.png) no-repeat 0 0 / contain; margin:0 auto; margin-bottom:0} 
+    .insight-box.n2 dt::before{background:url(/polaris/src/public/static/images/main/insight-bg2.png) no-repeat 0 0 / contain;} 
+    .insight-box.n3 dt::before{background:url(/polaris/src/public/static/images/main/insight-bg3.png) no-repeat 0 0 / contain;} 
+    .insight-box.n2:after,
+    .insight-box.n1:after{display:none;}
+    .insight-swiper .swiper-container{padding-bottom:50px;}
+    .insight-swiper .swiper-pagination{display:block}
+    .insight-wrap .btn-upload{margin:5vw auto 0; width:110px; height:110px; background:#0032a2; color:#fff; border-radius:50%; border:7px solid #215ce1; font-size:14px; transition: border .4s ease-in; z-index:10;}
+    .insight-wrap .btn-upload span{display:none;}
+    .insight-wrap .btn-upload::before{content:""; display:block; width:60px; height:60px; background:url(/polaris/src/public/static/images/main/ico-docinfo.png) no-repeat 0 -30px; margin:-5px auto; }
+    .insight-wrap .btn-upload:hover,
+    .insight-wrap .btn-upload:focus{border-width:0;}
+}
+@media (max-width:768px) {
+    .insight-wrap .title-insight {font-size:25px}
+    .insight-wrap .title-insight .point {font-size:45px;;margin-top:8px}
+    .insight-wrap .text-insight {font-size:16px;margin-top:16px}
+}
