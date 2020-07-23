@@ -46,6 +46,9 @@
 
 			//page callback
 			var callbackLayout = function(){
+
+				//main 외의 페이지에는 class추가
+				$('.base-wrap').addClass('type-sub');
 				console.log('layout load');
 			}
 			var callbackHeader = function(){
@@ -60,7 +63,7 @@
 
 			//pageload
 			$plugins.uiPageLoad('/polaris/src/components/Layout.html', 'inc-Layout', callbackLayout)
-				.then($plugins.uiPageLoad('/polaris/src/components/header/Header_sub.html', 'inc-Header', callbackHeader))
+				.then($plugins.uiPageLoad('/polaris/src/components/header/Header.html', 'inc-Header', callbackHeader))
 				.then($plugins.uiPageLoad('/polaris/src/components/body/template/template.html', 'inc-Main', callbackBody))
 				.then($plugins.uiPageLoad('/polaris/src/components/footer/Footer.html', 'inc-Footer', callbackFooter));
 

@@ -5,12 +5,6 @@
 .inc-MainVisual{position:relative; width:100%; max-width:1200px; margin:0 auto; height:940px}
 .visual-img{position:absolute; top:0; right:-105px; width:883px; height:624px; background:url(/polaris/src/public/static/images/main/visual-main.png) no-repeat 0 0;}
 
-.visual-wrap .btn-upload{position:absolute; top:640px; right:0; width:110px; height:110px; background:#0032a2; color:#fff; border-radius:50%; border:7px solid #215ce1; font-size:14px; transition: border .4s ease-in; z-index:10;}
-.visual-wrap .btn-upload span{display:none;}
-.visual-wrap .btn-upload::before{content:""; display:block; width:60px; height:60px; background:url(/polaris/src/public/static/images/main/ico-docinfo.png) no-repeat 0 -30px; margin:-5px auto; }
-.visual-wrap .btn-upload:hover,
-.visual-wrap .btn-upload:focus{border-width:0;}
-
 .main-swiper{position:absolute !important; width:510px; height:510px; background:url(/polaris/src/public/static/images/main/hexagon-bg.png) no-repeat 0 0 / contain; top:345px; right:180px; padding:44px 30px 0; }
 .main-swiper .swiper-container{width:100%; margin:0 auto; height:437px;-webkit-clip-path: url(#my-clip-path); clip-path: url(#my-clip-path);}
 .main-swiper .swiper-button-next:after, 
@@ -50,15 +44,8 @@
     .inc-MainVisual{height:auto}
     .visual-img{position: relative;; top:0; right:0; width:100%; height:0; padding-bottom:100%; background:url(/polaris/src/public/static/images/main/visual-main-m.png) no-repeat 50% 100% / cover;}
 
-    .visual-wrap .btn-upload{position:absolute; top:70vw; left:20vw; right:auto; width:60vw; height:15vw; background:#3ec6ff; color:#fff; border-radius:8vw; border:0; font-size:6vw; transition: border .4s ease-in;}
-    .visual-wrap .btn-upload span{display:inline;}
-    .visual-wrap .btn-upload::before{display:none}
-    .visual-wrap .btn-upload:hover,
-    .visual-wrap .btn-upload:focus{border-width:0;}
-
     .main-swiper{position:relative !important; width:100%; height:auto; background:none; top:0; margin-top:-50vw; right:0; padding:0; }
     .main-swiper .swiper-container{width:100%; margin:0 auto; height:auto; -webkit-clip-path: none; clip-path: none; padding-top:50vw}
-
     .main-swiper .swiper-slide{ transform:scale(0.5); top:-45vw; transition:left .1s ease-in, top .2s ease-in, transform 0.4s}
     .main-swiper .swiper-slide.swiper-slide-active{transform:scale(1); top:0}
     .main-swiper .swiper-slide-prev{ left:45vw;}

@@ -1,8 +1,4 @@
-
-
-
 .header-wrap{position:absolute; width:100%; max-width:1200px; height:100px; top:0; left:50%; z-index:100; transform:translate(-50%, 0)}
-
 .header-logo{position:absolute; top:30px; left:0; background:url(/polaris/src/public/static/images/common/logo.png) no-repeat 0 0; width:450px; height:46px;}
 .header-search{position:absolute; top:120px; width:348px; height:58px; }
 .header-search input{width:100%; height:100%; padding:5px 70px 5px 10px; border:1px solid #c7e0ff; background:#fff; }
@@ -11,6 +7,23 @@
 .btn-login{position:absolute; top:30px; right:0; width:116px; height:40px; background:#fff; border-radius:20px; color:#6e6e6e; font-size:14px; padding:0 22px;}
 .btn-login:before{content:""; display:inline-block; width:24px; height:24px; background:url(/polaris/src/public/static/images/common/ico-login.png) no-repeat 0 0; vertical-align:middle; margin-right:5px; }
 .btn-login span{display:inline-block; vertical-align:middle;}
+
+.header-wrap .btn-upload{position:absolute; top:640px; right:0; width:110px; height:110px; background:#0032a2; color:#fff; border-radius:50%; border:7px solid #215ce1; font-size:14px; transition: border .4s ease-in; z-index:10; text-transform:uppercase;}
+.header-wrap .btn-upload span{display:none;}
+.header-wrap .btn-upload::before{content:""; display:block; width:60px; height:60px; background:url(/polaris/src/public/static/images/main/ico-docinfo.png) no-repeat 0 -30px; margin:-5px auto; }
+.header-wrap .btn-upload:hover,
+.header-wrap .btn-upload:focus{border-width:0;}
+
+/* sub */
+.type-sub .header-wrap{background:url(/polaris/src/public/static/images/common/bg-header-sub.png) no-repeat 610px 0 / contain; height:169px; z-index:11;}
+.type-sub .header-search{left:672px; top:22px;}
+.type-sub .header-wrap .btn-upload{top:92px; left:730px; border:0; width:240px; height:60px; border-radius:30px; font-size:24px; text-transform: capitalize;}
+.header-wrap .btn-upload::before{display:inline-block; vertical-align:middle; transform: scale(0.8);}
+.type-sub .header-wrap .btn-upload b{display:inline-block; vertical-align:middle;}
+.type-sub .btn-login{border:1px solid #dfdede}
+
+
+
 
 @media (max-width:1024px) {
     .header-wrap{background:rgba(29,35,42,0.9); height:57px;}
@@ -23,6 +36,12 @@
     .btn-login{position:absolute; top:11px; right:15px; width:36px; height:36px; background:transparent; border-radius:0; padding:0; background:url(/polaris/src/public/static/images/common/ico-login-m.png) no-repeat 0 0 / contain; }
     .btn-login:before,
     .btn-login span{display:none}
+
+    .header-wrap .btn-upload{position:absolute; top:70vw; left:20vw; right:auto; width:60vw; height:15vw; background:#3ec6ff; color:#fff; border-radius:8vw; border:0; font-size:6vw; transition: border .4s ease-in;}
+    .header-wrap .btn-upload span{display:inline;}
+    .header-wrap .btn-upload::before{display:none}
+    .header-wrap .btn-upload:hover,
+    .header-wrap .btn-upload:focus{border-width:0;}
 
 }
 @media (max-width:768px) {
