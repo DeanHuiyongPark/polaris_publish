@@ -1,20 +1,11 @@
 .btn-skip{position:fixed; width:100%; width:100%; padding:10px; background:#0059c9; color:#fff; text-align:center; z-index:999; top:-100px; transition:top .2s ease-in;}
 .btn-skip:focus{top:0;}
 
+/* Layout --------------------------------------------------------------------------- */
 .base-wrap{position:relative; width:100%;}
+.type-sub .base-body{padding-top:200px; max-width:1200px; margin:0 auto;}
+.type-sub-v2 .base-body{padding-top:170px; max-width:1600px; margin:0 auto;}
 
-/* select */
-select {display:inline-block; position:relative; vertical-align:top; width:auto; height:40px; padding:0 40px 0 10px; border-radius:2px; 
-background:#fff url(/polaris/src/public/static/images/common/ico-select.png) no-repeat 100% 3px; appearance:none; -moz-appearance:none; -webkit-appearance:none; border:1px solid #c9c9c9; font-size:14px; cursor:pointer;}
-select::-ms-expand {display:none;}
-select optgroup,
-select option {font-style:normal; background-color:#fff; font-size:13px;}
-select[disabled] {background-color:#f7f7f7; color:#888;}
-select:focus{border-color:#000;}
-.ie9 select {padding:0;}
-
-
-/* [base] Layout ---------------------------------------------------------------------------*/
 /* layout inline-block */
 .in-wrap{position:relative; font-size:0; margin:10px 0 0;}
 .in-wrap > *,
@@ -26,9 +17,21 @@ select:focus{border-color:#000;}
 .fl-item-l{float:left; position:relative;}
 .fl-item-r{float:right; position:relative;}
 
+/* button --------------------------------------------------------------------------- */
+.btn-wrap{width:100%; text-align:center;}
 .btn-more{height:25px; background:#0032a2; color:#fff; text-align:center; display:inline-block; padding:3px 15px; font-size:12px; border-radius:13px;}
-.type-sub .base-body{padding-top:200px;}
-.type-sub-v2 .base-body{padding-top:170px;}
+
+/* form --------------------------------------------------------------------------- */
+/* select */
+select {display:inline-block; position:relative; vertical-align:top; width:auto; height:40px; padding:0 40px 0 10px; border-radius:2px; 
+background:#fff url(/polaris/src/public/static/images/common/ico-select.png) no-repeat 100% 3px; appearance:none; -moz-appearance:none; -webkit-appearance:none; border:1px solid #c9c9c9; font-size:14px; cursor:pointer;}
+select::-ms-expand {display:none;}
+select optgroup,
+select option {font-style:normal; background-color:#fff; font-size:13px;}
+select[disabled] {background-color:#f7f7f7; color:#888;}
+select:focus{border-color:#000;}
+.ie9 select {padding:0;}
+
 @media (max-width:1024px) {
     .type-sub .base-body{padding-top:100px;}
     .type-sub-v2 .base-body{padding-top:100px;}
