@@ -36,7 +36,15 @@
         <div class="card-item"></div>
         <!-- E : card-item unit -->
     </div>
-
+    <p style="font-size:16px;color:#000;font-weight:500;">user item</p>
+    <div class="user-list-a">
+        <!-- S : user item unit -->
+        <div class="user-item-a"></div>
+        <!-- E : user item unit -->
+        <!-- S : user item unit -->
+        <div class="user-item-a"></div>
+        <!-- E : user item unit -->
+    </div>
 </div>
 
 <script>
@@ -46,7 +54,11 @@
         var callbackCardItem = function(){
             console.log(`CardItem load`);
         }
+        var callbackUserItemA = function(){
+            console.log(`UserItemA load`);
+        }
         $plugins.uiPageLoad('/polaris/src/components/body/items/card-item.html', 'card-item', callbackCardItem);
+        $plugins.uiPageLoad('/polaris/src/components/body/items/user-item-a.html', 'user-item-a', callbackUserItemA);
     })(jQuery, window, document);
 
 </script>
