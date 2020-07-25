@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charSet="utf-8" />
+	<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+
+	<title>Template</title>
+
+	<link rel="stylesheet" href="/polaris/src/public/static/styles/base.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<!-- lib :swiper -->
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	<!-- //lib :swiper -->
+</head>
+
+<body>
+
+	<div class="base-wrap inc-Layout"></div>
+	
+	<script>
+		;(function($, win, doc, undefined) {
+
+			'use strict';
+			
+			window.$plugins = {};
+
+			$plugins.uiPageLoad = function(u,t,c) {
+				var url = u;
+				var target = t;
+				var callback = c;
+				return new Promise(function(resolve, reject) {
+					$.get(url, function(response) {
+						if (response) {
+							$('.' + target).html(response);
+							resolve(callback());
+						} else{
+							reject(new Error("Request is failed"));
+						}
+					});
+				});
+			}
+
+			//page callback
+			var callbackLayout = function(){
+
+				//main 외의 페이지에는 class추가
+				$('.base-wrap').addClass('type-sub-v2');
+				console.log('layout load');
+			}
+			var callbackHeader = function(){
+				console.log('header load');
+			}
+			var callbackBody = function(){
+				console.log(`body load ${$('.aaa').length}`);
+			}
+			var callbackFooter = function(){
+				console.log('footer load');
+			}
+
+			//pageload
+			$plugins.uiPageLoad('/polaris/src/components/Layout.html', 'inc-Layout', callbackLayout)
+				.then($plugins.uiPageLoad('/polaris/src/components/header/Header.html', 'inc-Header', callbackHeader))
+				.then($plugins.uiPageLoad('/polaris/src/components/body/template/template.html', 'inc-Main', callbackBody))
+				.then($plugins.uiPageLoad('/polaris/src/components/footer/Footer.html', 'inc-Footer', callbackFooter));
+
+		})(jQuery, window, document);
+
+	</script>
+
+	
+</body>
+</html>
