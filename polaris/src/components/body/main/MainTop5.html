@@ -3,19 +3,7 @@
         <h3 class="title">TOP 5</h3>
         <div class="top5-list">
             <!-- S : item unit -->
-            <div class="top5-item"></div>
-            <!-- E : item unit -->
-            <!-- S : item unit -->
-            <div class="top5-item"></div>
-            <!-- E : item unit -->
-            <!-- S : item unit -->
-            <div class="top5-item"></div>
-            <!-- E : item unit -->
-            <!-- S : item unit -->
-            <div class="top5-item"></div>
-            <!-- E : item unit -->
-            <!-- S : item unit -->
-            <div class="top5-item"></div>
+            <div class="components-top5-item"></div>
             <!-- E : item unit -->
         </div>
     </div>
@@ -27,11 +15,15 @@
         'use strict';
 
         // page load
-        var callbackMainTop5Item = function(){
+        var callbackItem = function(v){
             console.log(`MainTop5Item load`);
+            for (var i = 1, len = 5; i < len; i++) {
+                $('.components-top5-item').append(v);
+            }
+            $('.components-top5-item > *').unwrap();
         }
 
-        $plugins.uiPageLoad('/polaris/src/components/body/main/MainTop5Item.html', 'top5-item', callbackMainTop5Item);
+        $plugins.uiPageLoad('/polaris/src/components/body/main/MainTop5Item.html', 'components-top5-item', callbackItem);
 
     })(jQuery, window, document);
 

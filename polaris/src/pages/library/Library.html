@@ -4,7 +4,7 @@
 	<meta charSet="utf-8" />
 	<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
 
-	<title>POLARIS SHARE</title>
+	<title>Template</title>
 
 	<link rel="stylesheet" href="/polaris/src/public/static/styles/base.css">
 
@@ -19,7 +19,7 @@
 
 <body>
 
-	<div class="base-wrap inc-Layout"></div>
+	<div class="components-layout"></div>
 	
 	<script>
 		;(function($, win, doc, undefined) {
@@ -36,7 +36,7 @@
 					$.get(url, function(response) {
 						if (response) {
 							$('.' + target).html(response);
-							resolve(callback());
+							resolve(callback(response));
 						} else{
 							reject(new Error("Request is failed"));
 						}
@@ -46,26 +46,28 @@
 
 			//page callback
 			var callbackLayout = function(){
-
-				//main 외의 페이지에는 class추가
-				$('.base-wrap').addClass('type-sub-v2');
 				console.log('layout load');
+				$('.base-wrap').addClass('type-sub-v2');
+				$('.components-layout > *').unwrap();
 			}
 			var callbackHeader = function(){
 				console.log('header load');
+				$('.components-header > *').unwrap();
 			}
 			var callbackBody = function(){
-				console.log(`body load ${$('.aaa').length}`);
+				console.log(`body load`);
+				$('.components-main > *').unwrap();
 			}
 			var callbackFooter = function(){
 				console.log('footer load');
+				$('.components-footer > *').unwrap();
 			}
 
 			//pageload
-			$plugins.uiPageLoad('/polaris/src/components/Layout.html', 'inc-Layout', callbackLayout)
-				.then($plugins.uiPageLoad('/polaris/src/components/header/Header.html', 'inc-Header', callbackHeader))
-				.then($plugins.uiPageLoad('/polaris/src/components/body/template/template.html', 'inc-Main', callbackBody))
-				.then($plugins.uiPageLoad('/polaris/src/components/footer/Footer.html', 'inc-Footer', callbackFooter));
+			$plugins.uiPageLoad('/polaris/src/components/Layout.html', 'components-layout', callbackLayout)
+				.then($plugins.uiPageLoad('/polaris/src/components/header/Header.html', 'components-header', callbackHeader))
+				.then($plugins.uiPageLoad('/polaris/src/components/body/library/Library.html', 'components-main', callbackBody))
+				.then($plugins.uiPageLoad('/polaris/src/components/footer/Footer.html', 'components-footer', callbackFooter));
 
 		})(jQuery, window, document);
 

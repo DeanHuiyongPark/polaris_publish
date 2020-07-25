@@ -19,7 +19,7 @@
 
 <body>
 
-	<div class="base-wrap inc-Layout"></div>
+	<div class="components-layout"></div>
 	
 	<script>
 		;(function($, win, doc, undefined) {
@@ -36,7 +36,7 @@
 					$.get(url, function(response) {
 						if (response) {
 							$('.' + target).html(response);
-							resolve(callback());
+							resolve(callback(response));
 						} else{
 							reject(new Error("Request is failed"));
 						}
@@ -47,22 +47,26 @@
 			//page callback
 			var callbackLayout = function(){
 				console.log('layout load');
+				$('.components-layout > *').unwrap();
 			}
 			var callbackHeader = function(){
 				console.log('header load');
+				$('.components-header > *').unwrap();
 			}
 			var callbackBody = function(){
-				console.log(`body load ${$('.aaa').length}`);
+				console.log(`body load`);
+				$('.components-main > *').unwrap();
 			}
 			var callbackFooter = function(){
 				console.log('footer load');
+				$('.components-footer > *').unwrap();
 			}
 
 			//pageload
-			$plugins.uiPageLoad('/polaris/src/components/Layout.html', 'inc-Layout', callbackLayout)
-				.then($plugins.uiPageLoad('/polaris/src/components/header/Header.html', 'inc-Header', callbackHeader))
-				.then($plugins.uiPageLoad('/polaris/src/components/body/main/Main.html', 'inc-Main', callbackBody))
-				.then($plugins.uiPageLoad('/polaris/src/components/footer/Footer.html', 'inc-Footer', callbackFooter));
+			$plugins.uiPageLoad('/polaris/src/components/Layout.html', 'components-layout', callbackLayout)
+				.then($plugins.uiPageLoad('/polaris/src/components/header/Header.html', 'components-header', callbackHeader))
+				.then($plugins.uiPageLoad('/polaris/src/components/body/main/Main.html', 'components-main', callbackBody))
+				.then($plugins.uiPageLoad('/polaris/src/components/footer/Footer.html', 'components-footer', callbackFooter));
 
 		})(jQuery, window, document);
 

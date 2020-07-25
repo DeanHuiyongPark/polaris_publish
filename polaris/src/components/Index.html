@@ -4,7 +4,7 @@
 	<meta charSet="utf-8" />
 	<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
 
-	<title>Template</title>
+	<title>Main</title>
 
 	<link rel="stylesheet" href="/polaris/src/public/static/styles/base.css">
 
@@ -19,7 +19,7 @@
 
 <body>
 
-	<div class="components-layout"></div>
+	<div class="base-wrap inc-Layout"></div>
 	
 	<script>
 		;(function($, win, doc, undefined) {
@@ -47,26 +47,24 @@
 			//page callback
 			var callbackLayout = function(){
 				console.log('layout load');
-				$('.base-wrap').addClass('type-sub-v2');
-				$('.components-layout > *').unwrap();
 			}
 			var callbackHeader = function(){
 				console.log('header load');
-				$('.components-header > *').unwrap();
+				$('.components-Header > *').unwrap();
 			}
 			var callbackBody = function(){
 				console.log(`body load`);
-				$('.components-main > *').unwrap();
+				$('.components-Main > *').unwrap();
 			}
 			var callbackFooter = function(){
 				console.log('footer load');
-				$('.components-footer > *').unwrap();
+				$('.components-Footer > *').unwrap();
 			}
 
 			//pageload
-			$plugins.uiPageLoad('/polaris/src/components/Layout.html', 'components-layout', callbackLayout)
+			$plugins.uiPageLoad('/polaris/src/components/Layout.html', 'inc-Layout', callbackLayout)
 				.then($plugins.uiPageLoad('/polaris/src/components/header/Header.html', 'components-header', callbackHeader))
-				.then($plugins.uiPageLoad('/polaris/src/components/body/template/template.html', 'components-main', callbackBody))
+				.then($plugins.uiPageLoad('/polaris/src/components/body/main/Main.html', 'components-main', callbackBody))
 				.then($plugins.uiPageLoad('/polaris/src/components/footer/Footer.html', 'components-footer', callbackFooter));
 
 		})(jQuery, window, document);

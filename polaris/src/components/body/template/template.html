@@ -1,117 +1,105 @@
-<div style="min-height:800px;padding-top:200px">
+<main class="base-body">
+
+    <!-- 
+        components로 불러오는 경우
+        components- 로 시작하는 클래스로 영역생성.
+        components- 에는 스타일을 주지 않는다.
+        components- 부분은 안에 코드를 불러온 후 삭제된다. react와 비슷한 구조를 만들기 위해 처리 
+    -->
+
     <p style="font-size:16px;color:#000;font-weight:500;">card item</p>
     <div class="card-list-a">
         <!-- S : card-item unit -->
-        <div class="card-item"></div>
-        <!-- E : card-item unit -->
-        <!-- S : card-item unit -->
-        <div class="card-item"></div>
-        <!-- E : card-item unit -->
-        <!-- S : card-item unit -->
-        <div class="card-item"></div>
-        <!-- E : card-item unit -->
-        <!-- S : card-item unit -->
-        <div class="card-item"></div>
-        <!-- E : card-item unit -->
-        <!-- S : card-item unit -->
-        <div class="card-item"></div>
-        <!-- E : card-item unit -->
-        <!-- S : card-item unit -->
-        <div class="card-item"></div>
-        <!-- E : card-item unit -->
-        <!-- S : card-item unit -->
-        <div class="card-item"></div>
+        <div class="components-card-item-1"></div>
         <!-- E : card-item unit -->
     </div>
     <button type="button" class="btn-more-c">더보기</button>
+
+
     <p style="font-size:16px;color:#000;font-weight:500;">card item 3개</p>
     <div class="card-list-b">
         <!-- S : card-item unit -->
-        <div class="card-item"></div>
-        <!-- E : card-item unit -->
-        <!-- S : card-item unit -->
-        <div class="card-item"></div>
-        <!-- E : card-item unit -->
-        <!-- S : card-item unit -->
-        <div class="card-item"></div>
+        <div class="components-card-item-2"></div>
         <!-- E : card-item unit -->
     </div>
     <p style="font-size:16px;color:#000;font-weight:500;">list item</p>
     <div class="box-list-a">
         <!-- S : list item unit -->
-        <div class="list-item-a"></div>
+        <div class="components-list-item-a"></div>
         <!-- E : list item unit -->
-        <!-- S : list item unit -->
-        <div class="list-item-a"></div>
-        <!-- E : list item unit -->
+
     </div>
     <p style="font-size:16px;color:#000;font-weight:500;">user item A</p>
     <div class="user-list-a">
         <!-- S : user item unit -->
-        <div class="user-item-a"></div>
-        <!-- E : user item unit -->
-        <!-- S : user item unit -->
-        <div class="user-item-a"></div>
+        <div class="components-user-item-a"></div>
         <!-- E : user item unit -->
     </div>
     <p style="font-size:16px;color:#000;font-weight:500;">user item B</p>
     <div class="user-list-b">
         <!-- S : user item unit -->
-        <div class="user-item-b"></div>
-        <!-- E : user item unit -->
-        <!-- S : user item unit -->
-        <div class="user-item-b"></div>
-        <!-- E : user item unit -->
-        <!-- S : user item unit -->
-        <div class="user-item-b"></div>
-        <!-- E : user item unit -->
-        <!-- S : user item unit -->
-        <div class="user-item-b"></div>
-        <!-- E : user item unit -->
-        <!-- S : user item unit -->
-        <div class="user-item-b"></div>
-        <!-- E : user item unit -->
-        <!-- S : user item unit -->
-        <div class="user-item-b"></div>
-        <!-- E : user item unit -->
-        <!-- S : user item unit -->
-        <div class="user-item-b"></div>
-        <!-- E : user item unit -->
-        <!-- S : user item unit -->
-        <div class="user-item-b"></div>
+        <div class="components-user-item-b"></div>
         <!-- E : user item unit -->
     </div>
     <p style="font-size:16px;color:#000;font-weight:500;">user item C</p>
     <!-- S : user item unit -->
-    <div class="user-item-c"></div>
+    <div class="components-user-item-c"></div>
     <!-- E : user item unit -->
 
-</div>
+</main>
 
 <script>
     ;(function($, win, doc, undefined) {
         'use strict';
         // page load
-        var callbackCardItem = function(){
-            console.log(`CardItem load`);
+        var callbackItem1 = function(v){
+            //아이템 7개
+            for (var i = 1, len = 7; i < len; i++) {
+                $('.components-card-item-1').append(v);
+            }
+            $('.components-card-item-1 .card-item').unwrap();
         }
-        var callbackListItem = function(){
-            console.log(`ListItem load`);
+        var callbackItem2 = function(v){
+            //아이템 3개
+            for (var i = 1, len = 3; i < len; i++) {
+                $('.components-card-item-2').append(v);
+            }
+            $('.components-card-item-2 .card-item').unwrap();
         }
-        var callbackUserItemA = function(){
-            console.log(`UserItemA load`);
+        var callbackItem3 = function(v){
+            //아이템 2개
+            for (var i = 1, len = 2; i < len; i++) {
+                $('.components-list-item-a').append(v);
+            }
+            $('.components-list-item-a .list-item-a').unwrap();
         }
-        var callbackUserItemB = function(){
-            console.log(`UserItemB load`);
+        var callbackItem4 = function(v){
+            //아이템 2개
+            for (var i = 1, len = 2; i < len; i++) {
+                $('.components-user-item-a').append(v);
+            }
+            $('.components-user-item-a .user-item-a').unwrap();
         }
-        var callbackUserItemC = function(){
-            console.log(`UserItemC load`);
+        var callbackItem5 = function(v){
+            //아이템 8개
+            for (var i = 1, len = 8; i < len; i++) {
+                $('.components-user-item-b').append(v);
+            }
+            $('.components-user-item-b .user-item-b').unwrap();
         }
-        $plugins.uiPageLoad('/polaris/src/components/body/items/card-item.html', 'card-item', callbackCardItem);
-        $plugins.uiPageLoad('/polaris/src/components/body/items/list-item.html', 'list-item-a', callbackListItem);
-        $plugins.uiPageLoad('/polaris/src/components/body/items/user-item-a.html', 'user-item-a', callbackUserItemA);
-        $plugins.uiPageLoad('/polaris/src/components/body/items/user-item-b.html', 'user-item-b', callbackUserItemB);
-        $plugins.uiPageLoad('/polaris/src/components/body/items/user-item-c.html', 'user-item-c', callbackUserItemC);
+        var callbackItem6 = function(v){
+            //아이템 1개
+            $('.components-user-item-c .user-item-c').unwrap();
+        }
+
+        $plugins.uiPageLoad('/polaris/src/components/body/items/card-item.html', 'components-card-item-1', callbackItem1)
+            .then($plugins.uiPageLoad('/polaris/src/components/body/items/card-item.html', 'components-card-item-2', callbackItem2))
+            .then($plugins.uiPageLoad('/polaris/src/components/body/items/list-item.html', 'components-list-item-a', callbackItem3))
+            .then($plugins.uiPageLoad('/polaris/src/components/body/items/user-item-a.html', 'components-user-item-a', callbackItem4))
+            .then($plugins.uiPageLoad('/polaris/src/components/body/items/user-item-b.html', 'components-user-item-b', callbackItem5))
+            .then($plugins.uiPageLoad('/polaris/src/components/body/items/user-item-c.html', 'components-user-item-c', callbackItem6));
+
+
     })(jQuery, window, document);
 
 </script>

@@ -1,5 +1,6 @@
 {"list":[
 {"state":"상태","date":"일정","enddate":"완료일","moddate":"수정일","pub":"퍼블","dev":"개발","id":"화면ID","d1":"D1","d2":"D2","d3":"D3","d4":"D4","d5":"D5","d6":"D6","d7":"D7","d8":"D8","root":"","memo":"메모"},
+{"state":"대기","date":"미정","enddate":"미정","moddate":"미정","pub":"…","dev":"…","id":"template","d1":"템플릿","d2":"","d3":"","d4":"","d5":"","d6":"","d7":"","d8":"","root":"/polaris/src/pages/","memo":"…"},
 {"state":"대기","date":"미정","enddate":"미정","moddate":"미정","pub":"…","dev":"…","id":"Index","d1":"메인","d2":"","d3":"","d4":"","d5":"","d6":"","d7":"","d8":"","root":"/polaris/src/pages/","memo":"…"},
 {"state":"대기","date":"미정","enddate":"미정","moddate":"미정","pub":"…","dev":"…","id":"Library","d1":"라이브러리","d2":"리스트","d3":"","d4":"","d5":"","d6":"","d7":"","d8":"","root":"/polaris/src/pages/library","memo":"ppt16"},
 {"state":"대기","date":"미정","enddate":"미정","moddate":"미정","pub":"…","dev":"…","id":"","d1":"","d2":"미리보기","d3":"","d4":"","d5":"","d6":"","d7":"","d8":"","root":"/polaris/src/pages/library","memo":"ppt17"},

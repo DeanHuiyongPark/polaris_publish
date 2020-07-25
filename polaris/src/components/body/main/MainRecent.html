@@ -6,34 +6,7 @@
         </div>
         <div class="recent-list">
             <!-- S : recent unit -->
-            <div class="recent-item"></div>
-            <!-- E : recent unit -->
-            <!-- S : recent unit -->
-            <div class="recent-item"></div>
-            <!-- E : recent unit -->
-            <!-- S : recent unit -->
-            <div class="recent-item"></div>
-            <!-- E : recent unit -->
-            <!-- S : recent unit -->
-            <div class="recent-item"></div>
-            <!-- E : recent unit -->
-            <!-- S : recent unit -->
-            <div class="recent-item"></div>
-            <!-- E : recent unit -->
-            <!-- S : recent unit -->
-            <div class="recent-item"></div>
-            <!-- E : recent unit -->
-            <!-- S : recent unit -->
-            <div class="recent-item"></div>
-            <!-- E : recent unit -->
-            <!-- S : recent unit -->
-            <div class="recent-item"></div>
-            <!-- E : recent unit -->
-            <!-- S : recent unit -->
-            <div class="recent-item"></div>
-            <!-- E : recent unit -->
-            <!-- S : recent unit -->
-            <div class="recent-item"></div>
+            <div class="components-recent-item"></div>
             <!-- E : recent unit -->
         </div>
     </div>
@@ -51,11 +24,14 @@
         'use strict';
 
         // page load
-        var callbackMainTop5Item = function(){
-            console.log(`MainRecentItem load`);
+        var callbackItem = function(v){
+            for (var i = 1, len = 10; i < len; i++) {
+                $('.components-recent-item').append(v);
+            }
+            $('.components-recent-item > *').unwrap();
         }
 
-        $plugins.uiPageLoad('/polaris/src/components/body/main/MainRecentItem.html', 'recent-item', callbackMainTop5Item);
+        $plugins.uiPageLoad('/polaris/src/components/body/main/MainRecentItem.html', 'components-recent-item', callbackItem);
 
     })(jQuery, window, document);
 

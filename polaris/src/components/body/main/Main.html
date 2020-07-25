@@ -1,14 +1,14 @@
-<div>
+<main class="base-body">
     <div class="main-section-wrap">
-        <div class="inc-MainVisual"></div>
+        <div class="components-MainVisual"></div>
         <!--
-            Header.html로 이동 
-            <div class="inc-MainTag"></div> -->
+            Header.html
+            <div class="components-MainTag"></div> -->
     </div>
-    <div class="inc-MainInsight"></div>
-    <div class="inc-MainLibrary"></div>
-    <div class="inc-MainEvent"></div>
-</div>
+    <div class="components-MainInsight"></div>
+    <div class="components-MainLibrary"></div>
+    <div class="components-MainEvent"></div>
+</main>
 
 
 <script>
@@ -19,26 +19,33 @@
         //page callback
         var callbackMainVisual = function(){
             console.log('MainVisual load');
+            $('.components-MainVisual > *').unwrap();
         }
         // var callbackMainTag = function(){
         //     console.log('MainTag load');
         // }
         var callbackMainInsight = function(){
             console.log('MainInsight load');
-        }
-        var callbackMainLibrary = function(){
-            console.log(`MainLibrary load ${$('.aaa').length}`);
-        }
-        var callbackMainEvent = function(){
-            console.log('MainEvent load');
+            $('.components-MainInsight > *').unwrap();
         }
 
+        var callbackMainLibrary = function(){
+            console.log(`MainLibrary load ${$('.aaa').length}`);
+            $('.components-MainLibrary > *').unwrap();
+        }
+
+        var callbackMainEvent = function(){
+            console.log('MainEvent load');
+            $('.components-MainEvent > *').unwrap();
+        }
+      
+
         //pageload
-        $plugins.uiPageLoad('/polaris/src/components/body/main/MainVisual.html', 'inc-MainVisual', callbackMainVisual);
-        // $plugins.uiPageLoad('/polaris/src/components/body/main/MainTag.html', 'inc-MainTag', callbackMainTag);
-        $plugins.uiPageLoad('/polaris/src/components/body/main/MainInsight.html', 'inc-MainInsight', callbackMainInsight);
-        $plugins.uiPageLoad('/polaris/src/components/body/main/MainLibrary.html', 'inc-MainLibrary', callbackMainLibrary);
-        $plugins.uiPageLoad('/polaris/src/components/body/main/MainEvent.html', 'inc-MainEvent', callbackMainEvent);
+        $plugins.uiPageLoad('/polaris/src/components/body/main/MainVisual.html', 'components-MainVisual', callbackMainVisual);
+        // $plugins.uiPageLoad('/polaris/src/components/body/main/MainTag.html', 'components-MainTag', callbackMainTag);
+        $plugins.uiPageLoad('/polaris/src/components/body/main/MainInsight.html', 'components-MainInsight', callbackMainInsight);
+        $plugins.uiPageLoad('/polaris/src/components/body/main/MainLibrary.html', 'components-MainLibrary', callbackMainLibrary);
+        $plugins.uiPageLoad('/polaris/src/components/body/main/MainEvent.html', 'components-MainEvent', callbackMainEvent);
 
     })(jQuery, window, document);
 
