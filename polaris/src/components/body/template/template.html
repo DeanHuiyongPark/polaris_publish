@@ -36,13 +36,40 @@
         <div class="card-item"></div>
         <!-- E : card-item unit -->
     </div>
-    <p style="font-size:16px;color:#000;font-weight:500;">user item</p>
+    <p style="font-size:16px;color:#000;font-weight:500;">user item A</p>
     <div class="user-list-a">
         <!-- S : user item unit -->
         <div class="user-item-a"></div>
         <!-- E : user item unit -->
         <!-- S : user item unit -->
         <div class="user-item-a"></div>
+        <!-- E : user item unit -->
+    </div>
+    <p style="font-size:16px;color:#000;font-weight:500;">user item B</p>
+    <div class="user-list-b">
+        <!-- S : user item unit -->
+        <div class="user-item-b"></div>
+        <!-- E : user item unit -->
+        <!-- S : user item unit -->
+        <div class="user-item-b"></div>
+        <!-- E : user item unit -->
+        <!-- S : user item unit -->
+        <div class="user-item-b"></div>
+        <!-- E : user item unit -->
+        <!-- S : user item unit -->
+        <div class="user-item-b"></div>
+        <!-- E : user item unit -->
+        <!-- S : user item unit -->
+        <div class="user-item-b"></div>
+        <!-- E : user item unit -->
+        <!-- S : user item unit -->
+        <div class="user-item-b"></div>
+        <!-- E : user item unit -->
+        <!-- S : user item unit -->
+        <div class="user-item-b"></div>
+        <!-- E : user item unit -->
+        <!-- S : user item unit -->
+        <div class="user-item-b"></div>
         <!-- E : user item unit -->
     </div>
 
@@ -58,8 +85,12 @@
         var callbackUserItemA = function(){
             console.log(`UserItemA load`);
         }
+        var callbackUserItemB = function(){
+            console.log(`UserItemB load`);
+        }
         $plugins.uiPageLoad('/polaris/src/components/body/items/card-item.html', 'card-item', callbackCardItem);
         $plugins.uiPageLoad('/polaris/src/components/body/items/user-item-a.html', 'user-item-a', callbackUserItemA);
+        $plugins.uiPageLoad('/polaris/src/components/body/items/user-item-b.html', 'user-item-b', callbackUserItemB);
     })(jQuery, window, document);
 
 </script>
