@@ -29,18 +29,15 @@
 /* sub v2 */
 .type-sub-v2 .header-wrap{height:170px; z-index:11; max-width:1600px;}
 .type-sub-v2 .base-header:after{content:""; display:block; width:100%; position: absolute; top:100px; left:0; height:70px; background:#eef1f5;}
-.type-sub-v2 .header-search{left:515px; top:22px; width:450px;}
+.type-sub-v2 .header-search{left:515px; top:24px; width:23vw; max-width:450px; height:50px;}
+.type-sub-v2 .btn-search{width:50px; height:50px; background-size: cover;}
 .type-sub-v2 .header-wrap .btn-upload{top:30px; left:auto; right:135px; border:0; width:125px; height:40px; border-radius:10px; font-size:14px; text-transform: capitalize;}
 .type-sub-v2 .header-wrap .btn-upload::before{display:inline-block; vertical-align:middle; transform: scale(0.5);  margin:-11px 0 0 -10px;  }
 .type-sub-v2 .header-wrap .btn-upload b{display:inline-block; vertical-align:middle; font-size:14px; margin:-10px 0 0 -10px;}
 .type-sub-v2 .btn-login{border:1px solid #dfdede; width:125px; border-radius:10px;}
 
-
-
-
-
-
 @media (max-width:1024px) {
+    .header-wrap{position:fixed; top:0; left:0; width:100%; transform:none;}
     .type-sub .header-wrap,
     .header-wrap{background:rgba(29,35,42,0.9); height:57px;}
     .header-logo{position:absolute; top:11px; left:20px; background:url(/polaris/src/public/static/images/common/logo-m.png) no-repeat 0 0 / contain; width:85px; height:36px;}
@@ -61,6 +58,29 @@
     .header-wrap .btn-upload::before{display:none}
     .header-wrap .btn-upload:hover,
     .header-wrap .btn-upload:focus{border-width:0;}
+
+    .type-sub .header-wrap,
+    .header-wrap{background:rgba(29,35,42,0.9); height:57px;}
+    .header-logo{position:absolute; top:11px; left:20px; background:url(/polaris/src/public/static/images/common/logo-m.png) no-repeat 0 0 / contain; width:85px; height:36px;}
+
+    /* sub v2*/
+    .type-sub-v2 .header-wrap{height:100px;}
+    .type-sub-v2 .header-search,
+    .type-sub-v2 .header-search{position:absolute; top:11px; right:90px; left:auto; width:40vw; height:36px; }
+    .type-sub-v2 .btn-search{width:40px; height:36px; background:url(/polaris/src/public/static/images/common/btn-search-m.png) no-repeat 0 0/ contain;}
+
+    .type-sub-v2 .btn-login,
+    .btn-login{position:absolute; top:11px; right:15px; width:36px; height:36px; background:transparent; border-radius:0; padding:0; background:url(/polaris/src/public/static/images/common/ico-login-m.png) no-repeat 0 0 / contain; border:0; }
+    .btn-login:before,
+    .btn-login span{display:none}
+
+    .type-sub-v2 .header-wrap .btn-upload,
+    .type-sub-v2 .header-wrap .btn-upload{position:absolute; top:17px; left:auto; right:56px; width:24px; height:24px; background:#3ec6ff; color:#fff; border-radius:50%; border:0; font-size:6vw; transition: border .4s ease-in;}
+    .type-sub-v2 .header-wrap .btn-upload b,
+    .type-sub-v2 .header-wrap .btn-upload span{display:none;}
+    .type-sub-v2 .header-wrap .btn-upload::before{display:block; transform:scale(0.4); margin-left:-17px; margin-top:-17px}
+    .type-sub-v2 .header-wrap .btn-upload:hover,
+    .type-sub-v2 .header-wrap .btn-upload:focus{border-width:0;}
 
 }
 @media (max-width:768px) {
