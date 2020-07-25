@@ -14,6 +14,8 @@
 .user-item-b .user-summary .record-item {text-align:center}
 .user-item-b .user-summary .record-item .record-title {display:inline-block;font-size:16px;line-height:32px;color:#54565a}
 .user-item-b .user-summary .record-item .record-value {display:inline-block;padding-left:20px;font-size:16px;line-height:32px;font-weight:600;color:#1c7df4}
+.user-item-b .user-summary .user-data {display:flex;justify-content:space-between;padding:0 16px}
+.user-item-b .user-summary .user-data .user-data-value {color:#1c7df4;font-size:14px;font-weight:600}
 
 @media (max-width:1024px) {
     .user-list-b .user-item-b {width:calc((100% - 48px) / 4)}
