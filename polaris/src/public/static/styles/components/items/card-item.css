@@ -2,9 +2,11 @@
 .card-list-a .card-item {width:calc((100% - 90px) / 6);margin-bottom:38px}
 .card-list-a .card-item  ~ .card-item {margin-left:18px}
 .card-list-a .card-item:nth-child(6n + 1) {margin-left:0}
-.card-item .card-item-wrap {overflow:hidden;border-radius:16px;border:1px solid #e0e0e0;position:relative;background-color:#fff}
+.card-item .card-item-wrap {overflow:hidden;border-radius:12px;border:1px solid #e0e0e0;position:relative;background-color:#fff}
 .card-item .box-img {position:relative;height:150px;overflow:hidden}
 .card-item .box-img img {position:absolute;left:0;width:100%;top:50%;transform:translateY(-50%);-webkit-transform:translateY(-50%)}
+.card-item .box-img .flag-public {position:absolute;left:4px;top:4px;width:48px;height:52px;border:1px solid #bdd3ff;background-color:#1361ff;padding-top:20px;text-align:center;font-size:12px;color:#fff;font-weight:600;border-radius:6px}
+.card-item .box-img .flag-public .sp-ico-public {position:absolute;left:8px;top:0}
 .card-item .box-content {padding:16px 20px 54px}
 .card-item .box-content .item-type {display:flex;justify-content:space-between}
 .card-item .box-content .item-type .file-type {font-size:12px;color:#385881}
@@ -20,20 +22,6 @@
 .card-item .person-info-box {background-color:#f6f6f6;position:absolute;left:0;bottom:0;right:0;padding:14px}
 .person-info-box .text-time {font-size:10px;line-height:12px;color:#818181}
 
-/*.card-item:hover {flex:0 0 310px;max-width:310px}
-.card-item:hover .card-item-wrap {height:430px}
-.card-item:hover .box-img {height:190px}
-.card-item:hover .box-img .tag {height:30px;min-width:72px;font-size:18px;line-height:28px}
-.card-item:hover .box-content .item-title {font-size:21px;line-height:31px;min-height:62px;margin:24px 20px}
-.card-item:hover .person-info-box .person-info .person-photo {width:45px;height:45px;margin-right:14px}
-.card-item:hover .person-info-box .person-info .person-name {font-size:18px}
-.card-item:hover .person-info-box .text-time {font-size:14px;line-height:16px}
-.card-item:hover [class^="sp-ico-"] {width:30px;height:30px}
-.card-item:hover .sp-ico-a {background-position:0 -20px}
-.card-item:hover .sp-ico-b {background-position:-30px -20px}
-.card-item:hover .sp-ico-c {background-position:-60px -20px}
-.card-item:hover .content-items .text-money {font-size:14px}
-.card-item:hover .content-items .text-number {font-size:14px}*/
 @media (max-width:1300px) {
     .card-list-a .card-item {width:calc((100% - 72px) / 5)}
     .card-list-a .card-item:nth-child(6n + 1) {margin-left:18px}
