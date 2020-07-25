@@ -29,7 +29,7 @@ select:focus{border-color:#000;}
 .btn-more{height:25px; background:#0032a2; color:#fff; text-align:center; display:inline-block; padding:3px 15px; font-size:12px; border-radius:13px;}
 .type-sub-v2 .base-body{padding-top:170px;}
 @media (max-width:1024px) {
-    .base-body{padding-top:100px;}
+    .type-sub-v2 .base-body{padding-top:100px;}
 
 
 }
