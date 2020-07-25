@@ -36,6 +36,15 @@
         <div class="card-item"></div>
         <!-- E : card-item unit -->
     </div>
+    <p style="font-size:16px;color:#000;font-weight:500;">list item</p>
+    <div class="box-list-a">
+        <!-- S : list item unit -->
+        <div class="list-item-a"></div>
+        <!-- E : list item unit -->
+        <!-- S : list item unit -->
+        <div class="list-item-a"></div>
+        <!-- E : list item unit -->
+    </div>
     <p style="font-size:16px;color:#000;font-weight:500;">user item A</p>
     <div class="user-list-a">
         <!-- S : user item unit -->
@@ -86,6 +95,9 @@
         var callbackCardItem = function(){
             console.log(`CardItem load`);
         }
+        var callbackListItem = function(){
+            console.log(`ListItem load`);
+        }
         var callbackUserItemA = function(){
             console.log(`UserItemA load`);
         }
@@ -96,8 +108,9 @@
             console.log(`UserItemC load`);
         }
         $plugins.uiPageLoad('/polaris/src/components/body/items/card-item.html', 'card-item', callbackCardItem);
+        $plugins.uiPageLoad('/polaris/src/components/body/items/list-item.html', 'list-item-a', callbackListItem);
         $plugins.uiPageLoad('/polaris/src/components/body/items/user-item-a.html', 'user-item-a', callbackUserItemA);
-        $plugins.uiPageLoad('/polaris/src/components/body/items/user-item-b-2.html', 'user-item-b', callbackUserItemB);
+        $plugins.uiPageLoad('/polaris/src/components/body/items/user-item-b.html', 'user-item-b', callbackUserItemB);
         $plugins.uiPageLoad('/polaris/src/components/body/items/user-item-c.html', 'user-item-c', callbackUserItemC);
     })(jQuery, window, document);
 
