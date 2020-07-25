@@ -22,8 +22,8 @@
     .fm-list .list-item:nth-child(4):before {display:none}
 
     .footer-contents {padding:90px 0}
-    .footer-contents .box-footer {width:1024px;display:block;text-align:center}
-    .box-footer .logo {margin:0 auto}
+    .footer-contents .box-footer {width:100%;display:block;text-align:center}
+    .box-footer .logo {margin:0 auto; width:auto;}
     .box-footer .copy {width:100%;text-align:center}
     .box-footer .sns-list {display:inline-flex;flex-wrap:wrap;max-width:620px;margin:70px auto;justify-content:center}
     .box-footer .family-site {width:100%;padding:0 325px}

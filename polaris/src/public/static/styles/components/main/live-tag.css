@@ -110,11 +110,12 @@ animation-fill-mode: forwards;
     .type-sub-v2 .live-tag h3{float:left; font-size:14px; display:block; top:12px}
     .type-sub-v2 .live-tag h3 b{display:block; width:auto; height:20px; background:none; color:#52565d; font-size:16px; padding:0 0 0 14px; line-height:1;}
     .type-sub-v2 .live-tag h3 b::after{display:none;}
-
+    
     .type-sub-v2 .live-tag h3 span{display:none;}
     .type-sub-v2 .live-tag .btn-more{display:none;}
 
     .type-sub-v2 .live-tag .tags .tag-group button{display:block; text-align:center; line-height:1.1; word-break: keep-all; position: relative; top:0 !important; left:0 !important; width:auto !important;  background:none; word-break: keep-all; white-space: nowrap; font-size:14px !important; padding:0 10px; border:1px solid #90b6e6; border-radius:15px; height:30px !important; color:#0056c1 !important;}
+    .type-sub-v2 .live-tag .tags::after{display:none;}
     .type-sub-v2 .live-tag .tags .tag-group li + li{margin-left:1vw}
 
     .type-sub-v2 .live-tag .tags .tag-group{display:flex;}
