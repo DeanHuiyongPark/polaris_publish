@@ -26,3 +26,6 @@
 @import url(components/main/recent.css);
 @import url(components/main/big-event.css);
 @import url(components/main/top5.css);
+
+/* items */
+@import url(components/items/card-item.css);
