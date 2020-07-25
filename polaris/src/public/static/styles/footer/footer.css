@@ -6,7 +6,7 @@
 .fm-list .list-item .link-footer {display:block;line-height:46px;height:46px;padding:0 24px;font-size:16px;color:#5c5c5c;letter-spacing:0}
 
 .footer-contents {padding:25px 0}
-.footer-contents .box-footer {width:1200px;margin:0 auto;display:flex;align-items:center}
+.footer-contents .box-footer {max-width:1200px;margin:0 auto;display:flex;align-items:center}
 .box-footer .logo {width:295px}
 .box-footer .copy {width:250px}
 .box-footer .copy .text-email {font-size:14px;color:#8a8a8a}
