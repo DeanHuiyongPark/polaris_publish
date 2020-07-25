@@ -1,0 +1,34 @@
+.user-item-c {display:flex;background-color:#f2faff;padding:20px 60px;align-items:center}
+.user-item-c .box-person {display:inline-flex;min-width:310px}
+.user-item-c .box-person .person-img {width:60px;height:60px;border-radius:50%;overflow:hidden}
+.user-item-c .box-person .person-img img {width:100%;vertical-align:top}
+.user-item-c .box-person .person-info {padding-left:12px;text-align:left}
+.user-item-c .box-person .person-lv {font-size:13px;color:#7c7c7c}
+.user-item-c .box-person .person-lv .person-lv-value {font-weight:500}
+.user-item-c .box-person .person-name {margin-top:5px;color:#3c3c3c;font-size:18px}
+.user-item-c .box-person .link-person {display:inline-block;color:#3c3c3c;position:relative}
+.user-item-c .box-person .link-person:before {content:'';display:block;position:absolute;bottom:1px;left:0;right:0;height:1px;background-color:#3c3c3c}
+.user-item-c .user-info .user-info-item {display:inline-block}
+.user-item-c .user-info .user-info-item ~ .user-info-item {margin-left:65px}
+.user-item-c .user-info .user-info-item .user-info-title {color:#565a5f;font-size:14px;line-height:20px;display:inline-block}
+.user-item-c .user-info .user-info-item .user-info-value {color:#1c7df4;font-size:14px;font-weight:600;display:inline-block;padding-left:8px}
+.user-item-c .user-info-value .txt-unit {font-size:10px}
+.user-item-c .user-info .user-info-item .user-info-value.type-a {color:#fd9422}
+
+@media (max-width:1200px) {
+    .user-item-c .user-info .user-info-item .user-info-title,
+    .user-item-c .user-info .user-info-item .user-info-value {display:block;padding-left:0}
+}
+
+@media (max-width:1024px) {
+    .user-item-c {padding:20px}
+    .user-item-c .box-person {min-width:220px}
+    .user-item-c .user-info .user-info-item ~ .user-info-item {margin-left:40px}
+}
+@media (max-width:700px) {
+    .user-item-c {display:block}
+    .user-item-c .box-person {display:flex;justify-content:center;margin-bottom:20px}
+    .user-item-c .user-info {border-top:1px solid #e0e0e0;padding-top:20px}
+    .user-item-c .user-info .user-info-item {display:flex;justify-content:space-between}
+    .user-item-c .user-info .user-info-item ~ .user-info-item {margin:10px 0 0 0}
+}
