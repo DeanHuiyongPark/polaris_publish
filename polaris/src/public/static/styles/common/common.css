@@ -4,7 +4,7 @@
 /* Layout --------------------------------------------------------------------------- */
 .base-wrap{position:relative;width:100%}
 .type-sub .base-body{padding-top:200px;max-width:1200px;margin:0 auto}
-.type-sub-v2 .base-body{padding-top:170px;max-width:1600px;margin:0 auto}
+.type-sub-v2 .base-body{max-width:1600px;margin:0 auto; padding:170px 20px 0; box-sizing: border-box;}
 
 .box-content-a {padding:70px 20px 60px}
 

@@ -13,7 +13,7 @@
 @import url(common/header.css);
 
 /* footer */
-@import url(footer/footer.css);
+@import url(common/footer.css);
 
 /* button */
 @import url(element/button.css);

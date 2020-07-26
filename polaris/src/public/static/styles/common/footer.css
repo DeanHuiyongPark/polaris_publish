@@ -15,6 +15,10 @@
 .box-footer .sns-list .list-item {margin-right:10px}
 .box-footer .family-site {width:185px}
 .box-footer .family-site select {width:100%}
+
+.type-sub-v2 .footer-contents .box-footer{max-width:1600px; padding:0 20px;}
+
+
 @media (max-width:1024px) {
     .footer-menu {padding:28px 50px;min-width:1024px}
     .fm-list .list-item .link-footer {line-height:80px;font-size:32px;height:80px;padding:0 52px}
