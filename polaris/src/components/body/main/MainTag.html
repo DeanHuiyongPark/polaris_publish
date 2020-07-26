@@ -49,7 +49,8 @@
             var $wrap = $('.tag-result-wrap');
 
             $('.tag-group button').on('click', function(){
-                $(this).addClass('on').siblings().removeClass('on');
+                $('.tag-group button').removeClass('on');
+                $(this).addClass('on');
             })
         }
         linkTag();
