@@ -26,3 +26,6 @@ label {cursor:pointer}
 
 .hidden, .hide { position:absolute !important; width:1px !important; height:1px !important; color:transparent !important; overflow:hidden !important; clip:rect(1px, 1px,1px, 1px); clip-path:inset(50%); }
 .for-a11y {position:absolute;width:1px;height:1px;margin:-1px;padding:0;border:0;clip:rect(0 0 0 0);overflow:hidden;text-indent:-99em}
+
+/* html5 */
+article, aside, details, figcaption, figure, footer, header, main, hgroup, nav, section, summary {display:block; margin:0; padding:0; box-sizing:border-box;}

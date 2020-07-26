@@ -2,7 +2,44 @@
     .page-library-view .title-type-c{margin-top:60px}
     .page-library-view .card-list-b{max-width:750px; width:100%; margin-top:25px}
     .library-view-img{margin-top:60px; position:relative; width:100%;}
+    .library-view-img img{width:100%;}
     .library-view-img .btn-exception-a{position:absolute; bottom:20px; right:20px;}
+    
+
+    .library-info{width:100%; position: relative; background-color:#f4faff;  padding:30px 60px; margin-top:25px;}
+    .library-info .title-wrap{width:100%;}
+    .library-info .title-wrap h2{font-size:24px; color:#000; font-weight: 500; margin-bottom:10px}
+    .library-info .title-wrap p{font-size:18px; color:#5d5f61;}
+
+    .library-info .group{display:table; width:100%; margin-top: 30px; height:200px}
+    .library-info .group > .group-item{display:table-cell; width:25%; vertical-align:top;}
+    .library-info .group > .group-item +.group-item {padding-left:3%}
+    .library-info .info{background-color: #fff; height: 200px;}
+    .library-info .info dl{width:100%; background-color: #e5f1fd; padding:30px 40px;}
+    .library-info .info dl > div{width:100%; overflow: hidden;}
+    .library-info .info dl > div + div{margin-top:20px}
+    .library-info .info dt{width:45%; float:left; font-size:16px;}
+    .library-info .info dd{width:55%; float:left; font-size:16px; color:#1c7df4; font-weight:500;}
+    .library-info .person-info-box{width:100%; padding:20px;}
+
+    .library-info .btn-wrap button{display:block; width:100%;}
+    .library-info .btn-wrap button + button{margin-top:9px;}
+
+    .library-info .tag{padding:24px; background-color:#e8f0f7; overflow-y: auto; height: 200px;}
+    .library-info .tag a{color:#a7a7a7; font-size: 16px; display: inline-block; margin:3px;}
+
+    .library-info .content-items {display:flex; flex-wrap:nowrap; justify-content: space-between;}
+    .library-info .content-items .items {flex:1;display:flex;align-items:center;justify-content:center}
+    .library-info .content-items .items i {margin-right:9px}
+    .library-info .content-items .text-money {font-size:16px;color:#4f4f4f}
+    .library-info .content-items .text-number {font-size:16px;color:#4f4f4f}
+
+    .library-info .sp-ico-a-s{width:26px; height:26px; background-position:-2px -22px; opacity:0.7;}
+    .library-info .sp-ico-b-s{width:26px; height:26px; background-position:-32px -22px; opacity:0.7;}
+    .library-info .sp-ico-c-s{width:26px; height:26px; background-position:-62px -22px; opacity:0.7;}
+
+
+
     @media (max-width:1024px) {
 
     }
@@ -16,6 +53,84 @@
             <img src="/polaris/src/public/static/images/temp/@temp2.jpg" alt="" />
             <button type="button" class="btn-exception-a"><span>Library설명 상세보기</span></button>
         </div>
+
+        <div class="library-info">
+            <div class="title-wrap">
+                <h2>Functional Programming개정판, 현재 트렌드를 알 수 있는최신의 자료입니다. </h2>
+                <p>제11회 2016 ITSM 컨퍼런스가 8월 25일 쉐라톤호텔에서 아래의 내용으로 개최하였고 YAP의 역량을 소개하고 있다. 엄청난 속도로 수집되고 쌓여가는 데이터의 효과적인 관리와 활용이 기업 성공의 핵심요소가 되어가고 있는 시점에서 엄청난 속도로 수집되고 쌓여 가는 데이터의 효과적인 관리와 활용될 수 있습니다.</p>
+                <button type="button" class="btn-text-b"><span>Edit</span></button>
+            </div>
+            <div class="group">
+                <div class="group-item">
+                    <div class="info">
+                        <dl>
+                            <div>
+                                <dt>library 언어</dt>
+                                <dd>KOR</dd>
+                            </div>
+                            <div>
+                                <dt>저작자</dt>
+                                <dd>폴라리스</dd>
+                            </div>
+                        </dl>
+                        <div class="person-info-box">
+                            <div class="content-items">
+                                <div class="items">
+                                    <i class="sp-ico-a-s"></i><span class="text-money">200</span>
+                                </div>
+                                <div class="items">
+                                    <i class="sp-ico-b-s"></i><span class="text-number">335</span>
+                                </div>
+                                <div class="items">
+                                    <i class="sp-ico-c-s"></i><span class="text-number">24</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group-item">
+                    <div class="btn-wrap">
+                        <button type="button" class="btn-basic-a"><span>Vote</span></button>
+                        <button type="button" class="btn-basic-c"><span>Buy</span></button>
+                        <button type="button" class="btn-basic-c"><span>Download</span></button>
+                    </div>
+                </div>
+
+                <div class="group-item">
+                    <div class="tag">
+                        <a href="#">#maketing</a>
+                        <a href="#">#business</a>
+                        <a href="#">#data</a>
+                        <a href="#">#engineering</a>
+                        <a href="#">#report</a>
+                        <a href="#">#technology</a>
+                        <a href="#">#maketing</a>
+                        <a href="#">#business</a>
+                        <a href="#">#data</a>
+                        <a href="#">#engineering</a>
+                        <a href="#">#report</a>
+                        <a href="#">#technology</a>
+                        <a href="#">#maketing</a>
+                        <a href="#">#business</a>
+                        <a href="#">#data</a>
+                        <a href="#">#engineering</a>
+                        <a href="#">#report</a>
+                        <a href="#">#technology</a>
+                    </div>
+                </div>
+
+                <div class="group-item">
+                    <div class="btn-wrap">
+                        <button type="button" class="btn-basic-d"><span>Share</span></button>
+                        <button type="button" class="btn-basic-d"><span>My Page 찜</span></button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="components-user-item-c-2"></div>
 
         <div class="fl-wrap">
             <div class="fl-item-l">
@@ -40,7 +155,6 @@
 
         'use strict';
 
-        console.log($('.tag-result-div').outerHeight())
         function linkTag(){
             var $wrap = $('.tag-result-wrap');
 
@@ -60,9 +174,14 @@
             }
             $('.components-library-a > *').unwrap();
         }
+         var callbackItem2 = function(v){
+            //아이템 1개
+            $('.components-user-item-c-2 .user-item-c').unwrap();
+        }
 
         //components 불러오기
-        $plugins.uiPageLoad('/polaris/src/components/body/items/card-item.html', 'components-library-a', callbackItem);
+        $plugins.uiPageLoad('/polaris/src/components/body/items/card-item.html', 'components-library-a', callbackItem)
+        .then($plugins.uiPageLoad('/polaris/src/components/body/items/user-item-c-2.html', 'components-user-item-c-2', callbackItem2));
 
     })(jQuery, window, document);
 

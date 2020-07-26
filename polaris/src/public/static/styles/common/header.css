@@ -54,8 +54,8 @@
     .btn-login:before,
     .btn-login span{display:none}
 
-    .type-sub .header-wrap .btn-upload,
-    .header-wrap .btn-upload{position:absolute; top:70vw; left:20vw; right:auto; width:60vw; height:15vw; background:#3ec6ff; color:#fff; border-radius:8vw; border:0; font-size:6vw; transition: border .4s ease-in;}
+    .type-sub .header-wrap .btn-upload{position:absolute; top:70vw; left:20vw; right:auto; width:60vw; height:15vw; background:#3ec6ff; color:#fff; border-radius:8vw; border:0; font-size:6vw; transition: border .4s ease-in;}
+    .header-wrap .btn-upload{display:none}
     .header-wrap .btn-upload span{display:inline;}
     .header-wrap .btn-upload::before{display:none}
     .header-wrap .btn-upload:hover,

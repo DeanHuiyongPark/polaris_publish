@@ -2,7 +2,7 @@
 
 .main-section-wrap{position:relative; width:100%; height:860px; background:url(/polaris/src/public/static/images/main/main-bg.png) no-repeat calc(100% + 220px) -400px;}
 .main-section-wrap:before{content:""; display:block; width:192px; height:600px; position:absolute; left:0; top:0; z-index:-1; background:url(/polaris/src/public/static/images/main/main-bg2.png) no-repeat 0 0;}
-.inc-MainVisual{position:relative; width:100%; max-width:1200px; margin:0 auto; height:940px}
+.visual-wrap{position:relative; width:100%; max-width:1200px; margin:0 auto; height:940px}
 .visual-img{position:absolute; top:0; right:-105px; width:883px; height:624px; background:url(/polaris/src/public/static/images/main/visual-main.png) no-repeat 0 0;}
 
 .main-swiper{position:absolute !important; width:510px; height:510px; background:url(/polaris/src/public/static/images/main/hexagon-bg.png) no-repeat 0 0 / contain; top:345px; right:180px; padding:44px 30px 0; }
@@ -35,13 +35,14 @@
 .doc-info .user{margin-top:22px;}
 .doc-info .user-img{display:block; width:70px; height:70px; border-radius:50%; background:#4095ff; margin:0 auto;}
 .btn-follow{position:relative; z-index:1; display:block; padding:0 10px; width:auto; color:#fff; height:20px; background:#0032a2; font-size:12px; margin:-10px auto 0; border-radius:10px; margin-bottom:5px;}
+.visual-wrap .btn-upload{display:none;}
 
 @media (max-width:1024px) {
     .visual-wrap{padding-bottom:10vw;}
     .main-section-wrap{position:relative; width:100%; height:auto; background:url(/polaris/src/public/static/images/main/main-bg-m.png) no-repeat 50% 100% / cover;}
     .main-section-wrap:before{display:none;}
 
-    .inc-MainVisual{height:auto}
+    .visual-wrap{height:auto}
     .visual-img{position: relative;; top:0; right:0; width:100%; height:0; padding-bottom:100%; background:url(/polaris/src/public/static/images/main/visual-main-m.png) no-repeat 50% 100% / cover;}
 
     .main-swiper{position:relative !important; width:100%; height:auto; background:none; top:0; margin-top:-50vw; right:0; padding:0; }
@@ -83,6 +84,12 @@
     .doc-info .user-img{width:14vw; height:14vw; border-radius:50%; }
     .doc-info .user-img img{width:100%;}
     .btn-follow{position:relative; z-index:1; display:block; padding:0 1.5vw; min-width:14vw; height:4vw; font-size:2.2vw; margin:-1.5vw auto 0; border-radius:2vw; margin-bottom:0.5vw;}
+
+    .visual-wrap .btn-upload{display:block; position:absolute; top:70vw; left:20vw; right:auto; width:60vw; height:15vw; background:#3ec6ff; color:#fff; border-radius:8vw; border:0; font-size:6vw; transition: border .4s ease-in;}
+    .visual-wrap .btn-upload span{display:inline;}
+    .visual-wrap .btn-upload::before{display:none}
+    .visual-wrap .btn-upload:hover,
+    .visual-wrap .btn-upload:focus{border-width:0;}
 }
 @media (max-width:768px) {
   .doc-info .file-info .document{font-size:3vw;}

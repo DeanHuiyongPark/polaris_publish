@@ -9,11 +9,12 @@
 	<link rel="stylesheet" href="/polaris/src/public/static/styles/base.css">
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script>
+
 	<!-- lib :swiper -->
-	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
-	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">	
 	<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	
 	<!-- //lib :swiper -->
 </head>
 
@@ -46,19 +47,15 @@
 
 			//page callback
 			var callbackLayout = function(){
-				console.log('layout load');
 				$('.components-layout > *').unwrap();
 			}
 			var callbackHeader = function(){
-				console.log('header load');
 				$('.components-header > *').unwrap();
 			}
 			var callbackBody = function(){
-				console.log(`body load`);
 				$('.components-main > *').unwrap();
 			}
 			var callbackFooter = function(){
-				console.log('footer load');
 				$('.components-footer > *').unwrap();
 			}
 

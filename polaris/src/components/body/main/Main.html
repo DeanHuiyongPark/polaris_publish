@@ -18,31 +18,23 @@
 
         //page callback
         var callbackMainVisual = function(){
-            console.log('MainVisual load');
             $('.components-MainVisual > *').unwrap();
         }
-        // var callbackMainTag = function(){
-        //     console.log('MainTag load');
-        // }
         var callbackMainInsight = function(){
-            console.log('MainInsight load');
             $('.components-MainInsight > *').unwrap();
         }
 
         var callbackMainLibrary = function(){
-            console.log(`MainLibrary load ${$('.aaa').length}`);
             $('.components-MainLibrary > *').unwrap();
         }
 
         var callbackMainEvent = function(){
-            console.log('MainEvent load');
             $('.components-MainEvent > *').unwrap();
         }
       
 
         //pageload
         $plugins.uiPageLoad('/polaris/src/components/body/main/MainVisual.html', 'components-MainVisual', callbackMainVisual);
-        // $plugins.uiPageLoad('/polaris/src/components/body/main/MainTag.html', 'components-MainTag', callbackMainTag);
         $plugins.uiPageLoad('/polaris/src/components/body/main/MainInsight.html', 'components-MainInsight', callbackMainInsight);
         $plugins.uiPageLoad('/polaris/src/components/body/main/MainLibrary.html', 'components-MainLibrary', callbackMainLibrary);
         $plugins.uiPageLoad('/polaris/src/components/body/main/MainEvent.html', 'components-MainEvent', callbackMainEvent);
