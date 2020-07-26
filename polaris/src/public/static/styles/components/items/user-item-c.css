@@ -14,16 +14,37 @@
 .user-item-c .user-info .user-info-item .user-info-value {color:#1c7df4;font-size:14px;font-weight:600;display:inline-block;padding-left:8px}
 .user-item-c .user-info-value .txt-unit {font-size:10px}
 .user-item-c .user-info .user-info-item .user-info-value.type-a {color:#fd9422}
-
+.user-item-c.v2 {background-color:#fff;border-bottom:1px solid #e1e1e1}
+.user-item-c.v2 .user-info .user-info-item .user-info-title,
+.user-item-c.v2 .user-info .user-info-item .user-info-value,
+.user-item-c.v2 .user-info-value .txt-unit {font-size:16px}
+.user-item-c.v2 .box-person {min-width:410px;align-items:center}
+.user-item-c.v2 .box-person .person-info {display:flex;align-items:center}
+.user-item-c.v2 .box-person .person-name {margin:0 0 0 12px}
+@media (max-width:1400px) {
+    .user-item-c.v2 .user-info .user-info-item .user-info-title,
+    .user-item-c.v2 .user-info .user-info-item .user-info-value {display:block;padding-left:0}
+}
 @media (max-width:1200px) {
     .user-item-c .user-info .user-info-item .user-info-title,
     .user-item-c .user-info .user-info-item .user-info-value {display:block;padding-left:0}
-}
 
+    .user-item-c.v2 .box-person {min-width:260px}
+    .user-item-c.v2 .box-person .person-info {display:block}
+    .user-item-c.v2 .box-person .person-name {margin:5px 0 0 0}
+}
 @media (max-width:1024px) {
     .user-item-c {padding:20px}
-    .user-item-c .box-person {min-width:220px}
+    .user-item-c .box-person,
+    .user-item-c.v2 .box-person {min-width:220px}
     .user-item-c .user-info .user-info-item ~ .user-info-item {margin-left:40px}
+}
+@media (max-width:767px) {
+    .user-item-c.v2 {display:block}
+    .user-item-c.v2 .box-person {display:flex;justify-content:center;margin-bottom:20px}
+    .user-item-c.v2 .user-info {border-top:1px solid #e0e0e0;padding-top:20px}
+    .user-item-c.v2 .user-info .user-info-item {display:flex;justify-content:space-between}
+    .user-item-c.v2 .user-info .user-info-item ~ .user-info-item {margin:10px 0 0 0}
 }
 @media (max-width:700px) {
     .user-item-c {display:block}
