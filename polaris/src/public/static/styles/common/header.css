@@ -84,6 +84,8 @@
     .type-sub-v2 .header-wrap .btn-upload:hover,
     .type-sub-v2 .header-wrap .btn-upload:focus{border-width:0;}
 
+    .type-sub-v2 .base-header:after {display:none}
+
 }
 @media (max-width:768px) {
     

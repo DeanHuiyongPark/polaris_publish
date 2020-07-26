@@ -1,3 +1,7 @@
+.user-list-a ~ .title-type-b {margin-top:48px}
+.title-type-b ~ .user-list-b {margin-top:28px}
+.user-list-b ~ .title-type-b {margin-top:48px}
+
 .user-list-b {display:flex;flex-wrap:wrap}
 .user-list-b .user-item-b {width:181px;margin:0 16px 16px 0}
 .user-list-b .user-item-b:last-child {margin-right:0}

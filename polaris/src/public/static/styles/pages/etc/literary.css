@@ -1,0 +1,31 @@
+.literary-wrap {padding:60px 20px}
+.literary-wrap .title-type-a {margin-bottom:36px}
+.literary-item ~ .literary-item {margin-top:56px}
+.literary-item .literary-title {padding:20px 36px;font-size:26px;color:#444;font-weight:600;background-color:#daedff;line-height:30px;word-break:keep-all}
+.literary-item .literary-content {padding:30px 46px 0}
+.literary-item .literary-content .literary-sub-title {font-size:18px;font-weight:600;color:#444;line-height:24px;margin-bottom:12px}
+.literary-item .literary-content .literary-des-a {font-size:16px;line-height:22px;color:#616161;word-break:keep-all}
+.literary-item .literary-content .literary-des-a ~ .literary-des-a {margin-top:22px}
+.literary-item .literary-content .literary-des-b {font-size:14px;margin-top:8px;color:#808080;line-height:20px;word-break:keep-all}
+.literary-item .literary-content .box-literary {margin-top:30px;padding:16px 40px;background-color:#f3f3f3;max-width:1000px}
+.box-literary .dot-list:after {content:'';display:block;clear:both}
+.box-literary .dot-list .list-item {float:left;width:50%}
+.box-literary .dot-list .list-item:nth-child(n+3) {margin-top:12px}
+.dot-list .list-item {font-size:14px;color:#4c4c4c;padding-left:14px;position:relative;line-height:20px;word-break:keep-all}
+.dot-list .list-item:before {content:'';position:absolute;left:0;top:8px;width:3px;height:3px;border-radius:50%;background-color:#4c4c4c}
+.number-list .list-item ~ .list-item {margin-top:20px}
+.number-list .list-item .list-item-title {font-size:14px;line-height:20px;color:#4c4c4c;font-weight:600;padding-left:16px;text-indent:-16px;word-break:keep-all}
+.number-list .list-item .list-item-txt {margin:8px 0 0 16px;color:#4c4c4c;line-height:17px;font-size:14px;word-break:keep-all}
+
+@media (max-width:768px) {
+    .literary-wrap .title-type-a {margin-bottom:20px}
+    .literary-item ~ .literary-item {margin-top:24px}
+    .literary-item .literary-title {font-size:18px;padding:16px;line-height:24px}
+    .literary-item .literary-content {padding:16px 8px}
+    .literary-item .literary-content .literary-sub-title {font-size:16px}
+    .literary-item .literary-content .literary-des-a {font-size:14px;line-height:20px}
+    .literary-item .literary-content .box-literary {margin-top:16px;padding:16px}
+    .box-literary .dot-list .list-item {float:none;width:100%;font-size:13px}
+    .box-literary .dot-list .list-item ~ .list-item {margin-top:8px}
+    .literary-item .literary-content .literary-des-b {font-size:12px}
+}

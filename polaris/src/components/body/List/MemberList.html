@@ -1,0 +1,73 @@
+<style>
+    .library-list-wrap{padding:50px 0;}
+    
+</style>
+
+
+<main class="base-body">
+    <div class="box-content-a">
+        <!-- S : tab -->
+        <div class="tab-wrap-a">
+            <ul class="tab-list">
+                <li class="tab-item"><a href="" class="link-tab">사용후기</a></li>
+                <li class="tab-item"><a href="" class="link-tab">Library 요청하기</a></li>
+                <li class="tab-item"><a href="" class="link-tab active">추천 회원</a></li>
+            </ul>
+        </div>
+        <!-- E : tab -->
+
+        <div class="user-list-a">
+            <!-- S : user item unit -->
+            <div class="components-user-item-a"></div>
+            <!-- E : user item unit -->
+        </div>
+
+        <p class="title-type-b">투표 많이 받은 회원</p>
+        <div class="user-list-b">
+            <!-- S : user item unit -->
+            <div class="components-user-item-b"></div>
+            <!-- E : user item unit -->
+        </div>
+        <p class="title-type-b">총 POLA 많은 회원</p>
+        <div class="user-list-b">
+            <!-- S : user item unit -->
+            <div class="components-user-item-b"></div>
+            <!-- E : user item unit -->
+        </div>
+        <p class="title-type-b">업로드 많은 회원</p>
+        <div class="user-list-b">
+            <!-- S : user item unit -->
+            <div class="components-user-item-b"></div>
+            <!-- E : user item unit -->
+        </div>
+    </div>
+</main>
+
+<script>
+    ;(function($, win, doc, undefined) {
+
+        'use strict';
+
+        //콜백실행
+        var callbackItem1 = function(v){
+            //아이템 2개
+            for (var i = 1, len = 2; i < len; i++) {
+                $('.components-user-item-a').append(v);
+            }
+            $('.components-user-item-a .user-item-a').unwrap();
+        }
+        var callbackItem2 = function(v){
+            //아이템 8개
+            for (var i = 1, len = 8; i < len; i++) {
+                $('.components-user-item-b').append(v);
+            }
+            $('.components-user-item-b .user-item-b').unwrap();
+        }
+
+        //components 불러오기
+        $plugins.uiPageLoad('/polaris/src/components/body/items/user-item-a.html', 'components-user-item-a', callbackItem1)
+            .then($plugins.uiPageLoad('/polaris/src/components/body/items/user-item-b.html', 'components-user-item-b', callbackItem2))
+
+    })(jQuery, window, document);
+
+</script>   

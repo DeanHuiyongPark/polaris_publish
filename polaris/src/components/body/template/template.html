@@ -53,7 +53,13 @@
         <div class="components-user-item-b"></div>
         <!-- E : user item unit -->
     </div>
-    <h3 class="g-h3">user item C</h3>
+    <p style="font-size:16px;color:#000;font-weight:500;">user item B-2</p>
+    <div class="user-list-b">
+        <!-- S : user item unit -->
+        <div class="components-user-item-b-2"></div>
+        <!-- E : user item unit -->
+    </div>
+    <p style="font-size:16px;color:#000;font-weight:500;">user item C</p>
     <!-- S : user item unit -->
     <div class="components-user-item-c"></div>
     <!-- E : user item unit -->
@@ -100,6 +106,13 @@
             $('.components-user-item-b .user-item-b').unwrap();
         }
         var callbackItem6 = function(v){
+            //아이템 8개
+            for (var i = 1, len = 8; i < len; i++) {
+                $('.components-user-item-b-2').append(v);
+            }
+            $('.components-user-item-b-2 .user-item-b').unwrap();
+        }
+        var callbackItem7 = function(v){
             //아이템 1개
             $('.components-user-item-c .user-item-c').unwrap();
         }
@@ -109,7 +122,8 @@
             .then($plugins.uiPageLoad('/polaris/src/components/body/items/list-item.html', 'components-list-item-a', callbackItem3))
             .then($plugins.uiPageLoad('/polaris/src/components/body/items/user-item-a.html', 'components-user-item-a', callbackItem4))
             .then($plugins.uiPageLoad('/polaris/src/components/body/items/user-item-b.html', 'components-user-item-b', callbackItem5))
-            .then($plugins.uiPageLoad('/polaris/src/components/body/items/user-item-c.html', 'components-user-item-c', callbackItem6));
+            .then($plugins.uiPageLoad('/polaris/src/components/body/items/user-item-b-2.html', 'components-user-item-b-2', callbackItem6))
+            .then($plugins.uiPageLoad('/polaris/src/components/body/items/user-item-c.html', 'components-user-item-c', callbackItem7));
 
 
     })(jQuery, window, document);
