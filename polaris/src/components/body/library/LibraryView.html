@@ -1,0 +1,63 @@
+<style>    
+    .page-library-view .title-type-c{margin-top:60px}
+    .page-library-view .card-list-b{max-width:750px; width:100%; margin-top:25px}
+
+    @media (max-width:1024px) {
+
+    }
+</style>
+
+
+<main class="base-body page-library-view">
+    <div class="library-view-wrap">
+
+        <div class="fl-wrap">
+            <div class="fl-item-l">
+                <h3 class="title-type-c">비슷한 Library</h3>
+                <div class="card-list-b">
+                    <div class="components-library-a"></div>
+                </div>
+            </div>
+            <div class="fl-item-r">
+                <h3 class="title-type-c">동일한 Creator Library</h3>
+                <div class="card-list-b">
+                    <div class="components-library-a"></div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</main>
+
+<script>
+    ;(function($, win, doc, undefined) {
+
+        'use strict';
+
+        console.log($('.tag-result-div').outerHeight())
+        function linkTag(){
+            var $wrap = $('.tag-result-wrap');
+
+            $('.tag-result-more').on('click', function(){
+                var divH = $('.tag-result-div').outerHeight();
+                var warpH = $wrap.outerHeight();
+                divH > warpH ? $wrap.css('height', divH) : $wrap.css('height', '25px');
+            })
+        }
+        linkTag();
+
+        //콜백실행
+        var callbackItem = function(v){
+            //아이템 18개
+            for (var i = 1, len = 3; i < len; i++) {
+                $('.components-library-a').append(v);
+            }
+            $('.components-library-a > *').unwrap();
+        }
+
+        //components 불러오기
+        $plugins.uiPageLoad('/polaris/src/components/body/items/card-item.html', 'components-library-a', callbackItem);
+
+    })(jQuery, window, document);
+
+</script>   

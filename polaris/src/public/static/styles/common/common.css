@@ -48,6 +48,8 @@ select:focus{border-color:#000}
 /* title */
 .title-type-a {font-size:36px;color:#000;line-height:100%;font-weight:600}
 .title-type-b {font-size:18px;color:#2d2d2d;line-height:20px;font-weight:600}
+.title-type-c {font-size:20px;color:#444;line-height:20px;font-weight:600}
+
 
 /* tab */
 .tab-wrap-a {border-radius:22px;overflow:hidden;margin-bottom:54px}
