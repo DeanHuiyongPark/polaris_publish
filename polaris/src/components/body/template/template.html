@@ -83,6 +83,18 @@
     <!-- S : user item unit -->
     <div class="components-user-item-c"></div>
     <!-- E : user item unit -->
+    <p style="font-size:16px;color:#000;font-weight:500;">user item C-2</p>
+    <!-- S : user item unit -->
+    <div class="components-user-item-c-2"></div>
+    <!-- E : user item unit -->
+    <p style="font-size:16px;color:#000;font-weight:500;">user item D</p>
+    <!-- S : user item unit -->
+    <div class="components-user-item-d"></div>
+    <!-- E : user item unit -->
+    <p style="font-size:16px;color:#000;font-weight:500;">user item E</p>
+    <!-- S : user item unit -->
+    <div class="components-user-item-e"></div>
+    <!-- E : user item unit -->
 
 </main>
 
@@ -136,6 +148,18 @@
             //아이템 1개
             $('.components-user-item-c .user-item-c').unwrap();
         }
+        var callbackItem8 = function(v){
+            //아이템 1개
+            $('.components-user-item-c-2 .user-item-c').unwrap();
+        }
+        var callbackItem9 = function(v){
+            //아이템 1개
+            $('.components-user-item-d .user-item-d').unwrap();
+        }
+        var callbackItem10 = function(v){
+            //아이템 1개
+            $('.components-user-item-e .user-item-e').unwrap();
+        }
 
         $plugins.uiPageLoad('/polaris/src/components/body/items/card-item.html', 'components-card-item-1', callbackItem1)
             .then($plugins.uiPageLoad('/polaris/src/components/body/items/card-item.html', 'components-card-item-2', callbackItem2))
@@ -143,7 +167,10 @@
             .then($plugins.uiPageLoad('/polaris/src/components/body/items/user-item-a.html', 'components-user-item-a', callbackItem4))
             .then($plugins.uiPageLoad('/polaris/src/components/body/items/user-item-b.html', 'components-user-item-b', callbackItem5))
             .then($plugins.uiPageLoad('/polaris/src/components/body/items/user-item-b-2.html', 'components-user-item-b-2', callbackItem6))
-            .then($plugins.uiPageLoad('/polaris/src/components/body/items/user-item-c.html', 'components-user-item-c', callbackItem7));
+            .then($plugins.uiPageLoad('/polaris/src/components/body/items/user-item-c.html', 'components-user-item-c', callbackItem7))
+            .then($plugins.uiPageLoad('/polaris/src/components/body/items/user-item-c-2.html', 'components-user-item-c-2', callbackItem8))
+            .then($plugins.uiPageLoad('/polaris/src/components/body/items/user-item-d.html', 'components-user-item-d', callbackItem9))
+            .then($plugins.uiPageLoad('/polaris/src/components/body/items/user-item-e.html', 'components-user-item-e', callbackItem10));
 
 
     })(jQuery, window, document);
