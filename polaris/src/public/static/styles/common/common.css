@@ -7,12 +7,12 @@
 .type-sub-v2 .base-body{padding-top:170px; max-width:1600px; margin:0 auto;}
 
 /* layout inline-block */
-.in-wrap{position:relative; font-size:0; margin:10px 0 0;}
+.in-wrap{position:relative; font-size:0; margin:0;}
 .in-wrap > *,
-.in-item{font-size:14px; display:inline-block; vertical-align:top; margin-top:10px;}
+.in-item{font-size:14px; display:inline-block; vertical-align:top; margin-top:0;}
 .in-item > * {vertical-align:top;}
 /* layout float */
-.fl-wrap{position:relative; margin:10px 0;}
+.fl-wrap{position:relative; margin:0;}
 .fl-wrap:after{content:""; display:block; clear:both;}
 .fl-item-l{float:left; position:relative;}
 .fl-item-r{float:right; position:relative;}
@@ -20,6 +20,10 @@
 /* button --------------------------------------------------------------------------- */
 .btn-wrap{width:100%; text-align:center;}
 .btn-more{height:25px; background:#0032a2; color:#fff; text-align:center; display:inline-block; padding:3px 15px; font-size:12px; border-radius:13px;}
+
+/* table */
+.list-head{width:100%; position: relative;}
+
 
 /* form --------------------------------------------------------------------------- */
 /* select */

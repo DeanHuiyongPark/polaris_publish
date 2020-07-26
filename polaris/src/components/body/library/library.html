@@ -1,13 +1,35 @@
-<style>
-    .library-list-wrap{padding:50px 0;}
-    
+<style>    
+    .tag-result{width:100%;}
+    .tag-result-title{width:100%; text-align:center; font-size:28px; color:#3a3a3a; font-weight:300; padding:50px 20px}
+    .tag-result-title strong{font-weight:700; color:#1378f4;}
+
+    .tag-result-link{position:relative; width:100%; padding:25px 40px; border:1px solid #e3e3e3; border-radius:5px;}
+    .tag-result-link dl{overflow: hidden;}
+    .tag-result-link dt{position:absolute; top:25px; left:40px; font-weight:600; color:#45515a; font-size:16px;}
+    .tag-result-link dd{float:left; padding:0 110px; width:100%; height:25px; overflow: hidden; transition: height 0.2s ease-in-out;}
+    .tag-result-link dd div > span{display:inline-block; margin:0 10px 10px; font-size:14px; color:#7c7c7c;}
+
+    .tag-result .btn-text-a{position:absolute; top:30px; right:40px;}
+
+    .page-library .list-head{margin:40px 0 15px}
+    .page-library {padding-bottom:100px}
+
+    @media (max-width:1024px) {
+        .tag-result-title{font-size:20px; color:#3a3a3a; font-weight:300; padding:20px}
+        .tag-result-link{padding:12px 20px 18px; margin:0 10px; width:calc(100% - 20px)}
+        .tag-result-link dt{position:absolute; top:15px; left:10px; font-weight:600; color:#45515a; font-size:14px;}
+        .tag-result-link dd{padding:0 50px; width:100%; height:20px; overflow: hidden; transition: height 0.2s ease-in-out;}
+        .tag-result .btn-text-a{top:17px; right:10px;}
+        .tag-result .btn-text-a i{display:none; }
+    }
 </style>
 
 
-<main class="base-body">
+<main class="base-body page-library">
     <div class="library-list-wrap">
 
         <div class="tag-result">
+            
             <div class="tag-result-title">
                 <strong>#이미지가 많이 쓰인</strong>
                 <span>태그 검색결과 입니다.</span>
@@ -15,8 +37,28 @@
             <div class="tag-result-link">
                 <dl>
                     <dt>관련태그</dt>
-                    <dd>
-                        <div>
+                    <dd class="tag-result-wrap">
+                        <div class="tag-result-div">
+                            <span>#포토샵</span>
+                            <span>#웹에이전시</span>
+                            <span>#무료</span>
+                            <span>#포토샵</span>
+                            <span>#무료</span>
+                            <span>#포토샵</span>
+                            <span>#웹에이전시</span>
+                            <span>#무료</span>
+                            <span>#포토샵</span>
+                            <span>#무료</span>
+                            <span>#포토샵</span>
+                            <span>#웹에이전시</span>
+                            <span>#포토샵</span>
+                            <span>#웹에이전시</span>
+                            <span>#무료</span>
+                            <span>#웹에이전시</span>
+                            <span>#무료</span>
+                            <span>#포토샵</span>
+                            <span>#웹에이전시</span>
+                            <span>#무료</span>
                             <span>#포토샵</span>
                             <span>#웹에이전시</span>
                             <span>#무료</span>
@@ -30,16 +72,18 @@
                             <span>#웹에이전시</span>
                             <span>#무료</span>
                         </div>
-                        <button type="button" class=""><span>관련태그 더보기</span></button>
+                        <button type="button" class="btn-text-a tag-result-more"><span><i>관련태그</i> 더보기</span></button>
                     </dd>
                 </dl>
             </div>
         </div>
 
-        <div class="list-head">
-            <select title="정렬선택">
-                <option>최근 1주일</option>
-            </select>
+        <div class="list-head fl-wrap">
+            <div class="fl-item-r">
+                <select title="정렬선택">
+                    <option>최근 1주일</option>
+                </select>
+            </div>
         </div>
 
         <div class="card-list-a">
@@ -61,6 +105,18 @@
     ;(function($, win, doc, undefined) {
 
         'use strict';
+
+        console.log($('.tag-result-div').outerHeight())
+        function linkTag(){
+            var $wrap = $('.tag-result-wrap');
+
+            $('.tag-result-more').on('click', function(){
+                var divH = $('.tag-result-div').outerHeight();
+                var warpH = $wrap.outerHeight();
+                divH > warpH ? $wrap.css('height', divH) : $wrap.css('height', '25px');
+            })
+        }
+        linkTag();
 
         //콜백실행
         var callbackItem = function(v){

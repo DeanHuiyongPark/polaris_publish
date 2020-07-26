@@ -1,3 +1,9 @@
+<style>
+    .g-h2{font-size:30px; margin:30px 0 5px; color:#000000}
+    .g-h3{font-size:20px; margin:10px 0 5px; color:#000;}
+    .g-h3::before{content:"- "}
+</style>
+
 <main class="base-body">
 
     <!-- 
@@ -6,42 +12,48 @@
         components- 에는 스타일을 주지 않는다.
         components- 부분은 안에 코드를 불러온 후 삭제된다. react와 비슷한 구조를 만들기 위해 처리 
     -->
+    <h2 class="g-h2">Button</h2>
+    <button type="button" class="btn-more-c"><span>더보기</span></button>
+    <br>
+    <button type="button" class="btn-text-a tag-result-more"><span>관련태그 더보기</span></button>
 
-    <p style="font-size:16px;color:#000;font-weight:500;">card item</p>
+
+    <h2 class="g-h2">List</h2>
+    <h3 class="g-h3">card item</h3>
     <div class="card-list-a">
         <!-- S : card-item unit -->
         <div class="components-card-item-1"></div>
         <!-- E : card-item unit -->
     </div>
-    <button type="button" class="btn-more-c">더보기</button>
+    
 
 
-    <p style="font-size:16px;color:#000;font-weight:500;">card item 3개</p>
+    <h3 class="g-h3">card item 3개</h3>
     <div class="card-list-b">
         <!-- S : card-item unit -->
         <div class="components-card-item-2"></div>
         <!-- E : card-item unit -->
     </div>
-    <p style="font-size:16px;color:#000;font-weight:500;">list item</p>
+    <h3 class="g-h3">list item</h3>
     <div class="box-list-a">
         <!-- S : list item unit -->
         <div class="components-list-item-a"></div>
         <!-- E : list item unit -->
 
     </div>
-    <p style="font-size:16px;color:#000;font-weight:500;">user item A</p>
+    <h3 class="g-h3">user item A</h3>
     <div class="user-list-a">
         <!-- S : user item unit -->
         <div class="components-user-item-a"></div>
         <!-- E : user item unit -->
     </div>
-    <p style="font-size:16px;color:#000;font-weight:500;">user item B</p>
+    <h3 class="g-h3">user item B</h3>
     <div class="user-list-b">
         <!-- S : user item unit -->
         <div class="components-user-item-b"></div>
         <!-- E : user item unit -->
     </div>
-    <p style="font-size:16px;color:#000;font-weight:500;">user item C</p>
+    <h3 class="g-h3">user item C</h3>
     <!-- S : user item unit -->
     <div class="components-user-item-c"></div>
     <!-- E : user item unit -->

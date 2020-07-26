@@ -37,6 +37,7 @@
 .type-sub-v2 .btn-login{border:1px solid #dfdede; width:125px; border-radius:10px;}
 
 @media (max-width:1024px) {
+
     .header-wrap{position:fixed; top:0; left:0; width:100%; transform:none;}
     .type-sub .header-wrap,
     .header-wrap{background:rgba(29,35,42,0.9); height:57px;}
@@ -64,6 +65,7 @@
     .header-logo{position:absolute; top:11px; left:20px; background:url(/polaris/src/public/static/images/common/logo-m.png) no-repeat 0 0 / contain; width:85px; height:36px;}
 
     /* sub v2*/
+    .type-sub-v2 .base-header:after{display:none;}
     .type-sub-v2 .header-wrap{height:100px;}
     .type-sub-v2 .header-search,
     .type-sub-v2 .header-search{position:absolute; top:11px; right:90px; left:auto; width:40vw; height:36px; }

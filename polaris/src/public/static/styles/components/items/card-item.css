@@ -32,6 +32,7 @@
 }
 
 @media (max-width:1024px) {
+    .card-list-a{padding:0 15px}
     .card-list-a .card-item {width:calc((100% - 36px) / 3)}
     .card-list-a .card-item:nth-child(5n + 1) {margin-left:18px}
     .card-list-a .card-item:nth-child(3n + 1) {margin-left:0}
