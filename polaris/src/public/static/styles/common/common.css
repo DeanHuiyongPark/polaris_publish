@@ -1,5 +1,6 @@
 .btn-skip{position:fixed;width:100%;padding:10px;background:#0059c9;color:#fff;text-align:center;z-index:999;top:-100px;transition:top .2s ease-in}
 .btn-skip:focus{top:0}
+.ellp {position:relative; overflow:hidden; display:inline-block; text-overflow:ellipsis; white-space:nowrap; word-break:normal;}
 
 /* Layout --------------------------------------------------------------------------- */
 .base-wrap{position:relative;width:100%}
@@ -38,13 +39,6 @@ select[disabled] {background-color:#f7f7f7;color:#888}
 select:focus{border-color:#000}
 .ie9 select {padding:0}
 
-@media (max-width:1024px) {
-    .type-sub .base-body{padding-top:100px}
-    .type-sub-v2 .base-body{padding-top:100px}
-
-
-}
-
 /* title */
 .title-type-a {font-size:36px;color:#000;line-height:100%;font-weight:600}
 .title-type-b {font-size:18px;color:#2d2d2d;line-height:20px;font-weight:600}
@@ -72,6 +66,9 @@ select:focus{border-color:#000}
 }
 
 @media (max-width:1024px) {
+    .type-sub .base-body{padding-top:100px}
+    .type-sub-v2 .base-body{padding-top:100px}
+
     /* tab */
     .tab-wrap-a .tab-list .tab-item .link-tab {font-size:22px}
 
