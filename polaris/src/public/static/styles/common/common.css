@@ -40,6 +40,9 @@ select[disabled] {background-color:#f7f7f7;color:#888}
 select:focus{border-color:#000}
 .ie9 select {padding:0}
 
+/* input */
+.form-input-a {height:45px;background-color:#dedede;border-radius:0;border:none;padding:0 8px;box-sizing:border-box}
+
 /* title */
 .title-type-a {font-size:36px;color:#000;line-height:100%;font-weight:600}
 .title-type-b {font-size:18px;color:#2d2d2d;line-height:20px;font-weight:600}
