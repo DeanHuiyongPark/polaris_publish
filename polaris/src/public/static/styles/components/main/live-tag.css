@@ -110,7 +110,7 @@ animation-fill-mode: forwards;
     .type-sub .live-tag .tags .tag-group li:last-child {padding-right:10px}
 
 
-    .type-sub-v2 .live-tag{position:absolute; z-index:10; width:100%; top:56px; left:0; margin-left:0; background:#eef1f5; padding:0; height:51px; overflow:hidden;}
+    .type-sub-v2 .live-tag{position:absolute; z-index:10; width:100%; top:56px; left:0; margin-left:0; background:#eef1f5; padding:0; height:44px; overflow:hidden;}
     .type-sub-v2 .live-tag h3{float:left; font-size:14px; display:none; top:12px}
     .type-sub-v2 .live-tag .btn-more{display:none;}
 
