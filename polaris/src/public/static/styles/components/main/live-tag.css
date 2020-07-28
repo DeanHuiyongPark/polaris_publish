@@ -47,8 +47,8 @@ animation-fill-mode: forwards;
 .type-sub .live-tag .tags{float:left; display:block; width:500px; height:40px; overflow:hidden; height:auto; margin:0 0 0 10px}
 .type-sub .live-tag .tags .tag-group button {display:block; text-align:center; line-height:1; word-break: keep-all; position: relative; top:0 !important; left:0 !important; width:auto !important;  background:none; word-break: keep-all; white-space: nowrap; font-size:16px !important; padding:0 10px; border:1px solid #90b6e6; border-radius:20px; height:40px !important; color:#0056c1 !important;}
 .type-sub .live-tag .tags .tag-group li + li{margin-left:10px}
-.type-sub .live-tag .tags .tag-group{display:flex;flex-wrap:wrap}
-.type-sub .live-tag .tags .tag-group li{flex:1;}
+.type-sub .live-tag .tags .tag-group{ overflow: hidden;}
+.type-sub .live-tag .tags .tag-group li{float:left; }
 .type-sub .live-tag .tags button{animation-name:none; }
 .type-sub .live-tag .tags button:hover{animation-play-state: paused;}
 
@@ -97,6 +97,7 @@ animation-fill-mode: forwards;
     .live-tag .tags button{animation-name:none; }
     .live-tag .tags button:hover{animation-play-state: paused;}
 
+    .type-sub .base-header{position:static; left:0;transform: none;}
     .type-sub .live-tag {padding-bottom:16px;height:56px; position:fixed; top:auto; bottom:13px; z-index:100; padding:10px 16px;}
     .type-sub .live-tag .tags {width:calc(100% - 92px); overflow-x:auto; height:58px;-webkit-overflow-scrolling:touch;padding-bottom:16px}
     .type-sub .live-tag::after{content:""; display:block; position:absolute; right:25px; width:20px; height:44px; top:8px; background: linear-gradient(to left, #fff, transparent);}
@@ -104,8 +105,8 @@ animation-fill-mode: forwards;
     .type-sub .live-tag .tags::-webkit-scrollbar-track {background-color:transparent}
     .type-sub .live-tag .tags::-webkit-scrollbar-thumb {border-radius:30px;background-color:#1f82ff;border:7px solid #fff;}
     .type-sub .live-tag .tags::-webkit-scrollbar-button {width:0;height:0}
-    .type-sub .live-tag .tags .tag-group {display:block;white-space:nowrap}
-    .type-sub .live-tag .tags .tag-group li {display:inline-block}
+    .type-sub .live-tag .tags .tag-group {display:block;white-space:nowrap; display:flex; flex-wrap: nowrap; overflow:auto;}
+    .type-sub .live-tag .tags .tag-group li {display:inline-block; float: none; flex:1}
     .type-sub .live-tag .tags .tag-group li:last-child {padding-right:10px}
 
 

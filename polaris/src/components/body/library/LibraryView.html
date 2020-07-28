@@ -47,7 +47,14 @@
     .list-ul-item .title{width:70%; color:#45515a; font-size:18px; padding:0 40px; display: inline-block; vertical-align:middle;}
     .list-ul-item span{display: inline-block; vertical-align:middle; font-size:18px;padding:0 20px; font-weight:200; width:15%; text-align: center;}
     @media (max-width:1024px) {
+        .library-info .group{display:block; width:100%; margin-top: 30px; height:auto; overflow: hidden;}
+        .library-info .group > .group-item{display:block; width:100%; float:left ; margin:0 0 20px 0; padding:0}
+         .library-info .group > .group-item +.group-item {padding:0}
+        .library-info .group > .group-item:nth-child(3){clear:both}
 
+        .page-library-view .fl-item-l,
+        .page-library-view .fl-item-r{width:100%;}
+        .page-library-view .card-list-b{max-width: 100%;}
     }
 </style>
 
