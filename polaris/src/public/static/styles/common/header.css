@@ -8,20 +8,20 @@
 .btn-login:before{content:""; display:inline-block; width:24px; height:24px; background:url(/polaris/src/public/static/images/common/ico-login.png) no-repeat 0 0; vertical-align:middle; margin-right:5px; }
 .btn-login span{display:inline-block; vertical-align:middle;}
 
-.header-wrap .btn-upload{position:absolute; top:640px; right:0; width:110px; height:110px; background:#0032a2; color:#fff; border-radius:50%; border:7px solid #215ce1; font-size:14px; transition: border .4s ease-in; z-index:10; text-transform:uppercase;}
-.header-wrap .btn-upload span{display:none;}
-.header-wrap .btn-upload::before{content:""; display:block; width:60px; height:60px; background:url(/polaris/src/public/static/images/main/ico-docinfo.png) no-repeat 0 -30px; margin:-5px auto; }
-.header-wrap .btn-upload:hover,
-.header-wrap .btn-upload:focus{border-width:0;}
+.base-header .btn-upload{position:absolute; top:640px; right:0; width:110px; height:110px; background:#0032a2; color:#fff; border-radius:50%; border:7px solid #215ce1; font-size:14px; transition: border .4s ease-in; z-index:10; text-transform:uppercase;}
+.base-header .btn-upload span{display:none;}
+.base-header .btn-upload::before{content:""; display:block; width:60px; height:60px; background:url(/polaris/src/public/static/images/main/ico-docinfo.png) no-repeat 0 -30px; margin:-5px auto; }
+.base-header .btn-upload:hover,
+.base-header .btn-upload:focus{border-width:0;}
 
 /* sub */
 .type-sub .header-wrap{background:url(/polaris/src/public/static/images/common/bg-header-sub.png) no-repeat 610px 0 / contain; height:169px; z-index:11;}
 .type-sub .header-search{left:672px; top:22px; }
-.type-sub .header-wrap .btn-upload{top:92px; left:730px; border:0; width:240px; height:60px; border-radius:30px; font-size:24px; text-transform: capitalize;}
-.type-sub .header-wrap .btn-upload::before{display:inline-block; vertical-align:middle; transform: scale(0.8);}
-.type-sub .header-wrap .btn-upload b{display:inline-block; vertical-align:middle;}
+.type-sub .base-header .btn-upload{display:block; background:#3dc6ff; top:57px; left:0; border:0; width:100%; height:45px; border-radius:0; font-size:22px; text-transform:uppercase;}
+.type-sub .base-header .btn-upload::before{display:inline-block; vertical-align:middle; transform: scale(0.5); margin-top:-7px;}
+.type-sub .base-header .btn-upload b{display:inline-block; vertical-align:middle; margin-top: -5px;}
 .type-sub .btn-login{border:1px solid #dfdede}
-
+.type-sub .base-header .btn-upload span{display:inline-block; vertical-align:middle; margin-top: -5px;}
 
 
 
@@ -77,13 +77,13 @@
     .btn-login:before,
     .btn-login span{display:none}
 
-    .type-sub-v2 .header-wrap .btn-upload,
-    .type-sub-v2 .header-wrap .btn-upload{position:absolute; top:17px; left:auto; right:56px; width:24px; height:24px; background:#3ec6ff; color:#fff; border-radius:50%; border:0; font-size:6vw; transition: border .4s ease-in;}
-    .type-sub-v2 .header-wrap .btn-upload b,
-    .type-sub-v2 .header-wrap .btn-upload span{display:none;}
-    .type-sub-v2 .header-wrap .btn-upload::before{display:block; transform:scale(0.4); margin-left:-17px; margin-top:-17px}
-    .type-sub-v2 .header-wrap .btn-upload:hover,
-    .type-sub-v2 .header-wrap .btn-upload:focus{border-width:0;}
+    .type-sub-v2 .base-header .btn-upload,
+    .type-sub-v2 .base-header .btn-upload{position:fixed; top:17px; left:auto; right:56px; width:24px; z-index: 99; height:24px; background:#3ec6ff; color:#fff; border-radius:50%; border:0; font-size:6vw; transition: border .4s ease-in;}
+    .type-sub-v2 .base-header .btn-upload b,
+    .type-sub-v2 .base-header .btn-upload span{display:none;}
+    .type-sub-v2 .base-header .btn-upload::before{display:block; transform:scale(0.4); margin-left:-17px; margin-top:-17px}
+    .type-sub-v2 .base-header .btn-upload:hover,
+    .type-sub-v2 .base-header .btn-upload:focus{border-width:0;}
 
     .type-sub-v2 .base-header:after {display:none}
 

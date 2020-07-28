@@ -25,7 +25,8 @@
     .fm-list .list-item ~ .list-item:before {height:30px;margin-top:-15px}
     .fm-list .list-item:nth-child(4):before {display:none}
 
-    .footer-contents {padding:90px 0}
+    
+    .footer-contents {padding:90px 0 160px}
     .footer-contents .box-footer {width:100%;display:block;text-align:center}
     .box-footer .logo {margin:0 auto; width:auto;}
     .box-footer .copy {width:100%;text-align:center}
@@ -42,7 +43,7 @@
     .fm-list .list-item ~ .list-item:before {height:14px;margin-top:-7px}
     .fm-list .list-item:nth-child(4):before {display:none}
 
-    .footer-contents {padding:45px 0}
+    .footer-contents {padding:45px 0 100px}
     .footer-contents .box-footer {width:100%}
     .box-footer .sns-list {max-width:300px;margin:35px auto}
     .box-footer .family-site {padding:0 95px}
