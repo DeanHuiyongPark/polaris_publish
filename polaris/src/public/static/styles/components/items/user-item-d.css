@@ -24,7 +24,7 @@
 }
 @media (max-width:700px) {
     .user-item-d {display:block}
-    .user-item-d .box-person {display:flex;justify-content:center;margin-bottom:20px}
-    .user-item-d  .user-info {border-top:1px solid #e0e0e0;padding-top:20px}
+    .user-item-d .box-person {display:flex;justify-content:center}
+    .user-item-d  .user-info {border-top:1px solid #e0e0e0;padding-top:20px;margin-top:20px}
     .user-item-d  .user-info .txt-data {font-size:16px}
 }
