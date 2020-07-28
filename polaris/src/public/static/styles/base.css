@@ -18,6 +18,9 @@
 /* button */
 @import url(element/button.css);
 
+/* form */
+@import url(element/checkbox.css);
+
 /* main-contents */
 @import url(components/main/main.css);
 @import url(components/main/insight.css);
@@ -34,7 +37,9 @@
 @import url(components/items/user-item-c.css);
 @import url(components/items/user-item-d.css);
 @import url(components/items/user-item-e.css);
+@import url(components/items/user-item-f.css);
 @import url(components/items/list-item.css);
 
 /* pages */
 @import url(pages/etc/literary.css);
+@import url(pages/vote/vote.css);

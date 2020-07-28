@@ -8,6 +8,8 @@
 .type-sub-v2 .base-body{max-width:1600px;margin:0 auto; padding:170px 20px 0; box-sizing: border-box;}
 
 .box-content-a {padding:70px 0 60px}
+.box-content-b {padding:60px 0}
+.box-content-c {padding:45px 0 60px}
 
 /* layout inline-block */
 .in-wrap{position:relative;font-size:0;margin:0}
@@ -39,10 +41,18 @@ select[disabled] {background-color:#f7f7f7;color:#888}
 select:focus{border-color:#000}
 .ie9 select {padding:0}
 
+/* input */
+.form-input-a {height:45px;background-color:#dedede;border-radius:0;border:none;padding:0 8px;box-sizing:border-box}
+
 /* title */
 .title-type-a {font-size:36px;color:#000;line-height:100%;font-weight:600}
 .title-type-b {font-size:18px;color:#2d2d2d;line-height:20px;font-weight:600}
 .title-type-c {font-size:20px;color:#444;line-height:20px;font-weight:600}
+.title-type-d {font-size:42px;color:#000;line-height:100%;font-weight:400}
+
+/* point color */
+.point-color-a {color:#1d7ff9}
+.point-color-b {color:#ff8400}
 
 /* tab */
 .tab-wrap-a {border-radius:22px;overflow:hidden;margin-bottom:54px}
@@ -82,6 +92,7 @@ select:focus{border-color:#000}
 
     /* title */
     .title-type-a {font-size:28px}
+    .title-type-d {font-size:32px}
 
     /* tab */
     .tab-wrap-a {border-radius:12px;margin-bottom:30px}

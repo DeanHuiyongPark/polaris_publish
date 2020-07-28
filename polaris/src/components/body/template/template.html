@@ -33,12 +33,14 @@
     <button type="button" class="btn-basic-c"><span>btn-basic-c</span></button>
     <button type="button" class="btn-basic-d"><span>btn-basic-d</span></button>
     <button type="button" class="btn-basic-e"><span>btn-basic-e</span></button>
+    <button type="button" class="btn-basic-f"><span>btn-basic-f</span></button>
     <br>
     <button type="button" class="btn-basic-a small"><span>btn-basic-a</span></button>
     <button type="button" class="btn-basic-b small"><span>btn-basic-b</span></button>
     <button type="button" class="btn-basic-c small"><i class="sp-ico-interest2"></i><span>공감하기</span><span class="count-value">100</span></button>
     <button type="button" class="btn-basic-d small"><span>btn-basic-d</span></button>
     <button type="button" class="btn-basic-e small"><span>btn-basic-e</span></button>
+    <button type="button" class="btn-basic-f small"><span>btn-basic-f</span></button>
     <br>
     <button type="button" class="btn-exception-a"><span>btn-exception-a</span></button>
     <button type="button" class="btn-exception-b"><span>목록</span></button>
@@ -124,6 +126,19 @@
     <!-- S : user item unit -->
     <div class="components-user-item-e"></div>
     <!-- E : user item unit -->
+    <p style="font-size:16px;color:#000;font-weight:500;">user item F 6개</p>
+    <!-- S : user item unit -->
+    <div class="user-list-c">
+        <!-- S : user item unit -->
+        <div class="components-user-item-f"></div>
+        <!-- E : user item unit -->
+    </div>
+    <p style="font-size:16px;color:#000;font-weight:500;">user item F 3개</p>
+    <div class="user-list-d">
+        <!-- S : user item unit -->
+        <div class="components-user-item-f"></div>
+        <!-- E : user item unit -->
+    </div>
 
 </main>
 
@@ -189,6 +204,13 @@
             //아이템 1개
             $('.components-user-item-e .user-item-e').unwrap();
         }
+        var callbackItem11 = function(v){
+            //아이템 8개
+            for (var i = 1, len = 8; i < len; i++) {
+                $('.components-user-item-f').append(v);
+            }
+            $('.components-user-item-f .user-item-f').unwrap();
+        }
 
         $plugins.uiPageLoad('/polaris/src/components/body/items/card-item.html', 'components-card-item-1', callbackItem1)
             .then($plugins.uiPageLoad('/polaris/src/components/body/items/card-item.html', 'components-card-item-2', callbackItem2))
@@ -199,7 +221,8 @@
             .then($plugins.uiPageLoad('/polaris/src/components/body/items/user-item-c.html', 'components-user-item-c', callbackItem7))
             .then($plugins.uiPageLoad('/polaris/src/components/body/items/user-item-c-2.html', 'components-user-item-c-2', callbackItem8))
             .then($plugins.uiPageLoad('/polaris/src/components/body/items/user-item-d.html', 'components-user-item-d', callbackItem9))
-            .then($plugins.uiPageLoad('/polaris/src/components/body/items/user-item-e.html', 'components-user-item-e', callbackItem10));
+            .then($plugins.uiPageLoad('/polaris/src/components/body/items/user-item-e.html', 'components-user-item-e', callbackItem10))
+            .then($plugins.uiPageLoad('/polaris/src/components/body/items/user-item-f.html', 'components-user-item-f', callbackItem11));
 
 
     })(jQuery, window, document);

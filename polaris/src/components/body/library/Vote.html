@@ -1,0 +1,132 @@
+
+<main class="base-body page-library">
+    <div class="box-content-b">
+        <h1 class="title-type-a">Vote</h1>
+        <!-- S : user item unit -->
+        <div class="components-user-item-d"></div>
+        <!-- E : user item unit -->
+        <div class="box-vote">
+            <div class="vote-title-wrap">
+                <h2 class="title-type-d">투표자 인증</h2>
+                <i class="vote-icon-a"></i>
+            </div>
+            <p class="vote-des">본인 확인 및 약관 동의 후 구매가 가능합니다. (첫 결제 1회 한정) <br>인증된 정보에 따라 실명이 자동 업데이트됩니다.</p>
+            <!-- S : 동의 영역 -->
+            <div class="box-vote-b">
+                <ul class="vote-agree">
+                    <li class="list-item all">
+                        <span class="box-checkbox-a">
+                            <input type="checkbox" id="agree1" class="form-checkbox" />
+                            <label for="agree1">모두 동의합니다.</label>
+                        </span>
+                    </li>
+                    <li class="list-item">
+                        <span class="box-checkbox-a">
+                            <input type="checkbox" id="agree2" class="form-checkbox" />
+                            <label for="agree2">만 14세 이상입니다. (필수)</label>
+                        </span>
+                    </li>
+                    <li class="list-item">
+                        <span class="box-checkbox-a">
+                            <input type="checkbox" id="agree3" class="form-checkbox" />
+                            <label for="agree3"><span class="point-color-a">서비스 이용약관</span>에 동의합니다. (필수)</label>
+                        </span>
+                    </li>
+                    <li class="list-item">
+                        <span class="box-checkbox-a">
+                            <input type="checkbox" id="agree4" class="form-checkbox" />
+                            <label for="agree4"><span class="point-color-a">개인정보 수집 • 이용</span>에 동의합니다. (필수)</label>
+                        </span>
+                    </li>
+                    <li class="list-item">
+                        <span class="box-checkbox-a">
+                            <input type="checkbox" id="agree5" class="form-checkbox" />
+                            <label for="agree5">이벤트 할인 혜택 알림 수신에 동의합니다. (선택)</label>
+                        </span>
+                    </li>
+                    <li class="list-item">
+                        <span class="box-checkbox-a">
+                            <input type="checkbox" id="agree6" class="form-checkbox" />
+                            <label for="agree6">장기 미접속 시 계정 활성 상태 유지합니다. (선택)</label>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+            <!-- E : 동의 영역 -->
+            <div class="vote-btn-area-a">
+                <button type="button" class="btn-basic-a">인증</button>
+            </div>
+
+            <div class="vote-title-wrap">
+                <h2 class="title-type-d">Vote 정보</h2>
+                <i class="vote-icon-b"></i>
+            </div>
+
+            <div class="box-vote-b v1">
+                <div class="vote-info">
+                    <p class="vote-info-title">My POLA</p>
+                    <dl class="vote-info-item">
+                        <dt class="vote-item-title">(투표가능) 보유 총 POLA :</dt>
+                        <dd class="vote-item-value"><span class="point-color-a">500</span></dd>
+                    </dl>
+                    <dl class="vote-info-item">
+                        <dt class="vote-item-title">Follower POLA :</dt>
+                        <dd class="vote-item-value"><span class="point-color-b">50</span></dd>
+                    </dl>
+                    <dl class="vote-info-item">
+                        <dt class="vote-item-title">구매 및 투표한 총 POLA : </dt>
+                        <dd class="vote-item-value"><span class="point-color-b">250</span></dd>
+                    </dl>
+                    <dl class="vote-info-item">
+                        <dt class="vote-item-title">이번달 구매 및 투표한 총 POLA : </dt>
+                        <dd class="vote-item-value"><span class="point-color-b">130</span></dd>
+                    </dl>
+                </div>
+                <div class="vote-info">
+                    <p class="vote-info-title">투표할 Library 정보</p>
+                    <dl class="vote-info-item">
+                        <dt class="vote-item-title">투표된 총 POLA :</dt>
+                        <dd class="vote-item-value"><span class="point-color-b">25</span></dd>
+                    </dl>
+                    <dl class="vote-info-item">
+                        <dt class="vote-item-title">이번달 투표된 총 POLA :</dt>
+                        <dd class="vote-item-value"><span class="point-color-b">13</span></dd>
+                    </dl>
+                </div>
+                <div class="vote-info">
+                    <p class="vote-info-title">투표할 POLA</p>
+                    <div class="vote-pola">
+                        <div class="vote-pola-form"><input type="text" class="form-input-a" /><span class="txt-pola-a">POLA</span></div>
+                        <div class="vote-pola-txt"><p class="txt-pola-b">투표한 POLA는 매월 초에 환급됩니다.</p></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vote-btn-area-b">
+                <button type="button" class="btn-basic-a">Vote</button>
+                <button type="button" class="btn-basic-b">Cancel</button>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+<script>
+    ;(function($, win, doc, undefined) {
+
+        'use strict';
+
+        //콜백실행
+        var callbackItem = function(v){
+            //아이템 1개
+            for (var i = 1, len = 18; i < len; i++) {
+                $('.components-user-item-d .user-item-d').unwrap();
+            }
+        }
+
+        //components 불러오기
+        $plugins.uiPageLoad('/polaris/src/components/body/items/user-item-d.html', 'components-user-item-d', callbackItem);
+
+    })(jQuery, window, document);
+
+</script>
