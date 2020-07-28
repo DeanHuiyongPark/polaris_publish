@@ -16,9 +16,11 @@
 .box-vote-b .vote-info {padding:46px 70px}
 .box-vote-b .vote-info ~ .vote-info {border-top:1px solid #dcdcdc}
 .box-vote-b.v1 {margin-top:36px}
-.vote-info .vote-info-title {margin-bottom:26px;font-size:24px;color:#000;font-weight:500;line-height:100%}
-.vote-info .vote-info-title .vote-pola-value {color:#1d7ff9;padding-left:20px;font-weight:600}
+.vote-info .vote-info-title {font-size:24px;color:#000;font-weight:500;line-height:100%}
+.vote-info .vote-info-title .vote-pola-value-a {color:#1d7ff9;padding-left:20px;font-weight:600}
+.vote-info .vote-info-title .vote-pola-value-b {color:#ff8400;padding-left:20px;font-weight:600}
 .vote-info .vote-info-title .vote-pola-txt {font-size:18px;color:#5a5a5a;padding-left:4px;font-weight:600}
+.vote-info .vote-info-title ~ .vote-info-des {margin-top:26px}
 .vote-info .vote-info-des {font-size:18px;line-height:24px;color:#696969;word-break:keep-all}
 .vote-info .vote-info-des ~ .vote-info-des {margin-top:24px}
 .vote-info .vote-info-item ~ .vote-info-item {margin-top:3px}
