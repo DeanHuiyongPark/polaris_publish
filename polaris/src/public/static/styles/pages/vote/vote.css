@@ -2,6 +2,7 @@
 .vote-title-wrap {display:flex;justify-content:space-between;align-items:center}
 .vote-icon-a {width:186px;height:124px;background:url(/polaris/src/public/static/images/sub/vote-img-a.png) 50% 50% no-repeat;background-size:100% auto}
 .vote-icon-b {width:186px;height:124px;background:url(/polaris/src/public/static/images/sub/vote-img-b.png) 50% 50% no-repeat;background-size:100% auto}
+.vote-icon-c {width:186px;height:124px;background:url(/polaris/src/public/static/images/sub/vote-img-c.png) 50% 50% no-repeat;background-size:100% auto}
 .box-vote .vote-des {margin:32px 0 28px;font-size:26px;line-height:40px;color:#000;font-weight:200;word-break:keep-all}
 .box-vote-b {border:1px solid #c3c3c3}
 .vote-agree .list-item {padding:26px 30px}
@@ -30,12 +31,17 @@
 .vote-pola .vote-pola-txt {display:table-cell;vertical-align:bottom;padding-left:20px}
 .vote-pola .vote-pola-txt .txt-pola-b {font-size:14px;color:#939393;position:relative;padding-left:8px}
 .vote-pola .vote-pola-txt .txt-pola-b:before {content:'';display:block;position:absolute;left:0;top:9px;width:3px;height:3px;border-radius:50%;background-color:#939393}
+.vote-library-info {display:table;table-layout:fixed;width:100%}
+.vote-library-info .vote-info-item,
+.vote-library-info .vote-library-btn {display:table-cell}
+.vote-library-info .vote-library-btn {text-align:right}
 
 .box-content-c .box-vote {margin-top:0}
 
 @media (max-width:768px) {
-	.vote-icon-a {width:93px;height:62px}
-	.vote-icon-b {width:93px;height:62px}
+	.vote-icon-a,
+	.vote-icon-b,
+	.vote-icon-c {width:93px;height:62px}
 	.box-vote .vote-des {font-size:16px;line-height:22px}
 	.vote-agree .list-item,
 	.box-vote-b .vote-info {padding:20px}
@@ -53,5 +59,12 @@
 	.vote-pola .vote-pola-form,
 	.vote-pola .vote-pola-txt {display:block}
 	.vote-pola .vote-pola-txt {padding:0;margin-top:8px}
+}
+@media (max-width:500px) {
+	.vote-library-info,
+	.vote-library-info .vote-info-item,
+	.vote-library-info .vote-library-btn {display:block}
+	.vote-library-info .vote-library-btn {margin-top:12px}
+	.vote-library-info .vote-library-btn .btn-exception-a {width:100%}
 }
 
