@@ -23,17 +23,18 @@
 .vote-info .vote-info-title ~ .vote-info-des {margin-top:26px}
 .vote-info .vote-info-des {font-size:18px;line-height:24px;color:#696969;word-break:keep-all}
 .vote-info .vote-info-des ~ .vote-info-des {margin-top:24px}
+.vote-info .vote-info-title ~ .vote-info-item {margin-top:26px}
 .vote-info .vote-info-item ~ .vote-info-item {margin-top:3px}
 .vote-info .vote-info-item .vote-item-title {display:inline-block;font-size:18px;color:#696969}
 .vote-info .vote-info-item .vote-item-value {display:inline-block;padding-left:16px;font-size:18px;font-weight:500}
-.vote-pola {display:table;table-layout:fixed;width:100%}
+.vote-pola {display:table;table-layout:fixed;width:100%;margin-top:26px}
 .vote-pola .vote-pola-form {display:table-cell;vertical-align:bottom}
 .vote-pola .vote-pola-form .form-input-a {width:calc(100% - 68px)}
 .vote-pola .vote-pola-form  .txt-pola-a {font-size:18px;color:#5a5a5a;font-weight:600;display:inline-block;vertical-align:bottom;margin-left:12px}
 .vote-pola .vote-pola-txt {display:table-cell;vertical-align:bottom;padding-left:20px}
 .vote-pola .vote-pola-txt .txt-pola-b {font-size:14px;color:#939393;position:relative;padding-left:8px}
 .vote-pola .vote-pola-txt .txt-pola-b:before {content:'';display:block;position:absolute;left:0;top:9px;width:3px;height:3px;border-radius:50%;background-color:#939393}
-.vote-library-info {display:table;table-layout:fixed;width:100%}
+.vote-library-info {display:table;table-layout:fixed;width:100%;margin-top:26px}
 .vote-library-info .vote-info-item,
 .vote-library-info .vote-library-btn {display:table-cell}
 .vote-library-info .vote-library-btn {text-align:right}
@@ -47,7 +48,11 @@
 	.box-vote .vote-des {font-size:16px;line-height:22px}
 	.vote-agree .list-item,
 	.box-vote-b .vote-info {padding:20px}
-	.vote-info .vote-info-title {font-size:20px;margin-bottom:16px}
+	.vote-info .vote-info-title {font-size:20px}
+	.vote-pola,
+	.vote-library-info,
+	.vote-info .vote-info-title ~ .vote-info-item {margin-top:16px}
+	.vote-info .vote-info-item ~ .vote-info-item {margin-top:3px}
 	.vote-info .vote-info-des {font-size:14px;line-height:20px}
 	.vote-info .vote-info-des ~ .vote-info-des {margin-top:20px}
 	.vote-info .vote-info-item .vote-item-value,
