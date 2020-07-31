@@ -1,16 +1,14 @@
 <style>    
     .page-library-view .title-type-c{margin-top:60px}
-    .page-library-view .card-list-b{max-width:750px; width:100%; margin-top:25px}
+
+    /* library info */
     .library-view-img{margin-top:60px; position:relative; width:100%;}
     .library-view-img img{width:100%;}
     .library-view-img .btn-exception-a{position:absolute; bottom:20px; right:20px;}
-    
-
     .library-info{width:100%; position: relative; background-color:#f4faff;  padding:30px 60px; margin-top:25px;}
     .library-info .title-wrap{width:100%;}
     .library-info .title-wrap h2{font-size:24px; color:#000; font-weight: 500; margin-bottom:10px}
     .library-info .title-wrap p{font-size:18px; color:#5d5f61;}
-
     .library-info .group{display:table; width:100%; margin-top: 30px; height:200px}
     .library-info .group > .group-item{display:table-cell; width:25%; vertical-align:top;}
     .library-info .group > .group-item +.group-item {padding-left:3%}
@@ -21,24 +19,25 @@
     .library-info .info dt{width:45%; float:left; font-size:16px;}
     .library-info .info dd{width:55%; float:left; font-size:16px; color:#1c7df4; font-weight:500;}
     .library-info .person-info-box{width:100%; padding:20px;}
-
     .library-info .btn-wrap button{display:block; width:100%;}
     .library-info .btn-wrap button + button{margin-top:9px;}
-
     .library-info .tag{padding:24px; background-color:#e8f0f7; overflow-y: auto; height: 200px;}
     .library-info .tag a{color:#a7a7a7; font-size: 16px; display: inline-block; margin:3px;}
-
     .library-info .content-items {display:flex; flex-wrap:nowrap; justify-content: space-between;}
     .library-info .content-items .items {flex:1;display:flex;align-items:center;justify-content:center}
     .library-info .content-items .items i {margin-right:9px}
     .library-info .content-items .text-money {font-size:16px;color:#4f4f4f}
     .library-info .content-items .text-number {font-size:16px;color:#4f4f4f}
-
     .library-info .sp-ico-a-s{width:26px; height:26px; background-position:-2px -22px; opacity:0.7;}
     .library-info .sp-ico-b-s{width:26px; height:26px; background-position:-32px -22px; opacity:0.7;}
     .library-info .sp-ico-c-s{width:26px; height:26px; background-position:-62px -22px; opacity:0.7;}
 
+    /* 비슷한 Library */
+    .similar-card .fl-item-r,
+    .similar-card .fl-item-l{width:calc(50% - 20px);}
+    .similar-card .card-list-b{width:100%; margin-top:25px}
 
+    /* 관련후기 */
     .list-ul,
     .list-ul-wrap,
     .list-ul-item{position:relative; width:100%;}
@@ -47,6 +46,7 @@
     .list-ul-item .title{width:70%; color:#45515a; font-size:18px; padding:0 40px; display: inline-block; vertical-align:middle;}
     .list-ul-item span{display: inline-block; vertical-align:middle; font-size:18px;padding:0 20px; font-weight:200; width:15%; text-align: center;}
 
+    /* 탭:comment/votes/statistics */
     .tab-text{position: relative; width:100%; margin:50px 0 80px;}
     .tab-text-btn{margin:0 0 15px;}
     .tab-text-btn button{font-size:16px; margin-right:60px;}
@@ -55,6 +55,7 @@
     .tab-text-pnl{display:none;}
     .tab-text-pnl.visible{display: block;}
 
+    /* votes */
     .votes-list{position: relative; width:100%; }
     .votes-list ul{width:100%; border-bottom:1px solid #d8d8d8;}
     .votes-list li{width:100%; padding:15px 75px 15px 50px; border-top:1px solid #d8d8d8;}
@@ -65,8 +66,7 @@
     .votes-list .pola{display:inline-block; width:calc(100% - 300px); color:#1c7df4; font-size:18px; text-align: center;}
     .votes-list .btn-wrap{margin-top:20px;}
 
-
-    
+    /* statistics */
     .statistics-info dl{width:100%;border:1px solid #e3e4e4; padding:16px 40px 10px;}
     .statistics-info dl > div{display: inline-block; width:100%; max-width:530px; margin-right:70px; margin-bottom:7px;}
     .statistics-info dl > div:before{content: "·"; font-weight:600; display: inline-block; font-size:18px; vertical-align: middle; margin-right: 5px;}
@@ -77,16 +77,44 @@
     .statistics-info dd strong{color:#1c7df4; font-weight:600;}
 
     @media (max-width:1024px) {
+        /* library info */
         .library-info{padding:20px;}
         .library-view-img{margin-top:20px}
+        .library-view-img .btn-exception-a{position:absolute; bottom:0; right:0; width:100%;}
         .library-info .group{display:block; width:100%; margin-top: 30px; height:auto; overflow: hidden;}
         .library-info .group > .group-item{display:block; width:100%; float:left ; margin:0 0 20px 0; padding:0}
         .library-info .group > .group-item +.group-item {padding:0}
         .library-info .group > .group-item:nth-child(3){clear:both}
 
-        .page-library-view .fl-item-l,
-        .page-library-view .fl-item-r{width:100%;}
-        .page-library-view .card-list-b{max-width: 100%;}
+        /* 비슷한 Library */
+        .similar-card .fl-item-r,
+        .similar-card .fl-item-l{width:100%;}
+        .similar-card .card-list-b{width:100%; margin-top:25px}
+
+        /* 관련후기 */
+        .list-ul-wrap{margin-top: 20px; font-size: 0; border-bottom:1px solid #ccc; padding-bottom:40px;}
+        .list-ul-item + .list-ul-item{margin-top:10px;}
+        .list-ul-item .title{width:100%; color:#45515a; font-size:16px; padding:0; }
+        .list-ul-item span{font-size:13px; padding:2px 10px 0 0; font-weight:400; width:auto; text-align:left;}
+
+        /* 탭:comment/votes/statistics */
+        .tab-text{position: relative; width:100%; margin:30px 0 40px;}
+        .tab-text-btn{margin:0 0 10px;}
+        .tab-text-btn button{font-size:14px; margin-right:10px;}
+
+        /* votes */
+  
+        .votes-list li{padding:10px; overflow: hidden;}
+        .votes-list .user {display:block; float:left; width:50%; text-align: center; margin-right:5%}
+        .votes-list .user img{width:40px; height:40px; display:block; margin:0 auto;}
+        .votes-list .user span{font-size:14px; margin:0; padding-bottom:3px;}
+        .votes-list .date {display:block; float:left; font-size:13px; width:40%;text-align: left;}
+        .votes-list .pola{display:block; float:left; width:40%; font-size:16px; text-align: left; margin-top:5px}
+
+        /* statistics */
+        .statistics-info dl{padding:10px 20px;}
+    
+
     }
 </style>
 
@@ -177,7 +205,7 @@
 
         <div class="components-user-item-c-2"></div>
 
-        <div class="fl-wrap">
+        <div class="similar-card fl-wrap">
             <div class="fl-item-l">
                 <h3 class="title-type-c">비슷한 Library</h3>
                 <div class="card-list-b">
