@@ -65,7 +65,7 @@ select:focus{border-color:#000}
 .tab-wrap-a .tab-list .tab-item.active + .tab-item .link-tab:before,
 .tab-wrap-a .tab-list .tab-item.active .link-tab:before {display:none}
 
-.tab-wrap-b {border:1px solid #e5e5e5}
+.tab-wrap-b {border:1px solid #e5e5e5; margin-bottom:30px}
 .tab-wrap-b .tab-list {display:flex}
 .tab-wrap-b .tab-list .tab-item {flex:1}
 .tab-wrap-b .tab-list .tab-item .link-tab {display:flex;align-items:center;justify-content:center;text-align:center;width:100%;background-color:#fff;height:60px;font-size:20px;color:#656565}

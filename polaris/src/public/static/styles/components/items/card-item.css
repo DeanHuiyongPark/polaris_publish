@@ -5,6 +5,7 @@
 .card-list-a .card-item:nth-child(6n + 1) {margin-left:0}
 .card-list-b .card-item {width:calc((100% - 18px) / 3)}
 .card-list-b .card-item  ~ .card-item {margin-left:9px}
+.card-list-b .card-item:nth-child(3n + 1){margin-left:0;}
 .card-item .card-item-wrap {overflow:hidden;border-radius:12px;border:1px solid #e0e0e0;position:relative;background-color:#fff}
 .card-item .box-img {position:relative;height:150px;overflow:hidden}
 .card-item .box-img img {position:absolute;left:0;width:100%;top:50%;transform:translateY(-50%);-webkit-transform:translateY(-50%)}
