@@ -69,6 +69,9 @@ select:focus{border-color:#000}
 .tab-wrap-b .tab-list .tab-item ~ .tab-item {border-left:1px solid #e5e5e5}
 .tab-wrap-b .tab-list .tab-item .count-value {color:#ff8400;font-size:16px;font-weight:600;margin-left:4px}
 
+.ui-tab-pnl{display:none}
+.ui-tab-pnl.visible{display:block}
+
 @media (max-width:1300px) {
     /* tab */
     .tab-wrap-b .tab-list .tab-item .link-tab {font-size:16px}
