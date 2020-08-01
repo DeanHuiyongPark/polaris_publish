@@ -1,0 +1,96 @@
+
+<main class="base-body page-search">
+    <div class="box-content-b">
+        <div class="sh-top">
+            <p class="sh-top-txt"><span class="sh-keyword">JRC</span> 통합 검색결과 입니다. </p>
+        </div>
+        <div class="sh-result">
+            <!-- S : 회원 검색 결과 -->
+            <div class="result-group">
+                <div class="box-result-title">
+                    <p class="result-title">회원 검색 결과  <span class="result-count">5건</span></p>
+                    <button type="button" class="btn-result-more">More<i class="sp-ico-blt-a"></i></button>
+                </div>
+                <div class="user-list-b">
+                    <!-- S : user item unit -->
+                    <div class="components-user-item-b"></div>
+                    <!-- E : user item unit -->
+                </div>
+            </div>
+            <!-- E : 회원 검색 결과 -->
+
+            <!-- S : Library 검색 결과 -->
+            <div class="result-group">
+                <div class="box-result-title">
+                    <p class="result-title">Library 검색 결과  <span class="result-count">55건</span></p>
+                    <button type="button" class="btn-result-more">More<i class="sp-ico-blt-a"></i></button>
+                </div>
+                <!-- S : result-item -->
+                <div class="result-item-a"></div>
+                <!-- E : result-item -->
+            </div>
+            <!-- E : Library 검색 결과 -->
+
+            <!-- S : 후기 검색 결과 -->
+            <div class="result-group">
+                <div class="box-result-title">
+                    <p class="result-title">후기 검색 결과  <span class="result-count">10건</span></p>
+                    <button type="button" class="btn-result-more">More<i class="sp-ico-blt-a"></i></button>
+                </div>
+                <!-- S : result-item -->
+                <div class="result-item-b"></div>
+                <!-- E : result-item -->
+            </div>
+            <!-- E : 후기 검색 결과 -->
+
+            <!-- S : Library 요청 검색 결과 -->
+            <div class="result-group">
+                <div class="box-result-title">
+                    <p class="result-title">Library 요청 검색 결과  <span class="result-count">10건</span></p>
+                    <button type="button" class="btn-result-more">More<i class="sp-ico-blt-a"></i></button>
+                </div>
+                <!-- S : result-item -->
+                <div class="result-item-b"></div>
+                <!-- E : result-item -->
+            </div>
+            <!-- E : Library 요청 검색 결과 -->
+        </div>
+
+    </div>
+</main>
+
+<script>
+    ;(function($, win, doc, undefined) {
+
+        'use strict';
+
+        var callbackItem1 = function(v){
+            //아이템 8개
+            for (var i = 1, len = 8; i < len; i++) {
+                $('.components-user-item-b').append(v);
+            }
+            $('.components-user-item-b .user-item-b').unwrap();
+        }
+        var callbackItem2 = function(v){
+            //아이템 3개
+            for (var i = 1, len = 3; i < len; i++) {
+                $('.result-item-a').append(v);
+            }
+            $('.result-item-a .result-item').unwrap();
+        }
+        var callbackItem3 = function(v){
+            //아이템 2개
+            for (var i = 1, len = 2; i < len; i++) {
+                $('.result-item-b').append(v);
+            }
+            $('.result-item-b .result-item').unwrap();
+        }
+
+        //components 불러오기
+        $plugins.uiPageLoad('/polaris/src/components/body/items/user-item-b.html', 'components-user-item-b', callbackItem1)
+            .then($plugins.uiPageLoad('/polaris/src/components/body/items/result-item-a.html', 'result-item-a', callbackItem2))
+            .then($plugins.uiPageLoad('/polaris/src/components/body/items/result-item-b.html', 'result-item-b', callbackItem3))
+
+    })(jQuery, window, document);
+
+</script>
