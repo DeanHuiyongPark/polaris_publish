@@ -4,7 +4,8 @@
     /* library info */
     .library-view-img{margin-top:60px; position:relative; width:100%;}
     .library-view-img img{width:100%;}
-    .library-view-img .btn-exception-a{position:absolute; bottom:20px; right:20px;}
+    .library-view-img .btn-exception-a{position:absolute; bottom:20px; right:20px;box-shadow:0 2px 2px 0 rgba(0,0,0,.24)}
+    }
     .library-info{width:100%; position: relative; background-color:#f4faff;  padding:30px 60px; margin-top:25px;}
     .library-info .title-wrap{width:100%;}
     .library-info .title-wrap h2{font-size:24px; color:#000; font-weight: 500; margin-bottom:10px}
@@ -85,6 +86,7 @@
         .library-info .group > .group-item{display:block; width:100%; float:left ; margin:0 0 20px 0; padding:0}
         .library-info .group > .group-item +.group-item {padding:0}
         .library-info .group > .group-item:nth-child(3){clear:both}
+        .library-info [class^="sp-ico-"] {background-image:url("/polaris/src/public/static/images/sprite/sp_ico.png")}
 
         /* 비슷한 Library */
         .similar-card .fl-item-r,
@@ -103,7 +105,6 @@
         .tab-text-btn button{font-size:14px; margin-right:10px;}
 
         /* votes */
-  
         .votes-list li{padding:10px; overflow: hidden;}
         .votes-list .user {display:block; float:left; width:50%; text-align: center; margin-right:5%}
         .votes-list .user img{width:40px; height:40px; display:block; margin:0 auto;}
@@ -113,8 +114,7 @@
 
         /* statistics */
         .statistics-info dl{padding:10px 20px;}
-    
-
+        .statistics-info dl > div {margin-right:0}
     }
 </style>
 
