@@ -2,9 +2,12 @@
     .page-library-view .title-type-c{margin-top:60px}
 
     /* library info */
-    .library-view-img{margin-top:60px; position:relative; width:100%;}
-    .library-view-img img{width:100%;}
-    .library-view-img .btn-exception-a{position:absolute; bottom:20px; right:20px;box-shadow:0 2px 2px 0 rgba(0,0,0,.24)}
+    .library-swiper{margin-top:60px; position:relative; width:100%; }
+    .library-swiper .swiper-container{border-radius: 10px; overflow: hidden;}
+    .library-swiper img{width:100%; display:block;}
+    .library-swiper .btn-exception-a{position:absolute; bottom:20px; right:20px; z-index:10;}
+    .library-swiper .swiper-pagination-bullet{width:16px; height:16px; opacity:1; background-color:#fff; box-shadow:0 2px 5px rgba(0,0,0,0.5);}
+    .library-swiper .swiper-pagination-bullet-active{background:#8bbfff;}
     .library-info{width:100%; position: relative; background-color:#f4faff;  padding:30px 60px; margin-top:25px;}
     .library-info .title-wrap{width:100%;}
     .library-info .title-wrap h2{font-size:24px; color:#000; font-weight: 500; margin-bottom:10px}
@@ -78,9 +81,9 @@
 
     @media (max-width:1024px) {
         /* library info */
-        .library-info{padding:20px;}
-        .library-view-img{margin-top:20px}
-        .library-view-img .btn-exception-a{position:absolute; bottom:0; right:0; width:100%;}
+        .library-swiper{margin-top:20px}
+        .library-swiper .btn-exception-a{position:absolute; bottom:-54px; right:0; width:100%;}
+        .library-info{padding:20px; margin-top:64px}
         .library-info .group{display:block; width:100%; margin-top: 30px; height:auto; overflow: hidden;}
         .library-info .group > .group-item{display:block; width:100%; float:left ; margin:0 0 20px 0; padding:0}
         .library-info .group > .group-item +.group-item {padding:0}
@@ -121,8 +124,21 @@
 <main class="base-body page-library-view">
     <div class="library-view-wrap">
 
-        <div class="library-view-img">
-            <img src="/polaris/src/public/static/images/temp/@temp2.jpg" alt="" />
+        <div class="library-swiper">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="/polaris/src/public/static/images/temp/@temp2.jpg" alt="" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/polaris/src/public/static/images/temp/@temp2.jpg" alt="" />
+                    </div>
+
+                </div>
+                <div class="swiper-pagination"></div>
+
+                    
+            </div>
             <button type="button" class="btn-exception-a"><span>Library설명 상세보기</span></button>
         </div>
 
@@ -284,7 +300,7 @@
                 </div>
             </div>
             <div class="tab-text-pnl ui-tab-pnl" pnl="3">
-               
+                
                 <div class="statistics-info">
                     <h3 class="hide">Statistics</h3>
                     <dl>
@@ -357,11 +373,41 @@
 
         //tab
         $plugins.tabToggle = function(v, name){
-            $('[tabname="'+ name +'"] .ui-tab-btn').removeClass('on');
-            $('[tabname="'+ name +'"] .ui-tab-btn[n="'+ v +'"]').addClass('on');
+            $('[tabname="'+ name +'"] .ui-tab-btn').removeClass('active');
+            $('[tabname="'+ name +'"] .ui-tab-btn[n="'+ v +'"]').addClass('active');
             $('[tabname="'+ name +'"] .ui-tab-pnl').removeClass('visible');
             $('[tabname="'+ name +'"] .ui-tab-pnl[pnl="'+ v +'"]').addClass('visible');
         }
+        $plugins.tabToggle(1, 'tabCVS');
+
+        var librarySwiper = new Swiper('.library-swiper .swiper-container', {
+            // Optional parameters
+            loop: false,
+            slidesPerView: 1,
+            centeredSlides: true,
+            spaceBetween:0,
+            breakpoints: {
+                1020: {
+                    loop: true,
+                },
+            },
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        });
     })(jQuery, window, document);
 
 </script>   
