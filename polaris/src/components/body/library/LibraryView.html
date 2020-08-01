@@ -50,7 +50,7 @@
     .tab-text{position: relative; width:100%; margin:50px 0 80px;}
     .tab-text-btn{margin:0 0 15px;}
     .tab-text-btn button{font-size:16px; margin-right:60px;}
-    .tab-text-btn button.on{color:#252728; font-weight:600; border-bottom:1px solid #252728}
+    .tab-text-btn button.active{color:#252728; font-weight:600; border-bottom:1px solid #252728}
     .tab-text-btn button i{color:#ff8400; font-weight:600;}
     .tab-text-pnl{display:none;}
     .tab-text-pnl.visible{display: block;}
@@ -243,18 +243,18 @@
 
         <div class="tab-text" tabname="tabCVS">
             <div class="tab-text-btn">
-                <button type="button" class="on" n="1" onclick="$plugins.tabToggle(1, 'tabCVS');"><span>Comments <i>32</i></span></button>
-                <button type="button" class="" n="2" onclick="$plugins.tabToggle(2, 'tabCVS');"><span>Votes <i>22</i></span></button>
-                <button type="button" class="" n="3" onclick="$plugins.tabToggle(3, 'tabCVS');"><span>Statistics <i>32</i></span></button>
+                <button type="button" class="active ui-tab-btn" n="1" onclick="$plugins.tabToggle(1, 'tabCVS');"><span>Comments <i>32</i></span></button>
+                <button type="button" class="ui-tab-btn" n="2" onclick="$plugins.tabToggle(2, 'tabCVS');"><span>Votes <i>22</i></span></button>
+                <button type="button" class="ui-tab-btn" n="3" onclick="$plugins.tabToggle(3, 'tabCVS');"><span>Statistics <i>32</i></span></button>
             </div>
-            <div class="tab-text-pnl visible" pnl="1">
+            <div class="tab-text-pnl visible ui-tab-pnl" pnl="1">
 
                 <!-- components : /components/body/items/Comment.html -->
                 <div class="components-comment"></div>
                 <!-- components : common/comment.html -->
 
             </div>
-            <div class="tab-text-pnl" pnl="2">
+            <div class="tab-text-pnl ui-tab-pnl" pnl="2">
                 <div class="votes-list">
                     <h3 class="hide">Votes</h3>
                     <ul>
@@ -284,7 +284,7 @@
                     </div>
                 </div>
             </div>
-            <div class="tab-text-pnl" pnl="3">
+            <div class="tab-text-pnl ui-tab-pnl" pnl="3">
                
                 <div class="statistics-info">
                     <h3 class="hide">Statistics</h3>
@@ -358,10 +358,10 @@
 
         //tab
         $plugins.tabToggle = function(v, name){
-            $('[tabname="'+ name +'"] .tab-text-btn button').removeClass('on');
-            $('[tabname="'+ name +'"] .tab-text-btn button[n="'+ v +'"]').addClass('on');
-            $('[tabname="'+ name +'"] .tab-text-pnl').removeClass('visible');
-            $('[tabname="'+ name +'"] .tab-text-pnl[pnl="'+ v +'"]').addClass('visible');
+            $('[tabname="'+ name +'"] .ui-tab-btn').removeClass('on');
+            $('[tabname="'+ name +'"] .ui-tab-btn[n="'+ v +'"]').addClass('on');
+            $('[tabname="'+ name +'"] .ui-tab-pnl').removeClass('visible');
+            $('[tabname="'+ name +'"] .ui-tab-pnl[pnl="'+ v +'"]').addClass('visible');
         }
     })(jQuery, window, document);
 
