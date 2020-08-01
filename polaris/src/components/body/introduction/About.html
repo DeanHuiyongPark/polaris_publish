@@ -1,0 +1,68 @@
+
+<main class="base-body page-introduction">
+    <div class="box-content-b">
+        <!-- S : tab -->
+        <div class="tab-wrap-a">
+            <ul class="tab-list">
+                <li class="tab-item active"><a href="" class="link-tab">About Us</a></li>
+                <li class="tab-item"><a href="" class="link-tab">이용가이드</a></li>
+                <li class="tab-item"><a href="" class="link-tab">FAQ</a></li>
+                <li class="tab-item"><a href="" class="link-tab">1:1 문의</a></li>
+            </ul>
+        </div>
+        <!-- E : tab -->
+        <div class="box-about">
+            <div class="box-about-top">
+                <p class="about-title"><img src="/polaris/src/public/static/images/sub/about-img-a.png" alt="about us"></p>
+                <p class="about-des">중요한 정보가 담긴 방대한 수의 문서가 활용되지 않은 채로 클라우드나 하드 드라이브에서 잠자고 있습니다.<br />
+                    많은 지식 생산자는 적절한 지식을 찾거나 그런 지식에 접근할 수 없기 때문에<br />
+                    결국 같은 주제에 관한 작업을 불필요하게 반복하게 됩니다.</p>
+                <p class="about-des">지식 생산자는 본인의 지식을 공유하고 판매함으로써 더 많은 이득을 얻을 기회를 놓치고 있습니다.</p>
+            </div>
+            <p class="about-txt">“Polaris 서비스는 지식 생산자와 수용자를 연결해주는 분산형 인센티브 지식 거래 시스템입니다.<br />
+                이 프로젝트는 단순한 문서 공유 서비스 차원을 넘어서서 지식의 가치를 평가하고 지식을 거래함으로써<br />
+                지식 생산자가 보상을 얻고 수용자는 낮은 비용으로 더 높은 품질의 지식을 얻을 수 있게 합니다.” </p>
+            <div class="box-about-list">
+                <div class="about-item">
+                    <i class="sp-about-a"></i>
+                    <p class="about-item-txt">문서 공유 및 판매</p>
+                </div>
+                <div class="about-item">
+                    <i class="sp-about-b"></i>
+                    <p class="about-item-txt">문서 찾기</p>
+                </div>
+                <div class="about-item">
+                    <i class="sp-about-c"></i>
+                    <p class="about-item-txt">문서 열람 및 투표</p>
+                </div>
+                <div class="about-item">
+                    <i class="sp-about-d"></i>
+                    <p class="about-item-txt">지식 생산자에 대한 보상</p>
+                </div>
+            </div>
+            <div class="about-btn-area">
+                <button type="button" class="btn-basic-a">Polaris 기업 사이트 바로가기</button>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script>
+    ;(function($, win, doc, undefined) {
+
+        'use strict';
+
+        //콜백실행
+        var callbackItem = function(v){
+            //아이템 1개
+            for (var i = 1, len = 18; i < len; i++) {
+                $('.components-user-item-d .user-item-d').unwrap();
+            }
+        }
+
+        //components 불러오기
+        $plugins.uiPageLoad('/polaris/src/components/body/items/user-item-d.html', 'components-user-item-d', callbackItem);
+
+    })(jQuery, window, document);
+
+</script>

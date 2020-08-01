@@ -1,0 +1,45 @@
+.box-about {margin-top:60px}
+.box-about-top {background:url("/polaris/src/public/static/images/sub/about-bg.png") no-repeat 50% 50%;background-size:cover;min-height:428px;text-align:center;padding:30px}
+.box-about-top .about-title {margin-bottom:36px}
+.box-about-top .about-title img {max-width:100%;vertical-align:top}
+.box-about-top .about-des {font-size:18px;line-height:32px;color:#fff;word-break:keep-all;font-weight:200}
+.box-about-top .about-des ~ .box-about-des {margin-top:16px}
+.box-about .about-txt {font-size:22px;text-align:center;color:#3b3b3b;font-weight:500;line-height:38px;margin-top:68px;word-break:keep-all}
+.box-about-list {max-width:1200px;margin:44px auto 0;display:flex}
+.box-about-list .about-item {flex:1;border:1px solid #dbdbdb;display:flex;flex-direction:column;align-items:center;padding:40px 15px}
+.box-about-list .about-item ~ .about-item {margin-left:38px}
+.box-about-list [class^="sp-about-"] {display:block;width:150px;height:160px;background-image:url("/polaris/src/public/static/images/sub/sp_about.png");background-repeat:no-repeat}
+.box-about-list .sp-about-a {background-position:0 0}
+.box-about-list .sp-about-b {background-position:-150px 0}
+.box-about-list .sp-about-c {background-position:-300px 0}
+.box-about-list .sp-about-d {background-position:-450px 0}
+.box-about-list .about-item .about-item-txt {font-size:22px;color:#1b1b1b;margin-top:16px;word-break:keep-all;text-align:center}
+.about-btn-area {text-align:center;margin-top:80px}
+.about-btn-area .btn-basic-a {min-width:430px;max-width:100%}
+
+@media (max-width:1024px) {
+    .box-about .about-txt {font-size:18px;margin-top:40px;line-height:28px}
+    .box-about-list .about-item ~ .about-item {margin-left:20px}
+    .box-about-list .about-item .about-item-txt {font-size:18px}
+}
+@media (max-width:768px) {
+    .box-about {margin-top:40px}
+    .box-about-top {min-height:1px}
+    .box-about-top .about-des {font-size:16px;line-height:28px}
+    .box-about .about-txt br {display:none}
+    .box-about-list {flex-wrap:wrap}
+    .box-about-list [class^="sp-about-"] {width:75px;height:80px;background-size:auto 80px}
+    .box-about-list .sp-about-b {background-position:-75px 0}
+    .box-about-list .sp-about-c {background-position:-150px 0}
+    .box-about-list .sp-about-d {background-position:-225px 0}
+    .box-about-list .about-item {flex:auto;width:calc(50% - 8px)}
+    .box-about-list .about-item ~ .about-item {margin:0}
+    .box-about-list .about-item:nth-child(2n) {margin-left:16px}
+    .box-about-list .about-item:nth-child(n+3) {margin-top:16px}
+    .about-btn-area {margin-top:40px}
+}
+@media (max-width:500px) {
+    .box-about .about-txt {font-size:16px;line-height:24px}
+    .about-btn-area .btn-basic-a {min-width:100%}
+}
+
