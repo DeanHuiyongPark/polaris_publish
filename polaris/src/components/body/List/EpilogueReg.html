@@ -1,0 +1,62 @@
+
+<main class="base-body page-library">
+    <div class="box-content-b">
+        <!-- S : tab -->
+        <div class="tab-wrap-a">
+            <ul class="tab-list">
+                <li class="tab-item active"><a href="" class="link-tab">사용후기</a></li>
+                <li class="tab-item"><a href="" class="link-tab">Library 요청하기</a></li>
+                <li class="tab-item"><a href="" class="link-tab">추천 회원</a></li>
+            </ul>
+        </div>
+        <!-- E : tab -->
+        <div class="box-write">
+            <div class="write-item-a">
+                <div class="write-title">제목</div>
+                <div class="write-form"><input type="text" class="form-input-b" /></div>
+            </div>
+            <div class="write-item-a">
+                <div class="write-title">해당 Library 검색</div>
+                <div class="write-form"><input type="text" class="form-input-b" /></div>
+                <div class="write-btn"><button type="button" class="btn-basic-f medium">검색</button></div>
+            </div>
+            <div class="write-item-a">
+                <div class="write-title">Library 썸네일 이미지</div>
+                <div class="write-form">
+                    <div class="file-box">
+                        <input class="form-input-b upload-name" value="" disabled="disabled" placeholder="해상도는 000*000로 30kbyte 이하로 올려주세요">
+                        <input type="file" id="fileUp" class="form-hidden">
+                    </div>
+                </div>
+                <div class="write-btn"><label for="fileUp" class="btn-basic-f medium">찾아보기</label></div>
+            </div>
+            <div class="write-edit">
+                에디트 영역
+            </div>
+        </div>
+        <div class="btn-area-a">
+            <button type="button" class="btn-basic-a"><span>작성완료</span></button>
+            <button type="button" class="btn-basic-b"><span>취소</span></button>
+        </div>
+    </div>
+</main>
+
+<script>
+    ;(function($, win, doc, undefined) {
+
+        'use strict';
+        var fileTarget = $('.write-form .file-box .form-hidden');
+
+        fileTarget.on('change', function(){
+            if(window.FileReader){
+                var filename = $(this)[0].files[0].name;
+            } else {
+                var filename = $(this).val().split('/').pop().split('\\').pop();
+            }
+
+            $(this).siblings('.upload-name').val(filename);
+        });
+
+    })(jQuery, window, document);
+
+</script>

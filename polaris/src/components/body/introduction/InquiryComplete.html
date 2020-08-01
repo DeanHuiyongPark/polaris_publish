@@ -1,0 +1,56 @@
+
+<main class="base-body page-introduction">
+    <div class="box-content-b">
+        <!-- S : tab -->
+        <div class="tab-wrap-a">
+            <ul class="tab-list">
+                <li class="tab-item"><a href="" class="link-tab">About Us</a></li>
+                <li class="tab-item"><a href="" class="link-tab">이용가이드</a></li>
+                <li class="tab-item"><a href="" class="link-tab">FAQ</a></li>
+                <li class="tab-item active"><a href="" class="link-tab">1:1 문의</a></li>
+            </ul>
+        </div>
+        <!-- E : tab -->
+        <div class="box-vote">
+            <div class="vote-title-wrap">
+                <h2 class="title-type-d">작성완료</h2>
+                <i class="vote-icon-d"></i>
+            </div>
+
+            <div class="box-vote-b v1">
+                <div class="vote-info">
+                    <p class="vote-info-title">투표한 Library제목</p>
+                    <p class="vote-info-des">1:1문의를 작성해 주셔서 감사합니다.<br />
+                        되도록 빠르게 확인하여 답변 드리도록 하겠습니다.<br />
+                        답변은 My Page에서 확인 가능합니다.</p>
+                    <p class="vote-info-des">감사합니다.</p>
+                </div>
+            </div>
+
+            <div class="vote-btn-area-b">
+                <button type="button" class="btn-basic-a">확인</button>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+<script>
+    ;(function($, win, doc, undefined) {
+
+        'use strict';
+
+        //콜백실행
+        var callbackItem = function(v){
+            //아이템 1개
+            for (var i = 1, len = 18; i < len; i++) {
+                $('.components-user-item-d .user-item-d').unwrap();
+            }
+        }
+
+        //components 불러오기
+        $plugins.uiPageLoad('/polaris/src/components/body/items/user-item-d.html', 'components-user-item-d', callbackItem);
+
+    })(jQuery, window, document);
+
+</script>
