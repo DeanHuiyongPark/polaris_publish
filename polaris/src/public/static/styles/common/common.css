@@ -24,10 +24,34 @@
 
 /* button --------------------------------------------------------------------------- */
 .btn-wrap{width:100%;text-align:center}
+.btn-wrap-r{width:100%;text-align:right}
 .btn-more{height:25px;background:#0032a2;color:#fff;text-align:center;display:inline-block;padding:3px 15px;font-size:12px;border-radius:13px}
 
 /* table */
 .list-head{width:100%; position:relative;}
+.tbl-list {table-layout: fixed; width:100%; margin:15px 0;}
+.tbl-list thead th{background:#f5f5f5; font-size:18px; color:#000; padding:20px; text-align:center; font-weight:500;}
+.tbl-list tbody td{background:#fff; font-size:18px; color:#787878; padding:20px; text-align:center; border-bottom:2px solid #eaeaea;}
+.tbl-list tbody td a{display:block; text-align: left; width:100%; color:#353535; padding:0 20px}
+.tbl-list tbody td a:focus,
+.tbl-list tbody td a:hover{text-decoration:underline;}
+.tbl-list tbody td .ellp.tit{font-size:18px;color:#353535;}
+.tbl-list tbody td .ellp{width:100%; color:#a5a5a5; font-size:16px;}
+.tbl-list i{display:inline-block; padding:0 10px; font-size:16px; vertical-align:top; color:#ccc}
+.tbl-list strong{color:#308cfe; font-weight:500;}
+
+.paging {margin:40px auto;position:relative;display:block;width:100%;text-align:center}
+.paging button {display:inline-block;margin:0 5px;height:26px;vertical-align:middle}
+.paging-first,
+.paging-last,
+.paging-prev,
+.paging-next {width:26px;height:26px;border-radius:50%;}
+.paging-num {padding:0 10px;color:#a0a0a0;font-size:16px}
+.paging-num.current {color:#1b1b1b;font-weight: 500}
+/* .paging-first {background:#d2d2d2 url() no-repeat 0 0}
+.paging-last {background:#d2d2d2 url() no-repeat 100% 0}
+.paging-prev {margin-right:10px;background:#d2d2d2 url() no-repeat 0 100%}
+.paging-next {margin-left:10px;background:#d2d2d2 url() no-repeat 100% 100%} */
 
 
 /* form --------------------------------------------------------------------------- */

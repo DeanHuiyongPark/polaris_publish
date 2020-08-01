@@ -1,20 +1,58 @@
 <style>
     .box-memberview {width:100%; position: relative; border:1px solid #dcecfc; margin-bottom:60px;}
     .box-memberview::after{content:""; display:block; clear:both;}
-    .box-memberview .user-list-a{width:370px; float:left;}
-    .box-memberview-info{float:left; width:calc(100% - 370px);}
-
+    .box-memberview .user-list-a{max-width:370px; float:left;}
+    .box-memberview-info{float:left; max-width:calc(100% - 370px);}
     .box-memberview-info .menu{padding:50px 0 0 60px; float:left;}
     .box-memberview-info .menu h3{font-size:35px; font-weight:500; color:#383838; margin:5px 0 60px}
     .box-memberview-info .menu button{font-size:24px; margin-bottom:25px;}
     .box-memberview-info .menu button.active{color:#308cfe; font-weight:600; border-bottom:1px solid #308cfe;}
-    .box-memberview-info .content{float:right; width:800px; padding:40px 20px 0 0;}
+    .box-memberview-info .content{float:right; max-width:800px; padding:40px 0 0 0;}
     .box-memberview-info .content .card-item{max-width:245px;}
     .box-memberview-info .content .card-item ~ .card-item{margin:0 0 15px 15px; } 
     .box-memberview-info .content .card-item:nth-child(3n + 1){margin-left:0 !important;}
 
+    /* tab in tab */
+    .tab-sub-btns{width:100%; text-align:center; margin-bottom:50px;}
+    .tab-sub-btns button{font-size:18px; padding:5px 70px;}
+    .tab-sub-btns button.active{color:#308cfe; font-weight:600;border-bottom:2px solid #308cfe;}
+
+    .type-simple .tbl-list{margin:0;}
+    .type-simple .btn-wrap-r,
+    .type-simple .paging,
+    .type-simple .col-3,
+    .type-simple .col-4,
+    .type-simple .col-5,
+    .type-simple .col-6,
+    .type-simple .col-7,
+    .type-simple th:nth-child(3),
+    .type-simple th:nth-child(4),
+    .type-simple th:nth-child(5),
+    .type-simple th:nth-child(6),
+    .type-simple th:nth-child(7),
+    .type-simple td:nth-child(3),
+    .type-simple td:nth-child(4),
+    .type-simple td:nth-child(5),
+    .type-simple td:nth-child(6),
+    .type-simple td:nth-child(7){display: none;}
+
     @media (max-width:1024px) {
+    
+        .box-memberview {width:100%; position: relative; border:1px solid #dcecfc; margin-bottom:60px;}
+        .box-memberview::after{content:""; display:block; clear:both;}
+        .box-memberview .user-list-a{width:100%; float:left;}
+        .box-memberview-info{float:left; width:100%;}
+
+        .box-memberview-info .menu{padding:50px 0 0 60px; float:left;}
+        .box-memberview-info .menu h3{font-size:35px; font-weight:500; color:#383838; margin:5px 0 60px}
+        .box-memberview-info .menu button{font-size:24px; margin-bottom:25px;}
+        .box-memberview-info .menu button.active{color:#308cfe; font-weight:600; border-bottom:1px solid #308cfe;}
+        .box-memberview-info .content{float:right; width:800px; padding:40px 20px 0 0;}
+        .box-memberview-info .content .card-item{max-width:245px;}
+        .box-memberview-info .content .card-item ~ .card-item{margin:0 0 15px 15px; } 
+        .box-memberview-info .content .card-item:nth-child(3n + 1){margin-left:0 !important;}
     }
+
 </style>
 
 <main class="base-body">
@@ -24,7 +62,7 @@
             <ul class="tab-list">
                 <li class="tab-item"><a href="" class="link-tab">사용후기</a></li>
                 <li class="tab-item"><a href="" class="link-tab">Library 요청하기</a></li>
-                <li class="tab-item"><a href="" class="link-tab active">추천 회원</a></li>
+                <li class="tab-item active"><a href="" class="link-tab">추천 회원</a></li>
             </ul>
         </div>
         <!-- E : tab -->
@@ -71,10 +109,19 @@
                         </div>
                     </div>
                     <div class="ui-tab-pnl" pnl="3">
-                        3
+                        <div class="type-simple">
+                            <div class="components-list-reviews"></div>
+                        </div>
                     </div>
                     <div class="ui-tab-pnl" pnl="4">
-                        4
+                        <div class="type-simple">
+                            <div class="components-list-request"></div>
+                        </div>
+                    </div>
+                    <div class="ui-tab-pnl" pnl="5">
+                        <div class="type-simple">
+                            <div class="components-list-reply"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -94,36 +141,59 @@
                 </ul>
             </div>
             <div tabpnl="tabMV">
+                <!-- 업로드 Library -->
                 <div class="ui-tab-pnl" pnl="1">
                     <h3 class="hide">업로드 Library</h3>
                     <div class="card-list-a">
                         <div class="components-mv-carditem"></div>
                     </div>
+                    <div class="btn-wrap">
+                        <button type="button" class="btn-more-c">더보기</button>
+                    </div>
                 </div>
+
+                <!-- 투표한 Library -->
                 <div class="ui-tab-pnl" pnl="2">
-                    <div class="tab-text" tabname="tabCtg">
-                        <div class="tab-text-btn" tabbtn="tabCtg">
+                    <h3 class="hide">투표한 Library</h3>
+                    <div tabname="tabCtg">
+                        <div class="tab-sub-btns" tabbtn="tabCtg">
                             <button type="button" class="ui-tab-btn" n="1" onclick="$plugins.tabToggle(1, 'tabCtg');"><span>Library</span></button>
                             <button type="button" class="ui-tab-btn" n="2" onclick="$plugins.tabToggle(2, 'tabCtg');"><span>회원</span></button>
                         </div>
-                        <div tabpnl="tabCtg">
-                            <div class="tab-text-pnl ui-tab-pnl" pnl="1">
-                                111
+                        <div class="tab-sub-pnl" tabpnl="tabCtg">
+                            <!-- 투표한 Library : Library -->
+                            <div class="ui-tab-pnl" pnl="1">
+                                <h4 class="hide">Library</h4>
+                                <div class="card-list-a">
+                                    <div class="components-mv-carditem"></div>
+                                </div>
+                                <div class="btn-wrap">
+                                    <button type="button" class="btn-more-c">더보기</button>
+                                </div>
                             </div>
-                            <div class="tab-text-pnl ui-tab-pnl" pnl="2">
-                                222
+                            <!-- 투표한 Library : 회원 -->
+                            <div class="ui-tab-pnl" pnl="2">
+                                <h4 class="hide">회원</h4>
+                                <div class="user-list-c">
+                                    <div class="components-user-item-f2"></div>
+                                </div>
+                                <div class="btn-wrap">
+                                    <button type="button" class="btn-more-c">더보기</button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- 작성한 사용후기 -->
                 <div class="ui-tab-pnl" pnl="3">
-                    3
+                    <div class="components-list-reviews"></div>
                 </div>
                 <div class="ui-tab-pnl" pnl="4">
-                    4
+                    <div class="components-list-request"></div>
                 </div>
                 <div class="ui-tab-pnl" pnl="5">
-                    5
+                    <div class="components-list-reply"></div>
                 </div>
             </div>
         </div>
@@ -164,12 +234,33 @@
             }
             $('.components-user-item-f > *').unwrap();
         }
+        var callbackItem5 = function(v){
+            //아이템 3개
+            for (var i = 1, len = 6; i < len; i++) {
+                $('.components-user-item-f2').append(v);
+            }
+            $('.components-user-item-f2 > *').unwrap();
+        }
+        var callbackItem6 = function(v){
+            $('.components-list-reviews > *').unwrap();
+        }
+        var callbackItem7 = function(v){
+            $('.components-list-request > *').unwrap();
+        }
+        var callbackItem8 = function(v){
+            $('.components-list-reply > *').unwrap();
+        }
 
         //components 불러오기
         $plugins.uiPageLoad('/polaris/src/components/body/items/card-item.html', 'components-mv-carditem', callbackItem1)
             .then($plugins.uiPageLoad('/polaris/src/components/body/items/user-item-e.html', 'components-user-item-e', callbackItem2))
             .then($plugins.uiPageLoad('/polaris/src/components/body/items/card-item.html', 'components-mv-carditem2', callbackItem3))
-            .then($plugins.uiPageLoad('/polaris/src/components/body/items/user-item-f.html', 'components-user-item-f', callbackItem4));
+            .then($plugins.uiPageLoad('/polaris/src/components/body/items/user-item-f.html', 'components-user-item-f', callbackItem4))
+            .then($plugins.uiPageLoad('/polaris/src/components/body/items/user-item-f.html', 'components-user-item-f2', callbackItem5))
+            .then($plugins.uiPageLoad('/polaris/src/components/body/items/list-reviews.html', 'components-list-reviews', callbackItem6))
+            .then($plugins.uiPageLoad('/polaris/src/components/body/items/list-request.html', 'components-list-request', callbackItem7))
+            .then($plugins.uiPageLoad('/polaris/src/components/body/items/list-reply.html', 'components-list-reply', callbackItem8));
+
 
         //tab
         $plugins.tabToggle = function(v, name){
@@ -178,8 +269,8 @@
             $('[tabpnl="'+ name +'"] > .ui-tab-pnl').removeClass('visible');
             $('[tabpnl="'+ name +'"] > .ui-tab-pnl[pnl="'+ v +'"]').addClass('visible');
         }
-        $plugins.tabToggle(1, 'tabMV');
-        $plugins.tabToggle(1, 'tabInfo');
+        $plugins.tabToggle(5, 'tabMV');
+        $plugins.tabToggle(5, 'tabInfo');
         $plugins.tabToggle(1, 'tabCtg');
 
     })(jQuery, window, document);
