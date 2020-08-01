@@ -5,7 +5,7 @@
 /* Layout --------------------------------------------------------------------------- */
 .base-wrap{position:relative;width:100%}
 .type-sub .base-body{padding-top:200px;max-width:1200px;margin:0 auto}
-.type-sub-v2 .base-body{max-width:1600px;margin:0 auto; padding:170px 20px 0; box-sizing: border-box;}
+.type-sub-v2 .base-body{max-width:1600px;margin:0 auto; padding:170px 20px 0; box-sizing:border-box;}
 
 .box-content-a {padding:70px 0 60px}
 .box-content-b {padding:60px 0}
@@ -27,7 +27,7 @@
 .btn-more{height:25px;background:#0032a2;color:#fff;text-align:center;display:inline-block;padding:3px 15px;font-size:12px;border-radius:13px}
 
 /* table */
-.list-head{width:100%; position: relative;}
+.list-head{width:100%; position:relative;}
 
 
 /* form --------------------------------------------------------------------------- */
@@ -43,6 +43,7 @@ select:focus{border-color:#000}
 
 /* input */
 .form-input-a {height:45px;background-color:#dedede;border-radius:0;border:none;padding:0 8px;box-sizing:border-box}
+.form-input-b {height:54px;background-color:#fff;border-radius:0;border:1px solid #999;padding:0 12px;box-sizing:border-box;font-size:18px}
 
 /* title */
 .title-type-a {font-size:36px;color:#000;line-height:100%;font-weight:600}
@@ -72,6 +73,22 @@ select:focus{border-color:#000}
 .tab-wrap-b .tab-list .tab-item ~ .tab-item {border-left:1px solid #e5e5e5}
 .tab-wrap-b .tab-list .tab-item .count-value {color:#ff8400;font-size:16px;font-weight:600;margin-left:4px}
 
+/* write */
+.box-write {padding:0 60px 50px;border-bottom:1px solid #d8d8d8}
+.write-item-a {position:relative;padding-right:210px;width:100%}
+.write-item-a ~ .write-item-a {margin-top:10px}
+.write-item-a:after {content:'';display:block;clear:both}
+.write-item-a .write-title {float:left;width:205px;font-size:18px;color:#000;vertical-align:middle;font-weight:500;line-height:54px}
+.write-item-a .write-form {float:left;width:calc(100% - 205px)}
+.write-item-a .write-form .form-input-b {width:100%}
+.write-item-a .write-btn {position:absolute;bottom:2px;right:0}
+.write-item-a .write-btn .medium {line-height:48px}
+.write-item-a .write-form .form-hidden {position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+.write-item-a .write-form .upload-name::placeholder {color:#aaa}
+.write-item-a .write-form .upload-name::-webkit-input-placeholder {color:#aaa}
+.write-item-a .write-form .upload-name:-ms-input-placeholder {color:#aaa}
+.write-edit {margin-top:50px}
+
 @media (max-width:1300px) {
     /* tab */
     .tab-wrap-b .tab-list .tab-item .link-tab {font-size:16px}
@@ -88,6 +105,16 @@ select:focus{border-color:#000}
     .tab-wrap-b {overflow-x:auto;-webkit-overflow-scrolling:touch}
     .tab-wrap-b .tab-list {flex-wrap:nowrap}
     .tab-wrap-b .tab-list .tab-item {flex:none;width:220px}
+
+    /* write */
+    .box-write {padding:0 20px 40px}
+    .write-item-a {padding-right:140px}
+    .write-item-a .write-btn .medium {min-width:130px}
+    .write-item-a .write-title {width:180px}
+    .write-item-a .write-form {width:calc(100% - 180px)}
+    .write-item-a .write-form .upload-name::placeholder {font-size:16px}
+    .write-item-a .write-form .upload-name::-webkit-input-placeholder {font-size:16px}
+    .write-item-a .write-form .upload-name:-ms-input-placeholder {font-size:16px}
 }
 @media (max-width:768px) {
     /* layout */
@@ -100,12 +127,27 @@ select:focus{border-color:#000}
     /* tab */
     .tab-wrap-a {border-radius:12px;margin-bottom:30px}
     .tab-wrap-a .tab-list .tab-item .link-tab {font-size:18px;height:52px}
-    .tab-wrap-a .tab-list .tab-item .link-tab.active {border-radius:12px}
+    .tab-wrap-a .tab-list .tab-item.active .link-tab {border-radius:12px}
     .tab-wrap-a .tab-list .tab-item {flex:auto}
+
+    /* write */
+    .box-write {padding:0 0 40px}
+    .write-item-a .write-title {display:block;width:100%;line-height:30px;padding-bottom:4px;float:none}
+    .write-item-a .write-form {width:100%}
 }
 @media (max-width:500px) {
     /* tab */
     .tab-wrap-a .tab-list .tab-item .link-tab {font-size:14px}
+
+    /* write */
+    .write-item-a {padding-right:0}
+    .write-item-a .write-title {font-size:16px}
+    .write-item-a .write-form {float:none}
+    .write-item-a .write-form .upload-name::placeholder {font-size:14px}
+    .write-item-a .write-form .upload-name::-webkit-input-placeholder {font-size:14px}
+    .write-item-a .write-form .upload-name:-ms-input-placeholder {font-size:14px}
+    .write-item-a .write-btn {position:static;margin-top:8px}
+    .write-item-a .write-btn [class^="btn-basic-"] {width:100%}
 }
 
 
