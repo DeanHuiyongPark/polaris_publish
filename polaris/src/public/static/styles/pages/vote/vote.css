@@ -3,6 +3,7 @@
 .vote-icon-a {width:186px;height:124px;background:url(/polaris/src/public/static/images/sub/vote-img-a.png) 50% 50% no-repeat;background-size:100% auto}
 .vote-icon-b {width:186px;height:124px;background:url(/polaris/src/public/static/images/sub/vote-img-b.png) 50% 50% no-repeat;background-size:100% auto}
 .vote-icon-c {width:186px;height:124px;background:url(/polaris/src/public/static/images/sub/vote-img-c.png) 50% 50% no-repeat;background-size:100% auto}
+.vote-icon-d {width:186px;height:124px;background:url(/polaris/src/public/static/images/sub/vote-img-d.png) 50% 50% no-repeat;background-size:100% auto}
 .box-vote .vote-des {margin:32px 0 28px;font-size:26px;line-height:40px;color:#000;font-weight:200;word-break:keep-all}
 .box-vote-b {border:1px solid #c3c3c3}
 .vote-agree .list-item {padding:26px 30px}
@@ -44,7 +45,8 @@
 @media (max-width:768px) {
 	.vote-icon-a,
 	.vote-icon-b,
-	.vote-icon-c {width:93px;height:62px}
+	.vote-icon-c,
+	.vote-icon-d {width:93px;height:62px}
 	.box-vote .vote-des {font-size:16px;line-height:22px}
 	.vote-agree .list-item,
 	.box-vote-b .vote-info {padding:20px}
