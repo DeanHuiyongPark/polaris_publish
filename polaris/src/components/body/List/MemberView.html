@@ -37,7 +37,7 @@
             <div class="box-memberview-info" tabname="tabInfo">
                 <div class="menu">
                     <h3>최근 활동 내역</h3>
-                    <ul>
+                    <ul tabbtn="tabInfo">
                         <li>
                             <button type="button" class="ui-tab-btn" n="1" onclick="$plugins.tabToggle(1, 'tabInfo');"><span>업로드 Library</span></button>
                         </li>
@@ -55,19 +55,19 @@
                         </li>
                     </ul>
                 </div>
-                <div class="content">
+                <div class="content" tabpnl="tabInfo">
                     <div class="ui-tab-pnl" pnl="1">
                         <h3 class="hide">업로드 Library</h3>
                         <div class="card-list-b">
-                             <div class="components-mv-carditem"></div>
+                            <div class="components-mv-carditem"></div>
                         </div>
                     </div>
                     <div class="ui-tab-pnl" pnl="2">
                         <div class="card-list-b">
-                             <div class="components-mv-carditem2"></div>
+                            <div class="components-mv-carditem2"></div>
                         </div>
                         <div class="user-list-d">
-                             <div class="components-user-item-f"></div>
+                            <div class="components-user-item-f"></div>
                         </div>
                     </div>
                     <div class="ui-tab-pnl" pnl="3">
@@ -76,7 +76,6 @@
                     <div class="ui-tab-pnl" pnl="4">
                         4
                     </div>
-                   
                 </div>
             </div>
 
@@ -86,7 +85,7 @@
 
         <div tabname="tabMV">   
             <div class="tab-wrap-b">
-                <ul class="tab-list">
+                <ul class="tab-list" tabbtn="tabMV">
                     <li class="tab-item"><button type="button" n="1" class="ui-tab-btn link-tab" onclick="$plugins.tabToggle(1, 'tabMV');">업로드 Library<span class="count-value">[12]</span></button></li>
                     <li class="tab-item"><button type="button" n="2" class="ui-tab-btn link-tab active" onclick="$plugins.tabToggle(2, 'tabMV');">투표한 Library<span class="count-value">[12]</span></button></li>
                     <li class="tab-item"><button type="button" n="3" class="ui-tab-btn link-tab" onclick="$plugins.tabToggle(3, 'tabMV');">작성한 사용후기<span class="count-value">[12]</span></button></li>
@@ -94,23 +93,38 @@
                     <li class="tab-item"><button type="button" n="5" class="ui-tab-btn link-tab" onclick="$plugins.tabToggle(5, 'tabMV');">작성한 댓글<span class="count-value">[12]</span></button></li>
                 </ul>
             </div>
-            <div class="ui-tab-pnl" pnl="1">
-                <h3 class="hide">업로드 Library</h3>
-                <div class="card-list-a">
-                    <div class="components-mv-carditem"></div>
+            <div tabpnl="tabMV">
+                <div class="ui-tab-pnl" pnl="1">
+                    <h3 class="hide">업로드 Library</h3>
+                    <div class="card-list-a">
+                        <div class="components-mv-carditem"></div>
+                    </div>
                 </div>
-            </div>
-            <div class="ui-tab-pnl" pnl="2">
-                2
-            </div>
-            <div class="ui-tab-pnl" pnl="3">
-                3
-            </div>
-            <div class="ui-tab-pnl" pnl="4">
-                4
-            </div>
-            <div class="ui-tab-pnl" pnl="5">
-                5
+                <div class="ui-tab-pnl" pnl="2">
+                    <div class="tab-text" tabname="tabCtg">
+                        <div class="tab-text-btn" tabbtn="tabCtg">
+                            <button type="button" class="ui-tab-btn" n="1" onclick="$plugins.tabToggle(1, 'tabCtg');"><span>Library</span></button>
+                            <button type="button" class="ui-tab-btn" n="2" onclick="$plugins.tabToggle(2, 'tabCtg');"><span>회원</span></button>
+                        </div>
+                        <div tabpnl="tabCtg">
+                            <div class="tab-text-pnl ui-tab-pnl" pnl="1">
+                                111
+                            </div>
+                            <div class="tab-text-pnl ui-tab-pnl" pnl="2">
+                                222
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-tab-pnl" pnl="3">
+                    3
+                </div>
+                <div class="ui-tab-pnl" pnl="4">
+                    4
+                </div>
+                <div class="ui-tab-pnl" pnl="5">
+                    5
+                </div>
             </div>
         </div>
         
@@ -159,13 +173,14 @@
 
         //tab
         $plugins.tabToggle = function(v, name){
-            $('[tabname="'+ name +'"] .ui-tab-btn').removeClass('active');
-            $('[tabname="'+ name +'"] .ui-tab-btn[n="'+ v +'"]').addClass('active');
-            $('[tabname="'+ name +'"] .ui-tab-pnl').removeClass('visible');
-            $('[tabname="'+ name +'"] .ui-tab-pnl[pnl="'+ v +'"]').addClass('visible');
+            $('[tabbtn="'+ name +'"] .ui-tab-btn').removeClass('active');
+            $('[tabbtn="'+ name +'"] .ui-tab-btn[n="'+ v +'"]').addClass('active');
+            $('[tabpnl="'+ name +'"] > .ui-tab-pnl').removeClass('visible');
+            $('[tabpnl="'+ name +'"] > .ui-tab-pnl[pnl="'+ v +'"]').addClass('visible');
         }
         $plugins.tabToggle(1, 'tabMV');
         $plugins.tabToggle(1, 'tabInfo');
+        $plugins.tabToggle(1, 'tabCtg');
 
     })(jQuery, window, document);
 
