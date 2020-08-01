@@ -1,24 +1,25 @@
 <style>
     /* 사용후기 */
-    .list-reviews .col-1{width:120px}
-    .list-reviews .col-2{width:auto}
-    .list-reviews .col-3{width:200px}
-    .list-reviews .col-4{width:180px}
-    .list-reviews .col-5{width:220px}
-    .list-reviews .col-6{width:120px}
-    .list-reviews .col-7{width:120px}
-    .list-reviews .paging .btn-basic-a{position:absolute; right:0; top:-25px;}
+    .list-requset .col-1{width:110px}
+    .list-requset .col-2{width:auto}
+    .list-requset .col-3{width:150px}
+    .list-requset .col-4{width:130px}
+    .list-requset .col-5{width:180px}
+    .list-requset .col-6{width:100px}
+    .list-requset .col-7{width:100px}
+    .list-requset .paging .btn-basic-a{position:absolute; right:0; top:-25px;}
 
     @media (max-width:1024px) {
 
     }
 </style>
 
-<div class="list-reviews">
+<div class="list-requset">
     <div class="btn-wrap-r">
         <button type="button" class="btn-basic-a small"><span>Library 요청하기</span></button>
     </div>
-    <table class="tbl-list">
+    <div class="tbl-list">
+        <table>
         <caption>번호,요청제목,구매의사POLA, 작성자, 날짜, 조회수, 공감수 정보의 작성한 사용후기 목록</caption>
         <colgroup>
             <col class="col-1">
@@ -113,7 +114,8 @@
             </tr>
             
         </tbody>
-    </table>
+        </table>
+    </div>
 
     <div class="paging">
         <button type="button" class="paging-first">
