@@ -56,12 +56,12 @@ select:focus{border-color:#000}
 .point-color-b {color:#ff8400}
 
 /* tab */
-.tab-wrap-a {border-radius:22px;overflow:hidden;margin-bottom:54px}
+.tab-wrap-a {border-radius:12px;overflow:hidden;margin-bottom:54px}
 .tab-wrap-a .tab-list {display:flex;background-color:#e2e6ec}
 .tab-wrap-a .tab-list .tab-item {flex:1}
-.tab-wrap-a .tab-list .tab-item .link-tab {position:relative;display:flex;align-items:center;justify-content:center;background-color:#e2e6ec;height:70px;font-size:28px;color:#727a83}
+.tab-wrap-a .tab-list .tab-item .link-tab {position:relative;display:flex;align-items:center;justify-content:center;background-color:#e2e6ec;height:70px;font-size:26px;color:#727a83}
 .tab-wrap-a .tab-list .tab-item ~ .tab-item .link-tab:before {content:'';position:absolute;left:0;top:0;bottom:0;width:1px;background-color:#fff}
-.tab-wrap-a .tab-list .tab-item.active .link-tab {color:#fff;font-weight:600;background-color:#308cfe;border-radius:22px}
+.tab-wrap-a .tab-list .tab-item.active .link-tab {color:#fff;font-weight:600;background-color:#308cfe;border-radius:12px}
 .tab-wrap-a .tab-list .tab-item.active + .tab-item .link-tab:before,
 .tab-wrap-a .tab-list .tab-item.active .link-tab:before {display:none}
 
@@ -78,18 +78,27 @@ select:focus{border-color:#000}
 
 /* write */
 .box-write {padding:0 60px 50px;border-bottom:1px solid #d8d8d8}
-.write-item-a {position:relative;padding-right:210px;width:100%}
+.box-write .form-input-b {width:100%}
+.write-item-a {position:relative;padding-right:210px}
+.write-item-b {position:relative}
+.write-item-b ~ .write-item-b,
 .write-item-a ~ .write-item-a {margin-top:10px}
+.write-item-b:after,
 .write-item-a:after {content:'';display:block;clear:both}
+.write-item-b .write-title,
 .write-item-a .write-title {float:left;width:205px;font-size:18px;color:#000;vertical-align:middle;font-weight:500;line-height:54px}
+.write-item-b .write-form,
 .write-item-a .write-form {float:left;width:calc(100% - 205px)}
-.write-item-a .write-form .form-input-b {width:100%}
 .write-item-a .write-btn {position:absolute;bottom:2px;right:0}
 .write-item-a .write-btn .medium {line-height:48px}
 .write-item-a .write-form .form-hidden {position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
 .write-item-a .write-form .upload-name::placeholder {color:#aaa}
 .write-item-a .write-form .upload-name::-webkit-input-placeholder {color:#aaa}
 .write-item-a .write-form .upload-name:-ms-input-placeholder {color:#aaa}
+.write-item-b .write-form-b {float:left;width:45%;display:table}
+.write-item-b .write-form-b .write-form-col {display:table-cell}
+.write-item-b .write-form-b .write-form-col select {width:100%;border-color:#999;height:54px;background-position:100% 8px;font-size:18px}
+.write-item-b .write-form-txt {display:table-cell;font-size:18px;color:#585757;line-height:54px;padding-left:20px;width:1%;white-space:nowrap}
 .write-edit {margin-top:50px}
 
 @media (max-width:1300px) {
@@ -113,7 +122,10 @@ select:focus{border-color:#000}
     .box-write {padding:0 20px 40px}
     .write-item-a {padding-right:140px}
     .write-item-a .write-btn .medium {min-width:130px}
+    .write-item-b .write-title,
     .write-item-a .write-title {width:180px}
+    .write-item-b .write-form-b,
+    .write-item-b .write-form,
     .write-item-a .write-form {width:calc(100% - 180px)}
     .write-item-a .write-form .upload-name::placeholder {font-size:16px}
     .write-item-a .write-form .upload-name::-webkit-input-placeholder {font-size:16px}
@@ -128,24 +140,31 @@ select:focus{border-color:#000}
     .title-type-d {font-size:32px}
 
     /* tab */
-    .tab-wrap-a {border-radius:12px;margin-bottom:30px}
+    .tab-wrap-a {border-radius:8px;margin-bottom:30px}
     .tab-wrap-a .tab-list .tab-item .link-tab {font-size:18px;height:52px}
     .tab-wrap-a .tab-list .tab-item.active .link-tab {border-radius:12px}
     .tab-wrap-a .tab-list .tab-item {flex:auto}
 
     /* write */
     .box-write {padding:0 0 40px}
-    .write-item-a .write-title {display:block;width:100%;line-height:30px;padding-bottom:4px;float:none}
-    .write-item-a .write-form {width:100%}
+    .write-item-a .write-title,
+    .write-item-b .write-title {display:block;width:100%;line-height:30px;padding-bottom:4px;float:none}
+    .write-item-a .write-form,
+    .write-item-b .write-form,
+    .write-item-b .write-form-b {width:100%}
 }
 @media (max-width:500px) {
+    .box-content-b {padding:30px 0 60px}
+
     /* tab */
     .tab-wrap-a .tab-list .tab-item .link-tab {font-size:14px}
 
     /* write */
     .write-item-a {padding-right:0}
-    .write-item-a .write-title {font-size:16px}
-    .write-item-a .write-form {float:none}
+    .write-item-a .write-title,
+    .write-item-b .write-title {font-size:16px}
+    .write-item-a .write-form,
+    .write-item-b .write-form {float:none}
     .write-item-a .write-form .upload-name::placeholder {font-size:14px}
     .write-item-a .write-form .upload-name::-webkit-input-placeholder {font-size:14px}
     .write-item-a .write-form .upload-name:-ms-input-placeholder {font-size:14px}
