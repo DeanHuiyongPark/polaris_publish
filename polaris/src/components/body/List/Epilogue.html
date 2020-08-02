@@ -48,15 +48,7 @@
             </div>
             <div class="fl-item-r">
 
-                <div>
-                    <select title="구분선택">
-                        <option>전체일</option>
-                    </select>
-                    <div class="inp-search">
-                        <input type="search" />
-                        <button type="button" class="btn-search"><span class="hide">검색</span></button>
-                    </div>
-                </div>
+                <div class="components-search-list"></div>
 
             </div>
         </div>
@@ -77,7 +69,10 @@
         var callbackItem1 = function(){
             $('.components-list-reviews > *').unwrap();
         }
-        var callbackItem2 = function(v){
+        var callbackItem2 = function(){
+            $('.components-search-list > *').unwrap();
+        }
+        var callbackItem3 = function(v){
             //아이템 6개
             for (var i = 1, len = 6; i < len; i++) {
                 $('.components-list-item-a').append(v);
@@ -87,7 +82,8 @@
         }
         
         $plugins.uiPageLoad('/polaris/src/components/body/items/list-reviews.html', 'components-list-reviews', callbackItem1)
-            .then($plugins.uiPageLoad('/polaris/src/components/body/items/list-item.html', 'components-list-item-a', callbackItem2));
+            .then($plugins.uiPageLoad('/polaris/src/components/body/items/Search-list.html', 'components-search-list', callbackItem2))
+            .then($plugins.uiPageLoad('/polaris/src/components/body/items/list-item.html', 'components-list-item-a', callbackItem3));
 
         //tab
         $plugins.tabToggle = function(v, name){
