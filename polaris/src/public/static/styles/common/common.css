@@ -129,7 +129,13 @@ select:focus{border-color:#000}
 @media (max-width:1300px) {
     /* table */
     .tbl-list{width:100%; position:relative; overflow-x: auto;}
-    .tbl-list table{table-layout: fixed; width:1600px; margin:15px 0;}
+    .tbl-list table{table-layout: fixed; width:1000px; margin:5px 0;}
+    .tbl-list thead th{font-size:16px;  padding:10px 5px; }
+    .tbl-list tbody td{font-size:16px; padding:10px 5px; border-bottom:1px solid #eaeaea;}
+    .tbl-list tbody td a{padding:0 10px}
+    .tbl-list tbody td .ellp.tit{font-size:16px;}
+    .tbl-list tbody td .ellp{font-size:14px;}
+    .tbl-list i{padding:0 5px; font-size:16px; }
 
     /* tab */
     .tab-wrap-b .tab-list .tab-item .link-tab {font-size:16px}
