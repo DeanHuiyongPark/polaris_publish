@@ -88,11 +88,10 @@
         </div>
 
         <div class="card-list-a">
-
-             <!-- components card item -->
+            <!-- components card item -->
             <div class="components-card-item"></div>
-
         </div>
+
         <div class="btn-wrap">
             <button type="button" class="btn-more-c">더보기</button>
         </div>
@@ -100,6 +99,8 @@
         
         
     </div>
+
+    
 </main>
 
 <script>
@@ -125,10 +126,24 @@
                 $('.components-card-item').append(v);
             }
             $('.components-card-item > *').unwrap();
+
+            //미리보기 이벤트
+            $('.item-title').on('click', function(e){
+                e.preventDefault();
+
+                $plugins.modalOpen()
+                
+            })
+
         }
 
         //components 불러오기
         $plugins.uiPageLoad('/polaris/src/components/body/items/card-item.html', 'components-card-item', callbackItem);
+
+        //미리보기 팝업
+        $plugins.modalOpen = function(){
+            alert(111)
+        }
 
     })(jQuery, window, document);
 
