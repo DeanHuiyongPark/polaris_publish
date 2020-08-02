@@ -51,6 +51,7 @@
     <br>
     <button type="button" class="btn-exception-a"><span>btn-exception-a</span></button>
     <button type="button" class="btn-exception-b"><span>목록</span></button>
+    <button type="button" class="btn-exception-c"><span>회원등급 안내</span></button>
 
     <h2 class="g-h2">Tab</h2>
     <h3 class="g-h3">Tab A</h3>
@@ -146,6 +147,10 @@
         <div class="components-user-item-f"></div>
         <!-- E : user item unit -->
     </div>
+    <h3 class="g-h3">user item g 1개</h3>
+    <!-- S : user item unit -->
+    <div class="components-user-item-g"></div>
+    <!-- E : user item unit -->
 
 </main>
 
@@ -218,6 +223,10 @@
             }
             $('.components-user-item-f .user-item-f').unwrap();
         }
+        var callbackItem12 = function(v){
+            //아이템 1개
+            $('.components-user-item-g .user-item-g').unwrap();
+        }
 
         $plugins.uiPageLoad('/polaris/src/components/body/items/card-item.html', 'components-card-item-1', callbackItem1)
             .then($plugins.uiPageLoad('/polaris/src/components/body/items/card-item.html', 'components-card-item-2', callbackItem2))
@@ -229,7 +238,8 @@
             .then($plugins.uiPageLoad('/polaris/src/components/body/items/user-item-c-2.html', 'components-user-item-c-2', callbackItem8))
             .then($plugins.uiPageLoad('/polaris/src/components/body/items/user-item-d.html', 'components-user-item-d', callbackItem9))
             .then($plugins.uiPageLoad('/polaris/src/components/body/items/user-item-e.html', 'components-user-item-e', callbackItem10))
-            .then($plugins.uiPageLoad('/polaris/src/components/body/items/user-item-f.html', 'components-user-item-f', callbackItem11));
+            .then($plugins.uiPageLoad('/polaris/src/components/body/items/user-item-f.html', 'components-user-item-f', callbackItem11))
+            .then($plugins.uiPageLoad('/polaris/src/components/body/items/user-item-g.html', 'components-user-item-g', callbackItem12));
 
 
     })(jQuery, window, document);

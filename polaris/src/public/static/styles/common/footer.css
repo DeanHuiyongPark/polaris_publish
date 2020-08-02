@@ -36,6 +36,20 @@
     .box-footer .copy {margin-top:60px}
     .box-footer .copy .text-email {font-size:28px}
     .box-footer .copy .text-copy {font-size:24px}
+
+    .type-sub-v2 .footer-menu {padding:28px 50px;min-width:100%}
+    .type-sub-v2 .fm-list .list-item .link-footer {line-height:40px;font-size:16px;height:40px;padding:0 26px}
+    .type-sub-v2 .fm-list .list-item ~ .list-item:before {height:14px;margin-top:-7px}
+    .type-sub-v2 .fm-list .list-item:nth-child(4):before {display:block}
+
+    .type-sub-v2 .footer-contents {padding:45px 0 100px}
+    .type-sub-v2 .footer-contents .box-footer {width:100%}
+    .type-sub-v2 .box-footer .sns-list {max-width:300px;margin:35px auto}
+    .type-sub-v2 .box-footer .family-site {padding:0 95px}
+    .type-sub-v2 .box-footer .family-site select {height:35px}
+    .type-sub-v2 .box-footer .copy {margin-top:30px}
+    .type-sub-v2 .box-footer .copy .text-email {font-size:14px}
+    .type-sub-v2 .box-footer .copy .text-copy {font-size:12px}
 }
 @media (max-width:768px) {
     .footer-menu {padding:28px 50px;min-width:100%}
@@ -51,6 +65,9 @@
     .box-footer .copy {margin-top:30px}
     .box-footer .copy .text-email {font-size:14px}
     .box-footer .copy .text-copy {font-size:12px}
+}
+@media (max-width:620px) {
+    .type-sub-v2 .fm-list .list-item:nth-child(4):before {display:none}
 }
 @media (max-width:420px) {
     .footer-menu {padding:28px 0}

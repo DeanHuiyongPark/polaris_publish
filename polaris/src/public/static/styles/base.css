@@ -38,6 +38,7 @@
 @import url(components/items/user-item-d.css);
 @import url(components/items/user-item-e.css);
 @import url(components/items/user-item-f.css);
+@import url(components/items/user-item-g.css);
 @import url(components/items/list-item.css);
 
 /* pages */
@@ -45,3 +46,4 @@
 @import url(pages/vote/vote.css);
 @import url(pages/introduction/About.css);
 @import url(pages/search/SearchResult.css);
+@import url(pages/mypage/MyExchange.css);

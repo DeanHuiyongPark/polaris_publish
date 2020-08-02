@@ -1,4 +1,5 @@
 .box-checkbox-a label:after,
+.exchange-item .exchange-col-group ~ .exchange-col-group:before,
 [class^="sp-ico-"] {display:inline-block;background-image:url("/polaris/src/public/static/images/sprite/sp_ico.png");background-repeat:no-repeat}
 .sp-ico-a {width:20px;height:20px;background-position:0 0}
 .sp-ico-b {width:20px;height:20px;background-position:-20px 0}
@@ -47,6 +48,19 @@
     .sp-ico-sns-8 {background-position:-700px -60px}
     .sp-ico-sns-9 {background-position:0 -160px}
     .sp-ico-f-logo {width:447px;height:101px;background-position:-100px -160px}
+
+    .type-sub-v2 .box-footer .logo {width:224px}
+    .type-sub-v2 .box-footer .sp-ico-f-logo {width:224px;height:51px;background-position:-50px -80px;background-size:400px auto}
+    .type-sub-v2 [class^="sp-ico-sns-"] {width:50px;height:50px;background-size:400px auto}
+    .type-sub-v2 .sp-ico-sns-1 {background-position:0 -30px}
+    .type-sub-v2 .sp-ico-sns-2 {background-position:-50px -30px}
+    .type-sub-v2 .sp-ico-sns-3 {background-position:-100px -30px}
+    .type-sub-v2 .sp-ico-sns-4 {background-position:-150px -30px}
+    .type-sub-v2 .sp-ico-sns-5 {background-position:-200px -30px}
+    .type-sub-v2 .sp-ico-sns-6 {background-position:-250px -30px}
+    .type-sub-v2 .sp-ico-sns-7 {background-position:-300px -30px}
+    .type-sub-v2 .sp-ico-sns-8 {background-position:-350px -30px}
+    .type-sub-v2 .sp-ico-sns-9 {background-position:-0px -80px}
 }
 @media (max-width:768px) {
     .box-footer .logo {width:224px}
