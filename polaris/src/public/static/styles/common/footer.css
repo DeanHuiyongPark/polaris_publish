@@ -37,8 +37,8 @@
     .box-footer .copy .text-email {font-size:28px}
     .box-footer .copy .text-copy {font-size:24px}
 
-    .type-sub-v2 .footer-menu {padding:28px 50px;min-width:100%}
-    .type-sub-v2 .fm-list .list-item .link-footer {line-height:40px;font-size:16px;height:40px;padding:0 26px}
+    .type-sub-v2 .footer-menu {padding:14px 20px;min-width:100%}
+    .type-sub-v2 .fm-list .list-item .link-footer {line-height:30px;font-size:16px;height:30px;padding:0 10px}
     .type-sub-v2 .fm-list .list-item ~ .list-item:before {height:14px;margin-top:-7px}
     .type-sub-v2 .fm-list .list-item:nth-child(4):before {display:block}
 
