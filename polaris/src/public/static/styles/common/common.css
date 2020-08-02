@@ -126,6 +126,9 @@ select:focus{border-color:#000}
 .write-item-b .write-form-txt {display:table-cell;font-size:18px;color:#585757;line-height:54px;padding-left:20px;width:1%;white-space:nowrap}
 .write-edit {margin-top:50px}
 
+/* modal */
+.ui-modal{display:none}
+
 @media (max-width:1300px) {
     /* table */
     .tbl-list{width:100%; position:relative; overflow-x: auto;}

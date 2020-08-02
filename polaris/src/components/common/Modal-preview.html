@@ -1,0 +1,140 @@
+<style>    
+    /* ui modal : base */
+    .no-scroll{overflow:hidden;}
+    .ui-modal {display:none; position:fixed; top:0; left:0; z-index:200; width:100%; height:100%; overflow:hidden; overflow-y:auto; }
+    .ui-modal.ready {display:flex;}
+    .ui-modal.ready:after{content:""; display:block; position:fixed; top:0; left:0; width:100%; height:100%; opacity:1; background:rgba(0,0,0,.5); }
+
+    .ui-modal-wrap {opacity:0; box-shadow:0 5px 10px rgba(0,0,0,0.5); position:relative; z-index:1; background:#fff; background:#2a2b2d}
+    .type-preview .ui-modal-wrap{width:790px; margin:20px 0; padding:20px; border-radius:10px;}
+    .ui-modal.type-preview {align-items:flex-start; justify-content:center; align-items:center;}
+
+    .ui-modal.open{display:block;}
+    .ui-modal.open .ui-modal-wrap{opacity:1; margin:30px auto; }
+
+    .ui-modal .btn-close {position:absolute; left:20px; top:20px; border:0; width:40px; height:40px; background:url(/polaris/src/public/static/images/common/modal-close.png) no-repeat 0 0 / cover; }
+    .ui-modal-body {position:relative; margin-top:0; padding:15px;}
+    .ui-modal-footer {position:relative; margin-top:0; padding:10px 15px}
+    .ui-modal-footer .btn-wrap{margin:0;}
+    /* ui modal : mobile */
+
+    .ui-m .ui-modal-footer{padding:10px 15px;}
+    .ui-m .ui-modal.ps-center.is-over .ui-modal-wrap {margin:0;}
+
+    /* 미리보기 */
+    .type-preview .library-img{overflow: hidden; border-radius: 5px;}
+    .type-preview .library-img img{width:100%; display: block;}
+
+    .type-preview .library-info{width:100%; position: relative; background-color:transparent;  padding:0; margin-top:25px;}
+    .type-preview .library-info .title-wrap{width:100%;}
+    .type-preview .library-info .title-wrap h2{font-size:22px; color:#fff; font-weight: 500; margin-bottom:10px}
+    .type-preview .library-info .title-wrap p{font-size:16px; color:#d2d2d2; margin-bottom:15px;}
+    .type-preview .library-info .txt{font-size:14px; color:#fff; }
+    .type-preview .library-info .txt
+
+    .type-preview .library-info .group{display:table; width:100%; margin-top: 30px; height:200px}
+    .type-preview .library-info .group > .group-item{display:table-cell; width:25%; vertical-align:top;}
+    .type-preview .library-info .group > .group-item +.group-item {padding-left:3%}
+    .type-preview .library-info .info{background-color: #fff; height: 200px;}
+    .type-preview .library-info .info dl{width:100%; background-color: #e5f1fd; padding:30px 40px;}
+    .type-preview .library-info .info dl > div{width:100%; overflow: hidden;}
+    .type-preview .library-info .info dl > div + div{margin-top:20px}
+    .type-preview .library-info .info dt{width:45%; float:left; font-size:16px;}
+    .type-preview .library-info .info dd{width:55%; float:left; font-size:16px; color:#1c7df4; font-weight:500;}
+    .type-preview .library-info .person-info-box{width:100%; padding:20px;}
+    .type-preview .library-info .btn-wrap button{display:block; width:100%;}
+    .type-preview .library-info .btn-wrap button + button{margin-top:9px;}
+    .type-preview .library-info .tag{padding:24px; background-color:#e8f0f7; overflow-y: auto; height: 200px;}
+    .type-preview .library-info .tag a{color:#a7a7a7; font-size: 16px; display: inline-block; margin:3px;}
+    .type-preview .library-info .content-items {display:flex; flex-wrap:nowrap; justify-content: space-between;}
+    .type-preview .library-info .content-items .items {flex:1;display:flex;align-items:center;justify-content:center}
+    .type-preview .library-info .content-items .items i {margin-right:9px}
+    .type-preview .library-info .content-items .text-money {font-size:16px;color:#4f4f4f}
+    .type-preview .library-info .content-items .text-number {font-size:16px;color:#4f4f4f}
+    .type-preview .library-info .sp-ico-a-s{width:26px; height:26px; background-position:-2px -22px; opacity:0.7;}
+    .type-preview .library-info .sp-ico-b-s{width:26px; height:26px; background-position:-32px -22px; opacity:0.7;}
+    .type-preview .library-info .sp-ico-c-s{width:26px; height:26px; background-position:-62px -22px; opacity:0.7;}
+
+    /* 비슷한 Library */
+    .similar-card .card-list-b .card-item{margin-bottom:20px}
+    .similar-card .card-list-b .card-item:nth-child(3n + 1){margin-left:0;}
+
+    @media (max-width:1024px) {
+        .tag-result-title{font-size:20px; color:#3a3a3a; font-weight:300; padding:20px}
+        .tag-result-link{padding:12px 20px 18px; margin:0 10px; width:calc(100% - 20px)}
+        .tag-result-link dt{position:absolute; top:15px; left:10px; font-weight:600; color:#45515a; font-size:14px;}
+        .tag-result-link dd{padding:0 50px; width:100%; height:20px; overflow: hidden; transition: height 0.2s ease-in-out;}
+        .tag-result .btn-text-a{top:17px; right:10px;}
+        .tag-result .btn-text-a i{display:none; }
+    }
+</style>
+
+<section class="ui-modal type-preview" id="modal_sample1">
+
+    <div class="ui-modal-wrap">
+        <button type="button" class="btn-close" aria-label="close" onclick="$plugins.modalClose()"><span class="hide">close</span></button>
+        <div class="library-view-wrap">
+
+            <div class="library-img">
+                <img src="/polaris/src/public/static/images/temp/@temp2.jpg" alt="" />
+            </div>
+
+            <div class="library-info">
+                <div class="title-wrap">
+                    <h2>Functional Programming개정판, 현재 트렌드를 알 수 있는최신의 자료입니다. </h2>
+                    <p>제11회 2016 ITSM 컨퍼런스가 8월 25일 쉐라톤호텔에서 아래의 내용으로 개최하였고 YAP의 역량을 소개하고 있다. 엄청난 속도로 수집되고 쌓여가는 데이터의 효과적인 관리와 활용이 기업 성공의 핵심요소가 되어가고 있는 시점에서 엄청난 속도로 수집되고 쌓여 가는 데이터의 효과적인 관리와 활용될 수 있습니다.</p>
+                </div>
+                <p class="txt">저작권 보호를 받는 자료일수 있습니다. <a href="#">[자세히 알아보기]</a></p>
+            </div>
+
+            <div class="box-person">
+                <div class="person-img"><img src="/polaris/src/public/static/images/main/empty-user.png" alt=""></div>
+                <div class="person-info">
+                    <p class="person-lv">Lv. <span class="person-lv-value">Legend</span></p>
+                    <p class="person-name"><a href="" class="link-person">chrislee</a></p>
+                </div>
+            </div>
+            <div class="person-info-box">
+                <div class="content-items">
+                    <div class="items">
+                        <i class="sp-ico-a-s"></i><span class="text-money">200</span>
+                    </div>
+                    <div class="items">
+                        <i class="sp-ico-b-s"></i><span class="text-number">335</span>
+                    </div>
+                    <div class="items">
+                        <i class="sp-ico-c-s"></i><span class="text-number">24</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="similar-card">
+            <h3 class="title-type-b">제일 비슷한 Library</h3>
+            <div class="card-list-b">
+                <div class="components-library-a"></div>
+            </div>
+        </div>
+
+
+    </div>
+</section>
+<script>
+    ;(function($, win, doc, undefined) {
+
+        'use strict';
+
+        var callbackItem = function(v){
+            //아이템 3개
+            for (var i = 1, len = 6; i < len; i++) {
+                $('.components-library-a').append(v);
+            }
+            $('.components-library-a > *').unwrap();
+        }
+
+
+        //components 불러오기
+        $plugins.uiPageLoad('/polaris/src/components/body/items/card-item.html', 'components-library-a', callbackItem);
+    })(jQuery, window, document);
+
+</script>   

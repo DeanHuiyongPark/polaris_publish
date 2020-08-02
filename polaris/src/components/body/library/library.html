@@ -100,7 +100,7 @@
         
     </div>
 
-    
+    <div class="components-modal"></div>
 </main>
 
 <script>
@@ -130,19 +130,28 @@
             //미리보기 이벤트
             $('.item-title').on('click', function(e){
                 e.preventDefault();
-
                 $plugins.modalOpen()
                 
             })
 
         }
 
+        var callbackItem2 = function(v){
+            $('.components-modal > *').unwrap();
+        }
+
         //components 불러오기
-        $plugins.uiPageLoad('/polaris/src/components/body/items/card-item.html', 'components-card-item', callbackItem);
+        $plugins.uiPageLoad('/polaris/src/components/body/items/card-item.html', 'components-card-item', callbackItem)
+        .then($plugins.uiPageLoad('/polaris/src/components/common/Modal-preview.html', 'components-modal', callbackItem2));
 
         //미리보기 팝업
         $plugins.modalOpen = function(){
-            alert(111)
+            $('body').addClass('no-scroll');
+            $('.ui-modal').addClass('ready').addClass('open');
+        }
+        $plugins.modalClose = function(){
+            $('body').removeClass('no-scroll');
+            $('.ui-modal').removeClass('ready').removeClass('open');
         }
 
     })(jQuery, window, document);
