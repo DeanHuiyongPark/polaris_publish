@@ -1,0 +1,126 @@
+<style>
+    /* 사용후기 */
+    .view-request .col-1{width:80px}
+    .view-request .col-2{width:auto}
+    .view-request .col-3{width:160px}
+    .view-request .col-4{width:150px}
+    .view-request .col-5{width:200px}
+    .view-request .col-6{width:100px}
+    .view-request .col-7{width:100px}
+
+    .view-content{width:100%; position: relative; padding:30px 60px; border-bottom: 2px solid #eaeaea;}
+    .view-request .btn-wrap-r{margin:20px 0 40px; padding:0 60px}
+    .view-request .btn-wrap-r button{ margin-left:6px}
+    @media (max-width:1024px) {
+
+    }
+</style>
+
+<main class="base-body">
+    <div class="box-content-b">
+        <!-- S : tab -->
+        <div class="tab-wrap-a">
+            <ul class="tab-list">
+                <li class="tab-item"><a href="" class="link-tab">사용후기</a></li>
+                <li class="tab-item active"><a href="" class="link-tab">Library 요청하기</a></li>
+                <li class="tab-item"><a href="" class="link-tab">추천 회원</a></li>
+            </ul>
+        </div>
+        <!-- E : tab -->
+
+        <div class="view-request">
+            <div class="tbl-list">
+                <table>
+                    <caption>요청제목,구매의사POLA, 작성자, 날짜, 조회수, 공감수 정보의 작성한 사용후기 상세</caption>
+                    <colgroup>
+                        <col class="col-2">
+                        <col class="col-3">
+                        <col class="col-4">
+                        <col class="col-5">
+                        <col class="col-6">
+                        <col class="col-7">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">요청 제목</th>
+                            <th scope="col">구매의사 POLA</th>
+                            <th scope="col">작성자</th>
+                            <th scope="col">날짜</th>
+                            <th scope="col">조회수</th>
+                            <th scope="col">공감수</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <a href="#">
+                                    <div class="ellp tit">JRC Science for Policy Report JRC Science for Policy ReportJRC Science for Policy ReportJRC Science for Policy ReportJRC Science for Policy ReportJRC Science for Policy Report</div><b>[33]</b>
+                                </a>
+                            </td>
+                            <td><strong>555</strong></td>
+                            <td>eadt555</td>
+                            <td>2020.06.25 12:00</td>
+                            <td>300</td>
+                            <td>300</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="view-content">
+                <img src="/polaris/src/public/static/images/temp/@temp3.jpg" alt="" />
+                <br /><br />
+                <p>
+                    그들이 AWS 위에서 데이터 파이프라인을 운영하는 법- <br />
+                    너무 좋습니다!!
+                </p>
+            </div>
+
+            <div class="btn-wrap-r ">
+                <button type="button" class="btn-basic-e small"><span>해당 Library 바로가기</span></button>
+                <button type="button" class="btn-basic-e small"><span>찜하기</span></button>
+                <button type="button" class="btn-basic-c small"><i class="sp-ico-interest2"></i><span>공감하기</span><span class="count-value">100</span></button>
+            </div>
+            
+            <div class="components-user-item-c"></div>
+            <div class="btn-wrap-r ">
+                <button type="button" class="btn-basic-f small"><span>목록</span></button>
+            </div>
+
+            <div class="components-comment"></div>
+            <div class="btn-wrap-r ">
+                <button type="button" class="btn-basic-f small"><span>목록</span></button>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+<script>
+    ;(function($, win, doc, undefined) {
+
+        'use strict';
+        
+        var callbackItem1 = function(){
+            $('.components-user-item-c > *').unwrap();
+        }
+        var callbackItem2 = function(){
+            $('.components-comment > *').unwrap();
+        }
+
+        
+        $plugins.uiPageLoad('/polaris/src/components/body/items/user-item-c.html', 'components-user-item-c', callbackItem1)
+        .then($plugins.uiPageLoad('/polaris/src/components/body/items/Comment.html', 'components-comment', callbackItem2));
+
+        //tab
+        $plugins.tabToggle = function(v, name){
+            $('[tabbtn="'+ name +'"] .ui-tab-btn').removeClass('active');
+            $('[tabbtn="'+ name +'"] .ui-tab-btn[n="'+ v +'"]').addClass('active');
+            $('[tabpnl="'+ name +'"] > .ui-tab-pnl').removeClass('visible');
+            $('[tabpnl="'+ name +'"] > .ui-tab-pnl[pnl="'+ v +'"]').addClass('visible');
+        }
+        $plugins.tabToggle(1, 'tabPeriod');
+
+    })(jQuery, window, document);
+
+</script>

@@ -1,0 +1,117 @@
+<style>
+    /* 사용후기 */
+    .view-reviews .col-2{width:auto}
+    .view-reviews .col-3{width:150px}
+    .view-reviews .col-4{width:200px}
+    .view-reviews .col-5{width:90px}
+
+    .view-content{width:100%; position: relative; padding:30px 60px; border-bottom: 2px solid #eaeaea;}
+    .view-reviews .btn-wrap-r{margin:20px 0 40px; padding:0 60px}
+    .view-reviews .btn-wrap-r button{ margin-left:6px}
+    @media (max-width:1024px) {
+
+    }
+</style>
+
+<main class="base-body page-library">
+    <div class="box-content-b">
+        <!-- S : tab -->
+        <div class="tab-wrap-a">
+            <ul class="tab-list">
+                <li class="tab-item active"><a href="" class="link-tab">사용후기</a></li>
+                <li class="tab-item"><a href="" class="link-tab">Library 요청하기</a></li>
+                <li class="tab-item"><a href="" class="link-tab">추천 회원</a></li>
+            </ul>
+        </div>
+        <!-- E : tab -->
+
+        <div class="view-reviews">
+            <div class="tbl-list">
+                <table>
+                    <caption>번호,제목|라이브러리명|원 라이브러리 올린이,후기 작성자, 날짜, 조회수 정보의 작성한 사용후기 목록</caption>
+                    <colgroup>
+                        <col class="col-2">
+                        <col class="col-3">
+                        <col class="col-4">
+                        <col class="col-5">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">제목<i>|</i>라이브러리명<i>|</i>원 라이브러리 올린이</th>
+                            <th scope="col">후기작성자</th>
+                            <th scope="col">날짜</th>
+                            <th scope="col">조회수</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <a href="#">
+                                    <div class="ellp tit">JRC Science for Policy Report<i>|</i>Marketing.ppt<i>|</i> dongkim </div><b>[33]</b>
+                                </a>
+                            </td>
+                            <td>eadt555</td>
+                            <td>2020.06.25 12:00</td>
+                            <td>300</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="view-content">
+                <img src="/polaris/src/public/static/images/temp/@temp3.jpg" alt="" />
+                <br /><br />
+                <p>
+                    그들이 AWS 위에서 데이터 파이프라인을 운영하는 법- <br />
+                    너무 좋습니다!!
+                </p>
+            </div>
+
+            <div class="btn-wrap-r ">
+                <button type="button" class="btn-basic-e small"><span>해당 Library 바로가기</span></button>
+                <button type="button" class="btn-basic-e small"><span>찜하기</span></button>
+                <button type="button" class="btn-basic-c small"><i class="sp-ico-interest2"></i><span>공감하기</span><span class="count-value">100</span></button>
+            </div>
+            
+            <div class="components-user-item-c"></div>
+            <div class="btn-wrap-r ">
+                <button type="button" class="btn-basic-f small"><span>목록</span></button>
+            </div>
+
+            <div class="components-comment"></div>
+            <div class="btn-wrap-r ">
+                <button type="button" class="btn-basic-f small"><span>목록</span></button>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+<script>
+    ;(function($, win, doc, undefined) {
+
+        'use strict';
+        
+        var callbackItem1 = function(){
+            $('.components-user-item-c > *').unwrap();
+        }
+        var callbackItem2 = function(){
+            $('.components-comment > *').unwrap();
+        }
+
+        
+        $plugins.uiPageLoad('/polaris/src/components/body/items/user-item-c.html', 'components-user-item-c', callbackItem1)
+        .then($plugins.uiPageLoad('/polaris/src/components/body/items/Comment.html', 'components-comment', callbackItem2));
+
+        //tab
+        $plugins.tabToggle = function(v, name){
+            $('[tabbtn="'+ name +'"] .ui-tab-btn').removeClass('active');
+            $('[tabbtn="'+ name +'"] .ui-tab-btn[n="'+ v +'"]').addClass('active');
+            $('[tabpnl="'+ name +'"] > .ui-tab-pnl').removeClass('visible');
+            $('[tabpnl="'+ name +'"] > .ui-tab-pnl[pnl="'+ v +'"]').addClass('visible');
+        }
+        $plugins.tabToggle(1, 'tabPeriod');
+
+    })(jQuery, window, document);
+
+</script>
