@@ -58,10 +58,16 @@
 			var callbackFooter = function(){
 				$('.components-footer > *').unwrap();
 			}
+			var callbackNotify = function(){
+				$('body').addClass('is-notify');
+				$('.components-notify > *').unwrap();
+			}
+			
 
 			//pageload
 			$plugins.uiPageLoad('/polaris/src/components/Layout.html', 'components-layout', callbackLayout)
 				.then($plugins.uiPageLoad('/polaris/src/components/header/Header.html', 'components-header', callbackHeader))
+				.then($plugins.uiPageLoad('/polaris/src/components/common/Notify-top.html', 'components-notify', callbackNotify))
 				.then($plugins.uiPageLoad('/polaris/src/components/body/main/Main.html', 'components-main', callbackBody))
 				.then($plugins.uiPageLoad('/polaris/src/components/footer/Footer.html', 'components-footer', callbackFooter));
 

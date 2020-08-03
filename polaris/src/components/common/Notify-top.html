@@ -1,0 +1,30 @@
+<style>
+    .base-wrap{margin-top:0; transition: margin .2s ease-in-out;}
+    .is-notify .base-wrap{margin-top:50px;}
+    .is-notify .notify-top{top:0; }
+    .notify-top{position:fixed; top:-250px; left:0; width:100%; background-color:#1c7ef9; color:#fff; min-height:50px; z-index:130; transition: top .2s ease-in-out;}
+    .notify-top-wrap{width:100%; max-width:1200px; margin:0 auto; font-size:16px; padding:11px 40px 10px 10px; position: relative;}
+    .notify-top-wrap::before{content:""; display:inline-block; width:23px; height:23px; background:url(/polaris/src/public/static/images/common/ico-noti.png) no-repeat 0 0 / cover; vertical-align:middle; margin-right:5px;}
+    .notify-top-wrap button{position: absolute; right: 0; top: 5px; border: 0; width: 40px;  height: 40px; background: url(/polaris/src/public/static/images/common/modal-close.png) no-repeat 0 0 / cover;}
+
+    @media (max-width:1024px) {
+        .is-notify .notify-top{top:50px; }
+    }
+</style>
+
+<div class="notify-top">
+    <div class="notify-top-wrap">
+        폴라리스쉐어는 사용자가 파일형태로 저장하고 있는 지식이나 노하우를 라이브러리라고 부르며, 라이브러리를 자유롭게 공유하고 보상받는 새로운 개념의 플랫폼이다.
+        <button type="button"><span class="hide">닫기</span></button>
+    </div>
+</div>
+
+<script>
+    ;(function($, win, doc, undefined) {
+        'use strict';
+        $('.notify-top button').on('click.noti', function(){
+            $('body').removeClass('is-notify');
+        })
+
+    })(jQuery, window, document);
+</script>
