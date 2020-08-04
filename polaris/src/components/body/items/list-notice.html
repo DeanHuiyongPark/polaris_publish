@@ -1,23 +1,17 @@
 <style>
     /* 사용후기 */
-    .list-requset .col-1{width:80px}
-    .list-requset .col-2{width:auto}
-    .list-requset .col-3{width:130px}
-    .list-requset .col-4{width:120px}
-    .list-requset .col-5{width:190px}
-    .list-requset .col-6{width:80px}
-    .list-requset .col-7{width:80px}
-    .list-requset .paging .btn-basic-a{position:absolute; right:0; top:-25px;}
+    .list-notice .col-1 {width:100px}
+    .list-notice .col-2 {width:140px}
+    .list-notice .col-3 {width:auto}
+    .list-notice .col-4{width:190px}
+    .list-notice .col-5{width:120px}
 
     @media (max-width:1024px) {
 
     }
 </style>
 
-<div class="list-requset">
-    <div class="btn-wrap-r">
-        <button type="button" class="btn-basic-a small"><span>Library 요청하기</span></button>
-    </div>
+<div class="list-notice">
     <div class="tbl-list">
         <table>
         <caption>번호,요청제목,구매의사POLA, 작성자, 날짜, 조회수, 공감수 정보의 작성한 사용후기 목록</caption>
@@ -27,89 +21,75 @@
             <col class="col-3">
             <col class="col-4">
             <col class="col-5">
-            <col class="col-6">
-            <col class="col-7">
         </colgroup>
         <thead>
             <tr>
                 <th scope="col">번호</th>
-                <th scope="col">요청 제목</th>
-                <th scope="col">구매의사 POLA</th>
-                <th scope="col">작성자</th>
+                <th scope="col">분류</th>
+                <th scope="col">제목</th>
                 <th scope="col">날짜</th>
                 <th scope="col">조회수</th>
-                <th scope="col">공감수</th>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td>2333</td>
+                <td class="notice-type">공지사항</td>
                 <td>
                     <a href="#">
                         <div>JRC Science for Policy Report</div>
                         <div class="ellp">노하우를 라이브러리라고 부르, 라이브러리를 자유롭게 공유하고 보상받는 새로운 개념의 노하우를 노하우를 라이브러리라고 부르, 라이브러리를 자유롭게 공유하고 보상받는 새로운 개념의 노하우를</div>
                     </a>
                 </td>
-                <td><strong>555</strong></td>
-                <td>eadt555</td>
                 <td>2020.06.25 12:00</td>
-                <td>300</td>
                 <td>300</td>
             </tr>
             <tr>
                 <td>2333</td>
+                <td class="notice-type">보도자료</td>
                 <td>
                     <a href="#">
                         <div>JRC Science for Policy Report</div>
                         <div class="ellp">노하우를 라이브러리라고 부르, 라이브러리를 자유롭게 공유하고 보상받는 새로운 개념의 노하우를 노하우를 라이브러리라고 부르, 라이브러리를 자유롭게 공유하고 보상받는 새로운 개념의 노하우를</div>
                     </a>
                 </td>
-                <td><strong>555</strong></td>
-                <td>eadt555</td>
                 <td>2020.06.25 12:00</td>
-                <td>300</td>
                 <td>300</td>
             </tr>
             <tr>
                 <td>2333</td>
+                <td class="notice-type">이벤트</td>
                 <td>
                     <a href="#">
                         <div>JRC Science for Policy Report</div>
                         <div class="ellp">노하우를 라이브러리라고 부르, 라이브러리를 자유롭게 공유하고 보상받는 새로운 개념의 노하우를 노하우를 라이브러리라고 부르, 라이브러리를 자유롭게 공유하고 보상받는 새로운 개념의 노하우를</div>
                     </a>
                 </td>
-                <td><strong>555</strong></td>
-                <td>eadt555</td>
                 <td>2020.06.25 12:00</td>
-                <td>300</td>
                 <td>300</td>
             </tr>
             <tr>
                 <td>2333</td>
+                <td class="notice-type">공지사항</td>
                 <td>
                     <a href="#">
                         <div>JRC Science for Policy Report</div>
                         <div class="ellp">노하우를 라이브러리라고 부르, 라이브러리를 자유롭게 공유하고 보상받는 새로운 개념의 노하우를 노하우를 라이브러리라고 부르, 라이브러리를 자유롭게 공유하고 보상받는 새로운 개념의 노하우를</div>
                     </a>
                 </td>
-                <td><strong>555</strong></td>
-                <td>eadt555</td>
                 <td>2020.06.25 12:00</td>
-                <td>300</td>
                 <td>300</td>
             </tr>
             <tr>
                 <td>2333</td>
+                <td class="notice-type">공지사항</td>
                 <td>
                     <a href="#">
                         <div>JRC Science for Policy Report</div>
                         <div class="ellp">노하우를 라이브러리라고 부르, 라이브러리를 자유롭게 공유하고 보상받는 새로운 개념의 노하우를 노하우를 라이브러리라고 부르, 라이브러리를 자유롭게 공유하고 보상받는 새로운 개념의 노하우를</div>
                     </a>
                 </td>
-                <td><strong>555</strong></td>
-                <td>eadt555</td>
                 <td>2020.06.25 12:00</td>
-                <td>300</td>
                 <td>300</td>
             </tr>
             
@@ -135,7 +115,5 @@
         <button type="button" class="paging-last">
             <span class="hide">마지막으로</span>
         </button>
-
-        <button type="button" class="btn-basic-a small"><span>Library 요청하기</span></button>
     </div>
 </div>
