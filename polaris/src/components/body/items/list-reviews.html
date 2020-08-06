@@ -5,10 +5,10 @@
     .list-reviews .col-3{width:120px}
     .list-reviews .col-4{width:190px}
     .list-reviews .col-5{width:80px}
-    .list-reviews .paging .btn-basic-a{position:absolute; right:0; top:-25px;}
+    .list-reviews .paging .btn-basic-a {position:absolute;right:0;top:-25px}
 
-    @media (max-width:1024px) {
-
+    @media (max-width:900px) {
+        .list-reviews .paging .btn-basic-a {position:static;display:block;margin-top:20px;width:100%}
     }
 </style>
 
@@ -101,9 +101,11 @@
     </div>
     <div class="paging">
         <button type="button" class="paging-first">
+            <i class="sp-ico-paging-first"></i>
             <span class="hide">처음으로</span>
         </button>
         <button type="button" class="paging-prev">
+            <i class="sp-ico-paging-prev"></i>
             <span class="hide">이전</span>
         </button>
         <button type="button" class="paging-num current">1</button>
@@ -111,15 +113,17 @@
         <button type="button" class="paging-num">3</button>
         <button type="button" class="paging-num">4</button>
         <button type="button" class="paging-num">5</button>
-        <button type="button" class="paging-num">6</button>
+        <!--<button type="button" class="paging-num">6</button>
         <button type="button" class="paging-num">7</button>
         <button type="button" class="paging-num">8</button>
         <button type="button" class="paging-num">9</button>
-        <button type="button" class="paging-num">10</button>
+        <button type="button" class="paging-num">10</button>-->
         <button type="button" class="paging-next">
+            <i class="sp-ico-paging-next"></i>
             <span class="hide">다음</span>
         </button>
         <button type="button" class="paging-last">
+            <i class="sp-ico-paging-last"></i>
             <span class="hide">마지막으로</span>
         </button>
 

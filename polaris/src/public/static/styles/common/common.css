@@ -46,6 +46,7 @@
 
 .paging {margin:40px auto;position:relative;display:block;width:100%;text-align:center}
 .paging button {display:inline-block;margin:0 5px;height:26px;vertical-align:middle}
+.paging button i {vertical-align:middle}
 .paging-first,
 .paging-last,
 .paging-prev,
@@ -212,6 +213,9 @@ select:focus {border-color:#000}
     .write-item-a .write-form .upload-name:-ms-input-placeholder {font-size:14px}
     .write-item-a .write-btn {position:static;margin-top:8px}
     .write-item-a .write-btn [class^="btn-basic-"] {width:100%}
+
+    /* paging */
+    .paging button {margin:0 2px}
 }
 
 
