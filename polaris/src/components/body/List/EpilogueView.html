@@ -3,13 +3,21 @@
     .view-reviews .col-2{width:auto}
     .view-reviews .col-3{width:150px}
     .view-reviews .col-4{width:200px}
-    .view-reviews .col-5{width:90px}
+    .view-reviews .col-5{width:120px}
 
-    .view-content{width:100%; position: relative; padding:30px 60px; border-bottom: 2px solid #eaeaea;}
-    .view-reviews .btn-wrap-r{margin:20px 0 40px; padding:0 60px}
-    .view-reviews .btn-wrap-r button{ margin-left:6px}
+    .view-reviews .btn-area-b,
+    .view-reviews .btn-wrap-r,
+    .view-reviews .comment-reg {padding-right:60px}
+    .view-reviews .user-item-c {margin-bottom:40px}
+    .view-reviews .comment-reg {margin-top:30px}
+
     @media (max-width:1024px) {
-
+        .view-reviews .btn-area-b,
+        .view-reviews .btn-wrap-r,
+        .view-reviews .comment-reg {padding-right:0}
+    }
+    @media (max-width:768px) {
+        .comment-wrap {margin-bottom:20px}
     }
 </style>
 
@@ -34,6 +42,7 @@
                         <col class="col-3">
                         <col class="col-4">
                         <col class="col-5">
+                        <col class="col-5">
                     </colgroup>
                     <thead>
                         <tr>
@@ -41,18 +50,20 @@
                             <th scope="col">후기작성자</th>
                             <th scope="col">날짜</th>
                             <th scope="col">조회수</th>
+                            <th scope="col">공감수</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>
                                 <a href="#">
-                                    <div class="ellp tit">JRC Science for Policy Report<i>|</i>Marketing.ppt<i>|</i> dongkim </div><b>[33]</b>
+                                    <div class="ellp tit">JRC Science for Policy Report<i>|</i>Marketing.ppt<i>|</i> dongkim <strong class="count">[33]</strong></div>
                                 </a>
                             </td>
                             <td>eadt555</td>
                             <td>2020.06.25 12:00</td>
                             <td>300</td>
+                            <td>5,000</td>
                         </tr>
                     </tbody>
                 </table>
@@ -67,20 +78,20 @@
                 </p>
             </div>
 
-            <div class="btn-wrap-r ">
-                <button type="button" class="btn-basic-e small"><span>해당 Library 바로가기</span></button>
-                <button type="button" class="btn-basic-e small"><span>찜하기</span></button>
-                <button type="button" class="btn-basic-c small"><i class="sp-ico-interest2"></i><span>공감하기</span><span class="count-value">100</span></button>
+             <div class="btn-area-b">
+                <div class="btn-col"><button type="button" class="btn-basic-e small"><span>해당 Library 바로가기</span></button></div>
+                <div class="btn-col"><button type="button" class="btn-basic-e small"><span>찜하기</span></button></div>
+                <div class="btn-col"><button type="button" class="btn-basic-c small"><i class="sp-ico-interest2"></i><span>공감하기</span><span class="count-value">100</span></button></div>
             </div>
             
             <div class="components-user-item-c"></div>
-            <div class="btn-wrap-r ">
-                <button type="button" class="btn-basic-f small"><span>목록</span></button>
+            <div class="btn-wrap-r">
+                <button type="button" class="btn-exception-b"><span>목록</span></button>
             </div>
 
             <div class="components-comment"></div>
-            <div class="btn-wrap-r ">
-                <button type="button" class="btn-basic-f small"><span>목록</span></button>
+            <div class="btn-wrap-r">
+                <button type="button" class="btn-exception-b"><span>목록</span></button>
             </div>
 
         </div>
@@ -101,7 +112,7 @@
 
         
         $plugins.uiPageLoad('/polaris/src/components/body/items/user-item-c.html', 'components-user-item-c', callbackItem1)
-        .then($plugins.uiPageLoad('/polaris/src/components/body/items/Comment.html', 'components-comment', callbackItem2));
+        .then($plugins.uiPageLoad('/polaris/src/components/body/items/Comment-b.html', 'components-comment', callbackItem2));
 
         //tab
         $plugins.tabToggle = function(v, name){

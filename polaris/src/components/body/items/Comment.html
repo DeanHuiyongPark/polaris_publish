@@ -1,48 +1,9 @@
-<style>
-    .comment-wrap {width:100%;}
-    .comment-reg{overflow: hidden; position:relative;}
-    .comment-reg .btn-more-c{min-width:220px; height:100px; float:right;}
-    .comment-box{float:left; width:calc(100% - 260px);border:1px solid #e3e4e4; padding:16px 40px;}
-    .comment-wrap textarea,
-    .comment-wrap input{width:100%; border:0; padding:3px; height:30px;}
-    .comment-wrap textarea:focus,
-    .comment-wrap input:focus{background:#fbfbfb; outline:0;}
-
-    .comment-list{width:100%; background:#f5f5f5; padding:20px 40px; margin-top:40px; }
-    .comment-list li{width:100%; overflow: hidden;}
-    .comment-list li + li{margin-top:20px; border-top:1px dashed rgb(226, 226, 226); padding-top:20px;}
-    .comment-list .id{float:left; width:104px; font-size:16px; color:#1c7df4; font-weight:600;}
-    .comment-list .comment{float:left; width:calc(100% - 110px); }
-    .comment-list .title{clear:both; float:left; width:90px; font-size:16px; font-weight:500; color:#3b3b3b;}
-    .comment-list .content{float:left; width:calc(100% - 280px); color:#5a5a5a;}
-    .comment-list .date{float:left; width:180px; color:#5a5a5a; text-align: center;}
-    .comment-list .url{margin-top:10px}
-    .comment-wrap .btn-wrap{margin-top:20px;}
-    @media (max-width:1024px) {
-        .comment-reg .btn-more-c{min-width:0; width:100%; height:50px; margin-top:10px}
-        .comment-box{float:left; width:100%; padding:5px 10px;}
-        .comment-wrap textarea{width:100%; border:0; padding:3px; height:70px;}
-        .comment-wrap input{width:100%; border:0; padding:3px; height:30px;}
-
-        .comment-list{width:100%; background:#f5f5f5; padding:10px; margin-top:20px; }
-        .comment-list li{width:100%; overflow: hidden;}
-        .comment-list li + li{margin-top:10px; border-top:1px dashed rgb(226, 226, 226); padding-top:10px;}
-        .comment-list .id{ width:100%; font-size:14px; }
-        .comment-list .comment{ width:100%; }
-        .comment-list .title{width:100%; font-size:14px; display:none}
-        .comment-list .content{width:100%; }
-        .comment-list .date{width:100%; margin-top:5px; text-align: left; color:#a2a2a2}
-        .comment-list .url{margin-top:0px; color:#a2a2a2}
-        .comment-wrap .btn-wrap{margin-top:20px;}
-    }
-</style>
-
 <div class="comment-wrap">
     <h3 class="hide">Comments</h3>
     <div class="comment-reg">
         <div class="comment-box">
             <textarea placeholder="Comment"></textarea>
-            <input type="text" placeholder="참고URL">
+            <input type="text" placeholder="참고URL" />
         </div>
         <button type="button" class="btn-more-c"><span>Comment</span></button>
     </div>

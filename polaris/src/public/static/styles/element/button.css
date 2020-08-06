@@ -25,12 +25,25 @@
 .btn-area-a {text-align:center;margin-top:50px;font-size:0}
 .btn-area-a [class^="btn-basic-"] ~ [class^="btn-basic-"] {margin-left:40px}
 
+.btn-area-b {text-align:right;margin:16px 0 36px;font-size:0}
+.btn-area-b .btn-col {display:inline-block}
+.btn-area-b .btn-col ~ .btn-col {margin-left:8px}
+
 @media (max-width:768px) {
     [class^="btn-basic-"] {height:50px;font-size:16px}
 
     .btn-area-a {margin-top:24px;display:flex}
     .btn-area-a [class^="btn-basic-"] {flex:1;min-width:1px}
     .btn-area-a [class^="btn-basic-"] ~ [class^="btn-basic-"] {margin-left:16px}
+
+    .btn-area-b {display:flex}
+    .btn-area-b .btn-col {flex:1}
+    .btn-area-b .btn-col [class^="btn-basic-"] {min-width:1px;padding:0;width:100%}
+}
+@media (max-width:520px) {
+    .btn-area-b .btn-col,
+    .btn-area-b {display:block}
+    .btn-area-b .btn-col ~ .btn-col {margin:8px 0 0}
 }
 
 
