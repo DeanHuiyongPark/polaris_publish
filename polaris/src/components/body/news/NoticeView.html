@@ -1,0 +1,98 @@
+<style>
+    /* 사용후기 */
+    .view-notice .col-2 {width:auto}
+    .view-notice .col-4 {width:200px}
+    .view-notice .col-5 {width:120px}
+    .view-notice .tit-b {padding-left:60px}
+
+    .view-notice .view-content {margin-bottom:20px}
+    @media (max-width:1300px) {
+        /* table */
+        .view-notice .tbl-list {width:100%;position:relative;overflow-x:auto;-webkit-overflow-scrolling:touch}
+        .view-notice .tbl-list table {width:100%}
+    }
+
+    @media (max-width:768px) {
+        .view-notice .tit-b {padding-left:0}
+        .view-notice .col-4 {width:120px}
+        .view-notice .col-5 {width:80px}
+    }
+</style>
+
+<main class="base-body page-library">
+    <div class="box-content-b">
+        <h3 class="title-type-a">Notice</h3>
+
+        <div class="view-notice">
+            <div class="tbl-list">
+                <table>
+                    <caption>제목, 날짜, 조회수의 Notice 목록</caption>
+                    <colgroup>
+                        <col class="col-2">
+                        <col class="col-4">
+                        <col class="col-5">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">제목</th>
+                            <th scope="col">날짜</th>
+                            <th scope="col">조회수</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="tit-b">[공지사항] Functional Programming 개정판 설명입니다.</div>
+                            </td>
+                            <td>2020.06.25 12:00</td>
+                            <td>300</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="view-content">
+                <img src="/polaris/src/public/static/images/temp/@temp3.jpg" alt="" />
+                <br /><br />
+                <p>
+                    그들이 AWS 위에서 데이터 파이프라인을 운영하는 법- <br />
+                    너무 좋습니다!!
+                </p>
+            </div>
+
+            <div class="btn-wrap-r">
+                <button type="button" class="btn-exception-b"><span>목록</span></button>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+<script>
+    ;(function($, win, doc, undefined) {
+
+        'use strict';
+        
+        var callbackItem1 = function(){
+            $('.components-user-item-c > *').unwrap();
+        }
+        var callbackItem2 = function(){
+            $('.components-comment > *').unwrap();
+        }
+
+        
+        $plugins.uiPageLoad('/polaris/src/components/body/items/user-item-c.html', 'components-user-item-c', callbackItem1)
+        .then($plugins.uiPageLoad('/polaris/src/components/body/items/Comment-b.html', 'components-comment', callbackItem2));
+
+        //tab
+        $plugins.tabToggle = function(v, name){
+            $('[tabbtn="'+ name +'"] .ui-tab-btn').removeClass('active');
+            $('[tabbtn="'+ name +'"] .ui-tab-btn[n="'+ v +'"]').addClass('active');
+            $('[tabpnl="'+ name +'"] > .ui-tab-pnl').removeClass('visible');
+            $('[tabpnl="'+ name +'"] > .ui-tab-pnl[pnl="'+ v +'"]').addClass('visible');
+        }
+        $plugins.tabToggle(1, 'tabPeriod');
+
+    })(jQuery, window, document);
+
+</script>
