@@ -76,6 +76,9 @@ select:focus {border-color:#000}
 .form-input-a {height:45px;background-color:#dedede;border-radius:0;border:none;padding:0 8px;box-sizing:border-box}
 .form-input-b {height:54px;background-color:#fff;border-radius:0;border:1px solid #999;padding:0 12px;box-sizing:border-box;font-size:18px}
 
+/* textarea */
+.form-textarea-a {border:1px solid #999;resize:none;width:100%}
+
 /* title */
 .title-type-a {font-size:36px;color:#000;line-height:100%;font-weight:600}
 .title-type-b {font-size:18px;color:#2d2d2d;line-height:20px;font-weight:600}

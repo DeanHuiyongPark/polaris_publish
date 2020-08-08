@@ -1,0 +1,38 @@
+.box-member {max-width:700px;margin:44px auto 0}
+.member-title-wrap {display:flex;justify-content:space-between;align-items:center}
+.member-icon-a {width:186px;height:124px;background:url(/polaris/src/public/static/images/sub/member-img-a.png) 50% 50% no-repeat;background-size:100% auto}
+.member-icon-b {width:186px;height:124px;background:url(/polaris/src/public/static/images/sub/member-img-b.png) 50% 50% no-repeat;background-size:100% auto}
+.box-member .member-des {margin:32px 0 28px;font-size:26px;line-height:40px;color:#000;font-weight:200;word-break:keep-all}
+.box-member-b {border:1px solid #c3c3c3;margin-top:36px}
+.list-type-a .list-item {padding:26px 30px}
+.list-type-a .list-item ~ .list-item {border-top:1px dashed #dcdcdc}
+.list-type-a .list-item .box-textarea {margin:20px 36px 0 36px}
+.list-type-a .list-item .box-textarea .form-textarea-a {height:160px;vertical-align:top}
+.list-type-a .list-item .box-textarea .txt-member-a {margin-top:4px}
+.member-btn-area-a {margin:40px 0 80px;text-align:center}
+.member-btn-area-a [class^="btn-basic-"] {min-width:340px}
+.box-member-b .member-info {padding:46px 70px}
+.box-member-b .member-info ~ .member-info {border-top:1px solid #dcdcdc}
+.box-member .box-member-txt {padding:44px 64px}
+.box-member .txt-member-a {padding-left:8px;position:relative;font-size:14px;color:#ff8400;word-break:keep-all}
+.box-member .txt-member-b {font-size:18px;color:#696969;line-height:24px;word-break:keep-all}
+.box-member .txt-member-a:before {content:'';position:absolute;left:0;top:8px;width:3px;height:3px;border-radius:50%;background-color:#949494}
+
+@media (max-width:768px) {
+	.member-icon-a,
+	.member-icon-b,
+	.member-icon-c,
+	.member-icon-d {width:93px;height:62px}
+	.box-member .member-des {font-size:16px;line-height:22px}
+	.list-type-a .list-item,
+	.box-member-b .member-info {padding:20px}
+	.member-info .member-info-title {font-size:20px}
+}
+@media (max-width:500px) {
+	.list-type-a .list-item .box-textarea {margin:12px 0 0}
+	.box-member .txt-member-a {font-size:12px}
+	.member-btn-area-a [class^="btn-basic-"] {min-width:100%}
+	.box-member .box-member-txt {padding:20px}
+	.box-member .txt-member-b {font-size:14px;line-height:20px}
+}
+
