@@ -1,22 +1,22 @@
 <style>
-    /* 공지사항 */
-    .view-notice {margin-top:30px}
-    .view-notice .col-2 {width:auto}
-    .view-notice .col-4 {width:200px}
-    .view-notice .col-5 {width:120px}
-    .view-notice .tit-b {padding-left:60px}
+    /* 이벤트보기 */
+    .view-event {margin-top:30px}
+    .view-event .col-2 {width:auto}
+    .view-event .col-4 {width:240px}
+    .view-event .col-5 {width:120px}
+    .view-event .tit-b {padding-left:60px}
 
-    .view-notice .view-content {margin-bottom:20px}
+    .view-event .view-content {margin-bottom:20px}
     @media (max-width:1300px) {
         /* table */
-        .view-notice .tbl-list {width:100%;position:relative;overflow-x:auto;-webkit-overflow-scrolling:touch}
-        .view-notice .tbl-list table {width:100%}
+        .view-event .tbl-list {width:100%;position:relative;overflow-x:auto;-webkit-overflow-scrolling:touch}
+        .view-event .tbl-list table {width:100%}
     }
 
     @media (max-width:768px) {
-        .view-notice .tit-b {padding-left:0}
-        .view-notice .col-4 {width:120px}
-        .view-notice .col-5 {width:80px}
+        .view-event .tit-b {padding-left:0}
+        .view-event .col-4 {width:120px}
+        .view-event .col-5 {width:80px}
     }
 </style>
 
@@ -24,7 +24,7 @@
     <div class="box-content-b">
         <h3 class="title-type-a">Notice</h3>
 
-        <div class="view-notice">
+        <div class="view-event">
             <div class="tbl-list">
                 <table>
                     <caption>제목, 날짜, 조회수의 Notice 목록</caption>
@@ -36,16 +36,16 @@
                     <thead>
                         <tr>
                             <th scope="col">제목</th>
-                            <th scope="col">날짜</th>
+                            <th scope="col">이벤트 기간</th>
                             <th scope="col">조회수</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>
-                                <div class="tit-b">[공지사항] Functional Programming 개정판 설명입니다.</div>
+                                <div class="tit-b">[이벤트] Functional Programming 개정판 설명입니다</div>
                             </td>
-                            <td>2020.06.25 12:00</td>
+                            <td>2020.05.06 ~ 2020.05.30</td>
                             <td>300</td>
                         </tr>
                     </tbody>
