@@ -46,23 +46,3 @@
         </div>
     </div>
 </main>
-
-<script>
-    ;(function($, win, doc, undefined) {
-
-        'use strict';
-
-        //콜백실행
-        var callbackItem = function(v){
-            //아이템 1개
-            for (var i = 1, len = 18; i < len; i++) {
-                $('.components-user-item-d .user-item-d').unwrap();
-            }
-        }
-
-        //components 불러오기
-        $plugins.uiPageLoad('/polaris/src/components/body/items/user-item-d.html', 'components-user-item-d', callbackItem);
-
-    })(jQuery, window, document);
-
-</script>

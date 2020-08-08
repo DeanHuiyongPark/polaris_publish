@@ -149,7 +149,7 @@ select:focus {border-color:#000}
     .tbl-list tbody td a {padding:0 10px}
     .tbl-list tbody td .ellp.tit {font-size:16px}
     .tbl-list tbody td .ellp {font-size:14px}
-    .tbl-list i {padding:0 5px;font-size:16px;}
+    .tbl-list i {padding:0 5px;font-size:16px}
 
     /* tab */
     .tab-wrap-b .tab-list .tab-item .link-tab {font-size:16px}
@@ -166,6 +166,7 @@ select:focus {border-color:#000}
     .tab-wrap-b {overflow-x:auto;-webkit-overflow-scrolling:touch}
     .tab-wrap-b .tab-list {flex-wrap:nowrap}
     .tab-wrap-b .tab-list .tab-item {flex:none;width:220px}
+    .tab-wrap-b.small .tab-list .tab-item {width:140px}
 
     /* write */
     .box-write {padding:0 20px 40px}
@@ -193,6 +194,9 @@ select:focus {border-color:#000}
     .tab-wrap-a .tab-list .tab-item .link-tab {font-size:18px;height:52px}
     .tab-wrap-a .tab-list .tab-item.active .link-tab {border-radius:12px}
     .tab-wrap-a .tab-list .tab-item {flex:auto}
+
+    .tab-wrap-b.small .tab-list .tab-item {width:120px}
+    .tab-wrap-b .tab-list .tab-item .link-tab {height:44px;font-size:14px}
 
     /* write */
     .box-write {padding:0 0 40px}

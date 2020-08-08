@@ -1,0 +1,148 @@
+<main class="base-body page-introduction">
+    <div class="box-content-b">
+        <!-- S : tab -->
+        <div class="tab-wrap-a">
+            <ul class="tab-list">
+                <li class="tab-item"><a href="" class="link-tab">About Us</a></li>
+                <li class="tab-item"><a href="" class="link-tab">이용가이드</a></li>
+                <li class="tab-item active"><a href="" class="link-tab">FAQ</a></li>
+                <li class="tab-item"><a href="" class="link-tab">1:1 문의</a></li>
+            </ul>
+        </div>
+        <!-- E : tab -->
+
+        <!-- S : tab -->
+        <div class="tab-wrap-b small">
+            <ul class="tab-list">
+                <li class="tab-item"><button type="button" class="link-tab active">지식공유</button></li>
+                <li class="tab-item"><button type="button" class="link-tab">투표</button></li>
+                <li class="tab-item"><button type="button" class="link-tab">구매</button></li>
+                <li class="tab-item"><button type="button" class="link-tab">홈페이지</button></li>
+                <li class="tab-item"><button type="button" class="link-tab">기타</button></li>
+            </ul>
+        </div>
+        <!-- E : tab -->
+
+        <div class="list-head fl-wrap">
+            <div class="fl-item-r">
+                <div class="components-search-list"></div>
+            </div>
+        </div>
+
+        <div class="box-faq">
+            <dl class="accordion-item active">
+                <dt class="faq-title">
+                    <span class="faq-q">Q</span>어떤 라이브러리를 공유할 수 있나요?
+                    <button type="button" class="btn-accordion"><span class="for-a11y">열기</span></button>
+                </dt>
+                <dd class="faq-content">
+                    <span class="faq-a">A</span>
+                    중요한 정보가 담긴 방대한 수의 문서가 활용되지 않은 채로 클라우드나 하드 드라이브에서 잠자고 있습니다.<br />
+                    많은 지식 생산자는 적절한 지식을 찾거나 그런 지식에 접근할 수 없기 때문에<br />
+                    결국 같은 주제에 관한 작업을 불필요하게 반복하게 됩니다.<br /><br />
+                    지식 생산자는 본인의 지식을 공유하고 판매함으로써 더 많은 이득을 얻을 기회를 놓치고 있습니다.
+                </dd>
+            </dl>
+            <dl class="accordion-item">
+                <dt class="faq-title">
+                    <span class="faq-q">Q</span>투표하는 방법은 어떻게 하나요?
+                    <button type="button" class="btn-accordion"><span class="for-a11y">열기</span></button>
+                </dt>
+                <dd class="faq-content">
+                    <span class="faq-a">A</span>
+                    중요한 정보가 담긴 방대한 수의 문서가 활용되지 않은 채로 클라우드나 하드 드라이브에서 잠자고 있습니다.<br />
+                    많은 지식 생산자는 적절한 지식을 찾거나 그런 지식에 접근할 수 없기 때문에<br />
+                    결국 같은 주제에 관한 작업을 불필요하게 반복하게 됩니다.<br /><br />
+                    지식 생산자는 본인의 지식을 공유하고 판매함으로써 더 많은 이득을 얻을 기회를 놓치고 있습니다.
+                </dd>
+            </dl>
+            <dl class="accordion-item">
+                <dt class="faq-title">
+                    <span class="faq-q">Q</span>홈페이지에서 회원가입은 어떻게 하나요?
+                    <button type="button" class="btn-accordion"><span class="for-a11y">열기</span></button>
+                </dt>
+                <dd class="faq-content">
+                    <span class="faq-a">A</span>
+                    중요한 정보가 담긴 방대한 수의 문서가 활용되지 않은 채로 클라우드나 하드 드라이브에서 잠자고 있습니다.<br />
+                    많은 지식 생산자는 적절한 지식을 찾거나 그런 지식에 접근할 수 없기 때문에<br />
+                    결국 같은 주제에 관한 작업을 불필요하게 반복하게 됩니다.<br /><br />
+                    지식 생산자는 본인의 지식을 공유하고 판매함으로써 더 많은 이득을 얻을 기회를 놓치고 있습니다.
+                </dd>
+            </dl>
+        </div>
+
+        <div class="paging">
+            <button type="button" class="paging-first">
+                <i class="sp-ico-paging-first"></i>
+                <span class="hide">처음으로</span>
+            </button>
+            <button type="button" class="paging-prev">
+                <i class="sp-ico-paging-prev"></i>
+                <span class="hide">이전</span>
+            </button>
+            <button type="button" class="paging-num current">1</button>
+            <button type="button" class="paging-num">2</button>
+            <button type="button" class="paging-num">3</button>
+            <button type="button" class="paging-num">4</button>
+            <button type="button" class="paging-num">5</button>
+            <button type="button" class="paging-next">
+                <i class="sp-ico-paging-next"></i>
+                <span class="hide">다음</span>
+            </button>
+            <button type="button" class="paging-last">
+                <i class="sp-ico-paging-last"></i>
+                <span class="hide">마지막으로</span>
+            </button>
+        </div>
+
+    </div>
+</main>
+
+<script>
+    //아코디언 메뉴
+    $.fn.uxeAccordionMenu = function (options) {
+        var settings = $.extend({
+            'selector' : 'js-accordion',
+            'itemSelector' : '.accordion-item',
+            'itemClass': 'js-accordion-item',
+            'navigation' : '.btn-accordion',
+            'activeItemClass': 'active',
+            'clickedShowOnly': false
+        }, options);
+        return this.each(function(){
+            var $this = $(this);
+            var $nav = $(this).find(settings.navigation);
+            $this.addClass(settings.selector).find(settings.itemSelector).addClass(settings.itemClass);
+            $nav.each(function(){
+                $(this).click(function(e){
+                    e.preventDefault();
+                    if(settings.clickedShowOnly === true){
+                        $(this).parents('.'+settings.itemClass).siblings().removeClass(settings.activeItemClass);
+                    }
+                    $(this).parents('.'+settings.itemClass).toggleClass(settings.activeItemClass);
+                });
+            });
+        });
+    };
+
+    ;(function($, win, doc, undefined) {
+
+        'use strict';
+
+        //콜백실행
+        var callbackItem = function(){
+            $('.components-search-list > *').unwrap();
+        }
+
+        //components 불러오기
+        $plugins.uiPageLoad('/polaris/src/components/body/items/Search-list.html', 'components-search-list', callbackItem);
+
+        // 아코디언 함수 호출
+        $('.box-faq').uxeAccordionMenu({
+            'clickedShowOnly': true
+        });
+
+
+    })(jQuery, window, document);
+
+</script>

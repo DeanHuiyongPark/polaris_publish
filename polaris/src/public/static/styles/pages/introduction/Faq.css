@@ -1,0 +1,22 @@
+.box-faq {margin-top:30px}
+.box-faq .faq-title {position:relative;padding:18px 40px 18px 76px;font-size:26px;color:#444;font-weight:600;background-color:#eef7ff;word-break:keep-all}
+.box-faq .faq-title .faq-q {position:absolute;left:40px;top:18px;color:#1c7df4}
+.box-faq .faq-title .btn-accordion {position:absolute;top:0;left:0;width:100%;right:0;bottom:0;height:100%}
+.box-faq .faq-content {display:none;position:relative;padding:30px 40px 30px 76px;font-size:18px;color:#616161;line-height:22px;word-break:keep-all}
+.box-faq .faq-content .faq-a {position:absolute;left:46px;top:30px;color:#ff8400}
+.box-faq .active .faq-content {display:block}
+.box-faq .accordion-item ~ .accordion-item {margin-top:30px}
+
+@media (max-width:768px) {
+    .box-faq .faq-title {font-size:18px;padding:18px 20px 18px 40px}
+    .box-faq .faq-title .faq-q {left:14px}
+    .box-faq .faq-content {padding:20px 0 20px 40px;font-size:14px}
+    .box-faq .faq-content .faq-a {top:20px;left:18px}
+    .box-faq .accordion-item ~ .accordion-item {margin-top:20px}
+}
+
+@media (max-width:500px) {
+    .box-faq .faq-title {font-size:16px}
+    .box-faq .faq-content {font-size:13px}
+}
+
