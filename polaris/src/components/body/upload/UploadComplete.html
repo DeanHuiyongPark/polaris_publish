@@ -1,0 +1,40 @@
+<style>
+    .box-upload-complete {max-width:700px;margin:0 auto}
+    .upload-title-wrap {display:flex;justify-content:space-between;align-items:center}
+    .upload-icon-a {width:186px;height:124px;background:url(/polaris/src/public/static/images/sub/upload-img-a.png) 50% 50% no-repeat;background-size:100% auto}
+    .box-upload-a {border:1px solid #c3c3c3;margin-top:36px}
+    .box-upload-a .upload-info {padding:46px 70px}
+    .upload-info .upload-info-des {font-size:18px;line-height:24px;color:#696969;word-break:keep-all}
+    .upload-info .upload-info-des ~ .upload-info-des {margin-top:24px}
+    @media (max-width:768px) {
+        .upload-icon-a {width:93px;height:62px}
+        .box-upload-a .upload-info {padding:20px}
+        .upload-info .upload-info-des {font-size:14px;line-height:20px}
+        .upload-info .upload-info-des ~ .upload-info-des {margin-top:20px}
+    }
+</style>
+<main class="base-body page-library">
+    <div class="box-content-c">
+        <div class="box-upload-complete">
+            <div class="upload-title-wrap">
+                <h2 class="title-type-d">업로드 완료</h2>
+                <i class="upload-icon-a"></i>
+            </div>
+
+            <div class="box-upload-a">
+                <div class="upload-info">
+                    <p class="upload-info-des">회원님의 라이브러리가 업로드 완료하였습니다.</p>
+                    <p class="upload-info-des">업로드한 자료는 등록하신 사항으로 투표 및 구매, 공유, 다운로드 등이 진행되며 위 해당사항에 따라 코인 등으로 보상을 받으실 수 있습니다.</p>
+                    <p class="upload-info-des">앞으로도 많은 사이트 이용 바랍니다.</p>
+                    <p class="upload-info-des">감사합니다.</p>
+                </div>
+            </div>
+
+            <div class="vote-btn-area-b">
+                <button type="button" class="btn-basic-f">Main으로 이동</button>
+                <button type="button" class="btn-basic-f">내가 업로드한 자료보기</button>
+            </div>
+
+        </div>
+    </div>
+</main>
