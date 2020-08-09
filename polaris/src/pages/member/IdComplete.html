@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charSet="utf-8" />
+	<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+
+	<title>아이디 비밀번호 찾기</title>
+
+	<link rel="stylesheet" href="/polaris/src/public/static/styles/base.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script>
+
+	<!-- lib :swiper -->
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	<!-- //lib :swiper -->
+</head>
+
+<body>
+
+	<div class="components-layout"></div>
+	
+	<script>
+		;(function($, win, doc, undefined) {
+
+			'use strict';
+			
+			window.$plugins = {};
+
+			$plugins.uiPageLoad = function(u,t,c) {
+				var url = u;
+				var target = t;
+				var callback = c;
+				return new Promise(function(resolve, reject) {
+					$.get(url, function(response) {
+						if (response) {
+							$('.' + target).html(response);
+							resolve(callback(response));
+						} else{
+							reject(new Error("Request is failed"));
+						}
+					});
+				});
+			}
+
+			//page callback
+			var callbackLayout = function(){
+				$('.base-wrap').addClass('type-sub-v2');
+				$('.components-layout > *').unwrap();
+			}
+			var callbackHeader = function(){
+				$('.components-header > *').unwrap();
+			}
+			var callbackBody = function(){
+				$('.components-main > *').unwrap();
+			}
+			var callbackFooter = function(){
+				$('.components-footer > *').unwrap();
+			}
+
+			//pageload
+			$plugins.uiPageLoad('/polaris/src/components/Layout.html', 'components-layout', callbackLayout)
+				.then($plugins.uiPageLoad('/polaris/src/components/header/Header.html', 'components-header', callbackHeader))
+				.then($plugins.uiPageLoad('/polaris/src/components/body/member/IdComplete.html', 'components-main', callbackBody))
+				.then($plugins.uiPageLoad('/polaris/src/components/footer/Footer.html', 'components-footer', callbackFooter));
+
+		})(jQuery, window, document);
+
+	</script>
+
+	
+</body>
+</html>

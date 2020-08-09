@@ -20,6 +20,10 @@
 .box-member .txt-member-c {margin:80px 0 90px;font-size:24px;color:#000;line-height:30px;word-break:keep-all;font-weight:500;text-align:center}
 .box-member .txt-member-d {text-align:center;margin-top:32px;font-size:14px;color:#939393;line-height:20px;word-break:keep-all;padding-left:8px;text-indent:-8px}
 .box-member .txt-member-d:before {content:'';position:relative;top:-1px;display:inline-block;width:3px;height:3px;border-radius:50%;background-color:#949494;margin-right:4px;vertical-align:middle}
+.box-member .txt-member-e {font-size:24px;color:#000;line-height:30px;word-break:keep-all}
+.box-member .join-data {margin-top:20px;font-size:18px;color:#696969}
+.box-member .join-data .point-color-a,
+.box-member .join-data .point-color-b {font-weight:600;padding-left:16px}
 
 .member-top-logo {text-align:center}
 .member-top-logo i {vertical-align:top}
@@ -90,6 +94,7 @@
 	.join-item-a .join-col-btn {position:static;padding-left:10px;width:auto;margin:0}
 	.join-item-a .join-col-btn .btn-exception-a {padding:0 20px}
 	.box-join-section .btn-area-a {margin-top:20px}
+	.box-member .txt-member-e {font-size:18px}
 }
 @media (max-width:500px) {
 	.list-type-a .list-item .box-textarea {margin:12px 0 0}
