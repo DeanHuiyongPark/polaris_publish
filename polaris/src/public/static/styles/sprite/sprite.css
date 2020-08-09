@@ -1,4 +1,5 @@
 .box-checkbox-a label:after,
+.box-checkbox-b label:after,
 .exchange-item .exchange-col-group ~ .exchange-col-group:before,
 [class^="sp-ico-"] {display:inline-block;background-image:url("/polaris/src/public/static/images/sprite/sp_ico.png");background-repeat:no-repeat}
 .sp-ico-a {width:20px;height:20px;background-position:0 0}
@@ -28,6 +29,12 @@
 .sp-ico-paging-prev {width:10px;height:20px;background-position:-80px -150px}
 .sp-ico-paging-next {width:10px;height:20px;background-position:-90px -150px}
 .sp-ico-paging-last {width:20px;height:20px;background-position:-100px -150px}
+
+[class^="sp_member-"] {display:inline-block;background-image:url("/polaris/src/public/static/images/sprite/sp_member.png");background-repeat:no-repeat}
+.sp_member-logo {width:400px;height:78px;background-position:0 0}
+.sp_member-join-a {width:40px;height:40px;background-position:0 -80px}
+.sp_member-join-b {width:40px;height:40px;background-position:-40px -80px}
+.sp_member-join-c {width:40px;height:40px;background-position:-80px -80px}
 
 @media (max-width:1024px) {
     [class^="sp-ico-"] {background-image:url("/polaris/src/public/static/images/sprite/sp_ico-m.png")}
@@ -90,4 +97,10 @@
     .sp-ico-sns-8 {background-position:-350px -30px}
     .sp-ico-sns-9 {background-position:-0px -80px}
     .sp-ico-f-logo {width:224px;height:51px;background-position:-50px -80px}
+
+    [class^="sp_member-"] {background-size:300px auto}
+    .sp_member-logo {width:200px;height:39px}
+    .sp_member-join-a {width:20px;height:20px;background-position:0 -40px}
+    .sp_member-join-b {width:20px;height:20px;background-position:-20px -40px}
+    .sp_member-join-c {width:20px;height:20px;background-position:-40px -40px}
 }

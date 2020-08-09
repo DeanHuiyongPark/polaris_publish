@@ -1,16 +1,16 @@
 .box-checkbox-a {position:relative;min-height:26px;display:inline-block}
-.box-checkbox-a label {position:relative;padding-left:38px;line-height:26px;display:inline-block;font-size:18px;color:#696969}
+.box-checkbox-a label {position:relative;padding-left:38px;line-height:26px;display:inline-block;font-size:18px;color:#696969;word-break:keep-all}
 .box-checkbox-a .form-checkbox {position:absolute;left:0;top:0;opacity:0}
 .box-checkbox-a label:before {content:'';position:absolute;left:0;top:0;width:26px;height:26px;border-radius:50%;background-color:#cfe5fb;box-sizing:border-box}
 .box-checkbox-a input[type="checkbox"]:checked+label:after {content:'';position:absolute;left:3px;top:3px;width:20px;height:20px;background-position:-240px 0}
 /*.box-checkbox-a input[type="checkbox"]:checked+label:before {background-color:#e6092c}*/
 
-.box-checkbox-b {position:relative;min-height:26px;display:inline-block}
-.box-checkbox-b label {position:relative;padding-left:34px;line-height:24px;display:inline-block;font-size:14px;color:#626262;font-weight:500}
+.box-checkbox-b {position:relative;min-height:22px;display:inline-block}
+.box-checkbox-b label {position:relative;padding-left:32px;line-height:22px;display:inline-block;font-size:14px;color:#939393;font-weight:400}
 .box-checkbox-b .form-checkbox {position:absolute;left:0;top:0;opacity:0}
-.box-checkbox-b label:before {content:'';position:absolute;left:0;top:0;width:24px;height:24px;border-radius:4px;border:1px solid #dcdcdc;background-color:#fff;box-sizing:border-box}
-.box-checkbox-b input[type="checkbox"]:checked+label:after {content:'';position:absolute;left:4px;top:4px;width:16px;height:16px;background-position:-60px 0}
-.box-checkbox-b.no-label label {padding-left:24px;font-size:0;height:24px}
+.box-checkbox-b label:before {content:'';position:absolute;left:0;top:0;width:22px;height:22px;border-radius:0;border:2px solid #909090;background-color:#fff;box-sizing:border-box}
+.box-checkbox-b input[type="checkbox"]:checked+label:after {content:'';position:absolute;left:1px;top:1px;width:20px;height:20px;background-position:-280px 0}
+.box-checkbox-b.no-label label {padding-left:22px;font-size:0;height:22px}
 
 @media (max-width:768px) {
 	.box-checkbox-a label {line-height:20px;font-size:14px;padding-left:30px}

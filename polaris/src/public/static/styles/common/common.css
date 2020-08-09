@@ -75,6 +75,10 @@ select:focus {border-color:#000}
 /* input */
 .form-input-a {height:45px;background-color:#dedede;border-radius:0;border:none;padding:0 8px;box-sizing:border-box}
 .form-input-b {height:54px;background-color:#fff;border-radius:0;border:1px solid #999;padding:0 12px;box-sizing:border-box;font-size:18px}
+.form-input-c {height:54px;background-color:#fff;border-radius:0;border:1px solid #c2c2c2;padding:0 12px;box-sizing:border-box;font-size:18px}
+.form-input-c::placeholder {color:#b7b7b7}
+.form-input-c::-webkit-input-placeholder {color:#aaa}
+.form-input-c:-ms-input-placeholder {color:#aaa}
 
 /* textarea */
 .form-textarea-a {border:1px solid #999;resize:none;width:100%}
@@ -191,6 +195,9 @@ select:focus {border-color:#000}
     /* title */
     .title-type-a {font-size:28px}
     .title-type-d {font-size:32px}
+
+    /* input */
+    .form-input-c {font-size:16px}
 
     /* tab */
     .tab-wrap-a {border-radius:8px;margin-bottom:30px}
