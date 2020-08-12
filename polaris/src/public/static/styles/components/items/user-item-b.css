@@ -2,8 +2,9 @@
 .title-type-b ~ .user-list-b {margin-top:28px}
 .user-list-b ~ .title-type-b {margin-top:48px}
 
-.user-list-b {display:flex;flex-wrap:wrap}
+.user-list-b {display:flex;flex-wrap:wrap; width:calc(100% + 16px)}
 .user-list-b .user-item-b {width:181px;margin:0 16px 16px 0}
+/* .user-list-b.n8 .user-item-b:nth-child(8n) {margin-right:0} */
 .user-list-b .user-item-b:last-child {margin-right:0}
 .user-item-b .user-summary {background-color:#f6f6f6;padding:26px 8px;text-align:center}
 .user-item-b .user-summary .box-person {display:inline-flex;margin:0 auto 12px}

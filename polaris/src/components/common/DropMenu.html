@@ -1,0 +1,69 @@
+<style>    
+    /* ui modal : base */
+    .drop-menu{position:relative; display:inline-block;}
+    .drop-menu-pnl{display:none; position:absolute; top:0; left:0; z-index:1; border:4px solid #484848; background:#fff; transform: translate(-95%,-95%);}
+    .drop-menu-wrap{padding:10px 20px 12px; }
+    .drop-menu-pnl button{font-size:14px; white-space: nowrap;}
+    .drop-menu-pnl button:hover,
+    .drop-menu-pnl button:focus{text-decoration:underline;}
+    .drop-menu.on .drop-menu-btn{font-weight:500;}
+    .drop-menu.on .drop-menu-pnl{display:block}
+    @media (max-width:1024px) {
+        
+        
+        
+    }
+</style>
+
+<div class="drop-menu">
+    <button type="button" class="drop-menu-btn"><span>brown</span></button>
+    <div class="drop-menu-pnl">
+        <div class="drop-menu-wrap">
+            <button type="button">쪽지보내기</button>
+             <button type="button">회원정보상세</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    ;(function($, win, doc, undefined) {
+
+        'use strict';
+        
+        $('.drop-menu-btn').off('click.drop').on('click.drop', function(){
+            var $this = $(this);
+            var v = !$this.data('drop');
+
+            if (v) {
+               
+                $('.drop-menu-btn').data('drop', false);
+                $this.data('drop',true);
+                $('.drop-menu').removeClass('on');
+                $this.closest('.drop-menu').addClass('on');
+                setTimeout(function(){
+                     $('body').data('dropdownOpened', true);
+                },0)
+            } else {
+                dropHide();
+            }
+        });
+
+        $(doc).off('click.drop').on('click.drop', function(e){
+            if (!!$('body').data('dropdownOpened')){
+                console.log($(doc).find('.drop-menu-pnl').has(e.target).length)
+                if ($(doc).find('.drop-menu-pnl').has(e.target).length < 1) {
+                    dropHide();
+                }
+            }
+        });
+
+        function dropHide(){
+            $('body').data('dropdownOpened', false);
+            $('.drop-menu-btn').data('drop', false);
+            $('.drop-menu').removeClass('on');
+        }
+
+
+    })(jQuery, window, document);
+
+</script>   
