@@ -82,56 +82,68 @@
                         <!-- 받은쪽지함 -->
                         <div class="ui-tab-pnl" pnl="1">
                             <h4 class="hide">받은쪽지함</h4>
+                            <!-- 리스트 -->
                             <div class="components-mm-getNote"></div>
-                            <div class="btn-wrap">
-                                <button type="button" class="btn-more-c">더보기</button>
-                            </div>
+
+                            <!-- 보기 -->
+                            <div class="components-mm-getNoteView"></div>
+
+
                         </div>
                         <!-- 보낸쪽지함 -->
                         <div class="ui-tab-pnl" pnl="2">
                             <h4 class="hide">보낸쪽지함</h4>
                             <div class="components-mm-setNote"></div>
-                            <div class="btn-wrap">
-                                <button type="button" class="btn-more-c">더보기</button>
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!-- 업로드 내역 -->
             <div class="ui-tab-pnl" pnl="3">
                 <h3 class="hide">업로드 내역</h3>
                 <div class="type-simple">
-                    <div class="components-mm-upload">3</div>
+                    <div class="components-mm-upload"></div>
                 </div>
             </div>
+
+            <!-- 작성 게시물 -->
             <div class="ui-tab-pnl" pnl="4">
                 <h3 class="hide">작성 게시물</h3>
                 <div class="type-simple">
-                    <div class="components-mm-make">4</div>
+                    <div class="components-mm-make"></div>
                 </div>
             </div>
+
+            <!-- Bookmark -->
             <div class="ui-tab-pnl" pnl="5">
                 <h3 class="hide">Bookmark</h3>
                 <div class="type-simple">
-                    <div class="components-mm-bookmark">5</div>
+                    <div class="components-mm-bookmark"></div>
                 </div>
             </div>
+
+            <!-- 정보수정 -->
             <div class="ui-tab-pnl" pnl="6">
                 <h3 class="hide">정보수정</h3>
                 <div class="type-simple">
-                    <div class="components-mm-infomodify">6</div>
+                    <div class="components-mm-infomodify"></div>
                 </div>
             </div>
+
+            <!-- 작성 댓글 -->
             <div class="ui-tab-pnl" pnl="7">
                 <h3 class="hide">작성 댓글</h3>
                 <div class="type-simple">
-                    <div class="components-mm-myreply">7</div>
+                    <div class="components-mm-myreply"></div>
                 </div>
             </div>
+
+            <!-- 문의 내역 -->
             <div class="ui-tab-pnl" pnl="8">
                 <h3 class="hide">문의 내역</h3>
                 <div class="type-simple">
-                    <div class="components-mm-inquiry">8</div>
+                    <div class="components-mm-inquiry"></div>
                 </div>
             </div>
         </div>
@@ -171,6 +183,9 @@
         var callbackItem5 = function(v){
             $('.components-mm-setNote > *').unwrap();
         }
+        var callbackItem5_2 = function(v){
+            $('.components-mm-getNoteView > *').unwrap();
+        }
         var callbackItem6 = function(v){
             $('.components-mm-upload > *').unwrap();
         }
@@ -197,6 +212,7 @@
             .then($plugins.uiPageLoad('/polaris/src/components/body/items/Search-list.html', 'components-search-list', callbackItem3))
             .then($plugins.uiPageLoad('/polaris/src/components/body/items/list-getnote.html', 'components-mm-getNote', callbackItem4))
             .then($plugins.uiPageLoad('/polaris/src/components/body/items/list-setnote.html', 'components-mm-setNote', callbackItem5))
+            .then($plugins.uiPageLoad('/polaris/src/components/body/items/list-getNoteView.html', 'components-mm-getNoteView', callbackItem5_2))
             .then($plugins.uiPageLoad('/polaris/src/components/body/items/list-upload.html', 'components-mm-upload', callbackItem6))
             .then($plugins.uiPageLoad('/polaris/src/components/body/items/list-make.html', 'components-mm-make', callbackItem7))
             .then($plugins.uiPageLoad('/polaris/src/components/body/items/list-bookmark.html', 'components-mm-bookmark', callbackItem8))
