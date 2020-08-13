@@ -1,0 +1,76 @@
+<style>
+    /* 사용후기 */
+    .list-upload .col-1 {width:100px}
+    .list-upload .col-2 {width:auto}
+    .list-upload .col-3 {width:200px}
+    .list-upload .col-4 {width:200px}
+    .list-upload .col-5 {width:200px}
+    .list-upload tbody td .ellp{color:#787878; font-size:18px; display:inline-block; padding-top:3px }
+    @media (max-width:1024px) {
+
+    }
+</style>
+<div class="box-content-b">
+    <div class="box-member">
+        <div class="box-join">
+            <!-- S : 이메일 -->
+            <div class="box-join-section">
+                <h3 class="member-title-b">이메일</h3>
+                <div class="join-item-a">
+                    <div class="join-col-form"><input type="text" class="form-input-c" /></div>
+                </div>
+            </div>
+            <!-- E : 이메일 -->
+            <!-- S : 비밀번호 -->
+            <div class="box-join-section">
+                <h3 class="member-title-b">비밀번호</h3>
+                <div class="join-item-a">
+                    <div class="join-col-form"><input type="password" class="form-input-c" placeholder="비밀번호를 입력해 주세요(6자 이상)" /></div>
+                </div>
+                <div class="join-item-a">
+                    <div class="join-col-form"><input type="password" class="form-input-c" placeholder="비밀번호를 입력해 주세요(6자 이상)" /></div>
+                </div>
+            </div>
+            <!-- E : 비밀번호 -->
+            <!-- S : 약관동의 -->
+            <div class="box-join-section">
+                <h3 class="member-title-b">회원아이콘</h3>
+                <div class="join-item-a">
+                    <div class="join-col-form"><input type="text" class="form-input-c" /></div>
+                    <div class="join-col-btn"><button type="button" class="btn-exception-a">찾아보기</button></div>
+                </div>
+                <p class="txt-member-d">이미지 크기는 가로 22픽셀, 세로 22픽셀 이하로 해주세요.<br>
+                gif만 가능하며 용량 5,000바이트 이하만 등록됩니다.</p>
+            </div>
+            <!-- E : 약관동의 -->
+        </div>
+        <div class="box-link-member">
+            <span></span>
+            <a href="" class="link-item">회원탈퇴</a>
+        </div>
+
+        <div class="member-btn-area-a">
+            <button type="button" class="btn-basic-a">수정완료</button>
+        </div>
+    </div>
+</div>
+<script>
+    ;(function($, win, doc, undefined) {
+
+        'use strict';
+
+        //콜백실행
+        var callbackItem1 = function(v){
+            $('.components-gn-dropmenu > *').unwrap();
+        }
+        var callbackItem3 = function(v){
+            $('.components-search-list > *').unwrap();
+        }
+        // //components 불러오기
+        $plugins.uiPageLoad('/polaris/src/components/common/DropMenu.html', 'components-gn-dropmenu', callbackItem1)
+        .then($plugins.uiPageLoad('/polaris/src/components/body/items/Search-list.html', 'components-search-list', callbackItem3));
+
+
+    })(jQuery, window, document);
+
+</script> 

@@ -6,6 +6,8 @@
     .tab-sub-btns{width:100%; text-align:center; margin-bottom:50px;}
     .tab-sub-btns button{font-size:18px; padding:5px 70px;}
     .tab-sub-btns button.active{color:#308cfe; font-weight:600;border-bottom:2px solid #308cfe;}
+
+    .user-list-b{margin-bottom:50px}
 </style>
 
 <main class="base-body page-Mypage">
@@ -80,15 +82,7 @@
                         <!-- 받은쪽지함 -->
                         <div class="ui-tab-pnl" pnl="1">
                             <h4 class="hide">받은쪽지함</h4>
-
-                            <div class="list-head fl-wrap">
-                                <div class="fl-item-r">
-                                    <div class="components-search-list"></div>
-                                </div>
-                            </div>
                             <div class="components-mm-getNote"></div>
-
-    
                             <div class="btn-wrap">
                                 <button type="button" class="btn-more-c">더보기</button>
                             </div>
@@ -96,11 +90,6 @@
                         <!-- 보낸쪽지함 -->
                         <div class="ui-tab-pnl" pnl="2">
                             <h4 class="hide">보낸쪽지함</h4>
-                            <div class="list-head fl-wrap">
-                                <div class="fl-item-r">
-                                    <div class="components-search-list"></div>
-                                </div>
-                            </div>
                             <div class="components-mm-setNote"></div>
                             <div class="btn-wrap">
                                 <button type="button" class="btn-more-c">더보기</button>
@@ -118,7 +107,7 @@
             <div class="ui-tab-pnl" pnl="4">
                 <h3 class="hide">작성 게시물</h3>
                 <div class="type-simple">
-                    <div class="components-mm-notice">4</div>
+                    <div class="components-mm-make">4</div>
                 </div>
             </div>
             <div class="ui-tab-pnl" pnl="5">
@@ -136,7 +125,7 @@
             <div class="ui-tab-pnl" pnl="7">
                 <h3 class="hide">작성 댓글</h3>
                 <div class="type-simple">
-                    <div class="components-mm-reply">7</div>
+                    <div class="components-mm-myreply">7</div>
                 </div>
             </div>
             <div class="ui-tab-pnl" pnl="8">
@@ -179,13 +168,41 @@
         var callbackItem4 = function(v){
             $('.components-mm-getNote > *').unwrap();
         }
+        var callbackItem5 = function(v){
+            $('.components-mm-setNote > *').unwrap();
+        }
+        var callbackItem6 = function(v){
+            $('.components-mm-upload > *').unwrap();
+        }
+        var callbackItem7 = function(v){
+            $('.components-mm-make > *').unwrap();
+        }
+        var callbackItem8 = function(v){
+            $('.components-mm-bookmark > *').unwrap();
+        }
+        var callbackItem9 = function(v){
+            $('.components-mm-myreply > *').unwrap();
+        }
+        var callbackItem10 = function(v){
+            $('.components-mm-inquiry > *').unwrap();
+        }
+        var callbackItem11 = function(v){
+            $('.components-mm-infomodify > *').unwrap();
+        }
         
 
         // //components 불러오기
         $plugins.uiPageLoad('/polaris/src/components/body/items/user-item-b.html', 'components-mm-follower', callbackItem1)
             .then($plugins.uiPageLoad('/polaris/src/components/body/items/user-item-b.html', 'components-mm-following', callbackItem2))
             .then($plugins.uiPageLoad('/polaris/src/components/body/items/Search-list.html', 'components-search-list', callbackItem3))
-            .then($plugins.uiPageLoad('/polaris/src/components/body/items/list-getnote.html', 'components-mm-getNote', callbackItem4));
+            .then($plugins.uiPageLoad('/polaris/src/components/body/items/list-getnote.html', 'components-mm-getNote', callbackItem4))
+            .then($plugins.uiPageLoad('/polaris/src/components/body/items/list-setnote.html', 'components-mm-setNote', callbackItem5))
+            .then($plugins.uiPageLoad('/polaris/src/components/body/items/list-upload.html', 'components-mm-upload', callbackItem6))
+            .then($plugins.uiPageLoad('/polaris/src/components/body/items/list-make.html', 'components-mm-make', callbackItem7))
+            .then($plugins.uiPageLoad('/polaris/src/components/body/items/list-bookmark.html', 'components-mm-bookmark', callbackItem8))
+            .then($plugins.uiPageLoad('/polaris/src/components/body/items/list-myreply.html', 'components-mm-myreply', callbackItem9))
+            .then($plugins.uiPageLoad('/polaris/src/components/body/items/list-inquiry.html', 'components-mm-inquiry', callbackItem10))
+            .then($plugins.uiPageLoad('/polaris/src/components/body/items/my-infomodify.html', 'components-mm-infomodify', callbackItem11));
 
 
         //tab
