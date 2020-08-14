@@ -1,0 +1,40 @@
+<style>
+    .list-upload{margin-top:20px;}
+</style>
+
+<div>
+    <div class="list-head fl-wrap">
+        <div class="fl-item-r">
+            <div class="components-search-list"></div>
+        </div>
+    </div>
+        
+    <div class="list-upload">
+        <div class="components-upload-list"></div>
+    </div>
+
+    <div class="components-paging"></div>
+ </div>
+
+ <script>
+    ;(function($, win, doc, undefined) {
+
+        'use strict';
+
+        //components 불러오기
+        $plugins.uiPageLoad('/polaris/src/components/common/paging.html', 'components-paging', function(v){
+            $('.components-paging > *').unwrap();
+        })
+        .then($plugins.uiPageLoad('/polaris/src/components/body/items/list-item-b.html', 'components-upload-list', function(v){
+             for (var i = 1, len = 5; i < len; i++) {
+                $('.components-upload-list').append(v);
+            }
+            $('.components-upload-list > *').unwrap();
+        }))
+        .then($plugins.uiPageLoad('/polaris/src/components/body/items/Search-list.html', 'components-search-list', function(v){
+            $('.components-search-list > *').unwrap();
+        }));
+
+    })(jQuery, window, document);
+
+</script> 
