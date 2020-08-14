@@ -35,18 +35,3 @@
     </div>
 </main>
 
-<script>
-    ;(function($, win, doc, undefined) {
-
-        'use strict';
-        
-        //components 불러오기
-        $plugins.uiPageLoad('/polaris/src/components/body/items/user-item-d.html', 'components-user-item-d', function(v){
-            for (var i = 1, len = 18; i < len; i++) {
-                $('.components-user-item-d .user-item-d').unwrap();
-            }
-        });
-
-    })(jQuery, window, document);
-
-</script>

@@ -119,6 +119,7 @@
                 <div class="box-list-b">
                     <!-- S : list item unit -->
                     <div class="components-mm-upload"></div>
+                    <div class="components-paging"></div>
                     <!-- E : list item unit -->
 
                 </div>
@@ -171,6 +172,7 @@
                     <div class="components-mm-modify"></div>
                 </div>
             </div>
+
         </div>
         <!-- E : tab -->
 
@@ -198,10 +200,6 @@
                 $('.components-mm-following').append(v);
             }
             $('.components-mm-following > *').unwrap();
-        }))
-
-        .then($plugins.uiPageLoad('/polaris/src/components/body/items/Search-list.html', 'components-search-list', function(v){
-            $('.components-search-list > *').unwrap();
         }))
 
         .then($plugins.uiPageLoad('/polaris/src/components/body/items/list-getnote.html', 'components-mm-getNote', function(v){
@@ -245,6 +243,10 @@
         
         .then($plugins.uiPageLoad('/polaris/src/components/body/items/my-modify.html', 'components-mm-modify', function(v){
             $('.components-mm-modify > *').unwrap();
+        }))
+
+        .then($plugins.uiPageLoad('/polaris/src/components/common/paging.html', 'components-paging', function(v){
+            $('.components-paging > *').unwrap();
         }));
 
 
