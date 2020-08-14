@@ -105,16 +105,12 @@
 
         'use strict';
         
-        var callbackItem1 = function(){
+        $plugins.uiPageLoad('/polaris/src/components/body/items/user-item-c.html', 'components-user-item-c', function(){
             $('.components-user-item-c > *').unwrap();
-        }
-        var callbackItem2 = function(){
+        })
+        .then($plugins.uiPageLoad('/polaris/src/components/body/items/Comment-b.html', 'components-comment',  function(){
             $('.components-comment > *').unwrap();
-        }
-
-        
-        $plugins.uiPageLoad('/polaris/src/components/body/items/user-item-c.html', 'components-user-item-c', callbackItem1)
-        .then($plugins.uiPageLoad('/polaris/src/components/body/items/Comment-b.html', 'components-comment', callbackItem2));
+        }));
 
         //tab
         $plugins.tabToggle = function(v, name){

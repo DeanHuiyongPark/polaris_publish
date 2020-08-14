@@ -108,41 +108,20 @@
 
         'use strict';
 
-        function linkTag(){
-            var $wrap = $('.tag-result-wrap');
-
-            $('.tag-result-more').on('click', function(){
-                var divH = $('.tag-result-div').outerHeight();
-                var warpH = $wrap.outerHeight();
-                divH > warpH ? $wrap.css('height', divH) : $wrap.css('height', '25px');
-            })
-        }
-        linkTag();
-
-        //콜백실행
-        var callbackItem = function(v){
-            //아이템 18개
+        //components 불러오기
+        $plugins.uiPageLoad('/polaris/src/components/body/items/card-item.html', 'components-card-item', function(v){
             for (var i = 1, len = 18; i < len; i++) {
                 $('.components-card-item').append(v);
             }
             $('.components-card-item > *').unwrap();
-
-            //미리보기 이벤트
             $('.item-title').on('click', function(e){
                 e.preventDefault();
                 $plugins.modalOpen()
-                
-            })
-
-        }
-
-        var callbackItem2 = function(v){
+            });
+        })
+        .then($plugins.uiPageLoad('/polaris/src/components/common/Modal-preview.html', 'components-modal',  function(v){
             $('.components-modal > *').unwrap();
-        }
-
-        //components 불러오기
-        $plugins.uiPageLoad('/polaris/src/components/body/items/card-item.html', 'components-card-item', callbackItem)
-        .then($plugins.uiPageLoad('/polaris/src/components/common/Modal-preview.html', 'components-modal', callbackItem2));
+        }));
 
         //미리보기 팝업
         $plugins.modalOpen = function(){
@@ -153,6 +132,17 @@
             $('body').removeClass('no-scroll');
             $('.ui-modal').removeClass('ready').removeClass('open');
         }
+
+        function linkTag(){
+            var $wrap = $('.tag-result-wrap');
+
+            $('.tag-result-more').on('click', function(){
+                var divH = $('.tag-result-div').outerHeight();
+                var warpH = $wrap.outerHeight();
+                divH > warpH ? $wrap.css('height', divH) : $wrap.css('height', '25px');
+            })
+        }
+        linkTag();
 
     })(jQuery, window, document);
 

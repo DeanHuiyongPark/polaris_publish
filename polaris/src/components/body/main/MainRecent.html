@@ -23,15 +23,12 @@
 
         'use strict';
 
-        // page load
-        var callbackItem = function(v){
+        $plugins.uiPageLoad('/polaris/src/components/body/main/MainRecentItem.html', 'components-recent-item', function(v){
             for (var i = 1, len = 10; i < len; i++) {
                 $('.components-recent-item').append(v);
             }
             $('.components-recent-item > *').unwrap();
-        }
-
-        $plugins.uiPageLoad('/polaris/src/components/body/main/MainRecentItem.html', 'components-recent-item', callbackItem);
+        });
 
     })(jQuery, window, document);
 

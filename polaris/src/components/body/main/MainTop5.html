@@ -15,14 +15,12 @@
         'use strict';
 
         // page load
-        var callbackItem = function(v){
+        $plugins.uiPageLoad('/polaris/src/components/body/main/MainTop5Item.html', 'components-top5-item', function(v){
             for (var i = 1, len = 5; i < len; i++) {
                 $('.components-top5-item').append(v);
             }
             $('.components-top5-item > *').unwrap();
-        }
-
-        $plugins.uiPageLoad('/polaris/src/components/body/main/MainTop5Item.html', 'components-top5-item', callbackItem);
+        });
 
     })(jQuery, window, document);
 

@@ -129,13 +129,10 @@
 
         'use strict';
 
-        //콜백실행
-        var callbackItem = function(){
-            $('.components-search-list > *').unwrap();
-        }
-
         //components 불러오기
-        $plugins.uiPageLoad('/polaris/src/components/body/items/Search-list.html', 'components-search-list', callbackItem);
+        $plugins.uiPageLoad('/polaris/src/components/body/items/Search-list.html', 'components-search-list', function(){
+            $('.components-search-list > *').unwrap();
+        });
 
         // 아코디언 함수 호출
         $('.box-faq').uxeAccordionMenu({

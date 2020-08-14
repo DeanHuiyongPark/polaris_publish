@@ -41,26 +41,20 @@
     ;(function($, win, doc, undefined) {
 
         'use strict';
-
-        //콜백실행
-        var callbackItem1 = function(v){
-            //아이템 2개
+        
+        //components 불러오기
+        $plugins.uiPageLoad('/polaris/src/components/body/items/user-item-a.html', 'components-user-item-a', function(v){
             for (var i = 1, len = 2; i < len; i++) {
                 $('.components-user-item-a').append(v);
             }
             $('.components-user-item-a .user-item-a').unwrap();
-        }
-        var callbackItem2 = function(v){
-            //아이템 8개
+        })
+        .then($plugins.uiPageLoad('/polaris/src/components/body/items/user-item-b.html', 'components-user-item-b', function(v){
             for (var i = 1, len = 8; i < len; i++) {
                 $('.components-user-item-b').append(v);
             }
             $('.components-user-item-b .user-item-b').unwrap();
-        }
-
-        //components 불러오기
-        $plugins.uiPageLoad('/polaris/src/components/body/items/user-item-a.html', 'components-user-item-a', callbackItem1)
-            .then($plugins.uiPageLoad('/polaris/src/components/body/items/user-item-b.html', 'components-user-item-b', callbackItem2))
+        }))
 
     })(jQuery, window, document);
 

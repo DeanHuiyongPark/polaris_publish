@@ -15,13 +15,13 @@
         'use strict';
 
         // page load
-        var callbackMainRecent = function(){
-        }
-        var callbackMainTop5 = function(){
-        }
 
-        $plugins.uiPageLoad('/polaris/src/components/body/main/MainRecent.html', 'inc-MainRecent', callbackMainRecent);
-        $plugins.uiPageLoad('/polaris/src/components/body/main/MainTop5.html', 'inc-MainTop5', callbackMainTop5);
+        $plugins.uiPageLoad('/polaris/src/components/body/main/MainRecent.html', 'inc-MainRecent', function(){
+            // page load
+        })
+        .then( $plugins.uiPageLoad('/polaris/src/components/body/main/MainTop5.html', 'inc-MainTop5',  function(){
+            // page load
+        }));
             
     })(jQuery, window, document);
 

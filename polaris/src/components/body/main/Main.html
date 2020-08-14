@@ -16,28 +16,22 @@
 
         'use strict';
 
-        //page callback
-        var callbackMainVisual = function(){
-            $('.components-MainVisual > *').unwrap();
-        }
-        var callbackMainInsight = function(){
-            $('.components-MainInsight > *').unwrap();
-        }
-
-        var callbackMainLibrary = function(){
-            $('.components-MainLibrary > *').unwrap();
-        }
-
-        var callbackMainEvent = function(){
-            $('.components-MainEvent > *').unwrap();
-        }
-      
-
         //pageload
-        $plugins.uiPageLoad('/polaris/src/components/body/main/MainVisual.html', 'components-MainVisual', callbackMainVisual);
-        $plugins.uiPageLoad('/polaris/src/components/body/main/MainInsight.html', 'components-MainInsight', callbackMainInsight);
-        $plugins.uiPageLoad('/polaris/src/components/body/main/MainLibrary.html', 'components-MainLibrary', callbackMainLibrary);
-        $plugins.uiPageLoad('/polaris/src/components/body/main/MainEvent.html', 'components-MainEvent', callbackMainEvent);
+        $plugins.uiPageLoad('/polaris/src/components/body/main/MainVisual.html', 'components-MainVisual', function(){
+            $('.components-MainVisual > *').unwrap();
+        })
+
+        .then($plugins.uiPageLoad('/polaris/src/components/body/main/MainInsight.html', 'components-MainInsight', function(){
+            $('.components-MainInsight > *').unwrap();
+        }))
+        
+        .then($plugins.uiPageLoad('/polaris/src/components/body/main/MainLibrary.html', 'components-MainLibrary', function(){
+            $('.components-MainLibrary > *').unwrap();
+        }))
+
+        .then($plugins.uiPageLoad('/polaris/src/components/body/main/MainEvent.html', 'components-MainEvent', function(){
+            $('.components-MainEvent > *').unwrap();
+        })) ;
 
     })(jQuery, window, document);
 

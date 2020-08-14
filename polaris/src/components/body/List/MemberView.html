@@ -223,58 +223,50 @@
 
         'use strict';
 
-        //콜백실행
-        var callbackItem1 = function(v){
-            //아이템 7개
+        //components 불러오기
+        $plugins.uiPageLoad('/polaris/src/components/body/items/card-item.html', 'components-mv-carditem', function(v){
             for (var i = 1, len = 6; i < len; i++) {
                 $('.components-mv-carditem').append(v);
             }
             $('.components-mv-carditem > *').unwrap();
-        }
-        var callbackItem2 = function(v){
-            //아이템 8개
+        })
+
+        .then($plugins.uiPageLoad('/polaris/src/components/body/items/user-item-e.html', 'components-user-item-e', function(v){
             $('.components-user-item-e > *').unwrap();
-        }
-        var callbackItem3 = function(v){
-            //아이템 3개
+        }))
+
+        .then($plugins.uiPageLoad('/polaris/src/components/body/items/card-item.html', 'components-mv-carditem2', function(v){
             for (var i = 1, len = 3; i < len; i++) {
                 $('.components-mv-carditem2').append(v);
             }
             $('.components-mv-carditem2 > *').unwrap();
-        }
-        var callbackItem4 = function(v){
-            //아이템 3개
+        }))
+
+        .then($plugins.uiPageLoad('/polaris/src/components/body/items/user-item-f.html', 'components-user-item-f', function(v){
             for (var i = 1, len = 3; i < len; i++) {
                 $('.components-user-item-f').append(v);
             }
             $('.components-user-item-f > *').unwrap();
-        }
-        var callbackItem5 = function(v){
-            //아이템 3개
+        }))
+
+        .then($plugins.uiPageLoad('/polaris/src/components/body/items/user-item-f.html', 'components-user-item-f2', function(v){
             for (var i = 1, len = 6; i < len; i++) {
                 $('.components-user-item-f2').append(v);
             }
             $('.components-user-item-f2 > *').unwrap();
-        }
-        var callbackItem6 = function(v){
-            $('.components-list-reviews > *').unwrap();
-        }
-        var callbackItem7 = function(v){
-            $('.components-list-request > *').unwrap();
-        }
-        var callbackItem8 = function(v){
-            $('.components-list-reply > *').unwrap();
-        }
+        }))
 
-        //components 불러오기
-        $plugins.uiPageLoad('/polaris/src/components/body/items/card-item.html', 'components-mv-carditem', callbackItem1)
-            .then($plugins.uiPageLoad('/polaris/src/components/body/items/user-item-e.html', 'components-user-item-e', callbackItem2))
-            .then($plugins.uiPageLoad('/polaris/src/components/body/items/card-item.html', 'components-mv-carditem2', callbackItem3))
-            .then($plugins.uiPageLoad('/polaris/src/components/body/items/user-item-f.html', 'components-user-item-f', callbackItem4))
-            .then($plugins.uiPageLoad('/polaris/src/components/body/items/user-item-f.html', 'components-user-item-f2', callbackItem5))
-            .then($plugins.uiPageLoad('/polaris/src/components/body/items/list-reviews.html', 'components-list-reviews', callbackItem6))
-            .then($plugins.uiPageLoad('/polaris/src/components/body/items/list-request.html', 'components-list-request', callbackItem7))
-            .then($plugins.uiPageLoad('/polaris/src/components/body/items/list-reply.html', 'components-list-reply', callbackItem8));
+        .then($plugins.uiPageLoad('/polaris/src/components/body/items/list-reviews.html', 'components-list-reviews', function(v){
+            $('.components-list-reviews > *').unwrap();
+        }))
+
+        .then($plugins.uiPageLoad('/polaris/src/components/body/items/list-request.html', 'components-list-request', function(v){
+            $('.components-list-request > *').unwrap();
+        }))
+        
+        .then($plugins.uiPageLoad('/polaris/src/components/body/items/list-reply.html', 'components-list-reply', function(v){
+            $('.components-list-reply > *').unwrap();
+        }));
 
 
         //tab

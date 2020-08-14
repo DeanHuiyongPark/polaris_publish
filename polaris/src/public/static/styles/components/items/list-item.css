@@ -26,3 +26,42 @@
     .list-item-a .list-item-wrap .box-img {width:100%;display:block}
     .list-item-a .list-item-wrap .item-info {display:block;padding:0}
 }
+
+.box-list-b {display:flex;flex-wrap:wrap; }
+.box-list-b .list-item-b:first-child{border-top:1px solid #767676}
+.box-list-b .list-item-b:last-child{border-bottom:1px solid #767676}
+.box-list-b .list-item-b {width:100%; border-bottom:1px solid #d8d8d8}
+.list-item-b .list-item-wrap {display:table;width:100%;table-layout:fixed; padding:20px 10px}
+.list-item-b .list-item-wrap .box-img {display:table-cell;width:203px;vertical-align:top}
+.list-item-b .list-item-wrap .box-img .img-item {display:block;border-radius:8px;overflow:hidden}
+.list-item-b .list-item-wrap .box-img img {width:100%;vertical-align:top}
+.list-item-b .list-item-wrap .item-info {display:table-cell;padding:0 20px}
+.list-item-b .list-item-wrap .item-title {font-size:16px;color:#2a2c2f;font-weight:500;margin:10px 0;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}
+.list-item-b .list-item-wrap .item-des {font-size:16px;color:#8a939f;line-height:20px; display:block;overflow:hidden;margin-top:10px;text-overflow:ellipsis; width:100%; white-space:nowrap;}
+.list-item-b .list-item-wrap .item-tag{margin-top:10px; color:#385881; font-size:14px;}
+.list-item-b .list-item-wrap .item-type {margin-top:0}
+.list-item-b .list-item-wrap .item-type .type-items {position:relative;display:inline-block;font-size:18px;color:#2a2c2f}
+.list-item-b .list-item-wrap .item-type .type-items ~ .type-items {margin-left:8px;padding-left:13px}
+.list-item-b .list-item-wrap .item-type .type-items ~ .type-items:before {content:'';position:absolute;left:0;top:50%;height:16px;width:1px;margin-top:-8px;background-color:#ababab}
+.list-item-b .list-item-wrap .sympathy {margin-top:8px}
+.list-item-b .list-item-wrap .sympathy i {vertical-align:middle}
+.list-item-b .list-item-wrap .sympathy .sympathy-value {font-size:14px;color:#2e2e2e;padding-left:8px}
+.list-item-b .sp-ico-a-s{width:26px; height:26px; background: url(/polaris/src/public/static/images/common/ico-pola-b.png) no-repeat 0 0 / cover;}
+.list-item-b .sp-ico-b-s{width:26px; height:26px; background: url(/polaris/src/public/static/images/common/ico-down-b.png) no-repeat 0 0 / cover;}
+.list-item-b .sp-ico-c-s{width:26px; height:26px; background: url(/polaris/src/public/static/images/common/ico-recom-b.png) no-repeat 0 0 / cover;}
+.list-item-b .content-items .items{display:inline-block; vertical-align: middle; margin-top:10px }
+.list-item-b .content-items .items + .items{margin-left:30px}
+.list-item-b .content-items .items i{display:inline-block;vertical-align: middle; margin-right:10px; line-height: 25px;}
+.list-item-b .item-view{display:table-cell;width:203px;vertical-align:middle; text-align:center; font-size:18px; color:#000; font-weight:400;}
+.list-item-b .item-date{display:table-cell;width:203px;vertical-align:middle; text-align:center; font-size:18px; color:#787878; font-weight:400;}
+
+@media (max-width:1200px) {
+    .box-list-b {display:block}
+    .box-list-b .list-item-b {width:100%}
+    .box-list-b .list-item-b ~ .list-item-b {margin-top:20px}
+}
+@media (max-width:600px) {
+    .list-item-b .list-item-wrap {display:block}
+    .list-item-b .list-item-wrap .box-img {width:100%;display:block}
+    .list-item-b .list-item-wrap .item-info {display:block;padding:0}
+}

@@ -45,31 +45,23 @@
 				});
 			}
 
-			//page callback
-			var callbackLayout = function(){
+			//pageload
+			$plugins.uiPageLoad('/polaris/src/components/Layout.html', 'components-layout', function(){
 				$('.components-layout > *').unwrap();
-			}
-			var callbackHeader = function(){
+			})
+			.then($plugins.uiPageLoad('/polaris/src/components/header/Header.html', 'components-header', function(){
 				$('.components-header > *').unwrap();
-			}
-			var callbackBody = function(){
-				$('.components-main > *').unwrap();
-			}
-			var callbackFooter = function(){
-				$('.components-footer > *').unwrap();
-			}
-			var callbackNotify = function(){
+			}))
+			.then($plugins.uiPageLoad('/polaris/src/components/common/Notify-top.html', 'components-notify', function(){
 				$('body').addClass('is-notify');
 				$('.components-notify > *').unwrap();
-			}
-			
-
-			//pageload
-			$plugins.uiPageLoad('/polaris/src/components/Layout.html', 'components-layout', callbackLayout)
-				.then($plugins.uiPageLoad('/polaris/src/components/header/Header.html', 'components-header', callbackHeader))
-				.then($plugins.uiPageLoad('/polaris/src/components/common/Notify-top.html', 'components-notify', callbackNotify))
-				.then($plugins.uiPageLoad('/polaris/src/components/body/main/Main.html', 'components-main', callbackBody))
-				.then($plugins.uiPageLoad('/polaris/src/components/footer/Footer.html', 'components-footer', callbackFooter));
+			}))
+			.then($plugins.uiPageLoad('/polaris/src/components/body/main/Main.html', 'components-main', function(){
+				$('.components-main > *').unwrap();
+			}))
+			.then($plugins.uiPageLoad('/polaris/src/components/footer/Footer.html', 'components-footer', function(){
+				$('.components-footer > *').unwrap();
+			}));
 
 		})(jQuery, window, document);
 

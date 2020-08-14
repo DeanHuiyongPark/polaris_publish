@@ -64,32 +64,30 @@
 
         'use strict';
 
-        var callbackItem1 = function(v){
+        //components 불러오기
+        $plugins.uiPageLoad('/polaris/src/components/body/items/user-item-b.html', 'components-user-item-b', function(v){
             //아이템 8개
             for (var i = 1, len = 8; i < len; i++) {
                 $('.components-user-item-b').append(v);
             }
             $('.components-user-item-b .user-item-b').unwrap();
-        }
-        var callbackItem2 = function(v){
+        })
+
+        .then($plugins.uiPageLoad('/polaris/src/components/body/items/result-item-a.html', 'result-item-a',  function(v){
             //아이템 3개
             for (var i = 1, len = 3; i < len; i++) {
                 $('.result-item-a').append(v);
             }
             $('.result-item-a .result-item').unwrap();
-        }
-        var callbackItem3 = function(v){
+        }))
+
+        .then($plugins.uiPageLoad('/polaris/src/components/body/items/result-item-b.html', 'result-item-b', function(v){
             //아이템 2개
             for (var i = 1, len = 2; i < len; i++) {
                 $('.result-item-b').append(v);
             }
             $('.result-item-b .result-item').unwrap();
-        }
-
-        //components 불러오기
-        $plugins.uiPageLoad('/polaris/src/components/body/items/user-item-b.html', 'components-user-item-b', callbackItem1)
-            .then($plugins.uiPageLoad('/polaris/src/components/body/items/result-item-a.html', 'result-item-a', callbackItem2))
-            .then($plugins.uiPageLoad('/polaris/src/components/body/items/result-item-b.html', 'result-item-b', callbackItem3))
+        }));
 
     })(jQuery, window, document);
 

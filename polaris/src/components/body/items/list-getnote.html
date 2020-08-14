@@ -82,29 +82,7 @@
             </table>
         </div>
 
-        <div class="paging">
-            <button type="button" class="paging-first">
-                <i class="sp-ico-paging-first"></i>
-                <span class="hide">처음으로</span>
-            </button>
-            <button type="button" class="paging-prev">
-                <i class="sp-ico-paging-prev"></i>
-                <span class="hide">이전</span>
-            </button>
-            <button type="button" class="paging-num current">1</button>
-            <button type="button" class="paging-num">2</button>
-            <button type="button" class="paging-num">3</button>
-            <button type="button" class="paging-num">4</button>
-            <button type="button" class="paging-num">5</button>
-            <button type="button" class="paging-next">
-                <i class="sp-ico-paging-next"></i>
-                <span class="hide">다음</span>
-            </button>
-            <button type="button" class="paging-last">
-                <i class="sp-ico-paging-last"></i>
-                <span class="hide">마지막으로</span>
-            </button>
-        </div>
+        <div class="components-paging"></div>
     </div>
 </div>
 <script>
@@ -112,16 +90,16 @@
 
         'use strict';
 
-        //콜백실행
-        var callbackItem1 = function(v){
+        // components 불러오기
+        $plugins.uiPageLoad('/polaris/src/components/common/DropMenu.html', 'components-gn-dropmenu', function(v){
             $('.components-gn-dropmenu > *').unwrap();
-        }
-        var callbackItem3 = function(v){
+        })
+        .then($plugins.uiPageLoad('/polaris/src/components/body/items/Search-list.html', 'components-search-list', function(v){
             $('.components-search-list > *').unwrap();
-        }
-        // //components 불러오기
-        $plugins.uiPageLoad('/polaris/src/components/common/DropMenu.html', 'components-gn-dropmenu', callbackItem1)
-        .then($plugins.uiPageLoad('/polaris/src/components/body/items/Search-list.html', 'components-search-list', callbackItem3));
+        }))
+        .then($plugins.uiPageLoad('/polaris/src/components/common/paging.html', 'components-paging', function(v){
+            $('.components-paging > *').unwrap();
+        }));
 
 
     })(jQuery, window, document);

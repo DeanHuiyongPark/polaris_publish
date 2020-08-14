@@ -40,16 +40,12 @@
 
         'use strict';
         
-        var callbackItem1 = function(v){
+        $plugins.uiPageLoad('/polaris/src/components/body/items/list-request.html', 'components-list-request', function(v){
             $('.components-list-request > *').unwrap();
-        }
-        var callbackItem2 = function(){
+        })
+        .then($plugins.uiPageLoad('/polaris/src/components/body/items/Search-list.html', 'components-search-list', function(){
             $('.components-search-list > *').unwrap();
-        }
-
-        
-        $plugins.uiPageLoad('/polaris/src/components/body/items/list-request.html', 'components-list-request', callbackItem1)
-            .then($plugins.uiPageLoad('/polaris/src/components/body/items/Search-list.html', 'components-search-list', callbackItem2));
+        }));
 
 
     })(jQuery, window, document);

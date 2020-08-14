@@ -54,12 +54,9 @@
     ;(function($, win, doc, undefined) {
         'use strict';
 
-        var callbackItem1 = function(v){
-            //아이템 1개
+        $plugins.uiPageLoad('/polaris/src/components/body/items/user-item-g.html', 'components-user-item-g', function(v){
             $('.components-user-item-g .user-item-g').unwrap();
-        }
-
-        $plugins.uiPageLoad('/polaris/src/components/body/items/user-item-g.html', 'components-user-item-g', callbackItem1)
+        })
 
 
     })(jQuery, window, document);

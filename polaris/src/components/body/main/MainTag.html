@@ -54,17 +54,14 @@
         }
         linkTag();
 
-        //콜백실행
-        var callbackItem = function(v){
+        //components 불러오기
+        $plugins.uiPageLoad('/polaris/src/components/body/items/card-item.html', 'components-card-item', function(v){
             //아이템 18개
             for (var i = 1, len = 18; i < len; i++) {
                 $('.components-card-item').append(v);
             }
             $('.components-card-item > *').unwrap();
-        }
-
-        //components 불러오기
-        $plugins.uiPageLoad('/polaris/src/components/body/items/card-item.html', 'components-card-item', callbackItem);
+        });
 
     })(jQuery, window, document);
 

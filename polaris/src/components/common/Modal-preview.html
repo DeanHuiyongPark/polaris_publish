@@ -137,17 +137,15 @@
 
         'use strict';
 
-        var callbackItem = function(v){
+        //components 불러오기
+        $plugins.uiPageLoad('/polaris/src/components/body/items/card-item.html', 'components-library-a', function(v){
             //아이템 3개
             for (var i = 1, len = 6; i < len; i++) {
                 $('.components-library-a').append(v);
             }
             $('.components-library-a > *').unwrap();
-        }
+        });
 
-
-        //components 불러오기
-        $plugins.uiPageLoad('/polaris/src/components/body/items/card-item.html', 'components-library-a', callbackItem);
     })(jQuery, window, document);
 
 </script>   

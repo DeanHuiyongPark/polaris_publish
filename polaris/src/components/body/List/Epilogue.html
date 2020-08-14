@@ -66,24 +66,19 @@
 
         'use strict';
         
-        var callbackItem1 = function(){
+        $plugins.uiPageLoad('/polaris/src/components/body/items/list-reviews.html', 'components-list-reviews', function(){
             $('.components-list-reviews > *').unwrap();
-        }
-        var callbackItem2 = function(){
+        })
+        .then($plugins.uiPageLoad('/polaris/src/components/body/items/Search-list.html', 'components-search-list', function(){
             $('.components-search-list > *').unwrap();
-        }
-        var callbackItem3 = function(v){
-            //아이템 6개
+        }))
+        .then($plugins.uiPageLoad('/polaris/src/components/body/items/list-item.html', 'components-list-item-a',  function(v){
             for (var i = 1, len = 6; i < len; i++) {
                 $('.components-list-item-a').append(v);
             }
 
             $('.components-list-item-a > *').unwrap();
-        }
-        
-        $plugins.uiPageLoad('/polaris/src/components/body/items/list-reviews.html', 'components-list-reviews', callbackItem1)
-            .then($plugins.uiPageLoad('/polaris/src/components/body/items/Search-list.html', 'components-search-list', callbackItem2))
-            .then($plugins.uiPageLoad('/polaris/src/components/body/items/list-item.html', 'components-list-item-a', callbackItem3));
+        }));
 
         //tab
         $plugins.tabToggle = function(v, name){

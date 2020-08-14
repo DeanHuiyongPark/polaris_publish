@@ -110,16 +110,13 @@
 
         'use strict';
 
-        //콜백실행
-        var callbackItem1 = function(v){
+        //components 불러오기
+        $plugins.uiPageLoad('/polaris/src/components/common/DropMenu.html', 'components-gn-dropmenu', function(v){
             $('.components-gn-dropmenu > *').unwrap();
-        }
-        var callbackItem3 = function(v){
+        })
+        .then($plugins.uiPageLoad('/polaris/src/components/body/items/Search-list.html', 'components-search-list', function(v){
             $('.components-search-list > *').unwrap();
-        }
-        // //components 불러오기
-        $plugins.uiPageLoad('/polaris/src/components/common/DropMenu.html', 'components-gn-dropmenu', callbackItem1)
-        .then($plugins.uiPageLoad('/polaris/src/components/body/items/Search-list.html', 'components-search-list', callbackItem3));
+        }));
 
 
     })(jQuery, window, document);

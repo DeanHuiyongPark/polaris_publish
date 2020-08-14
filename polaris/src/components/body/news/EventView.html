@@ -73,26 +73,13 @@
     ;(function($, win, doc, undefined) {
 
         'use strict';
-        
-        var callbackItem1 = function(){
+
+        $plugins.uiPageLoad('/polaris/src/components/body/items/user-item-c.html', 'components-user-item-c', function(){
             $('.components-user-item-c > *').unwrap();
-        }
-        var callbackItem2 = function(){
+        })
+        .then($plugins.uiPageLoad('/polaris/src/components/body/items/Comment-b.html', 'components-comment', function(){
             $('.components-comment > *').unwrap();
-        }
-
-        
-        $plugins.uiPageLoad('/polaris/src/components/body/items/user-item-c.html', 'components-user-item-c', callbackItem1)
-        .then($plugins.uiPageLoad('/polaris/src/components/body/items/Comment-b.html', 'components-comment', callbackItem2));
-
-        //tab
-        $plugins.tabToggle = function(v, name){
-            $('[tabbtn="'+ name +'"] .ui-tab-btn').removeClass('active');
-            $('[tabbtn="'+ name +'"] .ui-tab-btn[n="'+ v +'"]').addClass('active');
-            $('[tabpnl="'+ name +'"] > .ui-tab-pnl').removeClass('visible');
-            $('[tabpnl="'+ name +'"] > .ui-tab-pnl[pnl="'+ v +'"]').addClass('visible');
-        }
-        $plugins.tabToggle(1, 'tabPeriod');
+        }));
 
     })(jQuery, window, document);
 

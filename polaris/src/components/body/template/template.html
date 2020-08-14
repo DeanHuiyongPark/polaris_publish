@@ -103,6 +103,16 @@
         <!-- E : list item unit -->
 
     </div>
+
+    <h3 class="g-h3">list item</h3>
+     <div class="box-list-b">
+        <!-- S : list item unit -->
+        <div class="components-list-item-a-2"></div>
+        <!-- E : list item unit -->
+
+    </div>
+
+
     <h3 class="g-h3">user item A</h3>
     <div class="user-list-a">
         <!-- S : user item unit -->
@@ -159,90 +169,97 @@
 
 <script>
     ;(function($, win, doc, undefined) {
+
         'use strict';
-        // page load
-        var callbackItem1 = function(v){
+        
+        $plugins.uiPageLoad('/polaris/src/components/body/items/card-item.html', 'components-card-item-1', function(v){
             //아이템 7개
             for (var i = 1, len = 7; i < len; i++) {
                 $('.components-card-item-1').append(v);
             }
-            $('.components-card-item-1 .card-item').unwrap();
-        }
-        var callbackItem2 = function(v){
+            $('.components-card-item-1 > *').unwrap();
+        })
+
+        .then($plugins.uiPageLoad('/polaris/src/components/body/items/card-item.html', 'components-card-item-2', function(v){
             //아이템 3개
             for (var i = 1, len = 3; i < len; i++) {
                 $('.components-card-item-2').append(v);
             }
-            $('.components-card-item-2 .card-item').unwrap();
-        }
-        var callbackItem3 = function(v){
+            $('.components-card-item-2 > *').unwrap();
+        }))
+
+        .then($plugins.uiPageLoad('/polaris/src/components/body/items/list-item.html', 'components-list-item-a', function(v){
             //아이템 2개
             for (var i = 1, len = 2; i < len; i++) {
                 $('.components-list-item-a').append(v);
             }
-            $('.components-list-item-a .list-item-a').unwrap();
-        }
-        var callbackItem4 = function(v){
+            $('.components-list-item-a > *').unwrap();
+        }))
+
+        .then($plugins.uiPageLoad('/polaris/src/components/body/items/list-item-b.html', 'components-list-item-a-2', function(v){
+            //아이템 2개
+            for (var i = 1, len = 2; i < len; i++) {
+                $('.components-list-item-a-2').append(v);
+            }
+            $('.components-list-item-a-2 > *').unwrap();
+        }))
+
+        .then($plugins.uiPageLoad('/polaris/src/components/body/items/user-item-a.html', 'components-user-item-a', function(v){
             //아이템 2개
             for (var i = 1, len = 2; i < len; i++) {
                 $('.components-user-item-a').append(v);
             }
-            $('.components-user-item-a .user-item-a').unwrap();
-        }
-        var callbackItem5 = function(v){
+            $('.components-user-item-a > *').unwrap();
+        }))
+
+        .then($plugins.uiPageLoad('/polaris/src/components/body/items/user-item-b.html', 'components-user-item-b', function(v){
             //아이템 8개
             for (var i = 1, len = 8; i < len; i++) {
                 $('.components-user-item-b').append(v);
             }
-            $('.components-user-item-b .user-item-b').unwrap();
-        }
-        var callbackItem6 = function(v){
+            $('.components-user-item-b > *').unwrap();
+        }))
+
+        .then($plugins.uiPageLoad('/polaris/src/components/body/items/user-item-b-2.html', 'components-user-item-b-2', function(v){
             //아이템 8개
             for (var i = 1, len = 8; i < len; i++) {
                 $('.components-user-item-b-2').append(v);
             }
-            $('.components-user-item-b-2 .user-item-b').unwrap();
-        }
-        var callbackItem7 = function(v){
+            $('.components-user-item-b-2 > *').unwrap();
+        }))
+
+        .then($plugins.uiPageLoad('/polaris/src/components/body/items/user-item-c.html', 'components-user-item-c', function(v){
             //아이템 1개
-            $('.components-user-item-c .user-item-c').unwrap();
-        }
-        var callbackItem8 = function(v){
+            $('.components-user-item-c > *').unwrap();
+        }))
+
+        .then($plugins.uiPageLoad('/polaris/src/components/body/items/user-item-c-2.html', 'components-user-item-c-2', function(v){
             //아이템 1개
-            $('.components-user-item-c-2 .user-item-c').unwrap();
-        }
-        var callbackItem9 = function(v){
+            $('.components-user-item-c-2 > *').unwrap();
+        }))
+
+        .then($plugins.uiPageLoad('/polaris/src/components/body/items/user-item-d.html', 'components-user-item-d', function(v){
             //아이템 1개
-            $('.components-user-item-d .user-item-d').unwrap();
-        }
-        var callbackItem10 = function(v){
+            $('.components-user-item-d > *').unwrap();
+        }))
+
+        .then($plugins.uiPageLoad('/polaris/src/components/body/items/user-item-e.html', 'components-user-item-e', function(v){
             //아이템 1개
-            $('.components-user-item-e .user-item-e').unwrap();
-        }
-        var callbackItem11 = function(v){
+            $('.components-user-item-e > *').unwrap();
+        }))
+
+        .then($plugins.uiPageLoad('/polaris/src/components/body/items/user-item-f.html', 'components-user-item-f', function(v){
             //아이템 8개
             for (var i = 1, len = 8; i < len; i++) {
                 $('.components-user-item-f').append(v);
             }
-            $('.components-user-item-f .user-item-f').unwrap();
-        }
-        var callbackItem12 = function(v){
+            $('.components-user-item-f > *').unwrap();
+        }))
+        
+        .then($plugins.uiPageLoad('/polaris/src/components/body/items/user-item-g.html', 'components-user-item-g', function(v){
             //아이템 1개
-            $('.components-user-item-g .user-item-g').unwrap();
-        }
-
-        $plugins.uiPageLoad('/polaris/src/components/body/items/card-item.html', 'components-card-item-1', callbackItem1)
-            .then($plugins.uiPageLoad('/polaris/src/components/body/items/card-item.html', 'components-card-item-2', callbackItem2))
-            .then($plugins.uiPageLoad('/polaris/src/components/body/items/list-item.html', 'components-list-item-a', callbackItem3))
-            .then($plugins.uiPageLoad('/polaris/src/components/body/items/user-item-a.html', 'components-user-item-a', callbackItem4))
-            .then($plugins.uiPageLoad('/polaris/src/components/body/items/user-item-b.html', 'components-user-item-b', callbackItem5))
-            .then($plugins.uiPageLoad('/polaris/src/components/body/items/user-item-b-2.html', 'components-user-item-b-2', callbackItem6))
-            .then($plugins.uiPageLoad('/polaris/src/components/body/items/user-item-c.html', 'components-user-item-c', callbackItem7))
-            .then($plugins.uiPageLoad('/polaris/src/components/body/items/user-item-c-2.html', 'components-user-item-c-2', callbackItem8))
-            .then($plugins.uiPageLoad('/polaris/src/components/body/items/user-item-d.html', 'components-user-item-d', callbackItem9))
-            .then($plugins.uiPageLoad('/polaris/src/components/body/items/user-item-e.html', 'components-user-item-e', callbackItem10))
-            .then($plugins.uiPageLoad('/polaris/src/components/body/items/user-item-f.html', 'components-user-item-f', callbackItem11))
-            .then($plugins.uiPageLoad('/polaris/src/components/body/items/user-item-g.html', 'components-user-item-g', callbackItem12));
+            $('.components-user-item-g  > *').unwrap();
+        }));
 
 
     })(jQuery, window, document);

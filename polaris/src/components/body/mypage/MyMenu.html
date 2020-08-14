@@ -1,5 +1,7 @@
 
 <style>
+    .tab-mypage{border:0; text-align:center;}
+    .tab-mypage .btn-basic-f{font-size:14px; float:right; min-width:0; margin-top:7px;}
     .tab-mypage button{font-size:24px;}
     .tab-mypage .tab-list .tab-item button.active{color:#308cfe; font-weight:600; border-bottom:1px solid #308cfe;}
     /* tab in tab */
@@ -23,8 +25,20 @@
 
         <!-- S : tab -->
         <div class="tab-wrap-b tab-mypage small">
-            <ul class="tab-list" tabbtn="tabMyMenu">
-                 
+
+            <select class="combo-tab" title="" tabbtn="tabMyMenu">
+                <option value="1">Follow</option>
+                <option value="2">쪽지함</option>
+                <option value="3">업로드 내역</option>
+                <option value="4">통계</option>
+                <option value="5">Bookmark</option>
+                <option value="6">작성 댓글</option>
+                <option value="7">작성 게시물</option>
+                <option value="8">문의 내역</option>
+            </select>
+
+            <button type="button" class="btn-basic-f small" onclick="$plugins.tabToggle(9, 'tabMyMenu');"><span>개인정보수정</span></button>
+            <!-- <ul class="tab-list" tabbtn="tabMyMenu">
                 <li class="tab-item"><button type="button" class="link-tab ui-tab-btn" n="1" onclick="$plugins.tabToggle(1, 'tabMyMenu');"><span>팔로우</span></button></li>
                 <li class="tab-item"><button type="button" class="link-tab ui-tab-btn" n="2" onclick="$plugins.tabToggle(2, 'tabMyMenu');"><span>쪽지함</span><span class="count-value">[12]</span></button></li>
                 <li class="tab-item"><button type="button" class="link-tab ui-tab-btn" n="3" onclick="$plugins.tabToggle(3, 'tabMyMenu');"><span>업로드 내역</span></button></li>
@@ -33,7 +47,7 @@
                 <li class="tab-item"><button type="button" class="link-tab ui-tab-btn" n="6" onclick="$plugins.tabToggle(6, 'tabMyMenu');"><span>정보수정</span></button></li>
                 <li class="tab-item"><button type="button" class="link-tab ui-tab-btn" n="7" onclick="$plugins.tabToggle(7, 'tabMyMenu');"><span>작성 댓글</span></button></li>
                 <li class="tab-item"><button type="button" class="link-tab ui-tab-btn" n="8" onclick="$plugins.tabToggle(8, 'tabMyMenu');"><span>문의 내역</span></button></li>
-            </ul>
+            </ul> -->
         </div>
 
         <div class="content" tabpnl="tabMyMenu">
@@ -102,16 +116,19 @@
             <!-- 업로드 내역 -->
             <div class="ui-tab-pnl" pnl="3">
                 <h3 class="hide">업로드 내역</h3>
-                <div class="type-simple">
+                <div class="box-list-b">
+                    <!-- S : list item unit -->
                     <div class="components-mm-upload"></div>
+                    <!-- E : list item unit -->
+
                 </div>
             </div>
 
-            <!-- 작성 게시물 -->
+            <!-- 통계 -->
             <div class="ui-tab-pnl" pnl="4">
-                <h3 class="hide">작성 게시물</h3>
+                <h3 class="hide">통계</h3>
                 <div class="type-simple">
-                    <div class="components-mm-make"></div>
+                    <div class="components-mm-stats"></div>
                 </div>
             </div>
 
@@ -123,19 +140,19 @@
                 </div>
             </div>
 
-            <!-- 정보수정 -->
-            <div class="ui-tab-pnl" pnl="6">
-                <h3 class="hide">정보수정</h3>
-                <div class="type-simple">
-                    <div class="components-mm-infomodify"></div>
-                </div>
-            </div>
-
             <!-- 작성 댓글 -->
-            <div class="ui-tab-pnl" pnl="7">
+            <div class="ui-tab-pnl" pnl="6">
                 <h3 class="hide">작성 댓글</h3>
                 <div class="type-simple">
                     <div class="components-mm-myreply"></div>
+                </div>
+            </div>
+
+            <!-- 작성 게시물 -->
+            <div class="ui-tab-pnl" pnl="7">
+                <h3 class="hide">작성 게시물</h3>
+                <div class="type-simple">
+                    <div class="components-mm-make"></div>
                 </div>
             </div>
 
@@ -144,6 +161,14 @@
                 <h3 class="hide">문의 내역</h3>
                 <div class="type-simple">
                     <div class="components-mm-inquiry"></div>
+                </div>
+            </div>
+
+            <!-- 개인정보수정 -->
+            <div class="ui-tab-pnl" pnl="9">
+                <h3 class="hide">개인정보수정</h3>
+                <div class="type-simple">
+                    <div class="components-mm-modify"></div>
                 </div>
             </div>
         </div>
@@ -160,68 +185,73 @@
 
         'use strict';
 
-        //콜백실행
-        var callbackItem1 = function(v){
-            //아이템 7개
+        //components 불러오기
+        $plugins.uiPageLoad('/polaris/src/components/body/items/user-item-b.html', 'components-mm-follower', function(v){
             for (var i = 1, len = 24; i < len; i++) {
                 $('.components-mm-follower').append(v);
             }
             $('.components-mm-follower > *').unwrap();
-        }
-        var callbackItem2 = function(v){
+        })
+
+        .then($plugins.uiPageLoad('/polaris/src/components/body/items/user-item-b.html', 'components-mm-following', function(v){
             for (var i = 1, len = 18; i < len; i++) {
                 $('.components-mm-following').append(v);
             }
             $('.components-mm-following > *').unwrap();
-        }
-        var callbackItem3 = function(v){
-            $('.components-search-list > *').unwrap();
-        }
-        var callbackItem4 = function(v){
-            $('.components-mm-getNote > *').unwrap();
-        }
-        var callbackItem5 = function(v){
-            $('.components-mm-setNote > *').unwrap();
-        }
-        var callbackItem5_2 = function(v){
-            $('.components-mm-getNoteView > *').unwrap();
-        }
-        var callbackItem6 = function(v){
-            $('.components-mm-upload > *').unwrap();
-        }
-        var callbackItem7 = function(v){
-            $('.components-mm-make > *').unwrap();
-        }
-        var callbackItem8 = function(v){
-            $('.components-mm-bookmark > *').unwrap();
-        }
-        var callbackItem9 = function(v){
-            $('.components-mm-myreply > *').unwrap();
-        }
-        var callbackItem10 = function(v){
-            $('.components-mm-inquiry > *').unwrap();
-        }
-        var callbackItem11 = function(v){
-            $('.components-mm-infomodify > *').unwrap();
-        }
-        
+        }))
 
-        // //components 불러오기
-        $plugins.uiPageLoad('/polaris/src/components/body/items/user-item-b.html', 'components-mm-follower', callbackItem1)
-            .then($plugins.uiPageLoad('/polaris/src/components/body/items/user-item-b.html', 'components-mm-following', callbackItem2))
-            .then($plugins.uiPageLoad('/polaris/src/components/body/items/Search-list.html', 'components-search-list', callbackItem3))
-            .then($plugins.uiPageLoad('/polaris/src/components/body/items/list-getnote.html', 'components-mm-getNote', callbackItem4))
-            .then($plugins.uiPageLoad('/polaris/src/components/body/items/list-setnote.html', 'components-mm-setNote', callbackItem5))
-            .then($plugins.uiPageLoad('/polaris/src/components/body/items/list-getNoteView.html', 'components-mm-getNoteView', callbackItem5_2))
-            .then($plugins.uiPageLoad('/polaris/src/components/body/items/list-upload.html', 'components-mm-upload', callbackItem6))
-            .then($plugins.uiPageLoad('/polaris/src/components/body/items/list-make.html', 'components-mm-make', callbackItem7))
-            .then($plugins.uiPageLoad('/polaris/src/components/body/items/list-bookmark.html', 'components-mm-bookmark', callbackItem8))
-            .then($plugins.uiPageLoad('/polaris/src/components/body/items/list-myreply.html', 'components-mm-myreply', callbackItem9))
-            .then($plugins.uiPageLoad('/polaris/src/components/body/items/list-inquiry.html', 'components-mm-inquiry', callbackItem10))
-            .then($plugins.uiPageLoad('/polaris/src/components/body/items/my-infomodify.html', 'components-mm-infomodify', callbackItem11));
+        .then($plugins.uiPageLoad('/polaris/src/components/body/items/Search-list.html', 'components-search-list', function(v){
+            $('.components-search-list > *').unwrap();
+        }))
+
+        .then($plugins.uiPageLoad('/polaris/src/components/body/items/list-getnote.html', 'components-mm-getNote', function(v){
+            $('.components-mm-getNote > *').unwrap();
+        }))
+
+        .then($plugins.uiPageLoad('/polaris/src/components/body/items/list-setnote.html', 'components-mm-setNote', function(v){
+            $('.components-mm-setNote > *').unwrap();
+        }))
+
+        .then($plugins.uiPageLoad('/polaris/src/components/body/items/list-getNoteView.html', 'components-mm-getNoteView', function(v){
+            $('.components-mm-getNoteView > *').unwrap();
+        }))
+
+        .then($plugins.uiPageLoad('/polaris/src/components/body/items/list-item-b.html', 'components-mm-upload', function(v){
+            for (var i = 1, len = 5; i < len; i++) {
+                $('.components-mm-upload').append(v);
+            }
+            $('.components-mm-upload > *').unwrap();
+        }))
+
+        .then($plugins.uiPageLoad('/polaris/src/components/body/items/list-make.html', 'components-mm-make', function(v){
+            $('.components-mm-make > *').unwrap();
+        }))
+
+        .then($plugins.uiPageLoad('/polaris/src/components/body/items/list-bookmark.html', 'components-mm-bookmark', function(v){
+            $('.components-mm-bookmark > *').unwrap();
+        }))
+
+        .then($plugins.uiPageLoad('/polaris/src/components/body/items/list-myreply.html', 'components-mm-myreply', function(v){
+            $('.components-mm-myreply > *').unwrap();
+        }))
+
+        .then($plugins.uiPageLoad('/polaris/src/components/body/items/list-inquiry.html', 'components-mm-inquiry', function(v){
+            $('.components-mm-inquiry > *').unwrap();
+        }))
+
+        .then($plugins.uiPageLoad('/polaris/src/components/body/items/list-item-b.html', 'components-mm-stats', function(v){
+            $('.components-mm-stats > *').unwrap();
+        }))
+        
+        .then($plugins.uiPageLoad('/polaris/src/components/body/items/my-modify.html', 'components-mm-modify', function(v){
+            $('.components-mm-modify > *').unwrap();
+        }));
 
 
         //tab
+        $('select[tabbtn="tabMyMenu"]').on('change', function(){
+            $plugins.tabToggle($(this).val(), 'tabMyMenu');
+        });
         $plugins.tabToggle = function(v, name){
             $('[tabbtn="'+ name +'"] .ui-tab-btn').removeClass('active');
             $('[tabbtn="'+ name +'"] .ui-tab-btn[n="'+ v +'"]').addClass('active');

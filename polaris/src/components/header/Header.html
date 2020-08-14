@@ -23,12 +23,10 @@
 
         'use strict';
 
-        //page callback
-        var callbackMainTag = function(){
-        }
-        
         //pageload
-        $plugins.uiPageLoad('/polaris/src/components/body/main/MainTag.html', 'inc-MainTag', callbackMainTag);
+        $plugins.uiPageLoad('/polaris/src/components/body/main/MainTag.html', 'inc-MainTag',  function(){
+            //page callback
+        });
 
     })(jQuery, window, document);
 
