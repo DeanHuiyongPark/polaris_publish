@@ -4,7 +4,7 @@
 	<meta charSet="utf-8" />
 	<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
 
-	<title>환전하기</title>
+	<title>Main</title>
 
 	<link rel="stylesheet" href="/polaris/src/public/static/styles/base.css">
 
@@ -12,10 +12,9 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script>
 
 	<!-- lib :swiper -->
-	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
-	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">	
 	<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	
 	<!-- //lib :swiper -->
 </head>
 
@@ -46,21 +45,23 @@
 				});
 			}
 
+			//pageload
 			$plugins.uiPageLoad('/polaris/src/components/Layout.html', 'components-layout', function(){
-				$('.base-wrap').addClass('type-sub-v2');
 				$('.components-layout > *').unwrap();
 			})
 			.then($plugins.uiPageLoad('/polaris/src/components/header/Header.html', 'components-header', function(){
 				$('.components-header > *').unwrap();
 			}))
-			.then($plugins.uiPageLoad('/polaris/src/components/body/mypage/MyExchange.html', 'components-main', function(){
+			.then($plugins.uiPageLoad('/polaris/src/components/common/Notify-top.html', 'components-notify', function(){
+				$('body').addClass('is-notify');
+				$('.components-notify > *').unwrap();
+			}))
+			.then($plugins.uiPageLoad('/polaris/src/components/body/main/Main.html', 'components-main', function(){
 				$('.components-main > *').unwrap();
 			}))
 			.then($plugins.uiPageLoad('/polaris/src/components/footer/Footer.html', 'components-footer', function(){
 				$('.components-footer > *').unwrap();
 			}));
-
-
 
 		})(jQuery, window, document);
 

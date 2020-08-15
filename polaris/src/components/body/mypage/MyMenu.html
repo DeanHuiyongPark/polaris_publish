@@ -159,7 +159,17 @@
             <h3 class="hide">개인정보수정</h3>
             <div class="components-mm-modify"></div>
         </div>
-
+        
+        <!-- 회원탈퇴사유 -->
+        <div class="ui-tab-pnl" pnl="10">
+            <h3 class="hide">회원탈퇴사유</h3>
+            <div class="components-mm-leave"></div>
+        </div>
+        <!-- 회원탈퇴완료 -->
+        <div class="ui-tab-pnl" pnl="11">
+            <h3 class="hide">회원탈퇴완료</h3>
+            <div class="components-mm-leaveComplete"></div>
+        </div>
     </div>
     <!-- E : tab -->
 
@@ -238,6 +248,14 @@
         
         .then($plugins.uiPageLoad('/polaris/src/components/body/mypage/my-modify.html', 'components-mm-modify', function(v){
             $('.components-mm-modify > *').unwrap();
+        }))
+
+        .then($plugins.uiPageLoad('/polaris/src/components/body/mypage/Leave.html', 'components-mm-leave', function(v){
+            $('.components-mm-leave > *').unwrap();
+        }))
+
+        .then($plugins.uiPageLoad('/polaris/src/components/body/mypage/LeaveComplete.html', 'components-mm-leaveComplete', function(v){
+            $('.components-mm-leaveComplete > *').unwrap();
         }))
 
 
