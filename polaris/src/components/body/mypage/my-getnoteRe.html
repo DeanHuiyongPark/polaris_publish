@@ -1,0 +1,53 @@
+
+<div>
+    <div class="box-write">
+        <div class="write-item-b">
+            <div class="write-title">받을회원</div>
+            <div class="write-form"><input type="text" class="form-input-b" value="domkiom555" readonly="readonly" /></div>
+        </div>
+        <div class="write-item-b">
+            <div class="write-title">제목</div>
+            <div class="write-form"><input type="text" class="form-input-b" value="RE: 이거에 대한 답장입니다." /></div>
+        </div>
+        <div class="write-item-b">
+            <div class="write-title">내용</div>
+            <div class="write-form">
+                <textarea class="form-textarea-a" rows="20" >
+
+
+========================================================
+이전내용: 
+
+Sent: 2020.06.23
+제목: 이거에 대한 답장입니다.
+
+
+해당 라이브러리 문의드립니다.  
+
+                </textarea>
+            </div>
+        </div>
+    </div>
+    <div class="btn-area-a">
+        <button type="button" class="btn-basic-a" onclick="$plugins.modalOpen('modal_alert');"><span>작성완료</span></button>
+        <button type="button" class="btn-basic-b"><span>취소</span></button>
+    </div>
+
+    <div class="components-modal-alert" data-text="쪽지가 정상적으로 보내졌습니다."></div>
+</div>
+
+<script>
+    ;(function($, win, doc, undefined) {
+
+        'use strict';
+
+        //components 불러오기
+        $plugins.uiPageLoad('/polaris/src/components/common/Modal-alert.html', 'components-modal-alert',  function(v){
+            $('#modal_alert .txt').html($('.components-modal-alert').attr('data-text'));
+            $('.components-modal > *').unwrap();
+            
+        });
+
+    })(jQuery, window, document);
+
+</script>

@@ -13,3 +13,30 @@
         footer...
     </div>
 </div>
+
+
+<script>
+    ;(function($, win, doc, undefined) {
+
+        'use strict';
+
+        //미리보기 팝업
+        $plugins.modalOpen = function(v){
+            $('body').addClass('no-scroll');
+            console.log(v)
+            v !== undefined ?
+            $('#' + v).addClass('ready').addClass('open'):
+            $('.ui-modal').addClass('ready').addClass('open');
+        }
+        $plugins.modalClose = function(v){
+            $('body').removeClass('no-scroll');
+             v !== undefined ?
+            $('#' + v).removeClass('ready').removeClass('open'):
+            $('.ui-modal').removeClass('ready').removeClass('open');
+        }
+
+
+
+    })(jQuery, window, document);
+
+</script>  

@@ -116,22 +116,12 @@
             $('.components-card-item > *').unwrap();
             $('.item-title').on('click', function(e){
                 e.preventDefault();
-                $plugins.modalOpen()
+                $plugins.modalOpen('modal_sample1');
             });
         })
         .then($plugins.uiPageLoad('/polaris/src/components/common/Modal-preview.html', 'components-modal',  function(v){
             $('.components-modal > *').unwrap();
         }));
-
-        //미리보기 팝업
-        $plugins.modalOpen = function(){
-            $('body').addClass('no-scroll');
-            $('.ui-modal').addClass('ready').addClass('open');
-        }
-        $plugins.modalClose = function(){
-            $('body').removeClass('no-scroll');
-            $('.ui-modal').removeClass('ready').removeClass('open');
-        }
 
         function linkTag(){
             var $wrap = $('.tag-result-wrap');

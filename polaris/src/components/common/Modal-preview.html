@@ -1,16 +1,7 @@
 <style>    
     /* ui modal : base */
-    .no-scroll{overflow:hidden;}
-    .ui-modal {display:none; position:fixed; top:0; left:0; z-index:200; width:100%; height:100%; overflow:hidden; overflow-y:auto; }
-    .ui-modal.open {display:flex;}
-    .ui-modal.open:after{content:""; display:block; position:fixed; top:0; left:0; width:100%; height:100%; opacity:1; background:rgba(0,0,0,.5); }
-    .ui-modal-wrap {opacity:0; box-shadow:0 5px 10px rgba(0,0,0,0.5); position:relative; z-index:1; background:#fff; background:#2a2b2d}
-    .type-preview .ui-modal-wrap{width:790px; margin:20px 0; padding:20px; border-radius:10px;}
-    .ui-modal.type-preview {align-items:flex-start; justify-content:center; align-items:center;}
-    .ui-modal.open{display:block;}
-    .ui-modal.open .ui-modal-wrap{opacity:1; margin:30px auto; }
-    .ui-modal .btn-close {position:absolute; left:20px; top:20px; border:0; width:40px; height:40px; background:url(/polaris/src/public/static/images/common/modal-close.png) no-repeat 0 0 / cover; }
-    .ui-modal-body {position:relative; margin-top:0; padding:15px;}
+    .type-preview .ui-modal-wrap{width:790px; margin:20px 0; padding:20px; border-radius:10px; background:#2a2b2d}
+    .ui-modal.type-preview {align-items:flex-start; justify-content:center; }
 
     /* 미리보기 */
     .type-preview .library-img{overflow: hidden; border-radius: 5px;}
@@ -46,20 +37,17 @@
     .type-preview .title-type-b{color:#fff; margin-bottom:20px;}
     .type-preview .card-list-b .card-item:nth-child(3n + 1){margin-left:0;}
 
-    
 
     @media (max-width:1024px) {
         
-        .ui-modal {display:none; position:fixed; top:0; left:0; z-index:200; width:100%; height:100%; overflow:hidden; overflow-y:auto; }
         .type-preview .ui-modal-wrap{width:100%; min-height:100%; height:auto; margin:0;  border-radius:0;}
-        .ui-modal.open .ui-modal-wrap{margin:0 auto;}
+        .ui-modal.type-preview.open .ui-modal-wrap{margin:0 auto;}
 
         /* 미리보기 */
         .type-preview .library-info .title-wrap h2{font-size:18px; }
         .type-preview .library-info .title-wrap p{font-size:14px; }
         .type-preview .library-info .txt{font-size:13px; }
         .type-preview .library-person{padding:30px 0 30px; margin-bottom:30px; text-align: center;}
-
         .type-preview .library-person .person-info-box{float:none; width:100%; text-align:left; color:#fff;}
         .type-preview .library-person .person-img{margin-right:30px; width:48px; height:48px;}
         .type-preview .library-person .person-img img{width:100%; display:block;}
@@ -86,7 +74,7 @@
 <section class="ui-modal type-preview" id="modal_sample1">
 
     <div class="ui-modal-wrap">
-        <button type="button" class="btn-close" aria-label="close" onclick="$plugins.modalClose()"><span class="hide">close</span></button>
+        <button type="button" class="btn-close" aria-label="close" onclick="$plugins.modalClose('modal_sample1')"><span class="hide">close</span></button>
         <div class="library-view-wrap">
 
             <div class="library-img">

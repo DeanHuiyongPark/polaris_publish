@@ -5,9 +5,7 @@
     .tab-mypage button{font-size:24px;}
     .tab-mypage .tab-list .tab-item button.active{color:#308cfe; font-weight:600; border-bottom:1px solid #308cfe;}
     /* tab in tab */
-    .tab-sub-btns{width:100%; text-align:center; margin-bottom:50px;}
-    .tab-sub-btns button{font-size:18px; padding:5px 70px;}
-    .tab-sub-btns button.active{color:#308cfe; font-weight:600;border-bottom:2px solid #308cfe;}
+
     .tab-mypage .combo-tab{width:100%; max-width:540px; text-align-last:center;}
     .user-list-b{margin-bottom:50px}
 </style>
@@ -102,7 +100,7 @@
                             <!-- 보기 -->
                             <div class="components-mm-getNoteView"></div>
 
-                            <!-- 보기 -->
+                            <!-- 답글 -->
                             <div class="components-mm-getNoteRe"></div>
 
 
@@ -110,7 +108,11 @@
                         <!-- 보낸쪽지함 -->
                         <div class="ui-tab-pnl" pnl="2">
                             <h4 class="hide">보낸쪽지함</h4>
+                            <!-- 리스트 -->
                             <div class="components-mm-setNote"></div>
+
+                            <!-- 보기 -->
+                            <div class="components-mm-setNoteView"></div>
                         </div>
                     </div>
                 </div>
@@ -126,49 +128,37 @@
             <!-- 통계 -->
             <div class="ui-tab-pnl" pnl="4">
                 <h3 class="hide">통계</h3>
-                <div class="type-simple">
-                    <div class="components-mm-stats"></div>
-                </div>
+                <div class="components-mm-stats"></div>
             </div>
 
             <!-- Bookmark -->
             <div class="ui-tab-pnl" pnl="5">
                 <h3 class="hide">Bookmark</h3>
-                <div class="type-simple">
-                    <div class="components-mm-bookmark"></div>
-                </div>
+                <div class="components-mm-bookmark"></div>
             </div>
 
             <!-- 작성 댓글 -->
             <div class="ui-tab-pnl" pnl="6">
                 <h3 class="hide">작성 댓글</h3>
-                <div class="type-simple">
-                    <div class="components-mm-myreply"></div>
-                </div>
+                <div class="components-mm-myreply"></div>
             </div>
 
             <!-- 작성 게시물 -->
             <div class="ui-tab-pnl" pnl="7">
                 <h3 class="hide">작성 게시물</h3>
-                <div class="type-simple">
-                    <div class="components-mm-make"></div>
-                </div>
+                <div class="components-mm-make"></div>
             </div>
 
             <!-- 문의 내역 -->
             <div class="ui-tab-pnl" pnl="8">
                 <h3 class="hide">문의 내역</h3>
-                <div class="type-simple">
-                    <div class="components-mm-inquiry"></div>
-                </div>
+                <div class="components-mm-inquiry"></div>
             </div>
 
             <!-- 개인정보수정 -->
             <div class="ui-tab-pnl" pnl="9">
                 <h3 class="hide">개인정보수정</h3>
-                <div class="type-simple">
-                    <div class="components-mm-modify"></div>
-                </div>
+                <div class="components-mm-modify"></div>
             </div>
 
         </div>
@@ -206,6 +196,10 @@
 
         .then($plugins.uiPageLoad('/polaris/src/components/body/mypage/my-setnote.html', 'components-mm-setNote', function(v){
             $('.components-mm-setNote > *').unwrap();
+        }))
+
+         .then($plugins.uiPageLoad('/polaris/src/components/body/mypage/my-setnoteView.html', 'components-mm-setNoteView', function(v){
+            $('.components-mm-setNoteView > *').unwrap();
         }))
 
         .then($plugins.uiPageLoad('/polaris/src/components/body/mypage/my-getNoteView.html', 'components-mm-getNoteView', function(v){

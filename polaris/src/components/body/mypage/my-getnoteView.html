@@ -4,7 +4,7 @@
     .view-getnote .col-3 {width:200px}
     .view-getnote .col-4 {width:200px}
     .view-getnote .col-5 {width:200px}
-    .view-getnote tbody td .ellp{color:#787878; font-size:18px; display:inline-block; padding-top:3px }
+    .view-getnote tbody td:first-child { text-align: left;}
     .view-getnote {margin-top:30px}
     .view-getnote .tit-b {padding-left:60px}
     .view-getnote .view-content {margin-bottom:20px}
@@ -12,8 +12,18 @@
 
     @media (max-width:1300px) {
         /* table */
-        .view-getnote .tbl-list {width:100%;position:relative;overflow-x:auto;-webkit-overflow-scrolling:touch}
+        .view-getnote .tbl-list {width:100%;position:relative;overflow:visible;-webkit-overflow-scrolling:touch; border-bottom:1px solid #eaeaea; }
         .view-getnote .tbl-list table {width:100%}
+        .view-getnote .tbl-list thead{display:none;}
+        .view-getnote .tbl-list tbody,
+        .view-getnote .tbl-list tr,
+        
+        .view-getnote .tbl-list table{display:block; margin:0}
+        .view-getnote .tbl-list td{display: inline-block; border:0 ; text-align: left;}
+        .view-getnote .tbl-list td:first-child{width:100%; color:#000; padding-bottom:0;}
+
+        .view-getnote .tbl-list td:nth-child(2){float:right}
+        .view-getnote .view-content{padding:15px; background:#f9f9f9}
     }
 
     @media (max-width:768px) {
@@ -43,10 +53,7 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>
-                        <a href="#">
-                            <div class="ellp">노하우를 라이브러리라고 부르, 라이브러리를 자유롭게 공유하고 보상받는 새로운 개념의 노하우를 노하우를 라이브러리라고 부르, 라이브러리를 자유롭게 공유하고 보상받는 새로운 개념의 노하우를</div>
-                        </a>
+                    <td>노하우를 라이브러리라고 부르, 라이브러리를 자유롭게 공유하고 보상받는 새로운 개념의 노하우를 노하우를 라이브러리라고 부르, 라이브러리를 자유롭게 공유하고 보상받는 새로운 개념의 노하우를
                     </td>
                     <td>
                         <div class="components-gn-dropmenu"></div>

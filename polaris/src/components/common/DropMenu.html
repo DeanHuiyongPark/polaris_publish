@@ -20,7 +20,7 @@
     <div class="drop-menu-pnl">
         <div class="drop-menu-wrap">
             <button type="button">쪽지보내기</button>
-             <button type="button">회원정보상세</button>
+            <button type="button">회원정보상세</button>
         </div>
     </div>
 </div>
@@ -35,13 +35,12 @@
             var v = !$this.data('drop');
 
             if (v) {
-               
                 $('.drop-menu-btn').data('drop', false);
                 $this.data('drop',true);
                 $('.drop-menu').removeClass('on');
                 $this.closest('.drop-menu').addClass('on');
                 setTimeout(function(){
-                     $('body').data('dropdownOpened', true);
+                    $('body').data('dropdownOpened', true);
                 },0)
             } else {
                 dropHide();
@@ -50,8 +49,7 @@
 
         $(doc).off('click.drop').on('click.drop', function(e){
             if (!!$('body').data('dropdownOpened')){
-                console.log($(doc).find('.drop-menu-pnl').has(e.target).length)
-                if ($(doc).find('.drop-menu-pnl').has(e.target).length < 1) {
+                if ($(doc).find('.drop-menu-pnl').has(e.target).length < 1 && $(doc).find('.drop-menu-btn').has(e.target).length < 1) {
                     dropHide();
                 }
             }

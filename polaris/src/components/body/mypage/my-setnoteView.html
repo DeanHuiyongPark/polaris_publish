@@ -1,28 +1,39 @@
 <style>
     /* 사용후기 */
-    .view-setnote .col-2 {width:auto}
-    .view-setnote .col-3 {width:200px}
-    .view-setnote .col-4 {width:200px}
-    .view-setnote .col-5 {width:200px}
-    .view-setnote tbody td .ellp{color:#787878; font-size:18px; display:inline-block; padding-top:3px }
-    .view-setnote {margin-top:30px}
-    .view-setnote .tit-b {padding-left:60px}
-    .view-setnote .view-content {margin-bottom:20px}
+    .view-getnote .col-2 {width:auto}
+    .view-getnote .col-3 {width:200px}
+    .view-getnote .col-4 {width:200px}
+    .view-getnote .col-5 {width:200px}
+    .view-getnote tbody td:first-child { text-align: left;}
+    .view-getnote {margin-top:30px}
+    .view-getnote .tit-b {padding-left:60px}
+    .view-getnote .view-content {margin-bottom:20px}
+    .view-getnote .btn-wrap-r button{width:auto !important; min-width:0; padding:0 30px}
 
     @media (max-width:1300px) {
         /* table */
-        .view-setnote .tbl-list {width:100%;position:relative;overflow-x:auto;-webkit-overflow-scrolling:touch}
-        .view-setnote .tbl-list table {width:100%}
+        .view-getnote .tbl-list {width:100%;position:relative;overflow:visible;-webkit-overflow-scrolling:touch; border-bottom:1px solid #eaeaea; }
+        .view-getnote .tbl-list table {width:100%}
+        .view-getnote .tbl-list thead{display:none;}
+        .view-getnote .tbl-list tbody,
+        .view-getnote .tbl-list tr,
+        
+        .view-getnote .tbl-list table{display:block; margin:0}
+        .view-getnote .tbl-list td{display: inline-block; border:0 ; text-align: left;}
+        .view-getnote .tbl-list td:first-child{width:100%; color:#000; padding-bottom:0;}
+
+        .view-getnote .tbl-list td:nth-child(2){float:right}
+        .view-getnote .view-content{padding:15px; background:#f9f9f9}
     }
 
     @media (max-width:768px) {
-        .view-setnote .tit-b {padding-left:0}
-        .view-setnote .col-4 {width:120px}
-        .view-setnote .col-5 {width:80px}
+        .view-getnote .tit-b {padding-left:0}
+        .view-getnote .col-4 {width:120px}
+        .view-getnote .col-5 {width:80px}
     }
 </style>
 <div>
-    <div class="view-setnote">
+    <div class="view-getnote">
         <div class="tbl-list">
             <table>
             <caption>번호, 제목, 받은회원, 학인시간, 보낸시간 정보의 작성한 사용후기 목록</caption>
@@ -42,10 +53,7 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>
-                        <a href="#">
-                            <div class="ellp">노하우를 라이브러리라고 부르, 라이브러리를 자유롭게 공유하고 보상받는 새로운 개념의 노하우를 노하우를 라이브러리라고 부르, 라이브러리를 자유롭게 공유하고 보상받는 새로운 개념의 노하우를</div>
-                        </a>
+                    <td>노하우를 라이브러리라고 부르, 라이브러리를 자유롭게 공유하고 보상받는 새로운 개념의 노하우를 노하우를 라이브러리라고 부르, 라이브러리를 자유롭게 공유하고 보상받는 새로운 개념의 노하우를
                     </td>
                     <td>
                         <div class="components-gn-dropmenu"></div>
@@ -58,11 +66,8 @@
         </div>
 
         <div class="view-content">
-            <img src="/polaris/src/public/static/images/temp/@temp3.jpg" alt="" />
-            <br /><br />
             <p>
-                그들이 AWS 위에서 데이터 파이프라인을 운영하는 법- <br />
-                너무 좋습니다!!
+                노하우를 라이브러리라고 부르, 라이브러리를 자유롭게 공유하고 보상받는 새로운 개념의 노하우를 노하우를 라이브러리라고 부르, 라이브러리를 자유롭게 공유하고 보상받는 새로운 개념의 노하우를
             </p>
         </div>
 

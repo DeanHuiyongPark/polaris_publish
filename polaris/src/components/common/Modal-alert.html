@@ -1,0 +1,18 @@
+<style>    
+    .type-alert .ui-modal-wrap{width:600px; margin:20px 0; padding:50px 20px; border-radius:0; background:#fff; border:3px solid #2a2b2d; text-align: center;}
+    .type-alert .ui-modal-wrap .txt{padding-bottom:40px; font-size: 18px;}
+    .ui-modal.type-alert {justify-content:center; align-items:center;}
+    .ui-modal.type-alert .btn-basic-f{min-width:160px}
+
+
+    @media (max-width:1024px) {
+         .type-alert .ui-modal-wrap{width:calc(100% - 20px); margin:20px 0; padding:50px 20px; border-radius:0; background:#fff; border:3px solid #2a2b2d; text-align: center;}
+    }
+</style>
+
+<div class="ui-modal type-alert" id="modal_alert">
+    <div class="ui-modal-wrap">
+        <div class="txt"></div>
+        <button type="button" class="btn-basic-f small" onclick="$plugins.modalClose('modal_alert')"><span>확인</span></button>
+    </div>
+</div>
