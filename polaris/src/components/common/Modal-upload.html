@@ -1,0 +1,257 @@
+<style>    
+    .ui-modal.type-upload .ui-modal-wrap{width:1100px; margin:20px 0; padding:40px 60px; border-radius:0; background:#fff; border:3px solid #2a2b2d; text-align: center;}
+    .ui-modal.type-upload .btn-basic-f{min-width:160px}
+    .ui-modal.type-upload .modal-tit{font-size:24px; text-align: left; margin-bottom:20px; color:#000; }
+    .ui-modal.type-upload .modal-tit span{font-size:14px; color:#939393;}
+    .ui-modal.type-upload .modal-tit span b{color:#ff8400;}
+
+    .ui-modal.type-upload .upload-wrap{text-align: left;}
+    .ui-modal.type-upload .upload-wrap button{margin-right:20px}
+
+    .ui-modal.type-upload .form-label{float:left; width:225px; text-align: left; padding-top:11px; color:#000; position: relative; font-size:18px;}
+    .ui-modal.type-upload .form-cont{float:left; width:calc(100% - 225px); text-align: left;}
+
+    .write-item-d{width:100%; display:inline-block; }
+    .write-item-d .write-form .form-label b{color:#ff8400;  display:block; position: absolute; top:14px; left:-14px}
+    .write-item-d .write-form{width:100%; position: relative; margin-top:10px; float:left}
+    .write-item-d .write-form.half{width:50%;}
+    .write-item-d .write-form.half + .half .form-label{text-align: center;}
+    .write-item-d .write-form .form-input-b{width:100%; border-color:#b1b1b1}
+    .write-item-d .write-form .form-textarea-b{width:100%; border-color:#b1b1b1}
+    .write-item-d .write-form select{height:54px; max-width:240px; width: 100%; background-position:100% 10px; margin-right:10px; font-size:18px; border-color:#b1b1b1}
+    .type-1-2 .write-form .form-input-b{max-width:365px; width: 100%;}
+    .type-2-1 .write-form .form-input-b{max-width:595px; width: 100%;}
+
+    .write-item-d .btn-exception-a{min-width:0; padding:0 50px; margin-left:5px}
+    .write-item-d .noti{color:#939393; font-size:14px; padding:5px 0}
+    .loadingbar-wrap{width:100%; height:30px; overflow-y: hidden; border-radius:10px; border:1px solid #939393; margin-top:12px}
+    .loadingbar-wrap span{display:block; height:100%; background-color:#1c7df4 ;}
+
+    .modal-cont{position: relative; overflow: hidden;}
+    .modal-cont .step1{display:block;}
+    .modal-cont .step2{display:none;}
+    .modal-cont.step2 .step1{display:none;}
+    .modal-cont.step2 .step2{display:block;}
+    @media (max-width:1024px) {
+        .type-base .ui-modal-wrap{width:100%; height:100%; margin: 0; padding:50px 20px; border-radius:0; background:#fff; border:3px solid #2a2b2d; text-align: center;}
+    }
+</style>
+<div>
+    <div class="ui-modal type-upload" id="modal_upload">
+        <div class="ui-modal-wrap">
+            
+            <div class="modal-cont">
+                <div class="step-warp step1">
+                    <h1 class="modal-tit">Upload Library (1/2) <span><b>*</b> 표시는 필수 입력값입니다.</span></h1>
+                    <dl class="write-item-d">
+                        <div class="write-form">
+                            <dt class="form-label">Loading</dt>
+                            <dd class="form-cont">
+                                <div class="loadingbar-wrap">
+                                    <span style="width:30%" aria-label="30%"></span>
+                                </div>
+                            </dd>
+                        </div>
+
+                        <div class="write-form">
+                            <dt class="form-label">
+                                <label for="fUpload-1"><b aria-label="필수">*</b>Title</label>
+                            </dt>
+                            <dd class="form-cont">
+                                <input type="text" class="form-input-b" id="fUpload-1" value="Marketing.ppt" />
+                            </dd>
+                        </div>
+
+                        <div class="write-form">
+                            <dt class="form-label">
+                                <label for="fUpload-2"><b aria-label="필수">*</b>Description(Text)</label>
+                            </dt>
+                            <dd class="form-cont">
+                                <textarea type="text" class="form-textarea-b" id="fUpload-2" value="" rows="10" ></textarea>
+                            </dd>
+                        </div>
+
+                        <div class="write-form">
+                            <dt class="form-label">
+                                <label for="fUpload-3"><b aria-label="필수">*</b>Tag</label>
+                            </dt>
+                            <dd class="form-cont">
+                                <input type="text" class="form-input-b" id="fUpload-3" value="" placeholder="태그는 쉼표 혹은 스페이스로 구분해 주세요." />
+                            </dd>
+                        </div>
+                    </dl>
+                    <div class="btn-area-a">
+                        <button type="button" class="btn-basic-a"><span>아래항목 변경 없이 업로드하기</span></button>
+                    </div>
+                    
+                    <hr>
+
+                    <dl class="write-item-d type-1-2">
+                        <div class="write-form half">
+                            <dt class="form-label">
+                                <label for="fUpload-4"><b aria-label="필수">*</b>공개여부</label>
+                            </dt>
+                            <dd class="form-cont">
+                                <select id="fUpload-4">
+                                    <option>무료공개</option>
+                                </select>
+                            </dd>
+                        </div>
+                        <div class="write-form half">
+                            <dt class="form-label">
+                                <label for="fUpload-5">다운로드 가능 여부</label>
+                            </dt>
+                            <dd class="form-cont">
+                                <select id="fUpload-5">
+                                    <option>가능</option>
+                                </select>
+                            </dd>
+                        </div>
+
+                        <div class="write-form">
+                            <dt class="form-label">
+                                <label for="fUpload-6">판매 시 POLA</label>
+                            </dt>
+                            <dd class="form-cont">
+                                <input type="text" class="form-input-b" id="fUpload-6" value="" />
+                                <span>POLA</span>
+
+                                <p class="noti">(유료공개를 선택하셨으면 판매할 금액을 기입해 주세요 업로드 1주일 후부터 판매가 가능하게 전환됩니다.)</p>
+                            </dd>
+                        </div>
+
+                        <div class="write-form">
+                            <dt class="form-label">
+                                <label for="fUpload-7"><b aria-label="필수">*</b>Library 언어</label>
+                            </dt>
+                            <dd class="form-cont">
+                                <select id="fUpload-7">
+                                    <option>KOR</option>
+                                </select>
+                            </dd>
+                        </div>
+
+                        <div class="write-form">
+                            <dt class="form-label">
+                                <label for="fUpload-8"><b aria-label="필수">*</b>Library 저작권</label>
+                            </dt>
+                            <dd class="form-cont">
+                                <select id="fUpload-8">
+                                    <option>본인</option>
+                                </select>
+                                <input type="text" class="form-input-b" title="Library 저작권" value="" />
+                            </dd>
+                        </div>
+
+                        <div class="write-form">
+                            <dt class="form-label">
+                                <label for="fUpload-3"><b aria-label="필수">*</b>Tag</label>
+                            </dt>
+                            <dd class="form-cont">
+                                <input type="text" class="form-input-b" id="fUpload-3" value="" placeholder="2020_06_09_32.jpg" readonly />
+                                <button type="button" class="btn-exception-a"><span>찾아보기</span></button>
+
+                                <p class="noti">자동 등록되나 수정하시려면 다시 등록해 주세요, 이미지 크기는 가로 **픽셀, 세로 ** 픽셀 이하로 해주세요. <br>
+                                gif만 가능하며 용량 5,000바이트 이하만 등록됩니다. </p>
+                            </dd>
+                        </div>
+                    </dl>
+                    <div class="btn-area-a">
+                        <button type="button" class="btn-basic-a" onclick="$plugins.modalStepNext(2)"><span>다음</span></button>
+                        <button type="button" class="btn-basic-b" onclick="$plugins.modalStepClose();"><span>취소</span></button>
+                    </div>
+                </div>
+
+                <div class="step-warp step2 type-2-1">
+                    <h1 class="modal-tit">Upload Library (2/2) <span>등록하신 자료가 저장 되었습니다. 추가로, 부가 선택 사항 정보를 등록해 주세요</span></h1>
+                    <dl class="write-item-d">
+                        <div class="write-form">
+                            <dt class="form-label">
+                                <span>상세설명</span>
+                            </dt>
+                            <dd class="form-cont">
+                                <div style="width:100%; height:480px; background:#f2f2f2;">
+                                    에디터
+                                </div>
+                            </dd>
+                        </div>
+
+                        <div class="write-form">
+                            <dt class="form-label">
+                                <label for="fUpload2-1">특정회원 알람</label>
+                            </dt>
+                            <dd class="form-cont">
+                                <input type="text" class="form-input-b" id="fUpload2-1" value="East555, donkim555" placeholder="2020_06_09_32.jpg" readonly />
+                                <button type="button" class="btn-exception-a" onclick=""><span>검색</span></button>
+
+                                <p class="noti">(라이브러리 업로드 소식을 알리고 싶은 회원을 검색하여 선택해 주세요)</p>
+                            </dd>
+                        </div>
+
+                        <div class="write-form">
+                            <dt class="form-label">
+                                <label for="fUpload2-2">개시일자</label>
+                            </dt>
+                            <dd class="form-cont">
+                                <input type="text" class="form-input-b" id="fUpload2-2" value="2020-06-08" />
+                            </dd>
+                        </div>
+                        <div class="write-form">
+                            <dt class="form-label">
+                                <label for="fUpload2-3">문서 생성일</label>
+                            </dt>
+                            <dd class="form-cont">
+                                <input type="text" class="form-input-b" id="fUpload2-3" value="2020-06-08" />
+                            </dd>
+                        </div>
+                        <div class="write-form">
+                            <dt class="form-label">
+                                <label for="fUpload2-4">문서 형삭</label>
+                            </dt>
+                            <dd class="form-cont">
+                                <input type="text" class="form-input-b" id="fUpload2-4" value="PPT" />
+                            </dd>
+                        </div>
+                    </dl>
+                    
+       
+                    <div class="btn-area-a">
+                        <button type="button" class="btn-basic-a"><span>업로드하기</span></button>
+                        <button type="button" class="btn-basic-b" onclick="$plugins.modalStepClose(); "><span>취소</span></button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="components-modal-alert2" data-text="해당 Library를 작성하신 이메일로 전송 하였습니다."></div>
+ </div>
+<script>
+    ;(function($, win, doc, undefined) {
+
+        'use strict';
+
+        //components 불러오기
+
+        $plugins.modalStepNext = function(v){
+            switch (v) {
+                case 1 :
+                    $('.type-upload .modal-cont').removeClass('step2')
+                    break;
+                case 2 :
+                    $('.type-upload .modal-cont').addClass('step2')
+                    break;
+            }
+            
+        }
+        $plugins.modalStepClose = function(v){
+            $plugins.modalClose('modal_upload');
+            $('.type-upload .modal-cont').removeClass('step2');
+            
+        }
+
+
+    })(jQuery, window, document);
+
+</script> 
+

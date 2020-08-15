@@ -84,9 +84,7 @@ select:focus {border-color:#000}
 .form-input-c::-webkit-input-placeholder {color:#aaa}
 .form-input-c:-ms-input-placeholder {color:#aaa}
 
-.form-input-c:read-only,
-.form-input-a:read-only,
-.form-input-b:read-only{border:0;}
+.no-line{border:0 !important;}
 
 /* textarea */
 .form-textarea-a {border:1px solid #999;resize:none;width:100%}

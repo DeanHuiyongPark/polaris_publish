@@ -1,0 +1,19 @@
+<style>
+    .upload-wrap{width:954px; height:0; margin:50px auto; background:url(/polaris/src/public/static/images/common/bg-uploadfile.png) no-repeat 50% 50% / contain; text-align: center; padding-bottom:60%; position: relative;}
+    .upload-wrap .btn-basic-a{position:absolute; top:38%; left:50%; transform:translate(-50%, 0); padding-bottom:9px}
+    .upload-file-area{position:absolute; width:727px; height:92px; background:#fff; border:1px solid #999; padding:20px; top:50%; left:50%; transform:translate(-50%, 0);}
+    .upload-file-area p{width:100%; text-align: center; font-size:14px; padding:14px 0;}
+    @media (max-width:1024px) {
+        .upload-wrap{width:100%;}
+        .upload-wrap .btn-basic-a{min-width:0; padding-bottom:0}
+        .upload-file-area{display: none}
+    }
+</style>
+<main class="base-body page-upload">
+    <div class="upload-wrap">
+        <button type="button" class="btn-basic-a"><span>파일을 선택해주세요</span></button>
+        <div class="upload-file-area">
+            <p>또는 드래그앤 드랍으로 파일을 끌어오세요</p>
+        </div>
+    </div>
+</main>

@@ -15,6 +15,9 @@
     <button type="button" class="btn-basic-d medium" onclick="$plugins.modalOpen('modal_library')"><span>Library 검색</span></button>
     <div class="components-modal-library"></div>
 
+    <button type="button" class="btn-basic-d medium" onclick="$plugins.modalOpen('modal_upload')"><span>upload</span></button>
+    <div class="components-modal-upload"></div>
+
 </main>
 
 <script>
@@ -31,6 +34,9 @@
         }))
         .then($plugins.uiPageLoad('/polaris/src/components/common/Modal-library.html', 'components-modal-library', function(v){
             $('.components-modal-library > *').unwrap();
+        }))
+        .then($plugins.uiPageLoad('/polaris/src/components/common/Modal-upload.html', 'components-modal-upload', function(v){
+            $('.components-modal-upload > *').unwrap();
         }))
         
 
