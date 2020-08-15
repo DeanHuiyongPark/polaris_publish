@@ -1,0 +1,88 @@
+<style>    
+    .ui-modal.type-library .ui-modal-wrap{width:900px; margin:20px 0; padding:40px 60px; border-radius:0; background:#fff; border:3px solid #2a2b2d; text-align: center;}
+    .ui-modal.type-library .btn-basic-f{min-width:160px}
+    .ui-modal.type-library .modal-tit{font-size:24px; text-align: left; margin-bottom:20px;}
+    .ui-modal.type-library .write-form select{height:54px; width:180px; background-position:100% 10px; margin-right:10px}
+    .ui-modal.type-library .write-form .form-input-b{width:calc(100% - 320px); display:inline-block;}
+    .ui-modal.type-library .write-form .btn-exception-a{width:120px; min-width:0; display:inline-block; margin-left:10px}
+
+    .box-library{width:100%; padding:10px 20px; border:1px solid #474747; margin-top:30px;}
+    .box-library button{width:100%; text-align: left; padding:5px 0; font-size:18px; display:inline-block;}
+    .box-library .ellp{width:50%; float:left}
+    .box-library button span{display:block; vertical-align:middle; float:right}
+    @media (max-width:1024px) {
+        .ui-modal.type-library .ui-modal-wrap{width:100%; height:100%; margin: 0; padding:50px 20px; border-radius:0; background:#fff; border:3px solid #2a2b2d; text-align: center;}
+        .ui-modal.open.type-library .ui-modal-wrap{margin:0;}
+    }
+</style>
+<div class="ui-modal type-library" id="modal_library">
+    <div class="ui-modal-wrap">
+        <h1 class="modal-tit">Library 검색</h1>
+        <div class="modal-cont">
+
+            <div class="write-item-c">
+                <div class="write-form">
+                    <select title="검색조건">
+                        <option>Library 제목</option>
+                    </select>
+                    <input type="text" class="form-input-b" value="" title="회원검색" />
+                    <button type="button" class="btn-exception-a"><span>검색</span></button>
+                </div>
+            </div>
+
+            <div class="box-library">
+                <button type="button" onclick="$plugins.modalClose('modal_library')">
+                    <span class="ellp">[10] 폴라리스쉐어에서는 사용자가 파일형태로 저장하고 폴라리스쉐어에서는 사용자가 파일형태로 저장하고</span> 
+                    <span>[Marketing.ppt] | dongkim </span>
+                </button>
+                <button type="button" onclick="$plugins.modalClose('modal_library')">
+                    <span class="ellp">[10] 폴라리스쉐어에서는 사용자가 파일형태로 저장하고 폴라리스쉐어에서는 사용자가 파일형태로 저장하고</span> 
+                    <span>[Marketing.ppt] | dongkim </span>
+                </button>
+                <button type="button" onclick="$plugins.modalClose('modal_library')">
+                    <span class="ellp">[10] 폴라리스쉐어에서는 사용자가 파일형태로 저장하고 폴라리스쉐어에서는 사용자가 파일형태로 저장하고</span> 
+                    <span>[Marketing.ppt] | dongkim </span>
+                </button>
+                <button type="button" onclick="$plugins.modalClose('modal_library')">
+                    <span class="ellp">[10] 폴라리스쉐어에서는 사용자가 파일형태로 저장하고 폴라리스쉐어에서는 사용자가 파일형태로 저장하고</span> 
+                    <span>[Marketing.ppt] | dongkim </span>
+                </button>
+                <button type="button" onclick="$plugins.modalClose('modal_library')">
+                    <span class="ellp">[10] 폴라리스쉐어에서는 사용자가 파일형태로 저장하고 폴라리스쉐어에서는 사용자가 파일형태로 저장하고</span> 
+                    <span>[Marketing.ppt] | dongkim </span>
+                </button>
+                <button type="button" onclick="$plugins.modalClose('modal_library')">
+                    <span class="ellp">[10] 폴라리스쉐어에서는 사용자가 파일형태로 저장하고 폴라리스쉐어에서는 사용자가 파일형태로 저장하고</span> 
+                    <span>[Marketing.ppt] | dongkim </span>
+                </button>
+                <button type="button" onclick="$plugins.modalClose('modal_library')">
+                    <span class="ellp">[10] 폴라리스쉐어에서는 사용자가 파일형태로 저장하고 폴라리스쉐어에서는 사용자가 파일형태로 저장하고</span> 
+                    <span>[Marketing.ppt] | dongkim </span>
+                </button>
+            </div>
+            <div class="components-paging"></div>
+            
+            <button type="button" class="btn-basic-f small" onclick="$plugins.modalClose('modal_library')"><span>닫기</span></button>
+        </div>
+    </div>
+</div>
+
+<script>
+    ;(function($, win, doc, undefined) {
+
+        'use strict';
+
+        //components 불러오기
+        $plugins.uiPageLoad('/polaris/src/components/common/paging.html', 'components-paging', function(v){
+            $('.components-paging > *').unwrap();
+        })
+        .then($plugins.uiPageLoad('/polaris/src/components/common/Modal-alert.html', 'components-modal-alert2',  function(v){
+            $('#modal_alert .txt').html($('.components-modal-alert2').attr('data-text'));
+            $('.components-modal-alert2 > *').unwrap();
+        }));
+
+
+    })(jQuery, window, document);
+
+</script> 
+

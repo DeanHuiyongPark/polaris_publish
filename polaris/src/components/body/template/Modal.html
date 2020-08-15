@@ -1,0 +1,39 @@
+<style>
+    .g-h2{font-size:30px; margin:30px 0 5px; color:#000000}
+    .g-h3{font-size:20px; margin:10px 0 5px; color:#000;}
+    .g-h3::before{content:"- "}
+</style>
+
+<main class="base-body" style="text-align: center; ">
+
+    <button type="button" class="btn-basic-d medium" onclick="$plugins.modalOpen('modal_memberSearch')"><span>회원검색</span></button>
+    <div class="components-modal-memberSearch"></div>
+
+    <button type="button" class="btn-basic-d medium" onclick="$plugins.modalOpen('modal_share')"><span>share lirary</span></button>
+    <div class="components-modal-share"></div>
+
+    <button type="button" class="btn-basic-d medium" onclick="$plugins.modalOpen('modal_library')"><span>Library 검색</span></button>
+    <div class="components-modal-library"></div>
+
+</main>
+
+<script>
+    ;(function($, win, doc, undefined) {
+
+        'use strict';
+        
+        //components 불러오기
+        $plugins.uiPageLoad('/polaris/src/components/common/Modal-memberSearch.html', 'components-modal-memberSearch', function(v){
+            $('.components-modal-memberSearch > *').unwrap();
+        })
+        .then($plugins.uiPageLoad('/polaris/src/components/common/Modal-share.html', 'components-modal-share', function(v){
+            $('.components-modal-share > *').unwrap();
+        }))
+        .then($plugins.uiPageLoad('/polaris/src/components/common/Modal-library.html', 'components-modal-library', function(v){
+            $('.components-modal-library > *').unwrap();
+        }))
+        
+
+    })(jQuery, window, document);
+
+</script>

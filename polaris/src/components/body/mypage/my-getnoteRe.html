@@ -44,7 +44,7 @@ Sent: 2020.06.23
         //components 불러오기
         $plugins.uiPageLoad('/polaris/src/components/common/Modal-alert.html', 'components-modal-alert',  function(v){
             $('#modal_alert .txt').html($('.components-modal-alert').attr('data-text'));
-            $('.components-modal > *').unwrap();
+            $('.components-modal-alert > *').unwrap();
             
         });
 
