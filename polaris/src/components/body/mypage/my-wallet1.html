@@ -1,0 +1,94 @@
+<style>
+    /* 사용후기 */
+    .list-wallet1 .col-1 {width:100px}
+    .list-wallet1 .col-2 {width:auto}
+    .list-wallet1 .col-3 {width:200px}
+    .list-wallet1 .col-4 {width:200px}
+    .list-wallet1 .col-5 {width:100px}
+    .list-wallet1 .col-6 {width:200px}
+    .list-wallet1 tbody td .ellp{color:#787878; font-size:18px; display:inline-block; padding-top:3px }
+    @media (max-width:1024px) {
+
+    }
+</style>
+<div>
+    <div class="list-wallet1">
+        <div class="tbl-list">
+            <table>
+            <caption>번호, 제목, 받은회원, 학인시간, 보낸시간 정보의 작성한 사용후기 목록</caption>
+            <colgroup>
+                <col class="col-1">
+                <col class="col-2">
+                <col class="col-3">
+                <col class="col-4">
+                <col class="col-5">
+                <col class="col-6">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">순서</th>
+                    <th scope="col">해당 적립 및 소진 내용</th>
+                    <th scope="col">내역</th>
+                    <th scope="col">적립 및 소진 POLA</th>
+                    <th scope="col">잔액</th>
+                    <th scope="col">날짜</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2333</td>
+                    <td>
+                        <a href="#">
+                            <div class="ellp">1111노하우를 라이브러리라고 부르, 라이브러리를 자유롭게 공유하고 보상받는 새로운 개념의 노하우를 노하우를 라이브러리라고 부르, 라이브러리를 자유롭게 공유하고 보상받는 새로운 개념의 노하우를</div>
+                        </a>
+                    </td>
+                    <td><strong class="point-color-b">투표로 소진</strong></td>
+                    <td>35</td>
+                    <td>500</td>
+                    <td>2020.06.25 12:00</td>
+                </tr>
+                <tr>
+                    <td>2333</td>
+                    <td>
+                        <a href="#">
+                            <div class="ellp">1111노하우를 라이브러리라고 부르, 라이브러리를 자유롭게 공유하고 보상받는 새로운 개념의 노하우를 노하우를 라이브러리라고 부르, 라이브러리를 자유롭게 공유하고 보상받는 새로운 개념의 노하우를</div>
+                        </a>
+                    </td>
+                    <td><strong class="point-color-b">투표로 소진</strong></td>
+                    <td>35</td>
+                    <td>500</td>
+                    <td>2020.06.25 12:00</td>
+                </tr>
+                <tr>
+                    <td>2333</td>
+                    <td>
+                        <a href="#">
+                            <div class="ellp">1111노하우를 라이브러리라고 부르, 라이브러리를 자유롭게 공유하고 보상받는 새로운 개념의 노하우를 노하우를 라이브러리라고 부르, 라이브러리를 자유롭게 공유하고 보상받는 새로운 개념의 노하우를</div>
+                        </a>
+                    </td>
+                    <td><strong class="point-color-b">투표로 소진</strong></td>
+                    <td>35</td>
+                    <td>500</td>
+                    <td>2020.06.25 12:00</td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+
+        <div class="components-paging"></div>
+    </div>
+</div>
+<script>
+    ;(function($, win, doc, undefined) {
+
+        'use strict';
+
+        //components 불러오기
+        $plugins.uiPageLoad('/polaris/src/components/common/paging.html', 'components-paging', function(v){
+            $('.components-paging > *').unwrap();
+        });
+
+
+    })(jQuery, window, document);
+
+</script> 

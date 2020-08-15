@@ -3,6 +3,7 @@
     .tab-mypage{border:0; text-align:center; position: relative; display: inline-block ; width:100%;}
     .tab-mypage .btn-basic-f{font-size:14px; position: absolute; top:0; right:0; min-width:0; margin-top:7px;}
     .tab-mypage button{font-size:24px;}
+    .tab-mypage .tab-sub-btns{margin-bottom:20px}
     .tab-mypage .tab-list .tab-item button.active{color:#308cfe; font-weight:600; border-bottom:1px solid #308cfe;}
     /* tab in tab */
 
@@ -17,19 +18,97 @@
 
 <div>
     
-    My Wallet
+     <!-- S : user item -->
+    <div class="components-user-item-g"></div>
+    <!-- E : user item -->
+
+    <div class="tab-wrap-b tab-mypage small my-wallet">
+
+        <div class="tab-sub-btns" tabbtn="tabWallet">
+            <button type="button" class="ui-tab-btn" n="1" onclick="$plugins.tabToggle(1, 'tabWallet');"><span>보유 총 POLA 내역</span></button>
+            <button type="button" class="ui-tab-btn" n="2" onclick="$plugins.tabToggle(2, 'tabWallet');"><span>달러 내역</span></button>
+            <button type="button" class="ui-tab-btn" n="3" onclick="$plugins.tabToggle(3, 'tabWallet');"><span>투표한 POLA 내역</span></button>
+            <button type="button" class="ui-tab-btn" n="4" onclick="$plugins.tabToggle(4, 'tabWallet');"><span>투표 받은 POLA 내역</span></button>
+        </div>
+        
+        <!-- <select class="combo-tab" title="" tabbtn="tabWallet">
+            <option value="1">보유 총 POLA 내역</option>
+            <option value="2">달러 내역</option>
+            <option value="3">투표한 POLA 내역</option>
+            <option value="4">투표 받은 POLA 내역</option>
+        </select>
+        -->
+
+    </div>
+
+    <div class="content" tabpnl="tabWallet">
+        <!-- 보유 총 POLA 내역 -->
+        <div class="ui-tab-pnl" pnl="1">
+            <h3 class="hide">보유 총 POLA 내역</h3>
+            <div class="components-wl-bbs1"></div>
+        </div>
+
+        <!-- 달러 내역 -->
+        <div class="ui-tab-pnl" pnl="2">
+            <h3 class="hide">달러 내역</h3>
+            <div class="components-wl-bbs2"></div>
+        </div>
+
+        <!-- 투표한 POLA 내역 -->
+        <div class="ui-tab-pnl" pnl="3">
+            <h3 class="hide">투표한 POLA 내역</h3>
+            <div class="components-wl-bbs3"></div>
+        </div>
+
+        <!-- 투표 받은 POLA 내역 -->
+        <div class="ui-tab-pnl" pnl="4">
+            <h3 class="hide">투표 받은 POLA 내역</h3>
+            <div class="components-wl-bbs4"></div>
+        </div>
+
+        <!-- 달러 환전 -->
+        <div class="ui-tab-pnl" pnl="5">
+            <h3 class="hide">환전</h3>
+            <div class="components-wl-exchange"></div>
+        </div>
+    </div>
 
   
 </div>
 
-
 <script>
     ;(function($, win, doc, undefined) {
-
         'use strict';
 
-        
+        $plugins.uiPageLoad('/polaris/src/components/body/items/user-item-g.html', 'components-user-item-g', function(v){
+            $('.components-user-item-g > *').unwrap();
+        })
+        .then( $plugins.uiPageLoad('/polaris/src/components/body/mypage/my-wallet1.html', 'components-wl-bbs1', function(v){
+            $('.components-wl-bbs1 > *').unwrap();
+        }))
+        .then( $plugins.uiPageLoad('/polaris/src/components/body/mypage/my-wallet2.html', 'components-wl-bbs2', function(v){
+            $('.components-wl-bbs2 > *').unwrap();
+        }))
+        .then( $plugins.uiPageLoad('/polaris/src/components/body/mypage/my-wallet3.html', 'components-wl-bbs3', function(v){
+            $('.components-wl-bbs3 > *').unwrap();
+        }))
+        .then( $plugins.uiPageLoad('/polaris/src/components/body/mypage/my-wallet4.html', 'components-wl-bbs4', function(v){
+            $('.components-wl-bbs4 > *').unwrap();
+        }))
+        .then( $plugins.uiPageLoad('/polaris/src/components/body/mypage/MyExchange.html', 'components-wl-exchange', function(v){
+            $('.components-wl-exchange > *').unwrap();
+        }));
+
+        //tab
+        $('select[tabbtn="tabWallet"]').on('change', function(){
+            
+            $plugins.tabToggle($(this).val(), 'tabWallet');
+        });
+
+
+        $plugins.tabToggle(1, 'tabWallet');
+
 
     })(jQuery, window, document);
 
-</script> 
+</script>
