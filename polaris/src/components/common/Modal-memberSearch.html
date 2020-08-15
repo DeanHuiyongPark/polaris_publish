@@ -5,7 +5,8 @@
     .ui-modal.type-memSearch .write-form .form-input-b{width:calc(100% - 130px); display:inline-block;}
     .ui-modal.type-memSearch .write-form .btn-exception-a{width:120px; min-width:0; display:inline-block; margin-left:10px}
 
-    .box-search{width:100%; padding:10px 20px; border:1px solid #474747; margin-top:30px;}
+    .box-search{width:100%; padding:10px 20px; border:1px solid #474747; margin-top:30px; text-align: left;}
+    .box-search li{width:100%; padding:5px 0;}
     .box-search button{width:100%; text-align: left; padding:5px 0; font-size:18px;}
     .box-search button::before{content:""; display:inline-block; width:22px; height:22px; border:2px solid #909090; vertical-align:middle; margin-right:10px; margin-top:-3px}
 
@@ -29,18 +30,20 @@
             </div>
 
             <div class="box-search">
-                <button type="button"><span>east5</span></button>
-                <button type="button"><span>east5</span></button>
-                <button type="button"><span>east5</span></button>
-                <button type="button"><span>east5</span></button>
-                <button type="button"><span>east5</span></button>
-                <button type="button"><span>east5</span></button>
-                <button type="button"><span>east5</span></button>
-                <button type="button"><span>east5</span></button>
+                <ul>
+                    <li><span class="box-checkbox-a"><input type="checkbox" id="mem1" class="form-checkbox"><label for="mem1">east5</label></span></li>
+                    <li><span class="box-checkbox-a"><input type="checkbox" id="mem2" class="form-checkbox"><label for="mem2">east5</label></span></li>
+                    <li><span class="box-checkbox-a"><input type="checkbox" id="mem3" class="form-checkbox"><label for="mem3">east5</label></span></li>
+                    <li><span class="box-checkbox-a"><input type="checkbox" id="mem4" class="form-checkbox"><label for="mem4">east5</label></span></li>
+                    <li><span class="box-checkbox-a"><input type="checkbox" id="mem5" class="form-checkbox"><label for="mem5">east5</label></span></li>
+                    <li><span class="box-checkbox-a"><input type="checkbox" id="mem6" class="form-checkbox"><label for="mem6">east5</label></span></li>
+                    <li><span class="box-checkbox-a"><input type="checkbox" id="mem7" class="form-checkbox"><label for="mem7">east5</label></span></li>
+                    <li><span class="box-checkbox-a"><input type="checkbox" id="mem8" class="form-checkbox"><label for="mem8">east5</label></span></li>
+                </ul>
             </div>
             <div class="components-paging"></div>
 
-            <button type="button" class="btn-basic-f small" onclick="$plugins.modalClose('modal_memberSearch')"><span>닫기</span></button>
+            <button type="button" class="btn-basic-f small" onclick="$plugins.modalClose('modal_memberSearch')"><span>확인</span></button>
         </div>
     </div>
 </div>
