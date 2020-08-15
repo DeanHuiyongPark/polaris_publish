@@ -117,6 +117,11 @@
         </div>
     </div>
     <div class="components-paging"></div>
+
+
+    <div class="components-modal-visitor"></div>
+
+
 </div>
 <script>
     ;(function($, win, doc, undefined) {
@@ -134,6 +139,11 @@
         
         .then($plugins.uiPageLoad('/polaris/src/components/common/paging.html', 'components-paging', function(v){
             $('.components-paging > *').unwrap();
+        }))
+        
+        .then($plugins.uiPageLoad('/polaris/src/components/common/Modal-visitor.html', 'components-modal-visitor',  function(v){
+            $('.components-modal-visitor > *').unwrap();
+            
         }));
 
     })(jQuery, window, document);

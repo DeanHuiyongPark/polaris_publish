@@ -1,0 +1,75 @@
+
+<style>
+    .tab-mypage .tab-list .tab-item button.active{color:#308cfe; font-weight:600; border-bottom:1px solid #308cfe;}
+    /* tab in tab */
+
+    .tab-mypage .combo-tab{width:100%; max-width:540px; text-align-last:center;}
+    .user-list-b{margin-bottom:50px}
+
+      
+
+    @media (max-width:1300px) {
+        .tab-mypage .combo-tab{max-width:100%;}
+        .tab-mypage .btn-basic-f{position: relative; float: right;}
+    }
+</style>
+
+<main class="base-body page-Mypage">
+    <div class="box-content-b">
+        <!-- S : tab -->
+
+        <div class="tab-wrap-a" tabname="tabMypage">
+            <ul class="tab-list" tabbtn="tabMypage">
+                <li class="tab-item">
+                    <button type="button" class="ui-tab-btn link-tab" n="1" onclick="$plugins.tabToggle(1, 'tabMypage');"><span>My Wallet</span></button>
+                </li>
+                <li class="tab-item">
+                    <button type="button" class="ui-tab-btn link-tab" n="2" onclick="$plugins.tabToggle(2, 'tabMypage');"><span>My Menu</span></button>
+                </li>
+            </ul>
+        </div>
+
+        <div tabpnl="tabMypage">
+            <div class="ui-tab-pnl" pnl="1">
+                <div class="components-my-mywallet"></div>
+            </div>
+            <div class="ui-tab-pnl" pnl="2">
+                <div class="components-my-mymenu"></div>
+            </div>
+
+        </div>
+
+    </div>
+</main>
+
+
+<script>
+    ;(function($, win, doc, undefined) {
+
+        'use strict';
+
+        //components 불러오기
+        $plugins.uiPageLoad('/polaris/src/components/body/mypage/MyWallet.html', 'components-my-mywallet', function(v){
+            $('.components-my-mywallet > *').unwrap();
+        })
+
+        .then($plugins.uiPageLoad('/polaris/src/components/body/mypage/MyMenu.html', 'components-my-mymenu', function(v){
+            $('.components-my-mymenu > *').unwrap();
+        }))
+
+        
+
+
+        //tab
+        $plugins.tabToggle = function(v, name){
+            $('[tabbtn="'+ name +'"] .ui-tab-btn').removeClass('active');
+            $('[tabbtn="'+ name +'"] .ui-tab-btn[n="'+ v +'"]').addClass('active');
+            $('[tabpnl="'+ name +'"] > .ui-tab-pnl').removeClass('visible');
+            $('[tabpnl="'+ name +'"] > .ui-tab-pnl[pnl="'+ v +'"]').addClass('visible');
+        }
+        $plugins.tabToggle(2, 'tabMypage');
+
+
+    })(jQuery, window, document);
+
+</script> 

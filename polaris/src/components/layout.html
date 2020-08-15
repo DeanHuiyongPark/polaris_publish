@@ -22,17 +22,21 @@
 
         //미리보기 팝업
         $plugins.modalOpen = function(v){
+            var $target = v !== undefined ? $('#' + v) :  $('.ui-modal');
+            
             $('body').addClass('no-scroll');
-            console.log(v)
-            v !== undefined ?
-            $('#' + v).addClass('ready').addClass('open'):
-            $('.ui-modal').addClass('ready').addClass('open');
+            $target.addClass('ready').addClass('open');
+            if ($target.find('.ui-modal-wrap').outerHeight() >= $(window).outerHeight()) {
+                $target.addClass('over');
+            } else{
+                $target.removeClass('over');
+            }
         }
         $plugins.modalClose = function(v){
+            var $target = v !== undefined ? $('#' + v) :  $('.ui-modal');
+
             $('body').removeClass('no-scroll');
-             v !== undefined ?
-            $('#' + v).removeClass('ready').removeClass('open'):
-            $('.ui-modal').removeClass('ready').removeClass('open');
+            $target.removeClass('ready').removeClass('open');
         }
 
 

@@ -1,173 +1,171 @@
 
 <style>
-    .tab-mypage{border:0; text-align:center;}
-    .tab-mypage .btn-basic-f{font-size:14px; float:right; min-width:0; margin-top:7px;}
+    .tab-mypage{border:0; text-align:center; position: relative; display: inline-block ; width:100%;}
+    .tab-mypage .btn-basic-f{font-size:14px; position: absolute; top:0; right:0; min-width:0; margin-top:7px;}
     .tab-mypage button{font-size:24px;}
     .tab-mypage .tab-list .tab-item button.active{color:#308cfe; font-weight:600; border-bottom:1px solid #308cfe;}
     /* tab in tab */
 
     .tab-mypage .combo-tab{width:100%; max-width:540px; text-align-last:center;}
     .user-list-b{margin-bottom:50px}
+
+    @media (max-width:1300px) {
+        .tab-mypage .combo-tab{max-width:100%;}
+        .tab-mypage .btn-basic-f{position: relative; float: right;}
+    }
 </style>
 
-<main class="base-body page-Mypage">
-    <div class="box-content-b">
-        <!-- S : tab -->
-        <div class="tab-wrap-a">
-            <ul class="tab-list">
-                <li class="tab-item"><a href="" class="link-tab">My Wallet</a></li>
-                <li class="tab-item active"><a href="" class="link-tab">My Menu</a></li>
-            </ul>
-        </div>
-        <!-- E : tab -->
+<div>
 
-        <!-- S : tab -->
-        <div class="tab-wrap-b tab-mypage small">
+    <!-- S : tab -->
+    <div class="tab-wrap-b tab-mypage small">
 
-            <select class="combo-tab" title="" tabbtn="tabMyMenu">
-                <option value="1">Follow</option>
-                <option value="2">쪽지함</option>
-                <option value="3">업로드 내역</option>
-                <option value="4">통계</option>
-                <option value="5">Bookmark</option>
-                <option value="6">작성 댓글</option>
-                <option value="7">작성 게시물</option>
-                <option value="8">문의 내역</option>
-            </select>
+        <select class="combo-tab" title="" tabbtn="tabMyMenu">
+            <option value="1">Follow</option>
+            <option value="2">쪽지함</option>
+            <option value="3">업로드 내역</option>
+            <option value="4">통계</option>
+            <option value="5">Bookmark</option>
+            <option value="6">작성 댓글</option>
+            <option value="7">작성 게시물</option>
+            <option value="8">문의 내역</option>
+        </select>
 
-            <button type="button" class="btn-basic-f small" onclick="$plugins.tabToggle(9, 'tabMyMenu');"><span>개인정보수정</span></button>
-            <!-- <ul class="tab-list" tabbtn="tabMyMenu">
-                <li class="tab-item"><button type="button" class="link-tab ui-tab-btn" n="1" onclick="$plugins.tabToggle(1, 'tabMyMenu');"><span>팔로우</span></button></li>
-                <li class="tab-item"><button type="button" class="link-tab ui-tab-btn" n="2" onclick="$plugins.tabToggle(2, 'tabMyMenu');"><span>쪽지함</span><span class="count-value">[12]</span></button></li>
-                <li class="tab-item"><button type="button" class="link-tab ui-tab-btn" n="3" onclick="$plugins.tabToggle(3, 'tabMyMenu');"><span>업로드 내역</span></button></li>
-                <li class="tab-item"><button type="button" class="link-tab ui-tab-btn" n="4" onclick="$plugins.tabToggle(4, 'tabMyMenu');"><span>작성 게시물</span></button></li>
-                <li class="tab-item"><button type="button" class="link-tab ui-tab-btn" n="5" onclick="$plugins.tabToggle(5, 'tabMyMenu');"><span>Bookmark</span></button></li>
-                <li class="tab-item"><button type="button" class="link-tab ui-tab-btn" n="6" onclick="$plugins.tabToggle(6, 'tabMyMenu');"><span>정보수정</span></button></li>
-                <li class="tab-item"><button type="button" class="link-tab ui-tab-btn" n="7" onclick="$plugins.tabToggle(7, 'tabMyMenu');"><span>작성 댓글</span></button></li>
-                <li class="tab-item"><button type="button" class="link-tab ui-tab-btn" n="8" onclick="$plugins.tabToggle(8, 'tabMyMenu');"><span>문의 내역</span></button></li>
-            </ul> -->
-        </div>
-
-        <div class="content" tabpnl="tabMyMenu">
-            <!-- 팔로우 -->
-            <div class="ui-tab-pnl" pnl="1">
-                <h3 class="hide">팔로우</h3>
-                <div tabname="tabFollower">
-                    <div class="tab-sub-btns" tabbtn="tabFollower">
-                        <button type="button" class="ui-tab-btn" n="1" onclick="$plugins.tabToggle(1, 'tabFollower');"><span>팔로워</span></button>
-                        <button type="button" class="ui-tab-btn" n="2" onclick="$plugins.tabToggle(2, 'tabFollower');"><span>팔로잉</span></button>
-                    </div>
-                    <div class="tab-sub-pnl" tabpnl="tabFollower">
-                        <!-- 팔로워 -->
-                        <div class="ui-tab-pnl" pnl="1">
-                            <h4 class="hide">팔로워</h4>
-                            <div class="user-list-b n8">
-                                <div class="components-mm-follower"></div>
-                            </div>
-                            <div class="btn-wrap">
-                                <button type="button" class="btn-more-c">더보기</button>
-                            </div>
-                        </div>
-                        <!-- 팔로잉 -->
-                        <div class="ui-tab-pnl" pnl="2">
-                            <h4 class="hide">팔로잉</h4>
-                            <div class="user-list-b n8">
-                                <div class="components-mm-following"></div>
-                            </div>
-                            <div class="btn-wrap">
-                                <button type="button" class="btn-more-c">더보기</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 쪽지함 -->
-            <div class="ui-tab-pnl" pnl="2">
-                <h3 class="hide">쪽지함</h3>
-                <div tabname="tabNote">
-                    <div class="tab-sub-btns" tabbtn="tabNote">
-                        <button type="button" class="ui-tab-btn" n="1" onclick="$plugins.tabToggle(1, 'tabNote');"><span>받은쪽지함</span></button>
-                        <button type="button" class="ui-tab-btn" n="2" onclick="$plugins.tabToggle(2, 'tabNote');"><span>보낸쪽지함</span></button>
-                    </div>
-                    <div class="tab-sub-pnl" tabpnl="tabNote">
-                        <!-- 받은쪽지함 -->
-                        <div class="ui-tab-pnl" pnl="1">
-                            <h4 class="hide">받은쪽지함</h4>
-                            <!-- 리스트 -->
-                            <div class="components-mm-getNote"></div>
-
-                            <!-- 보기 -->
-                            <div class="components-mm-getNoteView"></div>
-
-                            <!-- 답글 -->
-                            <div class="components-mm-getNoteRe"></div>
-
-
-                        </div>
-                        <!-- 보낸쪽지함 -->
-                        <div class="ui-tab-pnl" pnl="2">
-                            <h4 class="hide">보낸쪽지함</h4>
-                            <!-- 리스트 -->
-                            <div class="components-mm-setNote"></div>
-
-                            <!-- 보기 -->
-                            <div class="components-mm-setNoteView"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 업로드 내역 -->
-            <div class="ui-tab-pnl" pnl="3">
-                <h3 class="hide">업로드 내역</h3>
-                <div class="components-mm-upload"></div>
-               
-            </div>
-
-            <!-- 통계 -->
-            <div class="ui-tab-pnl" pnl="4">
-                <h3 class="hide">통계</h3>
-                <div class="components-mm-stats"></div>
-            </div>
-
-            <!-- Bookmark -->
-            <div class="ui-tab-pnl" pnl="5">
-                <h3 class="hide">Bookmark</h3>
-                <div class="components-mm-bookmark"></div>
-            </div>
-
-            <!-- 작성 댓글 -->
-            <div class="ui-tab-pnl" pnl="6">
-                <h3 class="hide">작성 댓글</h3>
-                <div class="components-mm-myreply"></div>
-            </div>
-
-            <!-- 작성 게시물 -->
-            <div class="ui-tab-pnl" pnl="7">
-                <h3 class="hide">작성 게시물</h3>
-                <div class="components-mm-make"></div>
-            </div>
-
-            <!-- 문의 내역 -->
-            <div class="ui-tab-pnl" pnl="8">
-                <h3 class="hide">문의 내역</h3>
-                <div class="components-mm-inquiry"></div>
-            </div>
-
-            <!-- 개인정보수정 -->
-            <div class="ui-tab-pnl" pnl="9">
-                <h3 class="hide">개인정보수정</h3>
-                <div class="components-mm-modify"></div>
-            </div>
-
-        </div>
-        <!-- E : tab -->
-
-        
-        
+        <button type="button" class="btn-basic-f small" onclick="$plugins.tabToggle(9, 'tabMyMenu');"><span>개인정보수정</span></button>
+        <!-- <ul class="tab-list" tabbtn="tabMyMenu">
+            <li class="tab-item"><button type="button" class="link-tab ui-tab-btn" n="1" onclick="$plugins.tabToggle(1, 'tabMyMenu');"><span>팔로우</span></button></li>
+            <li class="tab-item"><button type="button" class="link-tab ui-tab-btn" n="2" onclick="$plugins.tabToggle(2, 'tabMyMenu');"><span>쪽지함</span><span class="count-value">[12]</span></button></li>
+            <li class="tab-item"><button type="button" class="link-tab ui-tab-btn" n="3" onclick="$plugins.tabToggle(3, 'tabMyMenu');"><span>업로드 내역</span></button></li>
+            <li class="tab-item"><button type="button" class="link-tab ui-tab-btn" n="4" onclick="$plugins.tabToggle(4, 'tabMyMenu');"><span>작성 게시물</span></button></li>
+            <li class="tab-item"><button type="button" class="link-tab ui-tab-btn" n="5" onclick="$plugins.tabToggle(5, 'tabMyMenu');"><span>Bookmark</span></button></li>
+            <li class="tab-item"><button type="button" class="link-tab ui-tab-btn" n="6" onclick="$plugins.tabToggle(6, 'tabMyMenu');"><span>정보수정</span></button></li>
+            <li class="tab-item"><button type="button" class="link-tab ui-tab-btn" n="7" onclick="$plugins.tabToggle(7, 'tabMyMenu');"><span>작성 댓글</span></button></li>
+            <li class="tab-item"><button type="button" class="link-tab ui-tab-btn" n="8" onclick="$plugins.tabToggle(8, 'tabMyMenu');"><span>문의 내역</span></button></li>
+        </ul> -->
     </div>
-</main>
+
+    <div class="content" tabpnl="tabMyMenu">
+        <!-- 팔로우 -->
+        <div class="ui-tab-pnl" pnl="1">
+            <h3 class="hide">팔로우</h3>
+            <div tabname="tabFollower">
+                <div class="tab-sub-btns" tabbtn="tabFollower">
+                    <button type="button" class="ui-tab-btn" n="1" onclick="$plugins.tabToggle(1, 'tabFollower');"><span>팔로워</span></button>
+                    <button type="button" class="ui-tab-btn" n="2" onclick="$plugins.tabToggle(2, 'tabFollower');"><span>팔로잉</span></button>
+                </div>
+                <div class="tab-sub-pnl" tabpnl="tabFollower">
+                    <!-- 팔로워 -->
+                    <div class="ui-tab-pnl" pnl="1">
+                        <h4 class="hide">팔로워</h4>
+                        <div class="user-list-b n8">
+                            <div class="components-mm-follower"></div>
+                        </div>
+                        <div class="btn-wrap">
+                            <button type="button" class="btn-more-c">더보기</button>
+                        </div>
+                    </div>
+                    <!-- 팔로잉 -->
+                    <div class="ui-tab-pnl" pnl="2">
+                        <h4 class="hide">팔로잉</h4>
+                        <div class="user-list-b n8">
+                            <div class="components-mm-following"></div>
+                        </div>
+                        <div class="btn-wrap">
+                            <button type="button" class="btn-more-c">더보기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 쪽지함 -->
+        <div class="ui-tab-pnl" pnl="2">
+            <h3 class="hide">쪽지함</h3>
+            <div tabname="tabNote">
+                <div class="tab-sub-btns" tabbtn="tabNote">
+                    <button type="button" class="ui-tab-btn" n="1" onclick="$plugins.tabToggle(1, 'tabNote');"><span>받은쪽지함</span></button>
+                    <button type="button" class="ui-tab-btn" n="2" onclick="$plugins.tabToggle(2, 'tabNote');"><span>보낸쪽지함</span></button>
+                </div>
+                <div class="tab-sub-pnl" tabpnl="tabNote">
+                    <!-- 받은쪽지함 -->
+                    <div class="ui-tab-pnl" pnl="1">
+                        <h4 class="hide">받은쪽지함</h4>
+                        <!-- 리스트 -->
+                        <div class="components-mm-getNote"></div>
+
+                        <!-- 보기 -->
+                        <div class="components-mm-getNoteView"></div>
+
+                        <!-- 답글 -->
+                        <div class="components-mm-getNoteRe"></div>
+
+
+                    </div>
+                    <!-- 보낸쪽지함 -->
+                    <div class="ui-tab-pnl" pnl="2">
+                        <h4 class="hide">보낸쪽지함</h4>
+                        <!-- 리스트 -->
+                        <div class="components-mm-setNote"></div>
+
+                        <!-- 보기 -->
+                        <div class="components-mm-setNoteView"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 업로드 내역 -->
+        <div class="ui-tab-pnl" pnl="3">
+            <h3 class="hide">업로드 내역</h3>
+            <div class="components-mm-upload"></div>
+        </div>
+
+        <!-- 통계 -->
+        <div class="ui-tab-pnl" pnl="4">
+            <h3 class="hide">통계</h3>
+            <div class="components-mm-stats"></div>
+        </div>
+
+        <!-- Bookmark -->
+        <div class="ui-tab-pnl" pnl="5">
+            <h3 class="hide">Bookmark</h3>
+            <div class="components-mm-bookmark"></div>
+        </div>
+
+        <!-- 작성 댓글 -->
+        <div class="ui-tab-pnl" pnl="6">
+            <h3 class="hide">작성 댓글</h3>
+            <div class="components-mm-myreply"></div>
+        </div>
+
+        <!-- 작성 게시물 -->
+        <div class="ui-tab-pnl" pnl="7">
+            <h3 class="hide">작성 게시물</h3>
+            <div class="components-mm-make"></div>
+        </div>
+
+        <!-- 문의 내역 -->
+        <div class="ui-tab-pnl" pnl="8">
+            <h3 class="hide">문의 내역</h3>
+            <!-- 리스트 -->
+            <div class="components-mm-inquiry"></div>
+
+            <!-- 보기 -->
+            <div class="components-mm-inquiryView"></div>
+        </div>
+
+        <!-- 개인정보수정 -->
+        <div class="ui-tab-pnl" pnl="9">
+            <h3 class="hide">개인정보수정</h3>
+            <div class="components-mm-modify"></div>
+        </div>
+
+    </div>
+    <!-- E : tab -->
+
+        
+        
+</div>
 
 
 <script>
@@ -230,6 +228,10 @@
             $('.components-mm-inquiry > *').unwrap();
         }))
 
+        .then($plugins.uiPageLoad('/polaris/src/components/body/mypage/my-inquiryView.html', 'components-mm-inquiryView', function(v){
+            $('.components-mm-inquiryView > *').unwrap();
+        }))
+
         .then($plugins.uiPageLoad('/polaris/src/components/body/mypage/my-stats.html', 'components-mm-stats', function(v){
             $('.components-mm-stats > *').unwrap();
         }))
@@ -252,12 +254,8 @@
         $('select[tabbtn="tabMyMenu"]').on('change', function(){
             $plugins.tabToggle($(this).val(), 'tabMyMenu');
         });
-        $plugins.tabToggle = function(v, name){
-            $('[tabbtn="'+ name +'"] .ui-tab-btn').removeClass('active');
-            $('[tabbtn="'+ name +'"] .ui-tab-btn[n="'+ v +'"]').addClass('active');
-            $('[tabpnl="'+ name +'"] > .ui-tab-pnl').removeClass('visible');
-            $('[tabpnl="'+ name +'"] > .ui-tab-pnl[pnl="'+ v +'"]').addClass('visible');
-        }
+
+
         $plugins.tabToggle(1, 'tabMyMenu');
         $plugins.tabToggle(1, 'tabFollower');
         $plugins.tabToggle(1, 'tabNote');

@@ -29,9 +29,29 @@
 .user-item-e.type-stats .user-summary .type-items + .type-items{font-size:16px; color:#707070; margin-right:10px;}
 .user-item-e.type-stats .user-summary .type-items:last-child::before{content:"|"; display: inline-block; font-size:12px; padding-right:10px;vertical-align: middle; opacity: 0.5; margin-top:-3px;}
 .user-item-e.type-stats .item-date{font-size:14px; margin-top:5px}
+@media (max-width:1500px) {
+
+    .list-visitor .tbl-list table{width:100%;}
+}
+@media (max-width:1024px) {   
+    .user-item-e.type-stats{display: table; width:100%;}
+    .user-item-e.type-stats .user-info ,
+    .user-item-e.type-stats .user-summary {display:table-cell}
+    .user-item-e.type-stats .user-summary{width:285px}
+
+}
+@media (max-width:600px) {   
+    .user-item-e.type-stats{display: block; width:100%;}
+    .user-item-e.type-stats .user-info ,
+    .user-item-e.type-stats .user-summary {display:block; width:100%;}
+    .user-item-e.type-stats .user-summary{ max-width:100%; text-align: center;}
+
+}
 @media (max-width:420px) {
     .user-item-e .user-summary {width:100%;padding:20px;}
     .user-item-e .user-summary .box-person .person-lv {margin-bottom:16px}
     .user-item-e .user-summary .box-person {margin-bottom:20px}
     .user-item-e .user-summary .box-person .person-img {width:60px;height:60px}
+
+    
 }
