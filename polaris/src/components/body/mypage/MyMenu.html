@@ -102,6 +102,9 @@
                             <!-- 보기 -->
                             <div class="components-mm-getNoteView"></div>
 
+                            <!-- 보기 -->
+                            <div class="components-mm-getNoteRe"></div>
+
 
                         </div>
                         <!-- 보낸쪽지함 -->
@@ -197,39 +200,43 @@
             $('.components-mm-following > *').unwrap();
         }))
 
-        .then($plugins.uiPageLoad('/polaris/src/components/body/items/list-getnote.html', 'components-mm-getNote', function(v){
+        .then($plugins.uiPageLoad('/polaris/src/components/body/mypage/my-getnote.html', 'components-mm-getNote', function(v){
             $('.components-mm-getNote > *').unwrap();
         }))
 
-        .then($plugins.uiPageLoad('/polaris/src/components/body/items/list-setnote.html', 'components-mm-setNote', function(v){
+        .then($plugins.uiPageLoad('/polaris/src/components/body/mypage/my-setnote.html', 'components-mm-setNote', function(v){
             $('.components-mm-setNote > *').unwrap();
         }))
 
-        .then($plugins.uiPageLoad('/polaris/src/components/body/items/list-getNoteView.html', 'components-mm-getNoteView', function(v){
+        .then($plugins.uiPageLoad('/polaris/src/components/body/mypage/my-getNoteView.html', 'components-mm-getNoteView', function(v){
             $('.components-mm-getNoteView > *').unwrap();
+        }))
+
+        .then($plugins.uiPageLoad('/polaris/src/components/body/mypage/my-getNoteRe.html', 'components-mm-getNoteRe', function(v){
+            $('.components-mm-getNoteRe > *').unwrap();
         }))
 
         .then($plugins.uiPageLoad('/polaris/src/components/body/mypage/my-upload.html', 'components-mm-upload', function(v){
             $('.components-mm-upload > *').unwrap();
         }))
 
-        .then($plugins.uiPageLoad('/polaris/src/components/body/items/list-make.html', 'components-mm-make', function(v){
+        .then($plugins.uiPageLoad('/polaris/src/components/body/mypage/my-make.html', 'components-mm-make', function(v){
             $('.components-mm-make > *').unwrap();
         }))
 
-        .then($plugins.uiPageLoad('/polaris/src/components/body/items/list-bookmark.html', 'components-mm-bookmark', function(v){
+        .then($plugins.uiPageLoad('/polaris/src/components/body/mypage/my-bookmark.html', 'components-mm-bookmark', function(v){
             $('.components-mm-bookmark > *').unwrap();
         }))
 
-        .then($plugins.uiPageLoad('/polaris/src/components/body/items/list-myreply.html', 'components-mm-myreply', function(v){
+        .then($plugins.uiPageLoad('/polaris/src/components/body/mypage/my-myreply.html', 'components-mm-myreply', function(v){
             $('.components-mm-myreply > *').unwrap();
         }))
 
-        .then($plugins.uiPageLoad('/polaris/src/components/body/items/list-inquiry.html', 'components-mm-inquiry', function(v){
+        .then($plugins.uiPageLoad('/polaris/src/components/body/mypage/my-inquiry.html', 'components-mm-inquiry', function(v){
             $('.components-mm-inquiry > *').unwrap();
         }))
 
-        .then($plugins.uiPageLoad('/polaris/src/components/body/items/list-stats.html', 'components-mm-stats', function(v){
+        .then($plugins.uiPageLoad('/polaris/src/components/body/mypage/my-stats.html', 'components-mm-stats', function(v){
             $('.components-mm-stats > *').unwrap();
         }))
         

@@ -1,56 +1,145 @@
 <style>
-    /* 사용후기 */
-    .list-upload .col-1 {width:100px}
-    .list-upload .col-2 {width:auto}
-    .list-upload .col-3 {width:200px}
-    .list-upload .col-4 {width:200px}
-    .list-upload .col-5 {width:200px}
-    .list-upload tbody td .ellp{color:#787878; font-size:18px; display:inline-block; padding-top:3px }
-    @media (max-width:1024px) {
+    .box-stats {width:100%; position: relative; border:1px solid #dcecfc; margin-bottom:60px;}
+    .box-stats::after{content:""; display:block; clear:both;}
+    .box-stats .user-list-a{max-width:300px; float:left;}
+    .box-stats-info{float:right; max-width:calc(100% - 300px); width:100%; padding-right: 40px;}
+    .box-stats-info .menu{padding:50px 20px 0 60px; float:left;}
+    .box-stats-info .menu h3{font-size:30px; font-weight:500; color:#383838; margin:5px 0 40px}
+    .box-stats-info .menu button{font-size:24px; margin-bottom:25px;}
+    .box-stats-info .menu button.active{color:#308cfe; font-weight:600; border-bottom:1px solid #308cfe;}
+    .box-stats-info .content{float:right; width:calc(100% - 370px); padding:40px 0 0 0;}
+    .box-stats-info .content .card-item{margin-bottom:10px;}
+    .box-stats-info .content .card-item:nth-child(3n + 1){margin-left:0}
+  
 
+    /* tab in tab */
+    .tab-sub-btns{width:100%; text-align:center; margin-bottom:50px;}
+    .tab-sub-btns button{font-size:18px; padding:5px 70px;}
+    .tab-sub-btns button.active{color:#308cfe; font-weight:600;border-bottom:2px solid #308cfe;}
+
+    .type-simple .tbl-list{margin:0;}
+    .type-simple .btn-wrap-r,
+    .type-simple .paging{display: none;}
+    @media (max-width:1500px) {
+        .box-stats .user-list-a{max-width:340px; float:left;}
+        .box-stats-info{float:right; max-width:calc(100% - 340px); width:100%; padding-right: 20px;}
+        .box-stats-info .menu{padding:20px 0 15px 20px; float:left; width:100%}
+        .box-stats-info .menu h3{font-size:1.8vw; font-weight:500; color:#383838; margin:0 15px 0 5px; display: inline-block;}
+        .box-stats-info .menu > ul{display:inline-block;}
+        .box-stats-info .menu li{display:inline-block; padding:0 10px}
+        .box-stats-info .menu button{font-size:1.2vw; margin-bottom:5px;}
+        .box-stats-info .menu button.active{color:#308cfe; font-weight:600; border-bottom:1px solid #308cfe;}
+        .box-stats-info .content{float:right; width:100%; padding:0 0 0 25px;}
+        .box-stats-info .content .card-item{margin-bottom:10px;}
+        .box-stats-info .content .card-item:nth-child(3n + 1){margin-left:0}
     }
+    @media (max-width:1500px) {
+        .type-simple .tbl-list table{width:100%;}
+    }
+    @media (max-width:1024px) {
+    
+        .box-stats .user-list-a{max-width:100%; width:100%; float:left;}
+        .box-stats-info{float:right; max-width:100%; width:100%; padding-right: 20px;}
+        .box-stats-info .menu{padding:20px 0 20px 20px; float:left; width:100%}
+        .box-stats-info .menu h3{font-size:16px; font-weight:500; color:#383838; margin:0 15px 5px 0; display: inline-block;}
+        .box-stats-info .menu > ul{display:inline-block;}
+        .box-stats-info .menu li{display:inline-block; padding:0 10px 0 0}
+        .box-stats-info .menu button{font-size:14px; margin-bottom:5px;}
+        .box-stats-info .menu button.active{color:#308cfe; font-weight:600; border-bottom:1px solid #308cfe;}
+        .box-stats-info .content{float:right; width:100%; padding:0 0 0 20px;}
+        .box-stats-info .content .card-item{margin-bottom:10px;}
+        .box-stats-info .content .card-item:nth-child(3n + 1){margin-left:0}
+    }
+
 </style>
-<div class="box-content-b">
-    <div class="box-member">
-        <div class="box-join">
-            <!-- S : 이메일 -->
-            <div class="box-join-section">
-                <h3 class="member-title-b">이메일</h3>
-                <div class="join-item-a">
-                    <div class="join-col-form"><input type="text" class="form-input-c" /></div>
-                </div>
-            </div>
-            <!-- E : 이메일 -->
-            <!-- S : 비밀번호 -->
-            <div class="box-join-section">
-                <h3 class="member-title-b">비밀번호</h3>
-                <div class="join-item-a">
-                    <div class="join-col-form"><input type="password" class="form-input-c" placeholder="비밀번호를 입력해 주세요(6자 이상)" /></div>
-                </div>
-                <div class="join-item-a">
-                    <div class="join-col-form"><input type="password" class="form-input-c" placeholder="비밀번호를 입력해 주세요(6자 이상)" /></div>
-                </div>
-            </div>
-            <!-- E : 비밀번호 -->
-            <!-- S : 약관동의 -->
-            <div class="box-join-section">
-                <h3 class="member-title-b">회원아이콘</h3>
-                <div class="join-item-a">
-                    <div class="join-col-form"><input type="text" class="form-input-c" /></div>
-                    <div class="join-col-btn"><button type="button" class="btn-exception-a">찾아보기</button></div>
-                </div>
-                <p class="txt-member-d">이미지 크기는 가로 22픽셀, 세로 22픽셀 이하로 해주세요.<br>
-                gif만 가능하며 용량 5,000바이트 이하만 등록됩니다.</p>
-            </div>
-            <!-- E : 약관동의 -->
-        </div>
-        <div class="box-link-member">
-            <span></span>
-            <a href="" class="link-item">회원탈퇴</a>
+
+<div>
+    <div class="box-stats">
+                
+        <div class="user-list-a">
+            <div class="components-user-item-e2"></div>
         </div>
 
-        <div class="member-btn-area-a">
-            <button type="button" class="btn-basic-a">수정완료</button>
+        <div class="box-stats-info" tabname="tabStats">
+            <div class="menu">
+                <h3>방문자 통계</h3>
+                <ul>
+                    <li>
+                        <button type="button" class="ui-tab-btn active"><span>1 week</span></button>
+                    </li>
+                    <li>
+                        <button type="button" class="ui-tab-btn"><span>1 month</span></button>
+                    </li>
+                    <li>
+                        <button type="button" class="ui-tab-btn"><span>3 month</span></button>
+                    </li>
+                    <li>
+                        <button type="button" class="ui-tab-btn"><span>6 month</span></button>
+                    </li>
+                    <li>
+                        <button type="button" class="ui-tab-btn"><span>1 year</span></button>
+                    </li>
+                </ul>
+            </div>
+            <div class="content" >
+                <h3 class="hide">1 week</h3>
+                <div class="components-stats-visitor"></div>
+            </div>
         </div>
     </div>
+    <div class="box-stats">
+                
+        <div class="user-list-a">
+            <div class="components-user-item-e2"></div>
+        </div>
+
+        <div class="box-stats-info" tabname="tabStats">
+            <div class="menu">
+                <h3>방문자 통계</h3>
+                <ul>
+                    <li>
+                        <button type="button" class="ui-tab-btn active"><span>1 week</span></button>
+                    </li>
+                    <li>
+                        <button type="button" class="ui-tab-btn"><span>1 month</span></button>
+                    </li>
+                    <li>
+                        <button type="button" class="ui-tab-btn"><span>3 month</span></button>
+                    </li>
+                    <li>
+                        <button type="button" class="ui-tab-btn"><span>6 month</span></button>
+                    </li>
+                    <li>
+                        <button type="button" class="ui-tab-btn"><span>1 year</span></button>
+                    </li>
+                </ul>
+            </div>
+            <div class="content" >
+                <h3 class="hide">1 week</h3>
+                <div class="components-stats-visitor"></div>
+            </div>
+        </div>
+    </div>
+    <div class="components-paging"></div>
 </div>
+<script>
+    ;(function($, win, doc, undefined) {
+
+        'use strict';
+
+        //components 불러오기
+        $plugins.uiPageLoad('/polaris/src/components/body/mypage/my-visitor.html', 'components-stats-visitor', function(v){
+            $('.components-stats-visitor > *').unwrap();
+        })
+
+        .then($plugins.uiPageLoad('/polaris/src/components/body/items/user-item-e-2.html', 'components-user-item-e2', function(v){
+            $('.components-user-item-e2 > *').unwrap();
+        }))
+        
+        .then($plugins.uiPageLoad('/polaris/src/components/common/paging.html', 'components-paging', function(v){
+            $('.components-paging > *').unwrap();
+        }));
+
+    })(jQuery, window, document);
+
+</script>  
