@@ -1,0 +1,17 @@
+.member-policy-title {font-size:36px;color:#000;font-weight:600}
+.member-policy-des {margin-top:44px;color:#444;font-weight:600;font-size:24px;word-break:keep-all}
+.list-member {margin-top:48px}
+@media (max-width:1300px) {
+	.tbl-list table {width:100%}
+}
+@media (max-width:768px) {
+	.member-policy-title {font-size:28px}
+	.member-policy-des {margin-top:20px;font-size:18px}
+	.list-member {margin-top:20px}
+}
+@media (max-width:600px) {
+	.member-policy-title {font-size:28px}
+	.member-policy-des {margin-top:20px;font-size:18px}
+	.list-member {margin-top:20px}
+	.tbl-list table {width:600px}
+}
