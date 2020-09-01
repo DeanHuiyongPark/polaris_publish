@@ -79,6 +79,14 @@
     .statistics-info dt{min-width:80px; width:25%;}
     .statistics-info dd strong{color:#1c7df4; font-weight:600;}
 
+    /* share */
+    .share-wrap {text-align:center;height:69px;padding-top:6px;font-size:0}
+    .share-wrap button ~ button {margin-left:10px}
+    .ico-share-1{display:inline-block; width:39px; height:39px; background:url(/polaris/src/public/static/images/common/ico-share-a.png) no-repeat 0 0 / cover;}
+    .ico-share-2{display:inline-block; width:39px; height:39px; background:url(/polaris/src/public/static/images/common/ico-share-b.png) no-repeat 0 0 / cover;}
+    .ico-share-3{display:inline-block; width:39px; height:39px; background:url(/polaris/src/public/static/images/common/ico-share-c.png) no-repeat 0 0 / cover;}
+    .ico-share-4{display:inline-block; width:39px; height:39px; background:url(/polaris/src/public/static/images/common/ico-share-d.png) no-repeat 0 0 / cover;}
+
     @media (max-width:1024px) {
         /* library info */
         .library-swiper{margin-top:20px}
@@ -209,9 +217,15 @@
                 </div>
 
                 <div class="group-item">
+                    <div class="share-wrap">
+                        <button type="button" class="ico-share-1"><span class="hide">in</span></button>
+                        <button type="button" class="ico-share-2"><span class="hide">facebook</span></button>
+                        <button type="button" class="ico-share-3"><span class="hide">twitter</span></button>
+                        <button type="button" class="ico-share-4"><span class="hide">kakao</span></button>
+                    </div>
                     <div class="btn-wrap">
                         <button type="button" class="btn-basic-d"><span>Share</span></button>
-                        <button type="button" class="btn-basic-d"><span>My Page 찜</span></button>
+                        <button type="button" class="btn-basic-d"><span>Bookmark</span></button>
                     </div>
                 </div>
             </div>

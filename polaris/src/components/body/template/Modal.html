@@ -18,6 +18,9 @@
     <button type="button" class="btn-basic-d medium" onclick="$plugins.modalOpen('modal_upload')"><span>upload</span></button>
     <div class="components-modal-upload"></div>
 
+    <button type="button" class="btn-basic-d medium" onclick="$plugins.modalOpen('modal_email')"><span>메일전송</span></button>
+    <div class="components-modal-email"></div>
+
 </main>
 
 <script>
@@ -37,6 +40,9 @@
         }))
         .then($plugins.uiPageLoad('/polaris/src/components/common/Modal-upload.html', 'components-modal-upload', function(v){
             $('.components-modal-upload > *').unwrap();
+        }))
+        .then($plugins.uiPageLoad('/polaris/src/components/common/Modal-email.html', 'components-modal-email', function(v){
+            $('.components-modal-email > *').unwrap();
         }))
         
 
