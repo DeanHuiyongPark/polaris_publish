@@ -1,4 +1,4 @@
-.box-about {margin-top:60px}
+/*.box-about {margin-top:60px}
 .box-about-top {background:url("/polaris/src/public/static/images/sub/about-bg.png") no-repeat 50% 50%;background-size:cover;min-height:428px;text-align:center;padding:30px}
 .box-about-top .about-title {margin-bottom:36px}
 .box-about-top .about-title img {max-width:100%;vertical-align:top}
@@ -41,5 +41,54 @@
 @media (max-width:500px) {
     .box-about .about-txt {font-size:16px;line-height:24px}
     .about-btn-area .btn-basic-a {min-width:100%}
-}
+}*/
 
+.box-about {margin-top:80px}
+.box-about .about-logo img {max-width:100%;vertical-align:top}
+.about-section-a {text-align:center}
+.about-section-a .about-txt-a {margin-top:28px;font-size:22px;color:#444;word-break:keep-all}
+.about-section-a .about-txt-a .point-color-b {font-weight:500}
+.about-section-a .about-txt-b {font-size:18px;margin-top:8px;color:#000;word-break:keep-all}
+.about-section-b {margin-top:100px}
+.box-about .about-title-a {font-size:36px;font-weight:600;color:#000}
+.box-about .about-txt-c {margin-top:32px;font-size:18px;word-break:keep-all;line-height:32px;color:#333}
+.box-about .box-direction {display:flex;justify-content:center;align-items:center;margin-top:72px}
+.box-about .box-direction img {width:100%}
+.box-direction .direction-col-b {position:relative;margin:0 84px 0 48px;text-align:center;padding:17px 22px 17px 42px;background-color:#308cfe;font-size:22px;line-height:26px;color:#fff;border-radius:44px 10px 10px 44px;}
+.box-direction .direction-txt {word-break:keep-all}
+.box-direction .direction-col-b .triangle {position:absolute;top:50%;right:-36px;margin-top:-43px;width:49px;height:86px;background:url("/polaris/src/public/static/images/sub/about-blt.png") no-repeat 0 0}
+.box-direction .direction-col-c {margin-top:100px}
+.about-section-c {margin-top:72px}
+.about-power {margin-top:80px}
+.about-power:after {content:'';display:block;clear:both}
+.about-power .power-item {float:left;width:calc(50% - 46px);border:1px solid #b6b6b6;padding:74px 60px}
+.about-power .power-item .power-img {text-align:center}
+.about-power .power-item .power-img img {vertical-align:top;max-width:100%}
+.about-power .power-item .power-des {margin-top:52px;font-size:22px;line-height:32px;color:#333;word-break:keep-all}
+.about-power .power-item ~ .power-item {float:right}
+.about-btn-area {text-align:center;margin-top:80px}
+.about-btn-area .btn-basic-a {min-width:430px;max-width:100%}
+@media (max-width:1024px) {
+    .box-direction .direction-col-b {margin:0 64px 0 28px}
+    .about-section-b {margin-top:50px}
+    .about-power {margin-top:40px}
+    .about-power .power-item {width:calc(50% - 20px)}
+}
+@media (max-width:768px) {
+    .box-about {margin-top:48px}
+    .box-about .about-logo {width:80%;margin:0 auto}
+    .box-about .box-direction {display:block}
+    .box-direction .direction-col-c {margin:0 auto;width:60%}
+    .about-btn-area {margin-top:40px}
+    .box-direction .direction-col-b {margin:40px 0 80px;border-radius:44px}
+    .box-direction .direction-col-b .triangle {top:58px;right:auto;left:50%;transform:rotate(90deg);-webkit-transform:rotate(90deg);margin:0 0 0 -28px}
+    .about-power .power-item {float:none;width:100%;padding:30px}
+    .about-power .power-item ~ .power-item {float:none;margin-top:20px}
+    .box-about .about-title-a {font-size:28px}
+    .box-about .about-txt-c {margin-top:20px;font-size:16px;line-height:26px}
+    .box-about .box-direction {margin-top:40px}
+    .about-power .power-item .power-des {margin-top:30px;font-size:16px;line-height:26px}
+}
+@media (max-width:500px) {
+    .about-btn-area .btn-basic-a {min-width:100%}
+}

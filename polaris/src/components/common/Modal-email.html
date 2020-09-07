@@ -1,0 +1,44 @@
+<style>    
+    .ui-modal.type-email .ui-modal-wrap{width:600px; margin:20px 0; padding:40px 60px; border-radius:0; background:#fff; border:3px solid #2a2b2d; text-align: center;}
+    .ui-modal.type-email .btn-basic-f{min-width:160px}
+    .ui-modal.type-email .write-item-c{margin-bottom:40px}
+    .ui-modal.type-email .send-txt {text-align:center;font-size:18px;color:#696969;word-break:keep-all}
+    @media (max-width:1024px) {
+         .ui-modal.type-email .ui-modal-wrap{width:100%; min-height:100%; margin:0; padding:20px;}
+         .ui-modal.type-email .write-form label{width:100%; display:inline-block; margin-right:10px; font-size:18px; color:#000; text-align: left; vertical-align:middle;}
+    }
+</style>
+<div>
+    <div class="ui-modal type-email" id="modal_email">
+        <div class="ui-modal-wrap">
+            <div class="modal-cont">
+                <div class="write-item-c">
+                    <p class="send-txt">해당 Library를 작성하신 이메일로 전송 하였습니다.</p>
+                </div>
+
+                
+                <button type="button" class="btn-basic-f small" onclick="$plugins.modalClose('modal_email')"><span>확인</span></button>
+            </div>
+        </div>
+    </div>
+    <div class="components-modal-alert2" data-text="해당 Library를 작성하신 이메일로 전송 하였습니다."></div>
+ </div>
+<script>
+    ;(function($, win, doc, undefined) {
+
+        'use strict';
+
+        //components 불러오기
+        $plugins.uiPageLoad('/polaris/src/components/common/paging.html', 'components-paging', function(v){
+            $('.components-paging > *').unwrap();
+        })
+        .then($plugins.uiPageLoad('/polaris/src/components/common/Modal-alert.html', 'components-modal-alert2',  function(v){
+            $('#modal_alert .txt').html($('.components-modal-alert2').attr('data-text'));
+            $('.components-modal-alert2 > *').unwrap();
+        }));
+
+
+    })(jQuery, window, document);
+
+</script> 
+
