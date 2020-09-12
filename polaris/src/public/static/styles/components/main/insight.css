@@ -1,4 +1,4 @@
-.insight-wrap {background:url(/polaris/src/public/static/images/main/main-bg.png) no-repeat -10vw 0 / contain; padding-top:130px; height:870px; position: relative; text-align: center;}
+.insight-wrap {/*background:url(/polaris/src/public/static/images/main/main-bg.png) no-repeat -10vw 0 / contain; */padding-top:100px; /*height:870px;*/ position: relative; text-align: center;}
 .insight-wrap .title-insight {text-align:left;font-size:50px;color:#4678b7;line-height:100%;max-width:1200px;margin:0 auto}
 .insight-wrap .title-insight .point {color:#00459b;font-weight:600}
 .insight-wrap .text-insight {font-size:24px;color:#454545;font-weight:300;text-align:left;max-width:1200px;margin:16px auto 0}
@@ -21,8 +21,30 @@
 .insight-wrap .btn-upload span{font-weight:200;}
 .insight-swiper .swiper-pagination{display:none}
 
+.box-insight {display:flex;justify-content:space-between;max-width:1200px;margin:52px auto 0}
+.box-insight .insight-col-a {width:calc(60% - 30px)}
+.box-insight .insight-col-a .insight-item ~ .insight-item {margin-top:30px}
+.box-insight .insight-col-b {width:40%}
+.box-insight .insight-item {background-color:#44bbf8;border-radius:40px;padding:48px 40px}
+.box-insight .insight-col-b .insight-item {height:100%}
+
+.insight-col-a .insight-item {display:flex;align-items:center;text-align:left}
+.insight-col-a .insight-item .insight-img {width:30%}
+.insight-item .insight-img img {width:100%}
+.insight-col-a .insight-item .insight-content {width:70%;padding-left:30px}
+.insight-col-b .insight-content {text-align:center}
+.insight-col-b .insight-img {margin-top:12px}
+.insight-item .insight-content .insight-sub-title {font-size:24px;color:#004d94;font-weight:600;margin-bottom:24px}
+.insight-item .insight-content .insight-decs-a {font-size:18px;line-height:23px;color:#fff;font-weight:500;word-break:keep-all}
+.insight-item .insight-content .insight-decs-a ~ .insight-decs-a {margin-top:22px}
+.insight-item .insight-content .insight-decs-b {font-size:15px;color:#fff;line-height:20px;padding-left:32px;text-indent:-32px;font-weight:300;word-break:keep-all;margin-top:16px}
+@media (max-width:1200px) {
+    .box-insight {padding:0 16px}
+    .insight-wrap .title-insight {padding-left:16px}
+    .insight-wrap .text-insight {padding-left:16px}
+}
 @media (max-width:1024px) {
-    .insight-wrap {background:url(/polaris/src/public/static/images/main/main-bg.png) no-repeat -120vw 30vw / 190vw; padding-top:130px; height:auto}
+    .insight-wrap {height:auto;padding-top:60px}
     .insight-wrap .title-insight {font-size:50px}
     .insight-wrap .title-insight .point {font-size:90px;display:block;margin-top:16px}
     .insight-wrap .text-insight {font-size:32px;margin-top:32px}
@@ -43,6 +65,18 @@
 }
 @media (max-width:768px) {
     .insight-wrap .title-insight {font-size:25px}
-    .insight-wrap .title-insight .point {font-size:45px;;margin-top:8px}
+    .insight-wrap .title-insight .point {font-size:45px;margin-top:8px}
     .insight-wrap .text-insight {font-size:16px;margin-top:16px}
+
+    .box-insight {display:block}
+    .box-insight .insight-col-a,
+    .box-insight .insight-col-b {width:100%}
+    .box-insight .insight-col-b {margin-top:16px}
+    .box-insight .insight-col-a .insight-item ~ .insight-item {margin-top:16px}
+}
+@media (max-width:767px) {
+    .box-insight .insight-item {padding:30px;border-radius:30px}
+    .insight-col-a .insight-item {display:block}
+    .insight-col-a .insight-item .insight-img {width:100%}
+    .insight-col-a .insight-item .insight-content {width:100%;padding:0;margin-top:20px}
 }

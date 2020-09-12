@@ -24,9 +24,13 @@ svg {position:absolute;width:0;height:0}
 .box-recent-item .file-name {margin-top:10px;font-size:13px;color:#fff;font-weight:300}
 .box-recent-item .file-type {padding-left:4px;font-size:16px;color:#81dafe}
 .box-recent-item .day {font-size:13px;margin-top:4px;color:#fff}
+@media (max-width:1200px) {
+    .box-recent .main-title-box {padding:0 16px}
+}
 
 @media (max-width:1024px) {
     .box-recent {width:1024px;padding-left:40px}
+    .box-recent .main-title-box {padding:0}
     .box-recent .box-title .title-recent {display:block;font-size:60px}
     .box-recent .box-title .btn-more-b {min-width:156px;height:64px;line-height:60px;border-radius:32px;font-size:32px;margin-top:16px;margin-left:0}
 

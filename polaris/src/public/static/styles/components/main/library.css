@@ -2,7 +2,10 @@
 .library-wrap .title-library {text-align:left;font-size:50px;color:#4678b7;line-height:100%;max-width:1200px;margin:0 auto}
 .library-wrap .title-library .point {color:#00459b;font-weight:600}
 .library-wrap .text-library {font-size:24px;color:#454545;font-weight:300;text-align:left;max-width:1200px;margin:16px auto 0}
-
+@media (max-width:1200px) {
+    .library-wrap .title-library,
+    .library-wrap .text-library {padding-left:16px}
+}
 @media (max-width:1024px) {
     .library-wrap .title-library {font-size:50px;padding-left:40px}
     .library-wrap .title-library .point {font-size:90px;display:block;margin-top:16px}
