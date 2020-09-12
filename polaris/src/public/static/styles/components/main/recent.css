@@ -3,6 +3,7 @@ svg {position:absolute;width:0;height:0}
 .box-recent .box-title {max-width:1200px;margin:90px auto 65px;text-align:center}
 .box-recent .box-title .title-recent {font-size:45px;color:#000;letter-spacing:3px;font-weight:600;display:inline-block;vertical-align:middle}
 .box-recent .box-title .btn-more-b {vertical-align:middle;margin-left:8px}
+.box-recent .main-title-box {max-width:1200px;margin:64px auto 36px}
 
 .recent-list {width:1248px;margin:0 auto 100px}
 .recent-list:after {content:'';display:block;clear:both}
@@ -60,7 +61,7 @@ svg {position:absolute;width:0;height:0}
     .box-recent .box-title .title-recent {font-size:30px}
     .box-recent .box-title .btn-more-b {min-width:78px;height:32px;line-height:32px;border-radius:16px;font-size:16px;margin-top:8px}
 
-    .recent-list {height:375px}
+    .recent-list {height:375px;margin-bottom:50px}
     .recent-list .recent-item ~ .recent-item {margin-left:10px !important}
 
     .box-recent-item {width:250px;height:347px;border-radius:36px}

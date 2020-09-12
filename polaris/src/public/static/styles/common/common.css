@@ -199,6 +199,7 @@ select:focus {border-color:#000}
 }
 
 @media (max-width:1024px) {
+    body {overflow-x:hidden}
     .type-sub .base-body {padding-top:100px}
     .type-sub-v2 .base-body {padding-top:100px}
 
