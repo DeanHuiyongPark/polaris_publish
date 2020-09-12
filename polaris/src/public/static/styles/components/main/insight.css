@@ -1,7 +1,7 @@
 .insight-wrap {background:url(/polaris/src/public/static/images/main/main-bg.png) no-repeat -10vw 0 / contain; padding-top:130px; height:870px; position: relative; text-align: center;}
-.insight-wrap .title-insight {text-align:center;font-size:50px;color:#4678b7;line-height:100%}
+.insight-wrap .title-insight {text-align:left;font-size:50px;color:#4678b7;line-height:100%;max-width:1200px;margin:0 auto}
 .insight-wrap .title-insight .point {color:#00459b;font-weight:600}
-.insight-wrap .text-insight {font-size:24px;color:#454545;margin-top:16px;font-weight:300;text-align:center}
+.insight-wrap .text-insight {font-size:24px;color:#454545;font-weight:300;text-align:left;max-width:1200px;margin:16px auto 0}
 
 .insight-swiper{max-width:1200px; width:100%; margin:60px auto 0;}
 .insight-box{width:340px; height:430px; background:#25aef4; border-radius:50px; padding:20px; color:#fff; text-align:center; font-size:15px; font-weight:400; margin:0 auto}

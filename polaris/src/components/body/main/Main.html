@@ -31,6 +31,7 @@
             <h2 class="main-title">추천회원</h2>
             <a href="" class="link-more-a">more</a>
         </div>
+        <div class="recommend-member-list"></div>
     </div>
     <!-- E : 추천회원 -->
     <!-- S : 사용후기 -->
@@ -107,6 +108,11 @@
             }
 
             $('.components-list-item-a > *').unwrap();
+        }))
+        .then($plugins.uiPageLoad('/polaris/src/components/body/items/user-item-h.html', 'recommend-member-list',  function(v){
+            for (var i = 1, len = 6; i < len; i++) {
+                $('.recommend-member-list').append(v);
+            }
         }));
 
         var noticeSwiper = new Swiper('.notice-swiper .swiper-container', {

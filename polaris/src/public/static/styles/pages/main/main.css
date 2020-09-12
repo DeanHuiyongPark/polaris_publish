@@ -25,6 +25,29 @@
 }
 /* 추천회원 */
 .recommend-member {max-width:1200px;margin:68px auto 0;}
+.recommend-member-list:after {content:'';display:block;clear:both}
+.recommend-member-item {position:relative;float:left;width:186px;height:168px;margin:0 16px 18px 0;padding-top:20px;background-color:#e9f9ff;background-size:cover;-webkit-clip-path:url(#my-clip-path);clip-path:url(#my-clip-path);text-align:center}
+.recommend-member-item:last-child {margin-right:0}
+.recommend-member-item .person-level img {vertical-align:top}
+.recommend-member-item .box-person {margin-top:16px;display:flex;justify-content:center;align-items:center}
+.recommend-member-item .box-person .person-img {width:40px;height:40px}
+.recommend-member-item .box-person .person-img img {width:100%;vertical-align:top}
+.recommend-member-item .box-person .person-info {padding-left:12px}
+.recommend-member-item .box-person .person-info .link-person {font-size:18px;display:inline-block;position:relative;color:#3c3c3c;font-weight:300}
+.recommend-member-item .box-person .person-info .link-person:before {content:'';position:absolute;left:0;right:0;bottom:0;height:1px;background-color:#3c3c3c}
+.recommend-member-item .pola-data {font-size:16px;margin-top:8px;color:#696969;line-height:20px}
+.recommend-member-item .pola-data .point-color-a {display:block;font-weight:500}
+@media (max-width:1200px) {
+    .recommend-member {padding:0 16px}
+}
+@media (max-width:1024px) {
+    .recommend-member-list {white-space:nowrap;overflow-y:hidden;overflow-x:auto;-webkit-overflow-scrolling:touch}
+    .recommend-member-item {display:inline-block;float:none}
+    .recommend-member-list::-webkit-scrollbar {width:5px}
+    .recommend-member-list::-webkit-scrollbar-track {background-color:transparent}
+    .recommend-member-list::-webkit-scrollbar-thumb {border-radius:30px;background-color:#1f82ff;border:6.5px solid #fff;}
+    .recommend-member-list::-webkit-scrollbar-button {width:0;height:0}
+}
 
 /* notice */
 .notice-area {border-top:1px solid #8c8c8c;margin-top:100px}
