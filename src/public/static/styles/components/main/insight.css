@@ -6,7 +6,7 @@
 .insight-swiper{max-width:1200px; width:100%; margin:60px auto 0;}
 .insight-box{width:340px; height:430px; background:#25aef4; border-radius:50px; padding:20px; color:#fff; text-align:center; font-size:15px; font-weight:400; margin:0 auto}
 .insight-box dt{font-size:24px;font-weight:500; margin-bottom:15px;}
-.insight-box dt::before{content:""; display:block; width:260px; height:200px; background:url(/polaris/src/public/static/images/main/insight-bg.png) no-repeat 0 0; margin:0 auto; margin-bottom:20px} 
+.insight-box dt::before{content:""; display:block; width:260px; height:200px; background:url(/polaris/src/public/static/images/main/insight-bg.png) no-repeat 0 0; margin:0 auto; margin-bottom:20px}
 .insight-box dd{word-break: keep-all;}
 
 .insight-box.n2:after,
@@ -50,9 +50,9 @@
     .insight-wrap .text-insight {font-size:32px;margin-top:32px}
     .insight-swiper{margin:10vw auto 0;}
     .insight-box{width:80vw; height:auto;border-radius:10vw; padding:5vw; font-size:3.5vw; line-height:1.6;}
-    .insight-box dt::before{content:""; display:block; width:70vw; height:54vw; background:url(/polaris/src/public/static/images/main/insight-bg1.png) no-repeat 0 0 / contain; margin:0 auto; margin-bottom:0} 
-    .insight-box.n2 dt::before{background:url(/polaris/src/public/static/images/main/insight-bg2.png) no-repeat 0 0 / contain;} 
-    .insight-box.n3 dt::before{background:url(/polaris/src/public/static/images/main/insight-bg3.png) no-repeat 0 0 / contain;} 
+    .insight-box dt::before{content:""; display:block; width:70vw; height:54vw; background:url(/polaris/src/public/static/images/main/insight-bg1.png) no-repeat 0 0 / contain; margin:0 auto; margin-bottom:0}
+    .insight-box.n2 dt::before{background:url(/polaris/src/public/static/images/main/insight-bg2.png) no-repeat 0 0 / contain;}
+    .insight-box.n3 dt::before{background:url(/polaris/src/public/static/images/main/insight-bg3.png) no-repeat 0 0 / contain;}
     .insight-box.n2:after,
     .insight-box.n1:after{display:none;}
     .insight-swiper .swiper-container{padding-bottom:50px;}
